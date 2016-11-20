@@ -1,0 +1,327 @@
+[p LITE_MODE AUTOSTATIC IEEE_DBL PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F628A ]
+[d frameptr 6 ]
+"6 /opt/microchip/xc8/v1.37/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.37/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 /opt/microchip/xc8/v1.37/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.37/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v1.37/sources/common/lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"10 /opt/microchip/xc8/v1.37/sources/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 /opt/microchip/xc8/v1.37/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 /opt/microchip/xc8/v1.37/sources/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.37/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"59 /home/vadim/MPLABXProjects/Termometer.X/prog.c
+[v _Reset_powerOnInterval Reset_powerOnInterval `(v  1 e 1 0 ]
+"66
+[v _setDigit setDigit `(v  1 e 1 0 ]
+"70
+[v _setPoint setPoint `(v  1 e 1 0 ]
+"74
+[v _refreshInd refreshInd `(v  1 e 1 0 ]
+"80
+[v _clrInd clrInd `(v  1 e 1 0 ]
+"86
+[v _convDig convDig `(uc  1 e 1 0 ]
+"128
+[v _EEWR EEWR `(v  1 e 1 0 ]
+"143
+[v _EERD EERD `(uc  1 e 1 0 ]
+"154
+[v _FillArrayFromEEPROM FillArrayFromEEPROM `(v  1 e 1 0 ]
+"160
+[v _WriteArrayToEEPROM WriteArrayToEEPROM `(v  1 e 1 0 ]
+"171
+[v _INIT INIT `(b  1 s 0 INIT ]
+"186
+[v _TX TX `(v  1 e 1 0 ]
+"206
+[v _RX RX `(uc  1 e 1 0 ]
+"220
+[v _Send_DS_Adress Send_DS_Adress `(v  1 e 1 0 ]
+"287
+[v _FindCell FindCell `(uc  1 e 1 0 ]
+"321
+[v _F F `II(v  1 e 1 0 ]
+"464
+[v _main main `(v  1 e 1 0 ]
+"55 /opt/microchip/xc8/v1.37/include/pic16f628a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"160
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"221
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"301
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S20 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"324
+[s S29 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S34 . 1 `S20 1 . 1 0 `S29 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES34  1 e 1 @11 ]
+"516
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"743
+[v _CMCON CMCON `VEuc  1 e 1 @31 ]
+"812
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"881
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"942
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1175
+[v _EEDATA EEDATA `VEuc  1 e 1 @154 ]
+"1181
+[v _EEADR EEADR `VEuc  1 e 1 @155 ]
+[s S54 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+]
+"1200
+[u S59 . 1 `S54 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES59  1 e 1 @156 ]
+"1224
+[v _EECON2 EECON2 `VEuc  1 e 1 @157 ]
+"1382
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"1384
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"1386
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"1440
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"1486
+[v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
+"1488
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
+"23 /home/vadim/MPLABXProjects/Termometer.X/prog.c
+[v _digits digits `VE[3]uc  1 e 3 0 ]
+"24
+[v _digits_0 digits_0 `VE[3]uc  1 e 3 0 ]
+"25
+[v _KeyCode KeyCode `VEuc  1 e 1 0 ]
+"26
+[v _TMR0_VALUE TMR0_VALUE `DCCuc  1 e 1 0 ]
+"27
+[v _digitnum digitnum `uc  1 e 1 0 ]
+"28
+[v _digitemp digitemp `uc  1 e 1 0 ]
+"29
+[v _powerOnInterval powerOnInterval `i  1 e 2 0 ]
+"30
+[v _count2 count2 `uc  1 e 1 0 ]
+"31
+[v _PortAData PortAData `DCC[3]uc  1 e 3 0 ]
+"36
+[v _endInterrupt endInterrupt `b  1 e 0 0 ]
+"37
+[v _powerOff powerOff `b  1 e 0 0 ]
+"38
+[v _Broadcasting Broadcasting `b  1 e 0 0 ]
+"40
+[v _DS_Adress DS_Adress `[8]uc  1 e 8 0 ]
+"42
+[v _temperature temperature `uc  1 e 1 0 ]
+"43
+[v _temp_drob temp_drob `uc  1 e 1 0 ]
+"44
+[v _sign sign `uc  1 e 1 0 ]
+"464
+[v _main main `(v  1 e 1 0 ]
+{
+"503
+[v main@i i `uc  1 a 1 31 ]
+"491
+[v main@adress adress `uc  1 a 1 30 ]
+"577
+} 0
+"70
+[v _setPoint setPoint `(v  1 e 1 0 ]
+{
+[v setPoint@dignum dignum `uc  1 a 1 wreg ]
+[v setPoint@dignum dignum `uc  1 a 1 wreg ]
+[v setPoint@value value `uc  1 p 1 0 ]
+[v setPoint@dignum dignum `uc  1 a 1 2 ]
+"72
+} 0
+"66
+[v _setDigit setDigit `(v  1 e 1 0 ]
+{
+[v setDigit@a a `uc  1 a 1 wreg ]
+[v setDigit@a a `uc  1 a 1 wreg ]
+[v setDigit@data data `uc  1 p 1 0 ]
+[v setDigit@a a `uc  1 a 1 3 ]
+"68
+} 0
+"74
+[v _refreshInd refreshInd `(v  1 e 1 0 ]
+{
+"75
+[v refreshInd@a a `uc  1 a 1 1 ]
+"78
+} 0
+"80
+[v _clrInd clrInd `(v  1 e 1 0 ]
+{
+"81
+[v clrInd@a a `uc  1 a 1 1 ]
+"84
+} 0
+"160
+[v _WriteArrayToEEPROM WriteArrayToEEPROM `(v  1 e 1 0 ]
+{
+[v WriteArrayToEEPROM@container container `*.4uc  1 a 1 wreg ]
+"161
+[v WriteArrayToEEPROM@i i `uc  1 a 1 9 ]
+"160
+[v WriteArrayToEEPROM@container container `*.4uc  1 a 1 wreg ]
+[v WriteArrayToEEPROM@adress_start adress_start `uc  1 p 1 4 ]
+[v WriteArrayToEEPROM@quantity quantity `uc  1 p 1 5 ]
+[v WriteArrayToEEPROM@container container `*.4uc  1 a 1 8 ]
+"164
+} 0
+"128
+[v _EEWR EEWR `(v  1 e 1 0 ]
+{
+[v EEWR@adress adress `uc  1 a 1 wreg ]
+"129
+[v EEWR@INTCON_BUP INTCON_BUP `VEuc  1 a 1 3 ]
+"128
+[v EEWR@adress adress `uc  1 a 1 wreg ]
+[v EEWR@data data `uc  1 p 1 0 ]
+[v EEWR@adress adress `uc  1 a 1 2 ]
+"141
+} 0
+"186
+[v _TX TX `(v  1 e 1 0 ]
+{
+[v TX@cmd cmd `uc  1 a 1 wreg ]
+"188
+[v TX@i i `uc  1 a 1 3 ]
+"187
+[v TX@temp temp `uc  1 a 1 2 ]
+"186
+[v TX@cmd cmd `uc  1 a 1 wreg ]
+[v TX@cmd cmd `uc  1 a 1 1 ]
+"204
+} 0
+"59
+[v _Reset_powerOnInterval Reset_powerOnInterval `(v  1 e 1 0 ]
+{
+"61
+} 0
+"206
+[v _RX RX `(uc  1 e 1 0 ]
+{
+"208
+[v RX@i i `uc  1 a 1 2 ]
+"207
+[v RX@d d `uc  1 a 1 1 ]
+"218
+} 0
+"171
+[v _INIT INIT `(b  1 s 0 INIT ]
+{
+"172
+[v INIT@b b `b  1 s 0 b ]
+"184
+} 0
+"287
+[v _FindCell FindCell `(uc  1 e 1 0 ]
+{
+[v FindCell@adressStart adressStart `uc  1 a 1 wreg ]
+"305
+[v FindCell@i i `uc  1 a 1 26 ]
+"301
+[v FindCell@CellsData CellsData `[8]uc  1 a 8 14 ]
+"304
+[v FindCell@CellIsEmpty CellIsEmpty `uc  1 a 1 24 ]
+"291
+[v FindCell@adress adress `ui  1 a 2 27 ]
+"292
+[v FindCell@adressNew adressNew `ui  1 a 2 22 ]
+"287
+[v FindCell@adressStart adressStart `uc  1 a 1 wreg ]
+[v FindCell@previous previous `uc  1 p 1 10 ]
+[v FindCell@adressStart adressStart `uc  1 a 1 25 ]
+"317
+} 0
+"154
+[v _FillArrayFromEEPROM FillArrayFromEEPROM `(v  1 e 1 0 ]
+{
+[v FillArrayFromEEPROM@container container `*.4uc  1 a 1 wreg ]
+"155
+[v FillArrayFromEEPROM@i i `uc  1 a 1 9 ]
+"154
+[v FillArrayFromEEPROM@container container `*.4uc  1 a 1 wreg ]
+[v FillArrayFromEEPROM@adress_start adress_start `uc  1 p 1 4 ]
+[v FillArrayFromEEPROM@quantity quantity `uc  1 p 1 5 ]
+[v FillArrayFromEEPROM@container container `*.4uc  1 a 1 8 ]
+"158
+} 0
+"143
+[v _EERD EERD `(uc  1 e 1 0 ]
+{
+[v EERD@adress adress `uc  1 a 1 wreg ]
+"145
+[v EERD@EEDATA_BUP EEDATA_BUP `VEuc  1 a 1 3 ]
+"144
+[v EERD@INTCON_BUP INTCON_BUP `VEuc  1 a 1 2 ]
+"143
+[v EERD@adress adress `uc  1 a 1 wreg ]
+[v EERD@adress adress `uc  1 a 1 1 ]
+"152
+} 0
+"321
+[v _F F `II(v  1 e 1 0 ]
+{
+"351
+[v F@CurrentKeysState CurrentKeysState `uc  1 a 1 7 ]
+"328
+[v F@dig dig `uc  1 a 1 6 ]
+"345
+[v F@KeyTimeCounter KeyTimeCounter `ui  1 s 2 KeyTimeCounter ]
+"346
+[v F@LastKeysState LastKeysState `uc  1 s 1 LastKeysState ]
+"347
+[v F@long_press long_press `uc  1 s 1 long_press ]
+"348
+[v F@ButtonPressTimeIn1 ButtonPressTimeIn1 `uc  1 s 1 ButtonPressTimeIn1 ]
+"349
+[v F@ButtonPressTimeIn2 ButtonPressTimeIn2 `uc  1 s 1 ButtonPressTimeIn2 ]
+"350
+[v F@ButtonPressTimeOut ButtonPressTimeOut `uc  1 s 1 ButtonPressTimeOut ]
+"415
+} 0
+"86
+[v _convDig convDig `(uc  1 e 1 0 ]
+{
+[v convDig@dig dig `uc  1 a 1 wreg ]
+[v convDig@dig dig `uc  1 a 1 wreg ]
+[v convDig@dig dig `uc  1 a 1 0 ]
+"125
+} 0
