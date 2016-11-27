@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Termometer.X
+PROJECTNAME=Termo-DS18B20
 
 # Active Configuration
 DEFAULTCONF=default

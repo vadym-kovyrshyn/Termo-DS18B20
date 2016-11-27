@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug/Termometer.X.debug.hex">
+  <executable name="dist/default/debug\Termo-DS18B20.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>2048</length>
-      <used>996</used>
-      <free>1052</free>
+      <used>1930</used>
+      <free>118</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>224</length>
-      <used>73</used>
-      <free>151</free>
+      <used>129</used>
+      <free>95</free>
     </memory>
   </executable>
 </project>

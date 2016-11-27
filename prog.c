@@ -20,6 +20,10 @@
 #pragma config CPD = OFF        // Data EE Memory Code Protection bit (Data memory code protection off)
 #pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
 
+//__EEPROM_DATA (0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF);
+//__EEPROM_DATA (0x28, 0xFF, 0xBE, 0xAC, 0x64, 0x15, 0x01, 0x68);
+//__EEPROM_DATA (0x28, 0xFF, 0x13, 0xE7, 0x63, 0x15, 0x02, 0x5B);
+
 volatile unsigned char digits [3];
 volatile unsigned char digits_0 [3];
 volatile unsigned char KeyCode;
@@ -27,7 +31,7 @@ const unsigned char TMR0_VALUE = 235;
 unsigned char digitnum;
 unsigned char digitemp;
 int powerOnInterval;
-unsigned char count2 = 0;
+unsigned char DigitNumber = 0;
 const unsigned char PortAData[3] = {
 	0b10000000,
 	0b01000000,
@@ -36,8 +40,23 @@ const unsigned char PortAData[3] = {
 bit endInterrupt;
 bit powerOff = 0;
 bit Broadcasting;
+unsigned char PowerBlocked;
 
-unsigned char DS_Adress [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+struct {
+	unsigned Init : 1;
+	unsigned Send_Address : 1;
+	unsigned CountAddressBytes : 4;
+	unsigned SendConvertTemp : 1;
+	unsigned int PauseValue;
+	unsigned SendGetTemp : 1;
+	unsigned ReadData : 1;
+	unsigned CountDataBytes : 4;
+	unsigned Error : 1;
+	unsigned ActiveProcess : 1;
+} getTemp_flags;
+
+unsigned char DS_Address [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+unsigned char DS_ReadData [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
 char temperature = 0; //температура
 unsigned char temp_drob = 0; //дробная часть температуры
@@ -49,16 +68,22 @@ unsigned char sign; //знак температуры
 #define STATE TRISA3
 #define PIN RA3
 
-#define  CELL_CAPACITY (sizeof(DS_Adress))
-#define END_OF_CELLS (CELL_CAPACITY * 24)
+#define CELLS_COUNT 16
+#define CELL_CAPACITY (sizeof(DS_Address))
+#define END_OF_CELLS (CELL_CAPACITY * CELLS_COUNT)
 #define LAST_CELL (END_OF_CELLS - CELL_CAPACITY)
-
 
 #define _XTAL_FREQ 4000000
 
-void Reset_powerOnInterval(){
+void waitInterrupt() {
+	endInterrupt = 0;
+	while (!endInterrupt);
+}
+
+void Reset_powerOnInterval() {
 	powerOnInterval = 700;
 }
+
 unsigned char getDigit(char a) {
 	return (digits_0[a - 1] & 0b00111111);
 }
@@ -81,6 +106,14 @@ void clrInd() {
 	for (char a = 0; a < 3; a++) {
 		digits_0[a] = 34;
 	}
+}
+
+void ShowError() {
+	clrInd();
+	setDigit(3, 14);
+	setDigit(2, 24);
+	setDigit(1, 24);
+	refreshInd();
 }
 
 unsigned char convDig(unsigned char dig) {
@@ -124,11 +157,10 @@ unsigned char convDig(unsigned char dig) {
 	}
 }//
 
-
-void EEWR(unsigned char adress, unsigned char data) {
+void EEWR(unsigned char address, unsigned char data) {
 	volatile unsigned char INTCON_BUP = INTCON;
 	INTCONbits.GIE = 0;
-	EEADR = adress;
+	EEADR = address;
 	EEDATA = data;
 	EECON1bits.WREN = 1;
 	EECON2 = 0x55;
@@ -140,31 +172,29 @@ void EEWR(unsigned char adress, unsigned char data) {
 	INTCON = INTCON_BUP;
 }
 
-unsigned char EERD(unsigned char adress) {
+unsigned char EERD(unsigned char address) {
 	volatile unsigned char INTCON_BUP = INTCON;
 	volatile unsigned char EEDATA_BUP;
 	INTCONbits.GIE = 0;
-	EEADR = adress;
+	EEADR = address;
 	EECON1bits.RD = 1;
 	EEDATA_BUP = EEDATA;
 	INTCON = INTCON_BUP;
 	return EEDATA_BUP;
 }
 
-void FillArrayFromEEPROM(unsigned char *container, unsigned char adress_start, unsigned char quantity) {
+void FillArrayFromEEPROM(unsigned char *container, unsigned char address_start, unsigned char quantity) {
 	for (unsigned char i = 0; i < quantity; i++) {
-		container[i] = EERD(adress_start + i);
+		//waitInterrupt();
+		container[i] = EERD(address_start + i);
 	}
 }
 
-void WriteArrayToEEPROM(unsigned char * container, unsigned char adress_start, unsigned char quantity) {
+void WriteArrayToEEPROM(unsigned char * container, unsigned char address_start, unsigned char quantity) {
 	for (unsigned char i = 0; i < quantity; i++) {
-		EEWR(adress_start + i, container[i]);
+		waitInterrupt();
+		EEWR(address_start + i, container[i]);
 	}
-}
-
-void LoadAdress(unsigned char cell){
-	FillArrayFromEEPROM(DS_Adress, cell * sizeof(DS_Adress), sizeof(DS_Adress));
 }
 
 /* Функции протокола 1-wire */
@@ -217,18 +247,41 @@ unsigned char RX() {
 	return d;
 }//
 
-void Send_DS_Adress(){
-	if(Broadcasting){
+unsigned char calc_crc(unsigned char *mas, unsigned char len) {
+	unsigned char crc = 0;
+	while (len--) {
+		unsigned char dat = *mas++;
+		for (unsigned char i = 0; i < 8; i++) { // счетчик битов в байте
+			unsigned char fb = (crc ^ dat) & 1;
+			crc >>= 1;
+			dat >>= 1;
+			if (fb) crc ^= 0x8c; // полином
+		}
+	}
+	return crc;
+}
+
+void Send_DS_Address() {
+	waitInterrupt();
+	if (Broadcasting) {
 		TX(0xCC);
-	}else{
+	} else {
 		TX(0x55);
-		for(unsigned char i = 0; i < sizeof(DS_Adress); i++){
-			TX(DS_Adress[i]);
+		for (unsigned char i = 0; i < sizeof (DS_Address); i++) {
+			waitInterrupt();
+			TX(DS_Address[i]);
 		}
 	}
 }
+
 /* Получаем значение температуры */
 void get_temp() {
+
+	temperature = 72;
+	temp_drob = 0;
+
+	return;
+
 	static bit init;
 	unsigned char temp1 = 0;
 	unsigned char temp2 = 0;
@@ -238,7 +291,8 @@ void get_temp() {
 	while (!endInterrupt);
 
 	if (init) {
-		Send_DS_Adress();
+		TX(0xCC);
+		//Send_DS_Address();
 		TX(0x44);
 		__delay_ms(250);
 		__delay_ms(250);
@@ -255,7 +309,7 @@ void get_temp() {
 	while (!endInterrupt);
 
 	if (init) {
-		Send_DS_Adress();
+		Send_DS_Address();
 		TX(0xBE);
 
 		endInterrupt = 0;
@@ -282,25 +336,121 @@ void get_temp() {
 	} else {
 		temperature = temp2;
 	}
-}//
+}
 
-unsigned char FindCell(unsigned char adressStart, unsigned char previous) {
-	if (adressStart == END_OF_CELLS) {
-		adressStart = LAST_CELL;
+void get_temp_Async() {
+
+	if (!getTemp_flags.ActiveProcess) {
+		return;
 	}
-	unsigned int adress = adressStart;
-	unsigned int adressNew = END_OF_CELLS;
+
+	// Step 1, 5
+	if (getTemp_flags.Init) {
+		if (INIT()) {
+			getTemp_flags.Init = 0;
+
+			getTemp_flags.Send_Address = 1;
+			getTemp_flags.CountAddressBytes = 0;
+		} else {
+			getTemp_flags.ActiveProcess = 0;
+			getTemp_flags.Error = 1;
+		}
+	} else
+		// Step 2, 6
+		if (getTemp_flags.Send_Address) {
+		if (Broadcasting || getTemp_flags.SendConvertTemp) {
+			TX(0xCC);
+			getTemp_flags.CountAddressBytes = 1;
+			getTemp_flags.Send_Address = 0;
+		} else if (getTemp_flags.CountAddressBytes < sizeof (DS_Address)) {
+			if (getTemp_flags.CountAddressBytes == 0) {
+				TX(0x55);
+			}
+			TX(DS_Address[getTemp_flags.CountAddressBytes]);
+			getTemp_flags.CountAddressBytes++;
+
+			if (getTemp_flags.CountAddressBytes == sizeof (DS_Address)) {
+				getTemp_flags.Send_Address = 0;
+			}
+		}
+	} else
+		// Step 3
+		if (getTemp_flags.SendConvertTemp) {
+		TX(0x44);
+		getTemp_flags.SendConvertTemp = 0;
+
+	} else
+		// Step 4
+		if (getTemp_flags.PauseValue > 0) {
+		getTemp_flags.PauseValue--;
+		if (getTemp_flags.PauseValue == 0) {
+			getTemp_flags.Init = 1;
+		}
+	} else
+		// Step 7
+		if (getTemp_flags.SendGetTemp) {
+		TX(0xBE);
+		getTemp_flags.SendGetTemp = 0;
+	} else
+		// Step 8
+		if (getTemp_flags.ReadData) {
+		if (getTemp_flags.CountDataBytes < sizeof (DS_ReadData)) {
+			for (unsigned char i = 0; i < 3 && getTemp_flags.CountDataBytes < sizeof (DS_ReadData); i++) {
+				DS_ReadData[getTemp_flags.CountDataBytes] = RX();
+				getTemp_flags.CountDataBytes++;
+			}
+			if (getTemp_flags.CountDataBytes == sizeof (DS_ReadData)) {
+				if (DS_ReadData[sizeof (DS_ReadData) - 1] != calc_crc(DS_ReadData, sizeof (DS_ReadData) - 1)) {
+					getTemp_flags.Error = 1;
+				} else {
+
+					unsigned char temp1 = DS_ReadData[0];
+					unsigned char temp2 = DS_ReadData[1];
+
+					temp_drob = temp1 & 0b00001111; //Записываем дробную часть в отдельную переменную
+					temp_drob = ((temp_drob * 6) + 2) / 10; //Переводим в нужное дробное число
+					temp1 >>= 4;
+					sign = temp2 & 0x80;
+					temp2 <<= 4;
+					temp2 &= 0b01110000;
+					temp2 |= temp1;
+
+					if (sign) {
+						temperature = 127 - temp2;
+						temp_drob = 10 - temp_drob;
+						if (temp_drob == 10) {
+							temp_drob = 0;
+							temperature++;
+						}
+					} else {
+						temperature = temp2;
+					}
+					
+				}
+				getTemp_flags.ReadData = 0;
+				getTemp_flags.ActiveProcess = 0;
+			}
+		}
+	}
+}
+
+unsigned char FindCell(unsigned char addressStart, unsigned char previous) {
+	if (addressStart == END_OF_CELLS) {
+		previous ? addressStart = 0 : addressStart = LAST_CELL;
+	}
+	unsigned char address = addressStart;
+	unsigned char addressNew = END_OF_CELLS;
 	do {
 
 		if (!previous) {
-			adress == LAST_CELL ? adress = 0 : adress += CELL_CAPACITY;
+			address == LAST_CELL ? address = 0 : address += CELL_CAPACITY;
 		} else {
-			adress == 0 ? adress = LAST_CELL : adress -= CELL_CAPACITY;
+			address == 0 ? address = LAST_CELL : address -= CELL_CAPACITY;
 		}
 
 		unsigned char CellsData [CELL_CAPACITY];
-		FillArrayFromEEPROM(&CellsData, adress * CELL_CAPACITY, CELL_CAPACITY);
-		//ReadDataOfCell(&CellsData, &Data, adress);
+		waitInterrupt();
+		FillArrayFromEEPROM(CellsData, address, CELL_CAPACITY);
 		unsigned char CellIsEmpty = 1;
 		for (unsigned char i = 0; i < CELL_CAPACITY; i++) {
 			if (CellsData[i] != 0xFF) {
@@ -309,35 +459,36 @@ unsigned char FindCell(unsigned char adressStart, unsigned char previous) {
 		}
 
 		if (CellIsEmpty == 0) {
-			adressNew = adress;
+			addressNew = address;
 			break;
 		}
-	} while (adress != adressStart);
-	return adressNew;
+	} while (address != addressStart);
+	return addressNew;
 }
 
 //////////
 
 void interrupt F() {
 	if (T0IF) {
+
 		T0IF = 0;
 		TMR0 += TMR0_VALUE;
-		
-		if (count2 > 2)count2 = 0;
-		digitnum = PortAData[count2];
-		unsigned char dig = digits[count2];
+
+		if (DigitNumber > 2)DigitNumber = 0;
+		digitnum = PortAData[DigitNumber];
+		unsigned char dig = digits[DigitNumber];
 		digitemp = convDig(0b00111111 & dig);
 		/*	if (0b10000000==(0b10000000&dig)){
 				if(!blink) digitemp = 0;
 			}*/
 		(0b01000000 == (0b01000000 & dig)) ? digitemp |= 0b00000100 : digitemp &= 0b11111011;
-		count2++;
+		DigitNumber++;
 
 		PORTB = digitemp;
 		PORTA = (PORTA & 0b00110110) | digitnum;
 		endInterrupt = 1;
 		powerOnInterval--;
-		if (powerOnInterval == 0) {
+		if (powerOnInterval == 0 && PowerBlocked == 0) {
 			powerOff = 1;
 			TRISA4 = 1;
 		}
@@ -349,61 +500,61 @@ void interrupt F() {
 		static unsigned char ButtonPressTimeIn2 = 0;
 		static unsigned char ButtonPressTimeOut = 0;
 		unsigned char CurrentKeysState = 0;
-		
+
 		if (ButtonPressTimeOut > 0) {
 			ButtonPressTimeOut--;
 		} else {
-			
+
 			KeyCode = 0;
-			
-			if(key1){
+
+			if (key1) {
 				CurrentKeysState = CurrentKeysState | 0b00000001;
 				ButtonPressTimeIn1 = 25;
-			}else{
-				if(ButtonPressTimeIn1 == 0){
+			} else {
+				if (ButtonPressTimeIn1 == 0) {
 					CurrentKeysState = CurrentKeysState & 0b11111110;
-				}else{
+				} else {
 					ButtonPressTimeIn1--;
 				}
 			}
 
-			if(key2){
+			if (key2) {
 				CurrentKeysState = CurrentKeysState | 0b00000010;
 				ButtonPressTimeIn2 = 25;
-			}else{
-				if(ButtonPressTimeIn2 == 0){
+			} else {
+				if (ButtonPressTimeIn2 == 0) {
 					CurrentKeysState = CurrentKeysState & 0b11111101;
-				}else{
+				} else {
 					ButtonPressTimeIn2--;
 				}
 			}
-			
-			if((ButtonPressTimeIn1 == 0 || ButtonPressTimeIn1 == 25) && (ButtonPressTimeIn2 == 0 || ButtonPressTimeIn2 == 25)){
-				if(CurrentKeysState > 0){
-					if(LastKeysState != CurrentKeysState){
+
+			if ((ButtonPressTimeIn1 == 0 || ButtonPressTimeIn1 == 25) && (ButtonPressTimeIn2 == 0 || ButtonPressTimeIn2 == 25)) {
+				if (CurrentKeysState > 0) {
+					if (LastKeysState != CurrentKeysState) {
 						KeyTimeCounter = 0;
 						long_press = 0;
 						LastKeysState = CurrentKeysState;
-					}else if(KeyTimeCounter < 150){
+					} else if (KeyTimeCounter < 150) {
 						KeyTimeCounter++;
-					}else if(KeyTimeCounter == 150 && !long_press){
+					} else if (KeyTimeCounter == 150 && !long_press) {
 						long_press = 1;
 					}
 
-					if(long_press == 1){
+					if (long_press == 1) {
 						KeyCode = 30 + LastKeysState + 3;
 						long_press = 2;
 						ButtonPressTimeOut = 40;
 					}
 
-				}else if(LastKeysState > 0 && long_press == 0){
+				} else if (LastKeysState > 0 && long_press == 0) {
 					KeyCode = 30 + LastKeysState;
 					LastKeysState = 0;
 					KeyTimeCounter = 0;
 					long_press = 0;
 					ButtonPressTimeOut = 40;
 
-				}else if(long_press == 2){
+				} else if (long_press == 2) {
 					LastKeysState = 0;
 					KeyTimeCounter = 0;
 					long_press = 0;
@@ -411,17 +562,12 @@ void interrupt F() {
 				}
 			}
 		}
+
+		get_temp_Async();
 	}
 }
 
 void indData() {
-
-	if (!INIT()) {
-		setDigit(3, 14);
-		setDigit(2, 24);
-		setDigit(1, 24);
-		return;
-	}
 
 	unsigned char cd = 3;
 	unsigned char dN = 3;
@@ -461,9 +607,131 @@ void indData() {
 	}
 }
 
+void ReadCell(unsigned char cell, unsigned char * CellsData, unsigned char * CellIsEmpty) {
+	unsigned char _CellIsEmpty = 1;
+	FillArrayFromEEPROM(CellsData, cell * CELL_CAPACITY, CELL_CAPACITY);
+	for (unsigned char i = 0; i < CELL_CAPACITY; i++) {
+		if (CellsData[i] != 0xFF) {
+			_CellIsEmpty = 0;
+			break;
+		}
+	}
+	*CellIsEmpty = _CellIsEmpty;
+}
+
+void CellToInd(unsigned char cell) {
+	clrInd();
+
+	if (cell >= 9) {
+		setDigit(3, (1 + cell) / 10);
+		setDigit(2, (1 + cell) % 10);
+	} else {
+		setDigit(3, 1 + cell);
+		setDigit(2, 34);
+	}
+	setDigit(1, 34);
+
+	refreshInd();
+}
+
+void EditAddressMemory() {
+	getTemp_flags.ActiveProcess = 0;
+
+	PowerBlocked++;
+
+	clrInd();
+
+	unsigned char cell = 0;
+	unsigned char CellIsEmpty = 1;
+	unsigned char CellsData [CELL_CAPACITY];
+
+	ReadCell(cell, CellsData, &CellIsEmpty);
+	CellToInd(cell);
+
+	while (1) {
+		if (KeyCode == 31) {
+			KeyCode = 0;
+			if (cell > 0) {
+				cell--;
+			} else {
+				cell = CELLS_COUNT - 1;
+			}
+			ReadCell(cell, CellsData, &CellIsEmpty);
+			CellToInd(cell);
+		} else if (KeyCode == 32) {
+			KeyCode = 0;
+			if (cell < CELLS_COUNT - 1) {
+				cell++;
+			} else {
+				cell = 0;
+			}
+			ReadCell(cell, CellsData, &CellIsEmpty);
+			CellToInd(cell);
+		} else if (KeyCode == 34) {
+			KeyCode = 0;
+			clrInd();
+			refreshInd();
+			break;
+		} else if (KeyCode == 35 && CellIsEmpty == 1) {
+			KeyCode = 0;
+			waitInterrupt();
+			if (INIT()) {
+				waitInterrupt();
+				TX(0x33);
+				waitInterrupt();
+				unsigned char CellsData [CELL_CAPACITY];
+				for (unsigned char i = 0; i < CELL_CAPACITY; i++) {
+					waitInterrupt();
+					CellsData[i] = RX();
+				}
+				if (CellsData[CELL_CAPACITY - 1] == calc_crc(CellsData, CELL_CAPACITY - 1)) {
+					waitInterrupt();
+					WriteArrayToEEPROM(CellsData, cell * CELL_CAPACITY, CELL_CAPACITY);
+					waitInterrupt();
+					ReadCell(cell, CellsData, &CellIsEmpty);
+				} else {
+					ShowError();
+				}
+			}
+		} else if (KeyCode == 36 && CellIsEmpty == 0) {
+			KeyCode = 0;
+			unsigned char CellsData [CELL_CAPACITY];
+			for (unsigned char i = 0; i < CELL_CAPACITY; i++) {
+				CellsData[i] = 0xFF;
+			}
+			waitInterrupt();
+			WriteArrayToEEPROM(CellsData, cell * CELL_CAPACITY, CELL_CAPACITY);
+			waitInterrupt();
+			ReadCell(cell, CellsData, &CellIsEmpty);
+		}
+
+
+		setPoint(1, !CellIsEmpty);
+
+		refreshInd();
+	}
+	PowerBlocked--;
+}
+
+void Run_getTemp() {
+
+	getTemp_flags.Init = 1;
+	getTemp_flags.Send_Address = 1;
+	getTemp_flags.CountAddressBytes = 0;
+	getTemp_flags.SendConvertTemp = 1;
+	getTemp_flags.PauseValue = 120;
+	getTemp_flags.SendGetTemp = 1;
+	getTemp_flags.ReadData = 1;
+	getTemp_flags.CountDataBytes = 0;
+	getTemp_flags.Error = 0;
+
+	getTemp_flags.ActiveProcess = 1;
+
+}
+
 void main() {
 	//powerOn = 1;
-	
+
 	INTCON = 0;
 	OPTION_REG = 0b00000111;
 	TRISA = 0b00000110;
@@ -474,104 +742,104 @@ void main() {
 	T2CON = 0b00000100;
 	CMCON = 0b00000111;
 	INTCON = 0b10100000;
-	
+
 	Reset_powerOnInterval();
-	
+
 	clrInd();
 	setDigit(1, 32);
 	setDigit(2, 32);
 	setDigit(3, 32);
-	
-	refreshInd();
-	
-	/*INIT();
-	TX(0xCC);
-	TX(0x44);*/
 
-	unsigned char adress = FindCell(END_OF_CELLS, 0);
-	Broadcasting = adress == END_OF_CELLS;
-	
-	if(Broadcasting){
-		setPoint(2, 1);
-	}
 	refreshInd();
-	
-	Broadcasting = 1;
-	
+
+	waitInterrupt();
+
 	INIT();
-	TX(0x33);
-	for(unsigned char i = 0; i < CELL_CAPACITY; i++){
-		DS_Adress[i] = RX();
+	waitInterrupt();
+	TX(0xCC);
+	waitInterrupt();
+	TX(0x44);
+
+	unsigned char address = FindCell(END_OF_CELLS, 0);
+	Broadcasting = address == END_OF_CELLS;
+
+	unsigned char cell = 0;
+
+	if (!Broadcasting) {
+		FillArrayFromEEPROM(DS_Address, address, CELL_CAPACITY);
+		cell = address / CELL_CAPACITY;
 	}
-	WriteArrayToEEPROM(DS_Adress, 0, CELL_CAPACITY);
-	
+
+	unsigned int data_on_ind_delay = 0;
+
+	Run_getTemp();
 	
 	while (1) {
-		
-		
-		
-		/*
-		if(KeyCode == 30 || KeyCode == 31 || start == 1){
-			unsigned char direct = 255;
-			while(1){
-				if(KeyCode == 30){
-					KeyCode = 0;
-					Reset_powerOnInterval();
-					direct = 0;
-				}else if(KeyCode == 31){
-					KeyCode = 0;
-					Reset_powerOnInterval();
-					direct = 1;
-				}else if(start == 1){
-					start = 0;
-					//Reset_powerOnInterval();
-					direct = 1;
-				}
-				
-				unsigned char run = 1;
-				if(cell > 0 && direct == 0){
-					cell--;
-				}else if(cell < 7 && direct == 1){
-					cell++;
-				}else{
-					run = 0;
-				}
-				
-				if(run){
-					LoadAdress(cell);
-					Broadcasting = 1;
-					for(unsigned char i = 0; i < sizeof(DS_Adress); i++){
-						if(DS_Adress[i] != 0xFF){
-							run = 0;
-							Broadcasting = 0;
-							break;
-						}
-					}
-				}else{
-					break;
-				}
-				
-				if(!run){
-					break;
-				}
+
+		if (KeyCode == 33) {
+			KeyCode = 0;
+			if (PowerBlocked != 1) {
+				PowerBlocked = 1;
+				setPoint(1, 1);
+				data_on_ind_delay = 10000;
+				refreshInd();
+			} else {
+				PowerBlocked = 0;
+			}
+		} else if (!Broadcasting && KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
+			Reset_powerOnInterval();
+			getTemp_flags.ActiveProcess = 0;
+			address = FindCell((KeyCode == 34 ? END_OF_CELLS : cell * CELL_CAPACITY), (KeyCode == 31 ? 1 : 0));
+			KeyCode = 0;
+
+			waitInterrupt();
+			FillArrayFromEEPROM(DS_Address, address, CELL_CAPACITY);
+			cell = address / CELL_CAPACITY;
+
+			CellToInd(cell);
+			data_on_ind_delay = 18000;
+			
+			Run_getTemp();
+
+		} else if (KeyCode == 36) {
+			KeyCode = 0;
+			EditAddressMemory();
+			
+			Reset_powerOnInterval();
+			address = FindCell(END_OF_CELLS, 0);
+			Broadcasting = address == END_OF_CELLS;
+			if (Broadcasting) {
+				setDigit(1, 32);
+				setDigit(2, 32);
+				setDigit(3, 32);
+				refreshInd();
+			} else {
+				FillArrayFromEEPROM(DS_Address, address, CELL_CAPACITY);
+				cell = address / CELL_CAPACITY;
+
+				CellToInd(cell);
+				data_on_ind_delay = 18000;
+				Run_getTemp();
 			}
 		}
-		*/
-		/*
-		if(KeyCode == 36){
-			KeyCode = 0;
-			
+
+		if (getTemp_flags.Error) {
+			ShowError();
+		} else if (!getTemp_flags.ActiveProcess) {
+			clrInd();
+			indData();
 		}
-		
-		clrInd();
-		endInterrupt = 0;
-		while (!endInterrupt);
-		get_temp();
-		indData();
-		for (unsigned char i = 0; i++; i <= 10) {
-			__delay_ms(200);
+
+		if (data_on_ind_delay == 0) {
+			refreshInd();
+		} else {
+			data_on_ind_delay--;
 		}
-		refreshInd();
-	*/
+
+		if (!getTemp_flags.ActiveProcess) {
+			Run_getTemp();
+		}
+
+
 	}
 }
