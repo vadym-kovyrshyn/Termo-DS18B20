@@ -954,20 +954,19 @@ extern __bit __timeout;
 #pragma config FOSC = INTOSCIO
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
-#pragma config MCLRE = ON
+#pragma config MCLRE = OFF
 #pragma config BOREN = OFF
 #pragma config LVP = OFF
 #pragma config CPD = OFF
 #pragma config CP = OFF
 
+# 27
 volatile unsigned char digits [3];
 volatile unsigned char digits_0 [3];
 volatile unsigned char KeyCode;
 const unsigned char TMR0_VALUE = 235;
-unsigned char digitnum;
 unsigned char digitemp;
 int powerOnInterval;
-unsigned char DigitNumber = 0;
 const unsigned char PortAData[3] = {
 0b10000000,
 0b01000000,
@@ -976,6 +975,7 @@ const unsigned char PortAData[3] = {
 bit endInterrupt;
 bit powerOff = 0;
 bit Broadcasting;
+bit OneWireIN = 0;
 unsigned char PowerBlocked;
 
 struct {
@@ -986,9 +986,10 @@ unsigned SendConvertTemp : 1;
 unsigned int PauseValue;
 unsigned SendGetTemp : 1;
 unsigned ReadData : 1;
-unsigned CountDataBytes : 2;
-unsigned ActiveProcess : 1;
+unsigned CountDataBytes : 4;
+unsigned DataIsRead : 1;
 unsigned Error : 1;
+unsigned ActiveProcess : 1;
 } getTemp_flags;
 
 unsigned char DS_Address [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
@@ -998,7 +999,7 @@ char temperature = 0;
 unsigned char temp_drob = 0;
 unsigned char sign;
 
-# 74
+# 80
 void waitInterrupt() {
 endInterrupt = 0;
 while (!endInterrupt);
@@ -1030,6 +1031,14 @@ void clrInd() {
 for (char a = 0; a < 3; a++) {
 digits_0[a] = 34;
 }
+}
+
+void ShowError() {
+clrInd();
+setDigit(3, 14);
+setDigit(2, 24);
+setDigit(1, 24);
+refreshInd();
 }
 
 unsigned char convDig(unsigned char dig) {
@@ -1130,6 +1139,8 @@ return !b;
 }
 
 void TX(unsigned char cmd) {
+
+# 223
 unsigned char temp = 0;
 unsigned char i = 0;
 temp = cmd;
@@ -1163,7 +1174,7 @@ _delay((unsigned long)((60)*(4000000/4000000.0)));
 return d;
 }
 
-unsigned char calc_crc(unsigned char *mas, unsigned char len){
+unsigned char calc_crc(unsigned char *mas, unsigned char len) {
 unsigned char crc = 0;
 while (len--) {
 unsigned char dat = *mas++;
@@ -1269,18 +1280,23 @@ getTemp_flags.Send_Address = 1;
 getTemp_flags.CountAddressBytes = 0;
 } else {
 getTemp_flags.ActiveProcess = 0;
+getTemp_flags.Error = 1;
 }
 } else
 
 if (getTemp_flags.Send_Address) {
-if (Broadcasting) {
+if (Broadcasting || getTemp_flags.SendConvertTemp) {
 TX(0xCC);
 getTemp_flags.CountAddressBytes = 1;
 getTemp_flags.Send_Address = 0;
-} else if (getTemp_flags.CountAddressBytes < 8) {
+} else if (getTemp_flags.CountAddressBytes < sizeof (DS_Address)) {
+if (getTemp_flags.CountAddressBytes == 0) {
+TX(0x55);
+}
 TX(DS_Address[getTemp_flags.CountAddressBytes]);
 getTemp_flags.CountAddressBytes++;
-if (getTemp_flags.CountAddressBytes == 8) {
+
+if (getTemp_flags.CountAddressBytes == sizeof (DS_Address)) {
 getTemp_flags.Send_Address = 0;
 }
 }
@@ -1305,11 +1321,15 @@ getTemp_flags.SendGetTemp = 0;
 } else
 
 if (getTemp_flags.ReadData) {
-if (getTemp_flags.CountDataBytes < 2) {
+if (getTemp_flags.CountDataBytes < sizeof (DS_ReadData)) {
+for (unsigned char i = 0; i < 3 && getTemp_flags.CountDataBytes < sizeof (DS_ReadData); i++) {
 DS_ReadData[getTemp_flags.CountDataBytes] = RX();
 getTemp_flags.CountDataBytes++;
-if (getTemp_flags.CountDataBytes == 2) {
-getTemp_flags.ActiveProcess = 0;
+}
+if (getTemp_flags.CountDataBytes == sizeof (DS_ReadData)) {
+if (DS_ReadData[sizeof (DS_ReadData) - 1] != calc_crc(DS_ReadData, sizeof (DS_ReadData) - 1)) {
+getTemp_flags.Error = 1;
+} else {
 
 unsigned char temp1 = DS_ReadData[0];
 unsigned char temp2 = DS_ReadData[1];
@@ -1332,6 +1352,11 @@ temperature++;
 } else {
 temperature = temp2;
 }
+
+}
+getTemp_flags.ReadData = 0;
+getTemp_flags.ActiveProcess = 0;
+getTemp_flags.DataIsRead = 1;
 }
 }
 }
@@ -1354,7 +1379,6 @@ address == 0 ? address = (((sizeof(DS_Address)) * 16) - (sizeof(DS_Address))) : 
 unsigned char CellsData [(sizeof(DS_Address))];
 waitInterrupt();
 FillArrayFromEEPROM(CellsData, address, (sizeof(DS_Address)));
-unsigned char CRC = calc_crc(CellsData, 7);
 unsigned char CellIsEmpty = 1;
 for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
 if (CellsData[i] != 0xFF) {
@@ -1374,21 +1398,27 @@ return addressNew;
 
 void interrupt F() {
 if (T0IF) {
+static unsigned char DigitNumber = 0;
 
 T0IF = 0;
 TMR0 += TMR0_VALUE;
 
-if (DigitNumber > 2)DigitNumber = 0;
-digitnum = PortAData[DigitNumber];
+if (DigitNumber > 2) {
+DigitNumber = 0;
+}
 unsigned char dig = digits[DigitNumber];
 digitemp = convDig(0b00111111 & dig);
 
-# 460
+# 495
 (0b01000000 == (0b01000000 & dig)) ? digitemp |= 0b00000100 : digitemp &= 0b11111011;
+
+PORTB = 0;
+PORTA = (PORTA & 0b00110100) | PortAData[DigitNumber];
+
 DigitNumber++;
 
 PORTB = digitemp;
-PORTA = (PORTA & 0b00110110) | digitnum;
+
 endInterrupt = 1;
 powerOnInterval--;
 if (powerOnInterval == 0 && PowerBlocked == 0) {
@@ -1410,7 +1440,7 @@ ButtonPressTimeOut--;
 
 KeyCode = 0;
 
-if (RA2) {
+if (RA5) {
 CurrentKeysState = CurrentKeysState | 0b00000001;
 ButtonPressTimeIn1 = 25;
 } else {
@@ -1421,7 +1451,7 @@ ButtonPressTimeIn1--;
 }
 }
 
-if (RA1) {
+if (RA2) {
 CurrentKeysState = CurrentKeysState | 0b00000010;
 ButtonPressTimeIn2 = 25;
 } else {
@@ -1472,7 +1502,6 @@ get_temp_Async();
 
 void indData() {
 
-# 555
 unsigned char cd = 3;
 unsigned char dN = 3;
 
@@ -1539,6 +1568,8 @@ refreshInd();
 }
 
 void EditAddressMemory() {
+getTemp_flags.ActiveProcess = 0;
+
 PowerBlocked++;
 
 clrInd();
@@ -1550,7 +1581,16 @@ unsigned char CellsData [(sizeof(DS_Address))];
 ReadCell(cell, CellsData, &CellIsEmpty);
 CellToInd(cell);
 
+unsigned char ErrorShowed = 0;
+unsigned char RereadCell = 1;
 while (1) {
+
+if(KeyCode != 0 && ErrorShowed) {
+KeyCode = 0;
+ErrorShowed = 0;
+RereadCell = 1;
+}
+
 if (KeyCode == 31) {
 KeyCode = 0;
 if (cell > 0) {
@@ -1558,8 +1598,7 @@ cell--;
 } else {
 cell = 16 - 1;
 }
-ReadCell(cell, CellsData, &CellIsEmpty);
-CellToInd(cell);
+RereadCell = 1;
 } else if (KeyCode == 32) {
 KeyCode = 0;
 if (cell < 16 - 1) {
@@ -1567,8 +1606,7 @@ cell++;
 } else {
 cell = 0;
 }
-ReadCell(cell, CellsData, &CellIsEmpty);
-CellToInd(cell);
+RereadCell = 1;
 } else if (KeyCode == 34) {
 KeyCode = 0;
 clrInd();
@@ -1581,32 +1619,41 @@ if (INIT()) {
 waitInterrupt();
 TX(0x33);
 waitInterrupt();
-unsigned char CellsData [(sizeof(DS_Address))];
 for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
 waitInterrupt();
 CellsData[i] = RX();
 }
+if (CellsData[(sizeof(DS_Address)) - 1] == calc_crc(CellsData, (sizeof(DS_Address)) - 1)) {
 waitInterrupt();
 WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
 waitInterrupt();
-ReadCell(cell, CellsData, &CellIsEmpty);
+RereadCell = 1;
+} else {
+ShowError();
+ErrorShowed = 1;
+}
+} else {
+ShowError();
+ErrorShowed = 1;
 }
 } else if (KeyCode == 36 && CellIsEmpty == 0) {
 KeyCode = 0;
-unsigned char CellsData [(sizeof(DS_Address))];
 for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
 CellsData[i] = 0xFF;
 }
 waitInterrupt();
 WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
 waitInterrupt();
-ReadCell(cell, CellsData, &CellIsEmpty);
+RereadCell = 1;
 }
 
-
+if(RereadCell){
+RereadCell = 0;
+ReadCell(cell, CellsData, &CellIsEmpty);
+CellToInd(cell);
 setPoint(1, !CellIsEmpty);
-
 refreshInd();
+}
 }
 PowerBlocked--;
 }
@@ -1624,6 +1671,7 @@ getTemp_flags.CountDataBytes = 0;
 getTemp_flags.Error = 0;
 
 getTemp_flags.ActiveProcess = 1;
+getTemp_flags.DataIsRead = 0;
 
 }
 
@@ -1632,37 +1680,36 @@ void main() {
 
 INTCON = 0;
 OPTION_REG = 0b00000111;
-TRISA = 0b00000110;
+TRISA = 0b00101110;
 TRISB = 0b00000000;
 PORTA = 0b00000000;
 PORTB = 0b00000000;
 TMR0 = TMR0_VALUE;
 T2CON = 0b00000100;
 CMCON = 0b00000111;
+
+volatile unsigned char Z = 0b11110111;
+volatile unsigned char X = Z ^ 0b11111111;
+
+
+clrInd();
+refreshInd();
+
 INTCON = 0b10100000;
 
 Reset_powerOnInterval();
 
-clrInd();
-setDigit(1, 32);
-setDigit(2, 32);
-setDigit(3, 32);
-
-refreshInd();
-
-# 740
-unsigned char address = FindCell(((sizeof(DS_Address)) * 16), 0);
-Broadcasting = address == ((sizeof(DS_Address)) * 16);
-
-if (!Broadcasting) {
-FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
-}
+waitInterrupt();
 
 unsigned char cell = 0;
 
+unsigned char address;
 unsigned int data_on_ind_delay = 0;
+unsigned int point_on_ind_delay = 0;
 
-unsigned char switcher = 0;
+unsigned char TheStart = 1;
+
+KeyCode = 36;
 
 while (1) {
 
@@ -1670,70 +1717,67 @@ if (KeyCode == 33) {
 KeyCode = 0;
 if (PowerBlocked != 1) {
 PowerBlocked = 1;
-setPoint(1, 1);
-refreshInd();
-data_on_ind_delay = 10000;
+point_on_ind_delay = 10000;
 } else {
 PowerBlocked = 0;
 }
-} else if (KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
+} else if (!Broadcasting && (KeyCode == 31 || KeyCode == 32 || KeyCode == 34)) {
 Reset_powerOnInterval();
-waitInterrupt();
+getTemp_flags.ActiveProcess = 0;
 address = FindCell((KeyCode == 34 ? ((sizeof(DS_Address)) * 16) : cell * (sizeof(DS_Address))), (KeyCode == 31 ? 1 : 0));
 KeyCode = 0;
 
-Broadcasting = address == ((sizeof(DS_Address)) * 16);
-if (!Broadcasting) {
+waitInterrupt();
 FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
 cell = address / (sizeof(DS_Address));
 
 CellToInd(cell);
-data_on_ind_delay = 25000;
-}
+data_on_ind_delay = 18000;
+
+Run_getTemp();
 
 } else if (KeyCode == 36) {
 KeyCode = 0;
+if(!TheStart){
 EditAddressMemory();
+}
 
-waitInterrupt();
+Reset_powerOnInterval();
 address = FindCell(((sizeof(DS_Address)) * 16), 0);
 Broadcasting = address == ((sizeof(DS_Address)) * 16);
 if (Broadcasting) {
-setDigit(1, 32);
-setDigit(2, 32);
-setDigit(3, 32);
-refreshInd();
+TheStart = 1;
 } else {
 FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
 cell = address / (sizeof(DS_Address));
 
 CellToInd(cell);
-data_on_ind_delay = 25000;
+data_on_ind_delay = 18000;
 }
+Run_getTemp();
 }
 
-if (switcher != getTemp_flags.ActiveProcess) {
 if (getTemp_flags.Error) {
 clrInd();
-setDigit(3, 14);
-setDigit(2, 24);
-setDigit(1, 24);
-refreshInd();
-} else if (!getTemp_flags.ActiveProcess) {
+ShowError();
+Run_getTemp();
+} else if (getTemp_flags.DataIsRead) {
 clrInd();
 indData();
-refreshInd();
-data_on_ind_delay = 30000;
-}
-switcher = getTemp_flags.ActiveProcess;
+Run_getTemp();
+} else if (TheStart) {
+TheStart = 0;
+setDigit(1, 32);
+setDigit(2, 32);
+setDigit(3, 32);
 }
 
-if (data_on_ind_delay == 0 && !getTemp_flags.ActiveProcess) {
-Run_getTemp();
-} else {
-if (data_on_ind_delay > 0) {
-data_on_ind_delay--;
+if (point_on_ind_delay > 0) {
+setPoint(1, 1);
+point_on_ind_delay--;
 }
-}
+
+refreshInd();
+
 }
 }
