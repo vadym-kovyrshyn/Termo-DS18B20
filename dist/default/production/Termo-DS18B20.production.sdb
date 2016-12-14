@@ -5,9 +5,6 @@
 [d frameptr 6 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-[v i1___awdiv __awdiv `(i  1 e 2 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
@@ -58,23 +55,25 @@
 "279
 [v _calc_crc calc_crc `(uc  1 e 1 0 ]
 [v i1_calc_crc calc_crc `(uc  1 e 1 0 ]
-"357
+"294
 [v _get_temp_Async get_temp_Async `(v  1 e 1 0 ]
-"455
+"394
 [v _FindCell FindCell `(uc  1 e 1 0 ]
-"489
+"428
 [v _F F `II(v  1 e 1 0 ]
-"596
+"535
 [v _indData indData `(v  1 e 1 0 ]
-"636
+"570
 [v _ReadCell ReadCell `(uc  1 e 1 0 ]
-"646
+"580
 [v _CellToInd CellToInd `(v  1 e 1 0 ]
-"659
+"594
 [v _EditAddressMemory EditAddressMemory `(v  1 e 1 0 ]
-"747
+"682
 [v _Run_getTemp Run_getTemp `(v  1 e 1 0 ]
-"765
+"700
+[v _Run_getInit Run_getInit `(v  1 e 1 0 ]
+"718
 [v _main main `(v  1 e 1 0 ]
 "55 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -175,118 +174,97 @@
 [v _temp_drob temp_drob `uc  1 e 1 0 ]
 "71
 [v _sign sign `uc  1 e 1 0 ]
-"765
+"718
 [v _main main `(v  1 e 1 0 ]
 {
-"786
+"739
 [v main@point_on_ind_delay point_on_ind_delay `ui  1 a 2 14 ]
-"788
+"741
 [v main@line line `uc  1 a 1 21 ]
-"785
+"738
 [v main@address address `uc  1 a 1 20 ]
-"784
-[v main@cell cell `uc  1 a 1 19 ]
-"787
-[v main@TheStart TheStart `uc  1 a 1 18 ]
-"882
+"740
+[v main@TheStart TheStart `uc  1 a 1 19 ]
+"737
+[v main@cell cell `uc  1 a 1 18 ]
+"854
 } 0
-"596
+"535
 [v _indData indData `(v  1 e 1 0 ]
 {
-"623
-[v indData@v_248 v `uc  1 a 1 26 ]
-"608
-[v indData@v v `uc  1 a 1 28 ]
-"599
-[v indData@dN dN `uc  1 a 1 30 ]
-"598
-[v indData@cd cd `uc  1 a 1 29 ]
-"606
-[v indData@isPoint isPoint `uc  1 a 1 27 ]
-"634
+"565
+[v indData@v_240 v `uc  1 a 1 23 ]
+"551
+[v indData@v v `uc  1 a 1 25 ]
+"537
+[v indData@cd cd `uc  1 a 1 27 ]
+"538
+[v indData@dN dN `uc  1 a 1 26 ]
+"549
+[v indData@isPoint isPoint `uc  1 a 1 24 ]
+"568
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-[v ___lbmod __lbmod `(uc  1 e 1 0 ]
-{
-[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
-"6
-[v ___lbmod@rem rem `uc  1 a 1 17 ]
-"7
-[v ___lbmod@counter counter `uc  1 a 1 16 ]
-"4
-[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
-[v ___lbmod@divisor divisor `uc  1 p 1 13 ]
-"9
-[v ___lbmod@dividend dividend `uc  1 a 1 15 ]
-"18
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
-{
-[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
-"6
-[v ___lbdiv@quotient quotient `uc  1 a 1 16 ]
-"7
-[v ___lbdiv@counter counter `uc  1 a 1 15 ]
-"4
-[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
-[v ___lbdiv@divisor divisor `uc  1 p 1 13 ]
-"9
-[v ___lbdiv@dividend dividend `uc  1 a 1 14 ]
-"26
-} 0
-"747 C:\Microcontrollers\Termo-DS18B20\prog.c
+"682
 [v _Run_getTemp Run_getTemp `(v  1 e 1 0 ]
 {
 [v Run_getTemp@line line `uc  1 a 1 wreg ]
 [v Run_getTemp@line line `uc  1 a 1 wreg ]
-"749
+"684
 [v Run_getTemp@line line `uc  1 a 1 13 ]
-"763
+"698
+} 0
+"700
+[v _Run_getInit Run_getInit `(v  1 e 1 0 ]
+{
+[v Run_getInit@line line `uc  1 a 1 wreg ]
+[v Run_getInit@line line `uc  1 a 1 wreg ]
+"702
+[v Run_getInit@line line `uc  1 a 1 13 ]
+"716
 } 0
 "96
 [v _Reset_powerOnInterval Reset_powerOnInterval `(v  1 e 1 0 ]
 {
 "98
 } 0
-"455
+"394
 [v _FindCell FindCell `(uc  1 e 1 0 ]
 {
 [v FindCell@addressStart addressStart `uc  1 a 1 wreg ]
-"473
+"412
 [v FindCell@i i `uc  1 a 1 33 ]
-"469
+"408
 [v FindCell@CellsData CellsData `[8]uc  1 a 8 22 ]
-"472
+"411
 [v FindCell@CellIsEmpty CellIsEmpty `uc  1 a 1 31 ]
-"459
+"398
 [v FindCell@address address `uc  1 a 1 34 ]
-"460
+"399
 [v FindCell@addressNew addressNew `uc  1 a 1 30 ]
-"455
+"394
 [v FindCell@addressStart addressStart `uc  1 a 1 wreg ]
 [v FindCell@previous previous `uc  1 p 1 21 ]
 [v FindCell@addressStart addressStart `uc  1 a 1 32 ]
-"485
+"424
 } 0
-"659
+"594
 [v _EditAddressMemory EditAddressMemory `(v  1 e 1 0 ]
 {
-"707
+"642
 [v EditAddressMemory@i i `uc  1 a 1 11 ]
-"726
-[v EditAddressMemory@i_264 i `uc  1 a 1 12 ]
-"668
+"661
+[v EditAddressMemory@i_256 i `uc  1 a 1 12 ]
+"603
 [v EditAddressMemory@CellsData CellsData `[8]uc  1 a 8 0 ]
-"666
+"601
 [v EditAddressMemory@cell cell `uc  1 a 1 13 ]
-"667
+"602
 [v EditAddressMemory@CellIsEmpty CellIsEmpty `uc  1 a 1 10 ]
-"671
+"606
 [v EditAddressMemory@RereadCell RereadCell `uc  1 a 1 9 ]
-"670
+"605
 [v EditAddressMemory@ErrorShowed ErrorShowed `uc  1 a 1 8 ]
-"745
+"680
 } 0
 "108
 [v _setPoint setPoint `(v  1 e 1 0 ]
@@ -368,17 +346,17 @@
 {
 "130
 } 0
-"636
+"570
 [v _ReadCell ReadCell `(uc  1 e 1 0 ]
 {
 [v ReadCell@cell cell `uc  1 a 1 wreg ]
-"638
+"572
 [v ReadCell@i i `uc  1 a 1 24 ]
-"636
+"570
 [v ReadCell@cell cell `uc  1 a 1 wreg ]
 [v ReadCell@CellsData CellsData `*.4uc  1 p 1 21 ]
 [v ReadCell@cell cell `uc  1 a 1 23 ]
-"644
+"578
 } 0
 "205
 [v _FillArrayFromEEPROM FillArrayFromEEPROM `(v  1 e 1 0 ]
@@ -438,21 +416,21 @@
 [v INIT@line line `uc  1 a 1 14 ]
 "235
 } 0
-"646
+"580
 [v _CellToInd CellToInd `(v  1 e 1 0 ]
 {
 [v CellToInd@cell cell `uc  1 a 1 wreg ]
 [v CellToInd@cell cell `uc  1 a 1 wreg ]
-[v CellToInd@cell cell `uc  1 a 1 25 ]
-"657
+[v CellToInd@cell cell `uc  1 a 1 22 ]
+"592
 } 0
 "104
 [v _setDigit setDigit `(v  1 e 1 0 ]
 {
 [v setDigit@a a `uc  1 a 1 wreg ]
 [v setDigit@a a `uc  1 a 1 wreg ]
-[v setDigit@data data `uc  1 p 1 21 ]
-[v setDigit@a a `uc  1 a 1 24 ]
+[v setDigit@data data `uc  1 p 1 18 ]
+[v setDigit@a a `uc  1 a 1 21 ]
 "106
 } 0
 "112
@@ -465,65 +443,71 @@
 {
 "122
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
 {
-"11
-[v ___awmod@sign sign `uc  1 a 1 18 ]
-[v ___awmod@counter counter `uc  1 a 1 17 ]
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
 "6
-[v ___awmod@divisor divisor `i  1 p 2 13 ]
-[v ___awmod@dividend dividend `i  1 p 2 15 ]
-"35
+[v ___lbmod@rem rem `uc  1 a 1 17 ]
+"7
+[v ___lbmod@counter counter `uc  1 a 1 16 ]
+"4
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbmod@divisor divisor `uc  1 p 1 13 ]
+"9
+[v ___lbmod@dividend dividend `uc  1 a 1 15 ]
+"18
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
 {
-"11
-[v ___awdiv@quotient quotient `i  1 a 2 19 ]
-"12
-[v ___awdiv@sign sign `uc  1 a 1 18 ]
-[v ___awdiv@counter counter `uc  1 a 1 17 ]
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
 "6
-[v ___awdiv@divisor divisor `i  1 p 2 13 ]
-[v ___awdiv@dividend dividend `i  1 p 2 15 ]
-"42
+[v ___lbdiv@quotient quotient `uc  1 a 1 16 ]
+"7
+[v ___lbdiv@counter counter `uc  1 a 1 15 ]
+"4
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbdiv@divisor divisor `uc  1 p 1 13 ]
+"9
+[v ___lbdiv@dividend dividend `uc  1 a 1 14 ]
+"26
 } 0
-"489 C:\Microcontrollers\Termo-DS18B20\prog.c
+"428 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _F F `II(v  1 e 1 0 ]
 {
-"528
+"467
 [v F@CurrentKeysState CurrentKeysState `uc  1 a 1 12 ]
-"499
+"438
 [v F@dig dig `uc  1 a 1 11 ]
-"491
+"430
 [v F@DigitNumber DigitNumber `uc  1 s 1 DigitNumber ]
-"522
+"461
 [v F@KeyTimeCounter KeyTimeCounter `ui  1 s 2 KeyTimeCounter ]
-"523
+"462
 [v F@LastKeysState LastKeysState `uc  1 s 1 LastKeysState ]
-"524
+"463
 [v F@long_press long_press `uc  1 s 1 long_press ]
-"525
+"464
 [v F@ButtonPressTimeIn1 ButtonPressTimeIn1 `uc  1 s 1 ButtonPressTimeIn1 ]
-"526
+"465
 [v F@ButtonPressTimeIn2 ButtonPressTimeIn2 `uc  1 s 1 ButtonPressTimeIn2 ]
-"527
+"466
 [v F@ButtonPressTimeOut ButtonPressTimeOut `uc  1 s 1 ButtonPressTimeOut ]
-"594
+"533
 } 0
-"357
+"294
 [v _get_temp_Async get_temp_Async `(v  1 e 1 0 ]
 {
-"426
-[v get_temp_Async@temp2 temp2 `uc  1 a 1 4 ]
-"425
-[v get_temp_Async@temp1 temp1 `uc  1 a 1 3 ]
-"416
-[v get_temp_Async@i i `uc  1 a 1 2 ]
 "363
+[v get_temp_Async@temp2 temp2 `uc  1 a 1 4 ]
+"362
+[v get_temp_Async@temp1 temp1 `uc  1 a 1 3 ]
+"353
+[v get_temp_Async@i i `uc  1 a 1 2 ]
+"300
 [v get_temp_Async@line line `uc  1 a 1 5 ]
-"453
+"392
 } 0
 "279
 [v i1_calc_crc calc_crc `(uc  1 e 1 0 ]
@@ -538,17 +522,7 @@
 [v i1calc_crc@mas mas `*.4uc  1 a 1 1 ]
 "291
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-[v i1___awdiv __awdiv `(i  1 e 2 0 ]
-{
-[v i1___awdiv@quotient __awdiv `i  1 a 2 12 ]
-[v i1___awdiv@sign __awdiv `uc  1 a 1 11 ]
-[v i1___awdiv@counter __awdiv `uc  1 a 1 10 ]
-[v i1___awdiv@divisor divisor `i  1 p 2 6 ]
-[v i1___awdiv@dividend dividend `i  1 p 2 8 ]
-"42
-} 0
-"237 C:\Microcontrollers\Termo-DS18B20\prog.c
+"237
 [v i1_TX TX `(v  1 e 1 0 ]
 {
 [v i1TX@cmd cmd `uc  1 a 1 wreg ]
@@ -593,6 +567,19 @@
 [v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 12 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 11 ]
+[v ___awdiv@counter counter `uc  1 a 1 10 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
+"42
 } 0
 "132 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _convDig convDig `(uc  1 e 1 0 ]

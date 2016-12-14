@@ -960,18 +960,18 @@ extern __bit __timeout;
 #pragma config CPD = OFF
 #pragma config CP = ON
 
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xA2" "," "0xD1" "," "0x64" "," "0x15" "," "0x01" "," "0x00");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xBE" "," "0xAC" "," "0x64" "," "0x15" "," "0x01" "," "0x68");
+asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x13" "," "0xE7" "," "0x63" "," "0x15" "," "0x02" "," "0x5B");
+asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x29" "," "0x89" "," "0x63" "," "0x15" "," "0x02" "," "0xE7");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xF8" "," "0xE7" "," "0x63" "," "0x15" "," "0x02" "," "0xF1");
+asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xBE" "," "0xAC" "," "0x64" "," "0x15" "," "0x01" "," "0x68");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xEC" "," "0x95" "," "0x63" "," "0x15" "," "0x02" "," "0x3D");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x00" "," "0x93" "," "0x63" "," "0x15" "," "0x02" "," "0xCF");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x1D" "," "0xA8" "," "0x63" "," "0x15" "," "0x02" "," "0x83");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x29" "," "0x89" "," "0x63" "," "0x15" "," "0x02" "," "0xE7");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x2A" "," "0xA8" "," "0x63" "," "0x15" "," "0x02" "," "0x56");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xA5" "," "0xD4" "," "0x63" "," "0x15" "," "0x02" "," "0x48");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x65" "," "0xD3" "," "0x63" "," "0x15" "," "0x02" "," "0xEC");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x13" "," "0xE7" "," "0x63" "," "0x15" "," "0x02" "," "0x5B");
 asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x41" "," "0xA7" "," "0x63" "," "0x15" "," "0x02" "," "0xAD");
+asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xA2" "," "0xD1" "," "0x64" "," "0x15" "," "0x01" "," "0x00");
 
 volatile unsigned char digits [3];
 volatile unsigned char digits_0 [3];
@@ -1193,69 +1193,6 @@ return crc;
 }
 
 
-void get_temp() {
-
-temperature = 72;
-temp_drob = 0;
-
-return;
-
-static bit init;
-unsigned char temp1 = 0;
-unsigned char temp2 = 0;
-init = INIT(0b00001000);
-
-endInterrupt = 0;
-while (!endInterrupt);
-
-if (init) {
-TX(0xCC, 0b00001000);
-
-TX(0x44, 0b00001000);
-_delay((unsigned long)((250)*(4000000/4000.0)));
-_delay((unsigned long)((250)*(4000000/4000.0)));
-_delay((unsigned long)((250)*(4000000/4000.0)));
-_delay((unsigned long)((250)*(4000000/4000.0)));
-}
-
-endInterrupt = 0;
-while (!endInterrupt);
-
-init = INIT(0b00001000);
-
-endInterrupt = 0;
-while (!endInterrupt);
-
-if (init) {
-Send_DS_Address();
-TX(0xBE, 0b00001000);
-
-endInterrupt = 0;
-while (!endInterrupt);
-
-temp1 = RX(0b00001000);
-temp2 = RX(0b00001000);
-}
-temp_drob = temp1 & 0b00001111;
-temp_drob = ((temp_drob * 6) + 2) / 10;
-temp1 >>= 4;
-sign = temp2 & 0x80;
-temp2 <<= 4;
-temp2 &= 0b01110000;
-temp2 |= temp1;
-
-if (sign) {
-temperature = 127 - temp2;
-temp_drob = 10 - temp_drob;
-if (temp_drob == 10) {
-temp_drob = 0;
-temperature++;
-}
-} else {
-temperature = temp2;
-}
-}
-
 void get_temp_Async() {
 
 if (!getTemp_flags.ActiveProcess) {
@@ -1351,6 +1288,8 @@ getTemp_flags.ActiveProcess = 0;
 getTemp_flags.DataIsRead = 1;
 }
 }
+} else {
+getTemp_flags.ActiveProcess = 0;
 }
 }
 
@@ -1401,7 +1340,7 @@ DigitNumber = 0;
 unsigned char dig = digits[DigitNumber];
 digitemp = convDig(0b00111111 & dig);
 
-# 506
+# 445
 (0b01000000 == (0b01000000 & dig)) ? digitemp |= 0b00000100 : digitemp &= 0b11111011;
 
 PORTB = 0;
@@ -1501,7 +1440,11 @@ if (sign != 0) {
 setDigit(cd, 32);
 cd--;
 dN--;
+} else if (temperature < 10) {
+cd--;
+dN--;
 }
+
 unsigned char isPoint = 0;
 do {
 unsigned char v = (temperature > 9 ? 1 : 0) + (temperature > 99 ? 1 : 0);
@@ -1516,19 +1459,10 @@ dN--;
 
 if (dN > 0) {
 cd = dN;
-if (temp_drob > 99) temp_drob /= 10;
 if (temp_drob > 9 && dN == 1) temp_drob /= 10;
-do {
+
 unsigned char v = (temp_drob > 9 ? 1 : 0);
 setDigit(cd - v, temp_drob % 10);
-temp_drob /= 10;
-dN--;
-} while (temp_drob > 0);
-}
-
-while (dN > 0) {
-setDigit(dN, 0);
-dN--;
 }
 }
 
@@ -1544,12 +1478,13 @@ return 1;
 
 void CellToInd(unsigned char cell) {
 clrInd();
+cell++;
 
-if (cell >= 9) {
-setDigit(3, (1 + cell) / 10);
-setDigit(2, (1 + cell) % 10);
+if (cell > 9) {
+setDigit(3, cell / 10);
+setDigit(2, cell % 10);
 } else {
-setDigit(3, 1 + cell);
+setDigit(3, cell);
 }
 
 refreshInd();
@@ -1649,9 +1584,27 @@ getTemp_flags.Init = 1;
 getTemp_flags.Send_Address = 1;
 getTemp_flags.CountAddressBytes = 0;
 getTemp_flags.SendConvertTemp = 1;
-getTemp_flags.PauseValue = 220;
+getTemp_flags.PauseValue = 120;
 getTemp_flags.SendGetTemp = 1;
 getTemp_flags.ReadData = 1;
+getTemp_flags.CountDataBytes = 0;
+getTemp_flags.Error = 0;
+getTemp_flags.DataIsRead = 0;
+getTemp_flags.Line = line;
+
+getTemp_flags.ActiveProcess = 1;
+
+}
+
+void Run_getInit(unsigned char line) {
+
+getTemp_flags.Init = 1;
+getTemp_flags.Send_Address = 0;
+getTemp_flags.CountAddressBytes = 0;
+getTemp_flags.SendConvertTemp = 0;
+getTemp_flags.PauseValue = 0;
+getTemp_flags.SendGetTemp = 0;
+getTemp_flags.ReadData = 0;
 getTemp_flags.CountDataBytes = 0;
 getTemp_flags.Error = 0;
 getTemp_flags.DataIsRead = 0;
@@ -1702,7 +1655,7 @@ PowerBlocked = 0;
 } else if (KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
 Reset_powerOnInterval();
 
-if (Broadcasting) {
+if (Broadcasting && KeyCode != 34) {
 
 if (KeyCode == 31 && line != 0b00001000) {
 TheStart = 1;
@@ -1722,17 +1675,30 @@ Run_getTemp(line);
 getTemp_flags.ActiveProcess = 0;
 
 address = FindCell((KeyCode == 34 ? ((sizeof(DS_Address)) * 16) : cell * (sizeof(DS_Address))), (KeyCode == 31 ? 1 : 0));
+Broadcasting = address == ((sizeof(DS_Address)) * 16);
 KeyCode = 0;
-
+if (Broadcasting) {
+TheStart = 1;
+} else {
 FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
 cell = address / (sizeof(DS_Address));
-
 CellToInd(cell);
-
+}
 line = 0b00001000;
+Run_getInit(line);
+while(getTemp_flags.ActiveProcess);
 Run_getTemp(line);
 }
 
+} else if (KeyCode == 35) {
+Reset_powerOnInterval();
+KeyCode = 0;
+Broadcasting = 1;
+line = 0b00000010;
+getTemp_flags.ActiveProcess = 0;
+waitInterrupt();
+Run_getTemp(line);
+TheStart = 1;
 } else if (KeyCode == 36) {
 KeyCode = 0;
 if (!TheStart) {
@@ -1755,8 +1721,14 @@ Run_getTemp(line);
 }
 
 if (getTemp_flags.Error) {
+if (Broadcasting) {
+if (line == 0b00000010) {
+line = 0b00001000;
+}
+} else {
 clrInd();
 ShowError();
+}
 Run_getTemp(line);
 } else if (getTemp_flags.DataIsRead) {
 clrInd();

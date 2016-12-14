@@ -20,18 +20,18 @@
 #pragma config CPD = OFF        // Data EE Memory Code Protection bit (Data memory code protection off)
 #pragma config CP = ON          // Flash Program Memory Code Protection bit (0000h to 07FFh code-protected)
 
-__EEPROM_DATA (0x28, 0xFF, 0xA2, 0xD1, 0x64, 0x15, 0x01, 0x00);
-__EEPROM_DATA (0x28, 0xFF, 0xBE, 0xAC, 0x64, 0x15, 0x01, 0x68);
-__EEPROM_DATA (0x28, 0xFF, 0xF8, 0xE7, 0x63, 0x15, 0x02, 0xF1);
-__EEPROM_DATA (0x28, 0xFF, 0xEC, 0x95, 0x63, 0x15, 0x02, 0x3D);
-__EEPROM_DATA (0x28, 0xFF, 0x00, 0x93, 0x63, 0x15, 0x02, 0xCF);
-__EEPROM_DATA (0x28, 0xFF, 0x1D, 0xA8, 0x63, 0x15, 0x02, 0x83);
-__EEPROM_DATA (0x28, 0xFF, 0x29, 0x89, 0x63, 0x15, 0x02, 0xE7);
-__EEPROM_DATA (0x28, 0xFF, 0x2A, 0xA8, 0x63, 0x15, 0x02, 0x56);
-__EEPROM_DATA (0x28, 0xFF, 0xA5, 0xD4, 0x63, 0x15, 0x02, 0x48);
-__EEPROM_DATA (0x28, 0xFF, 0x65, 0xD3, 0x63, 0x15, 0x02, 0xEC);
-__EEPROM_DATA (0x28, 0xFF, 0x13, 0xE7, 0x63, 0x15, 0x02, 0x5B);
-__EEPROM_DATA (0x28, 0xFF, 0x41, 0xA7, 0x63, 0x15, 0x02, 0xAD);
+__EEPROM_DATA(0x28, 0xFF, 0x13, 0xE7, 0x63, 0x15, 0x02, 0x5B); // 11
+__EEPROM_DATA(0x28, 0xFF, 0x29, 0x89, 0x63, 0x15, 0x02, 0xE7); // 7
+__EEPROM_DATA(0x28, 0xFF, 0xF8, 0xE7, 0x63, 0x15, 0x02, 0xF1); // 3
+__EEPROM_DATA(0x28, 0xFF, 0xBE, 0xAC, 0x64, 0x15, 0x01, 0x68); // 2
+__EEPROM_DATA(0x28, 0xFF, 0xEC, 0x95, 0x63, 0x15, 0x02, 0x3D); // 4
+__EEPROM_DATA(0x28, 0xFF, 0x00, 0x93, 0x63, 0x15, 0x02, 0xCF); // 5
+__EEPROM_DATA(0x28, 0xFF, 0x1D, 0xA8, 0x63, 0x15, 0x02, 0x83); // 6
+__EEPROM_DATA(0x28, 0xFF, 0x2A, 0xA8, 0x63, 0x15, 0x02, 0x56); // 8
+__EEPROM_DATA(0x28, 0xFF, 0xA5, 0xD4, 0x63, 0x15, 0x02, 0x48); // 9
+__EEPROM_DATA(0x28, 0xFF, 0x65, 0xD3, 0x63, 0x15, 0x02, 0xEC); // 10
+__EEPROM_DATA(0x28, 0xFF, 0x41, 0xA7, 0x63, 0x15, 0x02, 0xAD); // 12
+__EEPROM_DATA(0x28, 0xFF, 0xA2, 0xD1, 0x64, 0x15, 0x01, 0x00); // 1
 
 volatile unsigned char digits [3];
 volatile unsigned char digits_0 [3];
@@ -291,69 +291,6 @@ unsigned char calc_crc(unsigned char *mas, unsigned char len) {
 }
 
 /* Получаем значение температуры */
-void get_temp() {
-
-	temperature = 72;
-	temp_drob = 0;
-
-	return;
-
-	static bit init;
-	unsigned char temp1 = 0;
-	unsigned char temp2 = 0;
-	init = INIT(FIRST_LINE);
-
-	endInterrupt = 0;
-	while (!endInterrupt);
-
-	if (init) {
-		TX(0xCC, FIRST_LINE);
-		//Send_DS_Address();
-		TX(0x44, FIRST_LINE);
-		__delay_ms(250);
-		__delay_ms(250);
-		__delay_ms(250);
-		__delay_ms(250);
-	}
-
-	endInterrupt = 0;
-	while (!endInterrupt);
-
-	init = INIT(FIRST_LINE);
-
-	endInterrupt = 0;
-	while (!endInterrupt);
-
-	if (init) {
-		Send_DS_Address();
-		TX(0xBE, FIRST_LINE);
-
-		endInterrupt = 0;
-		while (!endInterrupt);
-
-		temp1 = RX(FIRST_LINE);
-		temp2 = RX(FIRST_LINE);
-	}
-	temp_drob = temp1 & 0b00001111; //Записываем дробную часть в отдельную переменную
-	temp_drob = ((temp_drob * 6) + 2) / 10; //Переводим в нужное дробное число
-	temp1 >>= 4;
-	sign = temp2 & 0x80;
-	temp2 <<= 4;
-	temp2 &= 0b01110000;
-	temp2 |= temp1;
-
-	if (sign) {
-		temperature = 127 - temp2;
-		temp_drob = 10 - temp_drob;
-		if (temp_drob == 10) {
-			temp_drob = 0;
-			temperature++;
-		}
-	} else {
-		temperature = temp2;
-	}
-}
-
 void get_temp_Async() {
 
 	if (!getTemp_flags.ActiveProcess) {
@@ -449,6 +386,8 @@ void get_temp_Async() {
 				getTemp_flags.DataIsRead = 1;
 			}
 		}
+	} else {
+		getTemp_flags.ActiveProcess = 0;
 	}
 }
 
@@ -602,7 +541,11 @@ void indData() {
 		setDigit(cd, 32);
 		cd--;
 		dN--;
+	} else if (temperature < 10) {
+		cd--;
+		dN--;
 	}
+
 	unsigned char isPoint = 0;
 	do {
 		unsigned char v = (temperature > 9 ? 1 : 0) + (temperature > 99 ? 1 : 0);
@@ -617,19 +560,10 @@ void indData() {
 
 	if (dN > 0) {
 		cd = dN;
-		if (temp_drob > 99) temp_drob /= 10;
 		if (temp_drob > 9 && dN == 1) temp_drob /= 10;
-		do {
-			unsigned char v = (temp_drob > 9 ? 1 : 0);
-			setDigit(cd - v, temp_drob % 10);
-			temp_drob /= 10;
-			dN--;
-		} while (temp_drob > 0);
-	}
 
-	while (dN > 0) {
-		setDigit(dN, 0);
-		dN--;
+		unsigned char v = (temp_drob > 9 ? 1 : 0);
+		setDigit(cd - v, temp_drob % 10);
 	}
 }
 
@@ -645,12 +579,13 @@ unsigned char ReadCell(unsigned char cell, unsigned char * CellsData) {
 
 void CellToInd(unsigned char cell) {
 	clrInd();
+	cell++;
 
-	if (cell >= 9) {
-		setDigit(3, (1 + cell) / 10);
-		setDigit(2, (1 + cell) % 10);
+	if (cell > 9) {
+		setDigit(3, cell / 10);
+		setDigit(2, cell % 10);
 	} else {
-		setDigit(3, 1 + cell);
+		setDigit(3, cell);
 	}
 
 	refreshInd();
@@ -750,9 +685,27 @@ void Run_getTemp(unsigned char line) {
 	getTemp_flags.Send_Address = 1;
 	getTemp_flags.CountAddressBytes = 0;
 	getTemp_flags.SendConvertTemp = 1;
-	getTemp_flags.PauseValue = 220;
+	getTemp_flags.PauseValue = 120;
 	getTemp_flags.SendGetTemp = 1;
 	getTemp_flags.ReadData = 1;
+	getTemp_flags.CountDataBytes = 0;
+	getTemp_flags.Error = 0;
+	getTemp_flags.DataIsRead = 0;
+	getTemp_flags.Line = line;
+
+	getTemp_flags.ActiveProcess = 1;
+
+}
+
+void Run_getInit(unsigned char line) {
+
+	getTemp_flags.Init = 1;
+	getTemp_flags.Send_Address = 0;
+	getTemp_flags.CountAddressBytes = 0;
+	getTemp_flags.SendConvertTemp = 0;
+	getTemp_flags.PauseValue = 0;
+	getTemp_flags.SendGetTemp = 0;
+	getTemp_flags.ReadData = 0;
 	getTemp_flags.CountDataBytes = 0;
 	getTemp_flags.Error = 0;
 	getTemp_flags.DataIsRead = 0;
@@ -803,7 +756,7 @@ void main() {
 		} else if (KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
 			Reset_powerOnInterval();
 
-			if (Broadcasting) {
+			if (Broadcasting && KeyCode != 34) {
 
 				if (KeyCode == 31 && line != FIRST_LINE) {
 					TheStart = 1;
@@ -823,17 +776,30 @@ void main() {
 				getTemp_flags.ActiveProcess = 0;
 
 				address = FindCell((KeyCode == 34 ? END_OF_CELLS : cell * CELL_CAPACITY), (KeyCode == 31 ? 1 : 0));
+				Broadcasting = address == END_OF_CELLS;
 				KeyCode = 0;
-
-				FillArrayFromEEPROM(DS_Address, address, CELL_CAPACITY);
-				cell = address / CELL_CAPACITY;
-
-				CellToInd(cell);
-
+				if (Broadcasting) {
+					TheStart = 1;
+				} else {
+					FillArrayFromEEPROM(DS_Address, address, CELL_CAPACITY);
+					cell = address / CELL_CAPACITY;
+					CellToInd(cell);
+				}
 				line = FIRST_LINE;
+				Run_getInit(line);
+				while(getTemp_flags.ActiveProcess);
 				Run_getTemp(line);
 			}
 
+		} else if (KeyCode == 35) {
+			Reset_powerOnInterval();
+			KeyCode = 0;
+			Broadcasting = 1;
+			line = SECOND_LINE;
+			getTemp_flags.ActiveProcess = 0;
+			waitInterrupt();
+			Run_getTemp(line);
+			TheStart = 1;
 		} else if (KeyCode == 36) {
 			KeyCode = 0;
 			if (!TheStart) {
@@ -856,8 +822,14 @@ void main() {
 		}
 
 		if (getTemp_flags.Error) {
-			clrInd();
-			ShowError();
+			if (Broadcasting) {
+				if (line == SECOND_LINE) {
+					line = FIRST_LINE;
+				}
+			} else {
+				clrInd();
+				ShowError();
+			}
 			Run_getTemp(line);
 		} else if (getTemp_flags.DataIsRead) {
 			clrInd();
