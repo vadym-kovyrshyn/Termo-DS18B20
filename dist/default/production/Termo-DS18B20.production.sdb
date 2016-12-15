@@ -19,61 +19,61 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"91 C:\Microcontrollers\Termo-DS18B20\prog.c
+"93 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _waitInterrupt waitInterrupt `(v  1 e 1 0 ]
-"96
+"98
 [v _Reset_powerOnInterval Reset_powerOnInterval `(v  1 e 1 0 ]
-"104
+"106
 [v _setDigit setDigit `(v  1 e 1 0 ]
-"108
+"110
 [v _setPoint setPoint `(v  1 e 1 0 ]
-"112
+"114
 [v _refreshInd refreshInd `(v  1 e 1 0 ]
-"118
+"120
 [v _clrInd clrInd `(v  1 e 1 0 ]
-"124
+"126
 [v _ShowError ShowError `(v  1 e 1 0 ]
-"132
+"134
 [v _convDig convDig `(uc  1 e 1 0 ]
-"179
+"181
 [v _EEWR EEWR `(v  1 e 1 0 ]
-"194
+"196
 [v _EERD EERD `(uc  1 e 1 0 ]
-"205
+"207
 [v _FillArrayFromEEPROM FillArrayFromEEPROM `(v  1 e 1 0 ]
-"211
+"213
 [v _WriteArrayToEEPROM WriteArrayToEEPROM `(v  1 e 1 0 ]
-"219
+"221
 [v _INIT INIT `(uc  1 e 1 0 ]
 [v i1_INIT INIT `(uc  1 e 1 0 ]
-"237
+"239
 [v _TX TX `(v  1 e 1 0 ]
 [v i1_TX TX `(v  1 e 1 0 ]
-"260
+"262
 [v _RX RX `(uc  1 e 1 0 ]
 [v i1_RX RX `(uc  1 e 1 0 ]
-"279
+"281
 [v _calc_crc calc_crc `(uc  1 e 1 0 ]
 [v i1_calc_crc calc_crc `(uc  1 e 1 0 ]
-"294
+"296
 [v _get_temp_Async get_temp_Async `(v  1 e 1 0 ]
-"394
+"396
 [v _FindCell FindCell `(uc  1 e 1 0 ]
-"428
+"430
 [v _F F `II(v  1 e 1 0 ]
-"535
+"537
 [v _indData indData `(v  1 e 1 0 ]
-"570
+"576
 [v _ReadCell ReadCell `(uc  1 e 1 0 ]
-"580
+"586
 [v _CellToInd CellToInd `(v  1 e 1 0 ]
-"594
+"600
 [v _EditAddressMemory EditAddressMemory `(v  1 e 1 0 ]
-"682
+"688
 [v _Run_getTemp Run_getTemp `(v  1 e 1 0 ]
-"700
+"706
 [v _Run_getInit Run_getInit `(v  1 e 1 0 ]
-"718
+"724
 [v _main main `(v  1 e 1 0 ]
 "55 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -132,23 +132,23 @@
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
 "1488
 [v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
-"36 C:\Microcontrollers\Termo-DS18B20\prog.c
+"38 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _digits digits `VE[3]uc  1 e 3 0 ]
-"37
+"39
 [v _digits_0 digits_0 `VE[3]uc  1 e 3 0 ]
-"38
-[v _KeyCode KeyCode `VEuc  1 e 1 0 ]
 "40
-[v _digitemp digitemp `uc  1 e 1 0 ]
-"41
-[v _powerOnInterval powerOnInterval `i  1 e 2 0 ]
+[v _KeyCode KeyCode `VEuc  1 e 1 0 ]
 "42
+[v _digitemp digitemp `uc  1 e 1 0 ]
+"43
+[v _powerOnInterval powerOnInterval `i  1 e 2 0 ]
+"44
 [v _PortAData PortAData `DCC[3]uc  1 e 3 0 ]
-"47
-[v _endInterrupt endInterrupt `b  1 e 0 0 ]
-"48
-[v _Broadcasting Broadcasting `b  1 e 0 0 ]
 "49
+[v _endInterrupt endInterrupt `b  1 e 0 0 ]
+"50
+[v _Broadcasting Broadcasting `b  1 e 0 0 ]
+"51
 [v _PowerBlocked PowerBlocked `uc  1 e 1 0 ]
 [s S19 . 6 `uc 1 Init 1 0 :1:0 
 `uc 1 Send_Address 1 0 :1:1 
@@ -162,286 +162,286 @@
 `uc 1 ActiveProcess 1 4 :1:0 
 `uc 1 Line 1 5 :8:0 
 ]
-"64
-[v _getTemp_flags getTemp_flags `S19  1 e 6 0 ]
 "66
+[v _getTemp_flags getTemp_flags `S19  1 e 6 0 ]
+"68
 [v _DS_Address DS_Address `[8]uc  1 e 8 0 ]
-"67
-[v _DS_ReadData DS_ReadData `[9]uc  1 e 9 0 ]
 "69
-[v _temperature temperature `uc  1 e 1 0 ]
-"70
-[v _temp_drob temp_drob `uc  1 e 1 0 ]
+[v _DS_ReadData DS_ReadData `[9]uc  1 e 9 0 ]
 "71
+[v _temperature temperature `uc  1 e 1 0 ]
+"72
+[v _temp_drob temp_drob `uc  1 e 1 0 ]
+"73
 [v _sign sign `uc  1 e 1 0 ]
-"718
+"724
 [v _main main `(v  1 e 1 0 ]
 {
-"739
+"745
 [v main@point_on_ind_delay point_on_ind_delay `ui  1 a 2 14 ]
-"741
+"747
 [v main@line line `uc  1 a 1 21 ]
-"738
+"744
 [v main@address address `uc  1 a 1 20 ]
-"740
+"746
 [v main@TheStart TheStart `uc  1 a 1 19 ]
-"737
+"743
 [v main@cell cell `uc  1 a 1 18 ]
-"854
+"858
 } 0
-"535
+"537
 [v _indData indData `(v  1 e 1 0 ]
 {
-"565
+"571
 [v indData@v_240 v `uc  1 a 1 23 ]
-"551
+"557
 [v indData@v v `uc  1 a 1 25 ]
-"537
+"539
 [v indData@cd cd `uc  1 a 1 27 ]
-"538
+"540
 [v indData@dN dN `uc  1 a 1 26 ]
-"549
+"551
 [v indData@isPoint isPoint `uc  1 a 1 24 ]
-"568
+"574
 } 0
-"682
+"688
 [v _Run_getTemp Run_getTemp `(v  1 e 1 0 ]
 {
 [v Run_getTemp@line line `uc  1 a 1 wreg ]
 [v Run_getTemp@line line `uc  1 a 1 wreg ]
-"684
+"690
 [v Run_getTemp@line line `uc  1 a 1 13 ]
-"698
+"704
 } 0
-"700
+"706
 [v _Run_getInit Run_getInit `(v  1 e 1 0 ]
 {
 [v Run_getInit@line line `uc  1 a 1 wreg ]
 [v Run_getInit@line line `uc  1 a 1 wreg ]
-"702
+"708
 [v Run_getInit@line line `uc  1 a 1 13 ]
-"716
+"722
 } 0
-"96
+"98
 [v _Reset_powerOnInterval Reset_powerOnInterval `(v  1 e 1 0 ]
 {
-"98
+"100
 } 0
-"394
+"396
 [v _FindCell FindCell `(uc  1 e 1 0 ]
 {
 [v FindCell@addressStart addressStart `uc  1 a 1 wreg ]
-"412
+"414
 [v FindCell@i i `uc  1 a 1 33 ]
-"408
+"410
 [v FindCell@CellsData CellsData `[8]uc  1 a 8 22 ]
-"411
+"413
 [v FindCell@CellIsEmpty CellIsEmpty `uc  1 a 1 31 ]
-"398
+"400
 [v FindCell@address address `uc  1 a 1 34 ]
-"399
+"401
 [v FindCell@addressNew addressNew `uc  1 a 1 30 ]
-"394
+"396
 [v FindCell@addressStart addressStart `uc  1 a 1 wreg ]
 [v FindCell@previous previous `uc  1 p 1 21 ]
 [v FindCell@addressStart addressStart `uc  1 a 1 32 ]
-"424
+"426
 } 0
-"594
+"600
 [v _EditAddressMemory EditAddressMemory `(v  1 e 1 0 ]
 {
-"642
+"648
 [v EditAddressMemory@i i `uc  1 a 1 11 ]
-"661
+"667
 [v EditAddressMemory@i_256 i `uc  1 a 1 12 ]
-"603
+"609
 [v EditAddressMemory@CellsData CellsData `[8]uc  1 a 8 0 ]
-"601
+"607
 [v EditAddressMemory@cell cell `uc  1 a 1 13 ]
-"602
+"608
 [v EditAddressMemory@CellIsEmpty CellIsEmpty `uc  1 a 1 10 ]
-"606
+"612
 [v EditAddressMemory@RereadCell RereadCell `uc  1 a 1 9 ]
-"605
+"611
 [v EditAddressMemory@ErrorShowed ErrorShowed `uc  1 a 1 8 ]
-"680
+"686
 } 0
-"108
+"110
 [v _setPoint setPoint `(v  1 e 1 0 ]
 {
 [v setPoint@dignum dignum `uc  1 a 1 wreg ]
 [v setPoint@dignum dignum `uc  1 a 1 wreg ]
 [v setPoint@value value `uc  1 p 1 13 ]
 [v setPoint@dignum dignum `uc  1 a 1 14 ]
-"110
+"112
 } 0
-"279
+"281
 [v _calc_crc calc_crc `(uc  1 e 1 0 ]
 {
 [v calc_crc@mas mas `*.4uc  1 a 1 wreg ]
-"284
+"286
 [v calc_crc@fb fb `uc  1 a 1 15 ]
-"283
+"285
 [v calc_crc@i i `uc  1 a 1 17 ]
-"282
+"284
 [v calc_crc@dat dat `uc  1 a 1 14 ]
-"280
+"282
 [v calc_crc@crc crc `uc  1 a 1 18 ]
-"279
+"281
 [v calc_crc@mas mas `*.4uc  1 a 1 wreg ]
 [v calc_crc@len len `uc  1 p 1 13 ]
 [v calc_crc@mas mas `*.4uc  1 a 1 16 ]
-"291
+"293
 } 0
-"211
+"213
 [v _WriteArrayToEEPROM WriteArrayToEEPROM `(v  1 e 1 0 ]
 {
 [v WriteArrayToEEPROM@container container `*.4uc  1 a 1 wreg ]
-"212
+"214
 [v WriteArrayToEEPROM@i i `uc  1 a 1 20 ]
-"211
+"213
 [v WriteArrayToEEPROM@container container `*.4uc  1 a 1 wreg ]
 [v WriteArrayToEEPROM@address_start address_start `uc  1 p 1 16 ]
 [v WriteArrayToEEPROM@quantity quantity `uc  1 p 1 17 ]
 [v WriteArrayToEEPROM@container container `*.4uc  1 a 1 19 ]
-"216
+"218
 } 0
-"91
+"93
 [v _waitInterrupt waitInterrupt `(v  1 e 1 0 ]
 {
-"94
+"96
 } 0
-"179
+"181
 [v _EEWR EEWR `(v  1 e 1 0 ]
 {
 [v EEWR@address address `uc  1 a 1 wreg ]
-"180
+"182
 [v EEWR@INTCON_BUP INTCON_BUP `VEuc  1 a 1 15 ]
-"179
+"181
 [v EEWR@address address `uc  1 a 1 wreg ]
 [v EEWR@data data `uc  1 p 1 13 ]
 [v EEWR@address address `uc  1 a 1 14 ]
-"192
+"194
 } 0
-"237
+"239
 [v _TX TX `(v  1 e 1 0 ]
 {
 [v TX@cmd cmd `uc  1 a 1 wreg ]
-"238
+"240
 [v TX@One One `uc  1 a 1 19 ]
-"242
+"244
 [v TX@i i `uc  1 a 1 18 ]
-"239
-[v TX@Zero Zero `uc  1 a 1 17 ]
 "241
+[v TX@Zero Zero `uc  1 a 1 17 ]
+"243
 [v TX@temp temp `uc  1 a 1 16 ]
-"237
+"239
 [v TX@cmd cmd `uc  1 a 1 wreg ]
 [v TX@line line `uc  1 p 1 13 ]
 [v TX@cmd cmd `uc  1 a 1 15 ]
-"258
+"260
 } 0
-"124
+"126
 [v _ShowError ShowError `(v  1 e 1 0 ]
 {
-"130
+"132
 } 0
-"570
+"576
 [v _ReadCell ReadCell `(uc  1 e 1 0 ]
 {
 [v ReadCell@cell cell `uc  1 a 1 wreg ]
-"572
+"578
 [v ReadCell@i i `uc  1 a 1 24 ]
-"570
+"576
 [v ReadCell@cell cell `uc  1 a 1 wreg ]
 [v ReadCell@CellsData CellsData `*.4uc  1 p 1 21 ]
 [v ReadCell@cell cell `uc  1 a 1 23 ]
-"578
+"584
 } 0
-"205
+"207
 [v _FillArrayFromEEPROM FillArrayFromEEPROM `(v  1 e 1 0 ]
 {
 [v FillArrayFromEEPROM@container container `*.4uc  1 a 1 wreg ]
-"206
+"208
 [v FillArrayFromEEPROM@i i `uc  1 a 1 20 ]
-"205
+"207
 [v FillArrayFromEEPROM@container container `*.4uc  1 a 1 wreg ]
 [v FillArrayFromEEPROM@address_start address_start `uc  1 p 1 16 ]
 [v FillArrayFromEEPROM@quantity quantity `uc  1 p 1 17 ]
 [v FillArrayFromEEPROM@container container `*.4uc  1 a 1 19 ]
-"209
+"211
 } 0
-"194
+"196
 [v _EERD EERD `(uc  1 e 1 0 ]
 {
 [v EERD@address address `uc  1 a 1 wreg ]
-"196
+"198
 [v EERD@EEDATA_BUP EEDATA_BUP `VEuc  1 a 1 15 ]
-"195
+"197
 [v EERD@INTCON_BUP INTCON_BUP `VEuc  1 a 1 14 ]
-"194
+"196
 [v EERD@address address `uc  1 a 1 wreg ]
 [v EERD@address address `uc  1 a 1 13 ]
-"203
+"205
 } 0
-"260
+"262
 [v _RX RX `(uc  1 e 1 0 ]
 {
 [v RX@line line `uc  1 a 1 wreg ]
-"265
+"267
 [v RX@i i `uc  1 a 1 17 ]
-"261
+"263
 [v RX@One One `uc  1 a 1 18 ]
-"264
+"266
 [v RX@d d `uc  1 a 1 16 ]
-"262
+"264
 [v RX@Zero Zero `uc  1 a 1 15 ]
-"260
+"262
 [v RX@line line `uc  1 a 1 wreg ]
 [v RX@line line `uc  1 a 1 14 ]
-"277
+"279
 } 0
-"219
+"221
 [v _INIT INIT `(uc  1 e 1 0 ]
 {
 [v INIT@line line `uc  1 a 1 wreg ]
-"220
+"222
 [v INIT@One One `uc  1 a 1 17 ]
-"223
+"225
 [v INIT@b b `uc  1 a 1 16 ]
-"221
+"223
 [v INIT@Zero Zero `uc  1 a 1 15 ]
-"219
+"221
 [v INIT@line line `uc  1 a 1 wreg ]
 [v INIT@line line `uc  1 a 1 14 ]
-"235
+"237
 } 0
-"580
+"586
 [v _CellToInd CellToInd `(v  1 e 1 0 ]
 {
 [v CellToInd@cell cell `uc  1 a 1 wreg ]
 [v CellToInd@cell cell `uc  1 a 1 wreg ]
 [v CellToInd@cell cell `uc  1 a 1 22 ]
-"592
+"598
 } 0
-"104
+"106
 [v _setDigit setDigit `(v  1 e 1 0 ]
 {
 [v setDigit@a a `uc  1 a 1 wreg ]
 [v setDigit@a a `uc  1 a 1 wreg ]
 [v setDigit@data data `uc  1 p 1 18 ]
 [v setDigit@a a `uc  1 a 1 21 ]
-"106
+"108
 } 0
-"112
+"114
 [v _refreshInd refreshInd `(v  1 e 1 0 ]
 {
-"116
-} 0
 "118
+} 0
+"120
 [v _clrInd clrInd `(v  1 e 1 0 ]
 {
-"122
+"124
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
@@ -473,43 +473,43 @@
 [v ___lbdiv@dividend dividend `uc  1 a 1 14 ]
 "26
 } 0
-"428 C:\Microcontrollers\Termo-DS18B20\prog.c
+"430 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _F F `II(v  1 e 1 0 ]
 {
-"467
+"469
 [v F@CurrentKeysState CurrentKeysState `uc  1 a 1 12 ]
-"438
+"440
 [v F@dig dig `uc  1 a 1 11 ]
-"430
+"432
 [v F@DigitNumber DigitNumber `uc  1 s 1 DigitNumber ]
-"461
-[v F@KeyTimeCounter KeyTimeCounter `ui  1 s 2 KeyTimeCounter ]
-"462
-[v F@LastKeysState LastKeysState `uc  1 s 1 LastKeysState ]
 "463
-[v F@long_press long_press `uc  1 s 1 long_press ]
+[v F@KeyTimeCounter KeyTimeCounter `ui  1 s 2 KeyTimeCounter ]
 "464
-[v F@ButtonPressTimeIn1 ButtonPressTimeIn1 `uc  1 s 1 ButtonPressTimeIn1 ]
+[v F@LastKeysState LastKeysState `uc  1 s 1 LastKeysState ]
 "465
-[v F@ButtonPressTimeIn2 ButtonPressTimeIn2 `uc  1 s 1 ButtonPressTimeIn2 ]
+[v F@long_press long_press `uc  1 s 1 long_press ]
 "466
+[v F@ButtonPressTimeIn1 ButtonPressTimeIn1 `uc  1 s 1 ButtonPressTimeIn1 ]
+"467
+[v F@ButtonPressTimeIn2 ButtonPressTimeIn2 `uc  1 s 1 ButtonPressTimeIn2 ]
+"468
 [v F@ButtonPressTimeOut ButtonPressTimeOut `uc  1 s 1 ButtonPressTimeOut ]
-"533
+"535
 } 0
-"294
+"296
 [v _get_temp_Async get_temp_Async `(v  1 e 1 0 ]
 {
-"363
+"365
 [v get_temp_Async@temp2 temp2 `uc  1 a 1 4 ]
-"362
+"364
 [v get_temp_Async@temp1 temp1 `uc  1 a 1 3 ]
-"353
+"355
 [v get_temp_Async@i i `uc  1 a 1 2 ]
-"300
+"302
 [v get_temp_Async@line line `uc  1 a 1 5 ]
-"392
+"394
 } 0
-"279
+"281
 [v i1_calc_crc calc_crc `(uc  1 e 1 0 ]
 {
 [v i1calc_crc@mas mas `*.4uc  1 a 1 wreg ]
@@ -520,9 +520,9 @@
 [v i1calc_crc@mas mas `*.4uc  1 a 1 wreg ]
 [v i1calc_crc@len len `uc  1 p 1 0 ]
 [v i1calc_crc@mas mas `*.4uc  1 a 1 1 ]
-"291
+"293
 } 0
-"237
+"239
 [v i1_TX TX `(v  1 e 1 0 ]
 {
 [v i1TX@cmd cmd `uc  1 a 1 wreg ]
@@ -533,9 +533,9 @@
 [v i1TX@cmd cmd `uc  1 a 1 wreg ]
 [v i1TX@line line `uc  1 p 1 0 ]
 [v i1TX@cmd cmd `uc  1 a 1 2 ]
-"258
-} 0
 "260
+} 0
+"262
 [v i1_RX RX `(uc  1 e 1 0 ]
 {
 [v i1RX@line line `uc  1 a 1 wreg ]
@@ -545,9 +545,9 @@
 [v i1RX@Zero RX `uc  1 a 1 2 ]
 [v i1RX@line line `uc  1 a 1 wreg ]
 [v i1RX@line line `uc  1 a 1 1 ]
-"277
+"279
 } 0
-"219
+"221
 [v i1_INIT INIT `(uc  1 e 1 0 ]
 {
 [v i1INIT@line line `uc  1 a 1 wreg ]
@@ -556,7 +556,7 @@
 [v i1INIT@Zero INIT `uc  1 a 1 2 ]
 [v i1INIT@line line `uc  1 a 1 wreg ]
 [v i1INIT@line line `uc  1 a 1 1 ]
-"235
+"237
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -581,11 +581,11 @@
 [v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "42
 } 0
-"132 C:\Microcontrollers\Termo-DS18B20\prog.c
+"134 C:\Microcontrollers\Termo-DS18B20\prog.c
 [v _convDig convDig `(uc  1 e 1 0 ]
 {
 [v convDig@dig dig `uc  1 a 1 wreg ]
 [v convDig@dig dig `uc  1 a 1 wreg ]
 [v convDig@dig dig `uc  1 a 1 0 ]
-"177
+"179
 } 0

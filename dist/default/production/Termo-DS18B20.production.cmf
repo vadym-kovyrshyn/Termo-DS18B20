@@ -11,45 +11,45 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
+$C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 10 10 1 2
 config CONFIG 0 2007 2007 1 2
 $dist/default/production\Termo-DS18B20.production.obj
 cinit CODE 0 11 11 1C 2
-text1 CODE 0 3C8 3C8 5E 2
-text2 CODE 0 6ED 6ED 14 2
-text3 CODE 0 714 714 12 2
-text4 CODE 0 78E 78E 6 2
-text5 CODE 0 426 426 45 2
+text1 CODE 0 3C8 3C8 6B 2
+text2 CODE 0 6FA 6FA 14 2
+text3 CODE 0 721 721 12 2
+text4 CODE 0 79B 79B 6 2
+text5 CODE 0 433 433 45 2
 text6 CODE 0 25F 25F BE 2
-text7 CODE 0 749 749 F 2
-text8 CODE 0 5F0 5F0 21 2
-text9 CODE 0 701 701 13 2
-text10 CODE 0 79A 79A 5 2
-text11 CODE 0 6D5 6D5 18 2
-text12 CODE 0 4E8 4E8 34 2
-text13 CODE 0 767 767 E 2
-text14 CODE 0 632 632 1C 2
-text15 CODE 0 738 738 11 2
-text16 CODE 0 758 758 F 2
-text17 CODE 0 57D 57D 2A 2
-text18 CODE 0 4B0 4B0 38 2
-text19 CODE 0 686 686 1B 2
-text20 CODE 0 726 726 12 2
-text21 CODE 0 786 786 8 2
-text22 CODE 0 794 794 6 2
-text23 CODE 0 64E 64E 1C 2
-text24 CODE 0 6A1 6A1 1B 2
+text7 CODE 0 756 756 F 2
+text8 CODE 0 5FD 5FD 21 2
+text9 CODE 0 70E 70E 13 2
+text10 CODE 0 7A7 7A7 5 2
+text11 CODE 0 6E2 6E2 18 2
+text12 CODE 0 4F5 4F5 34 2
+text13 CODE 0 774 774 E 2
+text14 CODE 0 63F 63F 1C 2
+text15 CODE 0 745 745 11 2
+text16 CODE 0 765 765 F 2
+text17 CODE 0 58A 58A 2A 2
+text18 CODE 0 4BD 4BD 38 2
+text19 CODE 0 693 693 1B 2
+text20 CODE 0 733 733 12 2
+text21 CODE 0 793 793 8 2
+text22 CODE 0 7A1 7A1 6 2
+text23 CODE 0 65B 65B 1C 2
+text24 CODE 0 6AE 6AE 1B 2
 text25 CODE 0 31D 31D AB 2
 text26 CODE 0 15D 15D 102 2
-text27 CODE 0 5CE 5CE 22 2
-text28 CODE 0 54D 54D 30 2
-text29 CODE 0 5A7 5A7 27 2
-text30 CODE 0 51C 51C 31 2
-text31 CODE 0 6BC 6BC 19 2
-text32 CODE 0 46B 46B 45 2
-text33 CODE 0 66A 66A 1C 2
+text27 CODE 0 5DB 5DB 22 2
+text28 CODE 0 55A 55A 30 2
+text29 CODE 0 5B4 5B4 27 2
+text30 CODE 0 529 529 31 2
+text31 CODE 0 6C9 6C9 19 2
+text32 CODE 0 478 478 45 2
+text33 CODE 0 677 677 1C 2
 nvBANK0 BANK0 1 5D 5D 3 1
 maintext CODE 0 2D 2D 130 2
 cstackCOMMON COMMON 1 70 70 E 1
@@ -58,11 +58,10 @@ cstackBANK1 BANK1 1 A0 A0 16 1
 bitbssBANK0 BANK0 1 300 60 2 1
 intentry CODE 0 4 4 C 2
 bssBANK0 BANK0 1 44 44 19 1
-strings STRING 0 775 775 9 2
-eeprom_data EEDATA 3 0 2100 60 2
-swtext1 CONST 0 611 611 21 2
+strings STRING 0 782 782 9 2
+swtext1 CONST 0 61E 61E 21 2
 dataBANK1 BANK1 1 B6 B6 11 1
-clrtext CODE 0 77E 77E 8 2
+clrtext CODE 0 78B 78B 8 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -76,22 +75,22 @@ BANK0 61-6F 1
 BANK1 C7-EF 1
 BANK2 120-14F 1
 CONST 1-3 2
-CONST 79F-7FF 2
+CONST 7AC-7FF 2
 ENTRY 1-3 2
-ENTRY 79F-7FF 2
+ENTRY 7AC-7FF 2
 IDLOC 2000-2003 2
 STACK 120-14F 1
 CODE 1-3 2
-CODE 79F-7FF 2
+CODE 7AC-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
 SFR3 180-1EF 1
-EEDATA 2160-217F 2
+EEDATA 2100-217F 2
 STRCODE 1-3 2
-STRCODE 79F-7FF 2
+STRCODE 7AC-7FF 2
 STRING 1-3 2
-STRING 79F-7FF 2
+STRING 7AC-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -106,700 +105,702 @@ STRING 79F-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Termo-DS18B20.production.obj
-11 cinit CODE >363:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-11 cinit CODE >366:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-11 cinit CODE >67:C:\Microcontrollers\Termo-DS18B20\prog.c
-12 cinit CODE >443:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-13 cinit CODE >445:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-14 cinit CODE >447:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-15 cinit CODE >449:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-16 cinit CODE >451:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-17 cinit CODE >453:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-18 cinit CODE >455:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-19 cinit CODE >457:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1A cinit CODE >459:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1B cinit CODE >461:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1C cinit CODE >463:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1D cinit CODE >465:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1E cinit CODE >467:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-1F cinit CODE >469:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-20 cinit CODE >471:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-21 cinit CODE >473:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-22 cinit CODE >475:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-23 cinit CODE >477:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-24 cinit CODE >497:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-25 cinit CODE >496:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-26 cinit CODE >498:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-27 cinit CODE >499:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-28 cinit CODE >500:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-29 cinit CODE >503:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-2A cinit CODE >504:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-2B cinit CODE >510:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-2B cinit CODE >512:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-2C cinit CODE >513:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-4 intentry CODE >428:C:\Microcontrollers\Termo-DS18B20\prog.c
-611 swtext1 CONST >133:C:\Microcontrollers\Termo-DS18B20\prog.c
-66A text33 CODE >132:C:\Microcontrollers\Termo-DS18B20\prog.c
-66B text33 CODE >133:C:\Microcontrollers\Termo-DS18B20\prog.c
-66C text33 CODE >134:C:\Microcontrollers\Termo-DS18B20\prog.c
-66D text33 CODE >135:C:\Microcontrollers\Termo-DS18B20\prog.c
-66E text33 CODE >136:C:\Microcontrollers\Termo-DS18B20\prog.c
-66F text33 CODE >137:C:\Microcontrollers\Termo-DS18B20\prog.c
-670 text33 CODE >138:C:\Microcontrollers\Termo-DS18B20\prog.c
-671 text33 CODE >139:C:\Microcontrollers\Termo-DS18B20\prog.c
-672 text33 CODE >140:C:\Microcontrollers\Termo-DS18B20\prog.c
-673 text33 CODE >141:C:\Microcontrollers\Termo-DS18B20\prog.c
-674 text33 CODE >142:C:\Microcontrollers\Termo-DS18B20\prog.c
-675 text33 CODE >143:C:\Microcontrollers\Termo-DS18B20\prog.c
-676 text33 CODE >150:C:\Microcontrollers\Termo-DS18B20\prog.c
-677 text33 CODE >162:C:\Microcontrollers\Termo-DS18B20\prog.c
-678 text33 CODE >173:C:\Microcontrollers\Termo-DS18B20\prog.c
-679 text33 CODE >175:C:\Microcontrollers\Termo-DS18B20\prog.c
-67A text33 CODE >133:C:\Microcontrollers\Termo-DS18B20\prog.c
-685 text33 CODE >177:C:\Microcontrollers\Termo-DS18B20\prog.c
-46B text32 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-46B text32 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-46C text32 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-46E text32 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-473 text32 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-475 text32 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-477 text32 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-47C text32 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-47E text32 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-480 text32 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-484 text32 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-485 text32 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-485 text32 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-486 text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-488 text32 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-48B text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-48C text32 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-48F text32 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-497 text32 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-49D text32 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-49E text32 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-4A1 text32 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-4A3 text32 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-4A6 text32 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-4AB text32 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-4AF text32 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
-6BC text31 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6BC text31 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6BE text31 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6C0 text31 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6C6 text31 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6C9 text31 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6CC text31 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6D0 text31 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-6D4 text31 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
-51C text30 CODE >219:C:\Microcontrollers\Termo-DS18B20\prog.c
-51D text30 CODE >220:C:\Microcontrollers\Termo-DS18B20\prog.c
-51E text30 CODE >221:C:\Microcontrollers\Termo-DS18B20\prog.c
-520 text30 CODE >225:C:\Microcontrollers\Termo-DS18B20\prog.c
-523 text30 CODE >226:C:\Microcontrollers\Termo-DS18B20\prog.c
-528 text30 CODE >227:C:\Microcontrollers\Termo-DS18B20\prog.c
-52C text30 CODE >228:C:\Microcontrollers\Termo-DS18B20\prog.c
-531 text30 CODE >229:C:\Microcontrollers\Termo-DS18B20\prog.c
-535 text30 CODE >230:C:\Microcontrollers\Termo-DS18B20\prog.c
-53A text30 CODE >231:C:\Microcontrollers\Termo-DS18B20\prog.c
-544 text30 CODE >232:C:\Microcontrollers\Termo-DS18B20\prog.c
-549 text30 CODE >234:C:\Microcontrollers\Termo-DS18B20\prog.c
-5A7 text29 CODE >260:C:\Microcontrollers\Termo-DS18B20\prog.c
-5A8 text29 CODE >261:C:\Microcontrollers\Termo-DS18B20\prog.c
-5A9 text29 CODE >262:C:\Microcontrollers\Termo-DS18B20\prog.c
-5AB text29 CODE >264:C:\Microcontrollers\Termo-DS18B20\prog.c
-5AC text29 CODE >265:C:\Microcontrollers\Termo-DS18B20\prog.c
-5AD text29 CODE >266:C:\Microcontrollers\Termo-DS18B20\prog.c
-5B1 text29 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
-5B4 text29 CODE >268:C:\Microcontrollers\Termo-DS18B20\prog.c
-5B8 text29 CODE >269:C:\Microcontrollers\Termo-DS18B20\prog.c
-5BA text29 CODE >270:C:\Microcontrollers\Termo-DS18B20\prog.c
-5BC text29 CODE >271:C:\Microcontrollers\Termo-DS18B20\prog.c
-5C1 text29 CODE >272:C:\Microcontrollers\Termo-DS18B20\prog.c
-5C2 text29 CODE >274:C:\Microcontrollers\Termo-DS18B20\prog.c
-5C7 text29 CODE >265:C:\Microcontrollers\Termo-DS18B20\prog.c
-5CC text29 CODE >276:C:\Microcontrollers\Termo-DS18B20\prog.c
-5CD text29 CODE >277:C:\Microcontrollers\Termo-DS18B20\prog.c
-54D text28 CODE >237:C:\Microcontrollers\Termo-DS18B20\prog.c
-54E text28 CODE >238:C:\Microcontrollers\Termo-DS18B20\prog.c
-550 text28 CODE >239:C:\Microcontrollers\Termo-DS18B20\prog.c
-552 text28 CODE >242:C:\Microcontrollers\Termo-DS18B20\prog.c
-553 text28 CODE >243:C:\Microcontrollers\Termo-DS18B20\prog.c
-555 text28 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-556 text28 CODE >245:C:\Microcontrollers\Termo-DS18B20\prog.c
-558 text28 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
-559 text28 CODE >247:C:\Microcontrollers\Termo-DS18B20\prog.c
-55C text28 CODE >248:C:\Microcontrollers\Termo-DS18B20\prog.c
-55D text28 CODE >249:C:\Microcontrollers\Termo-DS18B20\prog.c
-561 text28 CODE >250:C:\Microcontrollers\Termo-DS18B20\prog.c
-562 text28 CODE >251:C:\Microcontrollers\Termo-DS18B20\prog.c
-563 text28 CODE >252:C:\Microcontrollers\Termo-DS18B20\prog.c
-568 text28 CODE >254:C:\Microcontrollers\Termo-DS18B20\prog.c
-56B text28 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-56B text28 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
-56C text28 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
-56E text28 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-5CE text27 CODE >279:C:\Microcontrollers\Termo-DS18B20\prog.c
-5CF text27 CODE >280:C:\Microcontrollers\Termo-DS18B20\prog.c
-5D0 text27 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
-5D1 text27 CODE >282:C:\Microcontrollers\Termo-DS18B20\prog.c
-5D7 text27 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
-5D8 text27 CODE >284:C:\Microcontrollers\Termo-DS18B20\prog.c
-5DD text27 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
-5DF text27 CODE >286:C:\Microcontrollers\Termo-DS18B20\prog.c
-5E1 text27 CODE >287:C:\Microcontrollers\Termo-DS18B20\prog.c
-5E6 text27 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
-5EB text27 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
-5EE text27 CODE >290:C:\Microcontrollers\Termo-DS18B20\prog.c
-5EF text27 CODE >291:C:\Microcontrollers\Termo-DS18B20\prog.c
-15D text26 CODE >294:C:\Microcontrollers\Termo-DS18B20\prog.c
+11 cinit CODE >315:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+11 cinit CODE >318:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+11 cinit CODE >69:C:\Microcontrollers\Termo-DS18B20\prog.c
+12 cinit CODE >395:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+13 cinit CODE >397:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+14 cinit CODE >399:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+15 cinit CODE >401:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+16 cinit CODE >403:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+17 cinit CODE >405:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+18 cinit CODE >407:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+19 cinit CODE >409:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1A cinit CODE >411:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1B cinit CODE >413:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1C cinit CODE >415:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1D cinit CODE >417:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1E cinit CODE >419:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+1F cinit CODE >421:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+20 cinit CODE >423:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+21 cinit CODE >425:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+22 cinit CODE >427:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+23 cinit CODE >429:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+24 cinit CODE >449:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+25 cinit CODE >448:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+26 cinit CODE >450:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+27 cinit CODE >451:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+28 cinit CODE >452:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+29 cinit CODE >455:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+2A cinit CODE >456:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+2B cinit CODE >462:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+2B cinit CODE >464:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+2C cinit CODE >465:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+4 intentry CODE >430:C:\Microcontrollers\Termo-DS18B20\prog.c
+61E swtext1 CONST >135:C:\Microcontrollers\Termo-DS18B20\prog.c
+677 text33 CODE >134:C:\Microcontrollers\Termo-DS18B20\prog.c
+678 text33 CODE >135:C:\Microcontrollers\Termo-DS18B20\prog.c
+679 text33 CODE >136:C:\Microcontrollers\Termo-DS18B20\prog.c
+67A text33 CODE >137:C:\Microcontrollers\Termo-DS18B20\prog.c
+67B text33 CODE >138:C:\Microcontrollers\Termo-DS18B20\prog.c
+67C text33 CODE >139:C:\Microcontrollers\Termo-DS18B20\prog.c
+67D text33 CODE >140:C:\Microcontrollers\Termo-DS18B20\prog.c
+67E text33 CODE >141:C:\Microcontrollers\Termo-DS18B20\prog.c
+67F text33 CODE >142:C:\Microcontrollers\Termo-DS18B20\prog.c
+680 text33 CODE >143:C:\Microcontrollers\Termo-DS18B20\prog.c
+681 text33 CODE >144:C:\Microcontrollers\Termo-DS18B20\prog.c
+682 text33 CODE >145:C:\Microcontrollers\Termo-DS18B20\prog.c
+683 text33 CODE >152:C:\Microcontrollers\Termo-DS18B20\prog.c
+684 text33 CODE >164:C:\Microcontrollers\Termo-DS18B20\prog.c
+685 text33 CODE >175:C:\Microcontrollers\Termo-DS18B20\prog.c
+686 text33 CODE >177:C:\Microcontrollers\Termo-DS18B20\prog.c
+687 text33 CODE >135:C:\Microcontrollers\Termo-DS18B20\prog.c
+692 text33 CODE >179:C:\Microcontrollers\Termo-DS18B20\prog.c
+478 text32 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+478 text32 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+479 text32 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+47B text32 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+480 text32 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+482 text32 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+484 text32 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+489 text32 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+48B text32 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+48D text32 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+491 text32 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+492 text32 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+492 text32 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+493 text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+495 text32 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+498 text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+499 text32 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+49C text32 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4A4 text32 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4AA text32 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4AB text32 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4AE text32 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4B0 text32 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4B3 text32 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4B8 text32 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+4BC text32 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+6C9 text31 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6C9 text31 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6CB text31 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6CD text31 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6D3 text31 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6D6 text31 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6D9 text31 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6DD text31 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+6E1 text31 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+529 text30 CODE >221:C:\Microcontrollers\Termo-DS18B20\prog.c
+52A text30 CODE >222:C:\Microcontrollers\Termo-DS18B20\prog.c
+52B text30 CODE >223:C:\Microcontrollers\Termo-DS18B20\prog.c
+52D text30 CODE >227:C:\Microcontrollers\Termo-DS18B20\prog.c
+530 text30 CODE >228:C:\Microcontrollers\Termo-DS18B20\prog.c
+535 text30 CODE >229:C:\Microcontrollers\Termo-DS18B20\prog.c
+539 text30 CODE >230:C:\Microcontrollers\Termo-DS18B20\prog.c
+53E text30 CODE >231:C:\Microcontrollers\Termo-DS18B20\prog.c
+542 text30 CODE >232:C:\Microcontrollers\Termo-DS18B20\prog.c
+547 text30 CODE >233:C:\Microcontrollers\Termo-DS18B20\prog.c
+551 text30 CODE >234:C:\Microcontrollers\Termo-DS18B20\prog.c
+556 text30 CODE >236:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B4 text29 CODE >262:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B5 text29 CODE >263:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B6 text29 CODE >264:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B8 text29 CODE >266:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B9 text29 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
+5BA text29 CODE >268:C:\Microcontrollers\Termo-DS18B20\prog.c
+5BE text29 CODE >269:C:\Microcontrollers\Termo-DS18B20\prog.c
+5C1 text29 CODE >270:C:\Microcontrollers\Termo-DS18B20\prog.c
+5C5 text29 CODE >271:C:\Microcontrollers\Termo-DS18B20\prog.c
+5C7 text29 CODE >272:C:\Microcontrollers\Termo-DS18B20\prog.c
+5C9 text29 CODE >273:C:\Microcontrollers\Termo-DS18B20\prog.c
+5CE text29 CODE >274:C:\Microcontrollers\Termo-DS18B20\prog.c
+5CF text29 CODE >276:C:\Microcontrollers\Termo-DS18B20\prog.c
+5D4 text29 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
+5D9 text29 CODE >278:C:\Microcontrollers\Termo-DS18B20\prog.c
+5DA text29 CODE >279:C:\Microcontrollers\Termo-DS18B20\prog.c
+55A text28 CODE >239:C:\Microcontrollers\Termo-DS18B20\prog.c
+55B text28 CODE >240:C:\Microcontrollers\Termo-DS18B20\prog.c
+55D text28 CODE >241:C:\Microcontrollers\Termo-DS18B20\prog.c
+55F text28 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
+560 text28 CODE >245:C:\Microcontrollers\Termo-DS18B20\prog.c
+562 text28 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+563 text28 CODE >247:C:\Microcontrollers\Termo-DS18B20\prog.c
+565 text28 CODE >248:C:\Microcontrollers\Termo-DS18B20\prog.c
+566 text28 CODE >249:C:\Microcontrollers\Termo-DS18B20\prog.c
+569 text28 CODE >250:C:\Microcontrollers\Termo-DS18B20\prog.c
+56A text28 CODE >251:C:\Microcontrollers\Termo-DS18B20\prog.c
+56E text28 CODE >252:C:\Microcontrollers\Termo-DS18B20\prog.c
+56F text28 CODE >253:C:\Microcontrollers\Termo-DS18B20\prog.c
+570 text28 CODE >254:C:\Microcontrollers\Termo-DS18B20\prog.c
+575 text28 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
+578 text28 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+578 text28 CODE >258:C:\Microcontrollers\Termo-DS18B20\prog.c
+579 text28 CODE >258:C:\Microcontrollers\Termo-DS18B20\prog.c
+57B text28 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+5DB text27 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
+5DC text27 CODE >282:C:\Microcontrollers\Termo-DS18B20\prog.c
+5DD text27 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
+5DE text27 CODE >284:C:\Microcontrollers\Termo-DS18B20\prog.c
+5E4 text27 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
+5E5 text27 CODE >286:C:\Microcontrollers\Termo-DS18B20\prog.c
+5EA text27 CODE >287:C:\Microcontrollers\Termo-DS18B20\prog.c
+5EC text27 CODE >288:C:\Microcontrollers\Termo-DS18B20\prog.c
+5EE text27 CODE >289:C:\Microcontrollers\Termo-DS18B20\prog.c
+5F3 text27 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
+5F8 text27 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
+5FB text27 CODE >292:C:\Microcontrollers\Termo-DS18B20\prog.c
+5FC text27 CODE >293:C:\Microcontrollers\Termo-DS18B20\prog.c
 15D text26 CODE >296:C:\Microcontrollers\Termo-DS18B20\prog.c
-15F text26 CODE >300:C:\Microcontrollers\Termo-DS18B20\prog.c
-161 text26 CODE >303:C:\Microcontrollers\Termo-DS18B20\prog.c
-163 text26 CODE >304:C:\Microcontrollers\Termo-DS18B20\prog.c
-166 text26 CODE >305:C:\Microcontrollers\Termo-DS18B20\prog.c
-168 text26 CODE >304:C:\Microcontrollers\Termo-DS18B20\prog.c
-16A text26 CODE >308:C:\Microcontrollers\Termo-DS18B20\prog.c
-16B text26 CODE >305:C:\Microcontrollers\Termo-DS18B20\prog.c
-16C text26 CODE >307:C:\Microcontrollers\Termo-DS18B20\prog.c
-16D text26 CODE >308:C:\Microcontrollers\Termo-DS18B20\prog.c
-16E text26 CODE >309:C:\Microcontrollers\Termo-DS18B20\prog.c
-16F text26 CODE >310:C:\Microcontrollers\Termo-DS18B20\prog.c
-170 text26 CODE >311:C:\Microcontrollers\Termo-DS18B20\prog.c
-172 text26 CODE >313:C:\Microcontrollers\Termo-DS18B20\prog.c
+15D text26 CODE >298:C:\Microcontrollers\Termo-DS18B20\prog.c
+15F text26 CODE >302:C:\Microcontrollers\Termo-DS18B20\prog.c
+161 text26 CODE >305:C:\Microcontrollers\Termo-DS18B20\prog.c
+163 text26 CODE >306:C:\Microcontrollers\Termo-DS18B20\prog.c
+166 text26 CODE >307:C:\Microcontrollers\Termo-DS18B20\prog.c
+168 text26 CODE >306:C:\Microcontrollers\Termo-DS18B20\prog.c
+16A text26 CODE >310:C:\Microcontrollers\Termo-DS18B20\prog.c
+16B text26 CODE >307:C:\Microcontrollers\Termo-DS18B20\prog.c
+16C text26 CODE >309:C:\Microcontrollers\Termo-DS18B20\prog.c
+16D text26 CODE >310:C:\Microcontrollers\Termo-DS18B20\prog.c
+16E text26 CODE >311:C:\Microcontrollers\Termo-DS18B20\prog.c
+16F text26 CODE >312:C:\Microcontrollers\Termo-DS18B20\prog.c
+170 text26 CODE >313:C:\Microcontrollers\Termo-DS18B20\prog.c
 172 text26 CODE >315:C:\Microcontrollers\Termo-DS18B20\prog.c
-174 text26 CODE >316:C:\Microcontrollers\Termo-DS18B20\prog.c
-176 text26 CODE >317:C:\Microcontrollers\Termo-DS18B20\prog.c
-17A text26 CODE >318:C:\Microcontrollers\Termo-DS18B20\prog.c
-180 text26 CODE >319:C:\Microcontrollers\Termo-DS18B20\prog.c
-181 text26 CODE >320:C:\Microcontrollers\Termo-DS18B20\prog.c
-18B text26 CODE >321:C:\Microcontrollers\Termo-DS18B20\prog.c
-191 text26 CODE >322:C:\Microcontrollers\Termo-DS18B20\prog.c
-195 text26 CODE >324:C:\Microcontrollers\Termo-DS18B20\prog.c
-1A2 text26 CODE >325:C:\Microcontrollers\Termo-DS18B20\prog.c
-1AB text26 CODE >327:C:\Microcontrollers\Termo-DS18B20\prog.c
-1B3 text26 CODE >331:C:\Microcontrollers\Termo-DS18B20\prog.c
+172 text26 CODE >317:C:\Microcontrollers\Termo-DS18B20\prog.c
+174 text26 CODE >318:C:\Microcontrollers\Termo-DS18B20\prog.c
+176 text26 CODE >319:C:\Microcontrollers\Termo-DS18B20\prog.c
+17A text26 CODE >320:C:\Microcontrollers\Termo-DS18B20\prog.c
+180 text26 CODE >321:C:\Microcontrollers\Termo-DS18B20\prog.c
+181 text26 CODE >322:C:\Microcontrollers\Termo-DS18B20\prog.c
+18B text26 CODE >323:C:\Microcontrollers\Termo-DS18B20\prog.c
+191 text26 CODE >324:C:\Microcontrollers\Termo-DS18B20\prog.c
+195 text26 CODE >326:C:\Microcontrollers\Termo-DS18B20\prog.c
+1A2 text26 CODE >327:C:\Microcontrollers\Termo-DS18B20\prog.c
+1AB text26 CODE >329:C:\Microcontrollers\Termo-DS18B20\prog.c
 1B3 text26 CODE >333:C:\Microcontrollers\Termo-DS18B20\prog.c
-1B5 text26 CODE >334:C:\Microcontrollers\Termo-DS18B20\prog.c
-1B9 text26 CODE >335:C:\Microcontrollers\Termo-DS18B20\prog.c
-1BC text26 CODE >337:C:\Microcontrollers\Termo-DS18B20\prog.c
-1BD text26 CODE >339:C:\Microcontrollers\Termo-DS18B20\prog.c
-1C1 text26 CODE >340:C:\Microcontrollers\Termo-DS18B20\prog.c
-1C7 text26 CODE >341:C:\Microcontrollers\Termo-DS18B20\prog.c
-1CA text26 CODE >342:C:\Microcontrollers\Termo-DS18B20\prog.c
-1CC text26 CODE >344:C:\Microcontrollers\Termo-DS18B20\prog.c
+1B3 text26 CODE >335:C:\Microcontrollers\Termo-DS18B20\prog.c
+1B5 text26 CODE >336:C:\Microcontrollers\Termo-DS18B20\prog.c
+1B9 text26 CODE >337:C:\Microcontrollers\Termo-DS18B20\prog.c
+1BC text26 CODE >339:C:\Microcontrollers\Termo-DS18B20\prog.c
+1BD text26 CODE >341:C:\Microcontrollers\Termo-DS18B20\prog.c
+1C1 text26 CODE >342:C:\Microcontrollers\Termo-DS18B20\prog.c
+1C7 text26 CODE >343:C:\Microcontrollers\Termo-DS18B20\prog.c
+1CA text26 CODE >344:C:\Microcontrollers\Termo-DS18B20\prog.c
 1CC text26 CODE >346:C:\Microcontrollers\Termo-DS18B20\prog.c
-1CE text26 CODE >347:C:\Microcontrollers\Termo-DS18B20\prog.c
-1D2 text26 CODE >348:C:\Microcontrollers\Termo-DS18B20\prog.c
-1D5 text26 CODE >349:C:\Microcontrollers\Termo-DS18B20\prog.c
-1D6 text26 CODE >351:C:\Microcontrollers\Termo-DS18B20\prog.c
-1D8 text26 CODE >352:C:\Microcontrollers\Termo-DS18B20\prog.c
-1DB text26 CODE >353:C:\Microcontrollers\Termo-DS18B20\prog.c
-1E0 text26 CODE >354:C:\Microcontrollers\Termo-DS18B20\prog.c
-1EA text26 CODE >355:C:\Microcontrollers\Termo-DS18B20\prog.c
-1F3 text26 CODE >353:C:\Microcontrollers\Termo-DS18B20\prog.c
-1F8 text26 CODE >357:C:\Microcontrollers\Termo-DS18B20\prog.c
-1FF text26 CODE >358:C:\Microcontrollers\Termo-DS18B20\prog.c
-207 text26 CODE >359:C:\Microcontrollers\Termo-DS18B20\prog.c
-209 text26 CODE >360:C:\Microcontrollers\Termo-DS18B20\prog.c
-20A text26 CODE >362:C:\Microcontrollers\Termo-DS18B20\prog.c
-20D text26 CODE >363:C:\Microcontrollers\Termo-DS18B20\prog.c
-211 text26 CODE >365:C:\Microcontrollers\Termo-DS18B20\prog.c
-215 text26 CODE >366:C:\Microcontrollers\Termo-DS18B20\prog.c
-22A text26 CODE >367:C:\Microcontrollers\Termo-DS18B20\prog.c
-22D text26 CODE >368:C:\Microcontrollers\Termo-DS18B20\prog.c
-231 text26 CODE >369:C:\Microcontrollers\Termo-DS18B20\prog.c
-234 text26 CODE >370:C:\Microcontrollers\Termo-DS18B20\prog.c
-236 text26 CODE >371:C:\Microcontrollers\Termo-DS18B20\prog.c
-238 text26 CODE >373:C:\Microcontrollers\Termo-DS18B20\prog.c
-23B text26 CODE >374:C:\Microcontrollers\Termo-DS18B20\prog.c
-23E text26 CODE >375:C:\Microcontrollers\Termo-DS18B20\prog.c
-241 text26 CODE >376:C:\Microcontrollers\Termo-DS18B20\prog.c
-244 text26 CODE >377:C:\Microcontrollers\Termo-DS18B20\prog.c
-245 text26 CODE >378:C:\Microcontrollers\Termo-DS18B20\prog.c
-247 text26 CODE >381:C:\Microcontrollers\Termo-DS18B20\prog.c
-249 text26 CODE >384:C:\Microcontrollers\Termo-DS18B20\prog.c
-24A text26 CODE >385:C:\Microcontrollers\Termo-DS18B20\prog.c
-24B text26 CODE >386:C:\Microcontrollers\Termo-DS18B20\prog.c
-24D text26 CODE >389:C:\Microcontrollers\Termo-DS18B20\prog.c
-24D text26 CODE >390:C:\Microcontrollers\Termo-DS18B20\prog.c
-24E text26 CODE >392:C:\Microcontrollers\Termo-DS18B20\prog.c
-31D text25 CODE >428:C:\Microcontrollers\Termo-DS18B20\prog.c
-31D text25 CODE >429:C:\Microcontrollers\Termo-DS18B20\prog.c
-31F text25 CODE >432:C:\Microcontrollers\Termo-DS18B20\prog.c
-320 text25 CODE >39:C:\Microcontrollers\Termo-DS18B20\prog.c
-322 text25 CODE >435:C:\Microcontrollers\Termo-DS18B20\prog.c
-325 text25 CODE >436:C:\Microcontrollers\Termo-DS18B20\prog.c
-326 text25 CODE >438:C:\Microcontrollers\Termo-DS18B20\prog.c
-32C text25 CODE >439:C:\Microcontrollers\Termo-DS18B20\prog.c
-32F text25 CODE >445:C:\Microcontrollers\Termo-DS18B20\prog.c
-334 text25 CODE >447:C:\Microcontrollers\Termo-DS18B20\prog.c
-335 text25 CODE >448:C:\Microcontrollers\Termo-DS18B20\prog.c
-33F text25 CODE >450:C:\Microcontrollers\Termo-DS18B20\prog.c
-341 text25 CODE >452:C:\Microcontrollers\Termo-DS18B20\prog.c
-342 text25 CODE >453:C:\Microcontrollers\Termo-DS18B20\prog.c
-346 text25 CODE >454:C:\Microcontrollers\Termo-DS18B20\prog.c
-349 text25 CODE >455:C:\Microcontrollers\Termo-DS18B20\prog.c
-34C text25 CODE >458:C:\Microcontrollers\Termo-DS18B20\prog.c
-350 text25 CODE >467:C:\Microcontrollers\Termo-DS18B20\prog.c
-352 text25 CODE >469:C:\Microcontrollers\Termo-DS18B20\prog.c
-355 text25 CODE >470:C:\Microcontrollers\Termo-DS18B20\prog.c
-356 text25 CODE >471:C:\Microcontrollers\Termo-DS18B20\prog.c
-357 text25 CODE >473:C:\Microcontrollers\Termo-DS18B20\prog.c
-358 text25 CODE >475:C:\Microcontrollers\Termo-DS18B20\prog.c
-35A text25 CODE >477:C:\Microcontrollers\Termo-DS18B20\prog.c
-35B text25 CODE >476:C:\Microcontrollers\Termo-DS18B20\prog.c
-35C text25 CODE >477:C:\Microcontrollers\Termo-DS18B20\prog.c
-35D text25 CODE >478:C:\Microcontrollers\Termo-DS18B20\prog.c
-35E text25 CODE >479:C:\Microcontrollers\Termo-DS18B20\prog.c
-361 text25 CODE >480:C:\Microcontrollers\Termo-DS18B20\prog.c
-362 text25 CODE >481:C:\Microcontrollers\Termo-DS18B20\prog.c
-363 text25 CODE >482:C:\Microcontrollers\Termo-DS18B20\prog.c
-364 text25 CODE >486:C:\Microcontrollers\Termo-DS18B20\prog.c
-366 text25 CODE >488:C:\Microcontrollers\Termo-DS18B20\prog.c
-367 text25 CODE >487:C:\Microcontrollers\Termo-DS18B20\prog.c
-368 text25 CODE >488:C:\Microcontrollers\Termo-DS18B20\prog.c
-369 text25 CODE >489:C:\Microcontrollers\Termo-DS18B20\prog.c
-36A text25 CODE >490:C:\Microcontrollers\Termo-DS18B20\prog.c
-36D text25 CODE >491:C:\Microcontrollers\Termo-DS18B20\prog.c
-36E text25 CODE >492:C:\Microcontrollers\Termo-DS18B20\prog.c
-36F text25 CODE >493:C:\Microcontrollers\Termo-DS18B20\prog.c
-370 text25 CODE >497:C:\Microcontrollers\Termo-DS18B20\prog.c
-37E text25 CODE >498:C:\Microcontrollers\Termo-DS18B20\prog.c
-381 text25 CODE >499:C:\Microcontrollers\Termo-DS18B20\prog.c
-385 text25 CODE >500:C:\Microcontrollers\Termo-DS18B20\prog.c
-387 text25 CODE >501:C:\Microcontrollers\Termo-DS18B20\prog.c
-388 text25 CODE >502:C:\Microcontrollers\Termo-DS18B20\prog.c
-38A text25 CODE >503:C:\Microcontrollers\Termo-DS18B20\prog.c
-392 text25 CODE >504:C:\Microcontrollers\Termo-DS18B20\prog.c
-395 text25 CODE >505:C:\Microcontrollers\Termo-DS18B20\prog.c
-39E text25 CODE >506:C:\Microcontrollers\Termo-DS18B20\prog.c
-3A0 text25 CODE >509:C:\Microcontrollers\Termo-DS18B20\prog.c
-3A2 text25 CODE >510:C:\Microcontrollers\Termo-DS18B20\prog.c
-3A5 text25 CODE >511:C:\Microcontrollers\Termo-DS18B20\prog.c
-3A7 text25 CODE >512:C:\Microcontrollers\Termo-DS18B20\prog.c
-3A8 text25 CODE >515:C:\Microcontrollers\Termo-DS18B20\prog.c
-3AE text25 CODE >516:C:\Microcontrollers\Termo-DS18B20\prog.c
-3B2 text25 CODE >522:C:\Microcontrollers\Termo-DS18B20\prog.c
-3B6 text25 CODE >523:C:\Microcontrollers\Termo-DS18B20\prog.c
-3B7 text25 CODE >524:C:\Microcontrollers\Termo-DS18B20\prog.c
-3B9 text25 CODE >525:C:\Microcontrollers\Termo-DS18B20\prog.c
-3BA text25 CODE >512:C:\Microcontrollers\Termo-DS18B20\prog.c
-3BC text25 CODE >531:C:\Microcontrollers\Termo-DS18B20\prog.c
-3BD text25 CODE >533:C:\Microcontrollers\Termo-DS18B20\prog.c
-6A1 text24 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6A2 text24 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6A3 text24 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6A6 text24 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6A7 text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6A8 text24 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6AA text24 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6AC text24 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6AD text24 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6AD text24 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6AF text24 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6B3 text24 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6B5 text24 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6B6 text24 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6B8 text24 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6BA text24 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-6BB text24 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
-64E text23 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-64F text23 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-651 text23 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-652 text23 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-65E text23 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-660 text23 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-664 text23 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-666 text23 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-668 text23 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-669 text23 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
-794 text22 CODE >118:C:\Microcontrollers\Termo-DS18B20\prog.c
-794 text22 CODE >119:C:\Microcontrollers\Termo-DS18B20\prog.c
-797 text22 CODE >120:C:\Microcontrollers\Termo-DS18B20\prog.c
-798 text22 CODE >121:C:\Microcontrollers\Termo-DS18B20\prog.c
-799 text22 CODE >122:C:\Microcontrollers\Termo-DS18B20\prog.c
-786 text21 CODE >112:C:\Microcontrollers\Termo-DS18B20\prog.c
-786 text21 CODE >113:C:\Microcontrollers\Termo-DS18B20\prog.c
-789 text21 CODE >114:C:\Microcontrollers\Termo-DS18B20\prog.c
-78B text21 CODE >115:C:\Microcontrollers\Termo-DS18B20\prog.c
-78D text21 CODE >116:C:\Microcontrollers\Termo-DS18B20\prog.c
-726 text20 CODE >104:C:\Microcontrollers\Termo-DS18B20\prog.c
-727 text20 CODE >105:C:\Microcontrollers\Termo-DS18B20\prog.c
-737 text20 CODE >106:C:\Microcontrollers\Termo-DS18B20\prog.c
-686 text19 CODE >580:C:\Microcontrollers\Termo-DS18B20\prog.c
-688 text19 CODE >581:C:\Microcontrollers\Termo-DS18B20\prog.c
-689 text19 CODE >584:C:\Microcontrollers\Termo-DS18B20\prog.c
-68A text19 CODE >582:C:\Microcontrollers\Termo-DS18B20\prog.c
-68B text19 CODE >584:C:\Microcontrollers\Termo-DS18B20\prog.c
-68E text19 CODE >585:C:\Microcontrollers\Termo-DS18B20\prog.c
-695 text19 CODE >586:C:\Microcontrollers\Termo-DS18B20\prog.c
-69C text19 CODE >588:C:\Microcontrollers\Termo-DS18B20\prog.c
-6A0 text19 CODE >591:C:\Microcontrollers\Termo-DS18B20\prog.c
-4B0 text18 CODE >219:C:\Microcontrollers\Termo-DS18B20\prog.c
-4B1 text18 CODE >220:C:\Microcontrollers\Termo-DS18B20\prog.c
-4B2 text18 CODE >221:C:\Microcontrollers\Termo-DS18B20\prog.c
-4B4 text18 CODE >225:C:\Microcontrollers\Termo-DS18B20\prog.c
-4B7 text18 CODE >226:C:\Microcontrollers\Termo-DS18B20\prog.c
-4BD text18 CODE >227:C:\Microcontrollers\Termo-DS18B20\prog.c
-4C2 text18 CODE >228:C:\Microcontrollers\Termo-DS18B20\prog.c
-4C8 text18 CODE >229:C:\Microcontrollers\Termo-DS18B20\prog.c
-4CD text18 CODE >230:C:\Microcontrollers\Termo-DS18B20\prog.c
-4D3 text18 CODE >231:C:\Microcontrollers\Termo-DS18B20\prog.c
-4DD text18 CODE >232:C:\Microcontrollers\Termo-DS18B20\prog.c
-4E2 text18 CODE >234:C:\Microcontrollers\Termo-DS18B20\prog.c
-57D text17 CODE >260:C:\Microcontrollers\Termo-DS18B20\prog.c
-57F text17 CODE >261:C:\Microcontrollers\Termo-DS18B20\prog.c
-580 text17 CODE >262:C:\Microcontrollers\Termo-DS18B20\prog.c
-582 text17 CODE >264:C:\Microcontrollers\Termo-DS18B20\prog.c
-583 text17 CODE >265:C:\Microcontrollers\Termo-DS18B20\prog.c
-584 text17 CODE >266:C:\Microcontrollers\Termo-DS18B20\prog.c
-587 text17 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
-58A text17 CODE >268:C:\Microcontrollers\Termo-DS18B20\prog.c
-58F text17 CODE >269:C:\Microcontrollers\Termo-DS18B20\prog.c
-591 text17 CODE >270:C:\Microcontrollers\Termo-DS18B20\prog.c
-595 text17 CODE >271:C:\Microcontrollers\Termo-DS18B20\prog.c
-598 text17 CODE >272:C:\Microcontrollers\Termo-DS18B20\prog.c
-599 text17 CODE >274:C:\Microcontrollers\Termo-DS18B20\prog.c
-59E text17 CODE >265:C:\Microcontrollers\Termo-DS18B20\prog.c
-5A5 text17 CODE >276:C:\Microcontrollers\Termo-DS18B20\prog.c
-5A6 text17 CODE >277:C:\Microcontrollers\Termo-DS18B20\prog.c
-758 text16 CODE >194:C:\Microcontrollers\Termo-DS18B20\prog.c
-759 text16 CODE >195:C:\Microcontrollers\Termo-DS18B20\prog.c
-75B text16 CODE >197:C:\Microcontrollers\Termo-DS18B20\prog.c
-75C text16 CODE >198:C:\Microcontrollers\Termo-DS18B20\prog.c
-75F text16 CODE >199:C:\Microcontrollers\Termo-DS18B20\prog.c
-760 text16 CODE >200:C:\Microcontrollers\Termo-DS18B20\prog.c
-763 text16 CODE >201:C:\Microcontrollers\Termo-DS18B20\prog.c
-765 text16 CODE >202:C:\Microcontrollers\Termo-DS18B20\prog.c
-766 text16 CODE >203:C:\Microcontrollers\Termo-DS18B20\prog.c
-738 text15 CODE >205:C:\Microcontrollers\Termo-DS18B20\prog.c
-739 text15 CODE >206:C:\Microcontrollers\Termo-DS18B20\prog.c
-73E text15 CODE >207:C:\Microcontrollers\Termo-DS18B20\prog.c
-747 text15 CODE >206:C:\Microcontrollers\Termo-DS18B20\prog.c
-632 text14 CODE >570:C:\Microcontrollers\Termo-DS18B20\prog.c
-634 text14 CODE >571:C:\Microcontrollers\Termo-DS18B20\prog.c
-640 text14 CODE >572:C:\Microcontrollers\Termo-DS18B20\prog.c
-641 text14 CODE >573:C:\Microcontrollers\Termo-DS18B20\prog.c
-647 text14 CODE >574:C:\Microcontrollers\Termo-DS18B20\prog.c
-648 text14 CODE >572:C:\Microcontrollers\Termo-DS18B20\prog.c
-64C text14 CODE >577:C:\Microcontrollers\Termo-DS18B20\prog.c
-64D text14 CODE >572:C:\Microcontrollers\Termo-DS18B20\prog.c
-767 text13 CODE >124:C:\Microcontrollers\Termo-DS18B20\prog.c
-767 text13 CODE >125:C:\Microcontrollers\Termo-DS18B20\prog.c
-768 text13 CODE >126:C:\Microcontrollers\Termo-DS18B20\prog.c
-76C text13 CODE >127:C:\Microcontrollers\Termo-DS18B20\prog.c
-770 text13 CODE >128:C:\Microcontrollers\Termo-DS18B20\prog.c
-774 text13 CODE >129:C:\Microcontrollers\Termo-DS18B20\prog.c
-4E8 text12 CODE >237:C:\Microcontrollers\Termo-DS18B20\prog.c
-4E9 text12 CODE >238:C:\Microcontrollers\Termo-DS18B20\prog.c
-4EB text12 CODE >239:C:\Microcontrollers\Termo-DS18B20\prog.c
-4ED text12 CODE >242:C:\Microcontrollers\Termo-DS18B20\prog.c
-4EE text12 CODE >243:C:\Microcontrollers\Termo-DS18B20\prog.c
-4F0 text12 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-4F1 text12 CODE >245:C:\Microcontrollers\Termo-DS18B20\prog.c
-4F3 text12 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
-4F6 text12 CODE >247:C:\Microcontrollers\Termo-DS18B20\prog.c
-4F9 text12 CODE >248:C:\Microcontrollers\Termo-DS18B20\prog.c
-4FA text12 CODE >249:C:\Microcontrollers\Termo-DS18B20\prog.c
-4FF text12 CODE >250:C:\Microcontrollers\Termo-DS18B20\prog.c
-500 text12 CODE >251:C:\Microcontrollers\Termo-DS18B20\prog.c
-503 text12 CODE >252:C:\Microcontrollers\Termo-DS18B20\prog.c
-509 text12 CODE >254:C:\Microcontrollers\Termo-DS18B20\prog.c
-50C text12 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-50C text12 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
-50D text12 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
-511 text12 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
-6D5 text11 CODE >179:C:\Microcontrollers\Termo-DS18B20\prog.c
-6D6 text11 CODE >180:C:\Microcontrollers\Termo-DS18B20\prog.c
-6D8 text11 CODE >181:C:\Microcontrollers\Termo-DS18B20\prog.c
-6D9 text11 CODE >182:C:\Microcontrollers\Termo-DS18B20\prog.c
-6DC text11 CODE >183:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E0 text11 CODE >184:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E1 text11 CODE >185:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E3 text11 CODE >186:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E5 text11 CODE >187:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E6 text11 CODE >188:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E7 text11 CODE >189:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E7 text11 CODE >190:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E9 text11 CODE >191:C:\Microcontrollers\Termo-DS18B20\prog.c
-6EC text11 CODE >192:C:\Microcontrollers\Termo-DS18B20\prog.c
-79A text10 CODE >91:C:\Microcontrollers\Termo-DS18B20\prog.c
-79A text10 CODE >92:C:\Microcontrollers\Termo-DS18B20\prog.c
-79C text10 CODE >93:C:\Microcontrollers\Termo-DS18B20\prog.c
-701 text9 CODE >211:C:\Microcontrollers\Termo-DS18B20\prog.c
-702 text9 CODE >212:C:\Microcontrollers\Termo-DS18B20\prog.c
-707 text9 CODE >213:C:\Microcontrollers\Termo-DS18B20\prog.c
-708 text9 CODE >214:C:\Microcontrollers\Termo-DS18B20\prog.c
-712 text9 CODE >212:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F0 text8 CODE >279:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F1 text8 CODE >280:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F2 text8 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F3 text8 CODE >282:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F8 text8 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
-5F9 text8 CODE >284:C:\Microcontrollers\Termo-DS18B20\prog.c
-5FE text8 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
-600 text8 CODE >286:C:\Microcontrollers\Termo-DS18B20\prog.c
-602 text8 CODE >287:C:\Microcontrollers\Termo-DS18B20\prog.c
-607 text8 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
-60C text8 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
-60F text8 CODE >290:C:\Microcontrollers\Termo-DS18B20\prog.c
-610 text8 CODE >291:C:\Microcontrollers\Termo-DS18B20\prog.c
-749 text7 CODE >108:C:\Microcontrollers\Termo-DS18B20\prog.c
-74A text7 CODE >109:C:\Microcontrollers\Termo-DS18B20\prog.c
-757 text7 CODE >110:C:\Microcontrollers\Termo-DS18B20\prog.c
-25F text6 CODE >594:C:\Microcontrollers\Termo-DS18B20\prog.c
-25F text6 CODE >595:C:\Microcontrollers\Termo-DS18B20\prog.c
-261 text6 CODE >597:C:\Microcontrollers\Termo-DS18B20\prog.c
-262 text6 CODE >599:C:\Microcontrollers\Termo-DS18B20\prog.c
-263 text6 CODE >601:C:\Microcontrollers\Termo-DS18B20\prog.c
-265 text6 CODE >602:C:\Microcontrollers\Termo-DS18B20\prog.c
-267 text6 CODE >605:C:\Microcontrollers\Termo-DS18B20\prog.c
-268 text6 CODE >606:C:\Microcontrollers\Termo-DS18B20\prog.c
-26A text6 CODE >609:C:\Microcontrollers\Termo-DS18B20\prog.c
-272 text6 CODE >610:C:\Microcontrollers\Termo-DS18B20\prog.c
-274 text6 CODE >611:C:\Microcontrollers\Termo-DS18B20\prog.c
-276 text6 CODE >612:C:\Microcontrollers\Termo-DS18B20\prog.c
-278 text6 CODE >615:C:\Microcontrollers\Termo-DS18B20\prog.c
-27D text6 CODE >616:C:\Microcontrollers\Termo-DS18B20\prog.c
-27E text6 CODE >617:C:\Microcontrollers\Termo-DS18B20\prog.c
-282 text6 CODE >618:C:\Microcontrollers\Termo-DS18B20\prog.c
-283 text6 CODE >619:C:\Microcontrollers\Termo-DS18B20\prog.c
-284 text6 CODE >620:C:\Microcontrollers\Termo-DS18B20\prog.c
-286 text6 CODE >622:C:\Microcontrollers\Termo-DS18B20\prog.c
-289 text6 CODE >623:C:\Microcontrollers\Termo-DS18B20\prog.c
-28E text6 CODE >624:C:\Microcontrollers\Termo-DS18B20\prog.c
-28F text6 CODE >625:C:\Microcontrollers\Termo-DS18B20\prog.c
-294 text6 CODE >626:C:\Microcontrollers\Termo-DS18B20\prog.c
-295 text6 CODE >627:C:\Microcontrollers\Termo-DS18B20\prog.c
-296 text6 CODE >628:C:\Microcontrollers\Termo-DS18B20\prog.c
-298 text6 CODE >631:C:\Microcontrollers\Termo-DS18B20\prog.c
-29C text6 CODE >632:C:\Microcontrollers\Termo-DS18B20\prog.c
-29D text6 CODE >633:C:\Microcontrollers\Termo-DS18B20\prog.c
-29E text6 CODE >634:C:\Microcontrollers\Termo-DS18B20\prog.c
-29F text6 CODE >635:C:\Microcontrollers\Termo-DS18B20\prog.c
-2A0 text6 CODE >636:C:\Microcontrollers\Termo-DS18B20\prog.c
-2A7 text6 CODE >637:C:\Microcontrollers\Termo-DS18B20\prog.c
-2A9 text6 CODE >638:C:\Microcontrollers\Termo-DS18B20\prog.c
-2AA text6 CODE >639:C:\Microcontrollers\Termo-DS18B20\prog.c
-2AF text6 CODE >640:C:\Microcontrollers\Termo-DS18B20\prog.c
-2B0 text6 CODE >641:C:\Microcontrollers\Termo-DS18B20\prog.c
-2B4 text6 CODE >642:C:\Microcontrollers\Termo-DS18B20\prog.c
-2B6 text6 CODE >643:C:\Microcontrollers\Termo-DS18B20\prog.c
-2B7 text6 CODE >644:C:\Microcontrollers\Termo-DS18B20\prog.c
-2BF text6 CODE >642:C:\Microcontrollers\Termo-DS18B20\prog.c
-2C5 text6 CODE >646:C:\Microcontrollers\Termo-DS18B20\prog.c
-2CE text6 CODE >647:C:\Microcontrollers\Termo-DS18B20\prog.c
-2CF text6 CODE >648:C:\Microcontrollers\Termo-DS18B20\prog.c
-2DE text6 CODE >649:C:\Microcontrollers\Termo-DS18B20\prog.c
-2E0 text6 CODE >652:C:\Microcontrollers\Termo-DS18B20\prog.c
-2E1 text6 CODE >653:C:\Microcontrollers\Termo-DS18B20\prog.c
-2E5 text6 CODE >659:C:\Microcontrollers\Termo-DS18B20\prog.c
-2EE text6 CODE >660:C:\Microcontrollers\Termo-DS18B20\prog.c
-2F0 text6 CODE >661:C:\Microcontrollers\Termo-DS18B20\prog.c
-2F2 text6 CODE >662:C:\Microcontrollers\Termo-DS18B20\prog.c
-2F8 text6 CODE >661:C:\Microcontrollers\Termo-DS18B20\prog.c
-2FD text6 CODE >664:C:\Microcontrollers\Termo-DS18B20\prog.c
-2FE text6 CODE >670:C:\Microcontrollers\Termo-DS18B20\prog.c
-302 text6 CODE >672:C:\Microcontrollers\Termo-DS18B20\prog.c
-303 text6 CODE >671:C:\Microcontrollers\Termo-DS18B20\prog.c
-304 text6 CODE >672:C:\Microcontrollers\Termo-DS18B20\prog.c
-30B text6 CODE >673:C:\Microcontrollers\Termo-DS18B20\prog.c
-30D text6 CODE >674:C:\Microcontrollers\Termo-DS18B20\prog.c
-318 text6 CODE >675:C:\Microcontrollers\Termo-DS18B20\prog.c
-31A text6 CODE >678:C:\Microcontrollers\Termo-DS18B20\prog.c
-31B text6 CODE >679:C:\Microcontrollers\Termo-DS18B20\prog.c
-31C text6 CODE >680:C:\Microcontrollers\Termo-DS18B20\prog.c
-426 text5 CODE >394:C:\Microcontrollers\Termo-DS18B20\prog.c
-428 text5 CODE >395:C:\Microcontrollers\Termo-DS18B20\prog.c
-42B text5 CODE >396:C:\Microcontrollers\Termo-DS18B20\prog.c
-432 text5 CODE >397:C:\Microcontrollers\Termo-DS18B20\prog.c
-432 text5 CODE >398:C:\Microcontrollers\Termo-DS18B20\prog.c
-434 text5 CODE >399:C:\Microcontrollers\Termo-DS18B20\prog.c
-436 text5 CODE >402:C:\Microcontrollers\Termo-DS18B20\prog.c
-439 text5 CODE >403:C:\Microcontrollers\Termo-DS18B20\prog.c
-442 text5 CODE >405:C:\Microcontrollers\Termo-DS18B20\prog.c
-44A text5 CODE >409:C:\Microcontrollers\Termo-DS18B20\prog.c
-44B text5 CODE >410:C:\Microcontrollers\Termo-DS18B20\prog.c
-451 text5 CODE >411:C:\Microcontrollers\Termo-DS18B20\prog.c
-453 text5 CODE >412:C:\Microcontrollers\Termo-DS18B20\prog.c
-454 text5 CODE >413:C:\Microcontrollers\Termo-DS18B20\prog.c
-459 text5 CODE >414:C:\Microcontrollers\Termo-DS18B20\prog.c
-45A text5 CODE >412:C:\Microcontrollers\Termo-DS18B20\prog.c
-45F text5 CODE >418:C:\Microcontrollers\Termo-DS18B20\prog.c
-462 text5 CODE >419:C:\Microcontrollers\Termo-DS18B20\prog.c
-464 text5 CODE >420:C:\Microcontrollers\Termo-DS18B20\prog.c
-465 text5 CODE >422:C:\Microcontrollers\Termo-DS18B20\prog.c
-469 text5 CODE >423:C:\Microcontrollers\Termo-DS18B20\prog.c
-46A text5 CODE >424:C:\Microcontrollers\Termo-DS18B20\prog.c
-78E text4 CODE >96:C:\Microcontrollers\Termo-DS18B20\prog.c
-78E text4 CODE >97:C:\Microcontrollers\Termo-DS18B20\prog.c
-793 text4 CODE >98:C:\Microcontrollers\Termo-DS18B20\prog.c
-714 text3 CODE >700:C:\Microcontrollers\Termo-DS18B20\prog.c
-716 text3 CODE >704:C:\Microcontrollers\Termo-DS18B20\prog.c
-717 text3 CODE >702:C:\Microcontrollers\Termo-DS18B20\prog.c
-718 text3 CODE >703:C:\Microcontrollers\Termo-DS18B20\prog.c
-719 text3 CODE >704:C:\Microcontrollers\Termo-DS18B20\prog.c
-71A text3 CODE >705:C:\Microcontrollers\Termo-DS18B20\prog.c
-71B text3 CODE >706:C:\Microcontrollers\Termo-DS18B20\prog.c
-71D text3 CODE >707:C:\Microcontrollers\Termo-DS18B20\prog.c
-71E text3 CODE >708:C:\Microcontrollers\Termo-DS18B20\prog.c
-71F text3 CODE >709:C:\Microcontrollers\Termo-DS18B20\prog.c
-720 text3 CODE >710:C:\Microcontrollers\Termo-DS18B20\prog.c
-721 text3 CODE >711:C:\Microcontrollers\Termo-DS18B20\prog.c
-722 text3 CODE >712:C:\Microcontrollers\Termo-DS18B20\prog.c
-724 text3 CODE >714:C:\Microcontrollers\Termo-DS18B20\prog.c
-725 text3 CODE >716:C:\Microcontrollers\Termo-DS18B20\prog.c
-6ED text2 CODE >682:C:\Microcontrollers\Termo-DS18B20\prog.c
-6EF text2 CODE >686:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F0 text2 CODE >684:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F1 text2 CODE >685:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F2 text2 CODE >686:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F3 text2 CODE >688:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F4 text2 CODE >687:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F5 text2 CODE >688:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F6 text2 CODE >691:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F7 text2 CODE >688:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F8 text2 CODE >689:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F9 text2 CODE >690:C:\Microcontrollers\Termo-DS18B20\prog.c
-6FA text2 CODE >691:C:\Microcontrollers\Termo-DS18B20\prog.c
-6FB text2 CODE >692:C:\Microcontrollers\Termo-DS18B20\prog.c
-6FC text2 CODE >693:C:\Microcontrollers\Termo-DS18B20\prog.c
-6FD text2 CODE >694:C:\Microcontrollers\Termo-DS18B20\prog.c
-6FF text2 CODE >696:C:\Microcontrollers\Termo-DS18B20\prog.c
-700 text2 CODE >698:C:\Microcontrollers\Termo-DS18B20\prog.c
-3C8 text1 CODE >535:C:\Microcontrollers\Termo-DS18B20\prog.c
+1CC text26 CODE >348:C:\Microcontrollers\Termo-DS18B20\prog.c
+1CE text26 CODE >349:C:\Microcontrollers\Termo-DS18B20\prog.c
+1D2 text26 CODE >350:C:\Microcontrollers\Termo-DS18B20\prog.c
+1D5 text26 CODE >351:C:\Microcontrollers\Termo-DS18B20\prog.c
+1D6 text26 CODE >353:C:\Microcontrollers\Termo-DS18B20\prog.c
+1D8 text26 CODE >354:C:\Microcontrollers\Termo-DS18B20\prog.c
+1DB text26 CODE >355:C:\Microcontrollers\Termo-DS18B20\prog.c
+1E0 text26 CODE >356:C:\Microcontrollers\Termo-DS18B20\prog.c
+1EA text26 CODE >357:C:\Microcontrollers\Termo-DS18B20\prog.c
+1F3 text26 CODE >355:C:\Microcontrollers\Termo-DS18B20\prog.c
+1F8 text26 CODE >359:C:\Microcontrollers\Termo-DS18B20\prog.c
+1FF text26 CODE >360:C:\Microcontrollers\Termo-DS18B20\prog.c
+207 text26 CODE >361:C:\Microcontrollers\Termo-DS18B20\prog.c
+209 text26 CODE >362:C:\Microcontrollers\Termo-DS18B20\prog.c
+20A text26 CODE >364:C:\Microcontrollers\Termo-DS18B20\prog.c
+20D text26 CODE >365:C:\Microcontrollers\Termo-DS18B20\prog.c
+211 text26 CODE >367:C:\Microcontrollers\Termo-DS18B20\prog.c
+215 text26 CODE >368:C:\Microcontrollers\Termo-DS18B20\prog.c
+22A text26 CODE >369:C:\Microcontrollers\Termo-DS18B20\prog.c
+22D text26 CODE >370:C:\Microcontrollers\Termo-DS18B20\prog.c
+231 text26 CODE >371:C:\Microcontrollers\Termo-DS18B20\prog.c
+234 text26 CODE >372:C:\Microcontrollers\Termo-DS18B20\prog.c
+236 text26 CODE >373:C:\Microcontrollers\Termo-DS18B20\prog.c
+238 text26 CODE >375:C:\Microcontrollers\Termo-DS18B20\prog.c
+23B text26 CODE >376:C:\Microcontrollers\Termo-DS18B20\prog.c
+23E text26 CODE >377:C:\Microcontrollers\Termo-DS18B20\prog.c
+241 text26 CODE >378:C:\Microcontrollers\Termo-DS18B20\prog.c
+244 text26 CODE >379:C:\Microcontrollers\Termo-DS18B20\prog.c
+245 text26 CODE >380:C:\Microcontrollers\Termo-DS18B20\prog.c
+247 text26 CODE >383:C:\Microcontrollers\Termo-DS18B20\prog.c
+249 text26 CODE >386:C:\Microcontrollers\Termo-DS18B20\prog.c
+24A text26 CODE >387:C:\Microcontrollers\Termo-DS18B20\prog.c
+24B text26 CODE >388:C:\Microcontrollers\Termo-DS18B20\prog.c
+24D text26 CODE >391:C:\Microcontrollers\Termo-DS18B20\prog.c
+24D text26 CODE >392:C:\Microcontrollers\Termo-DS18B20\prog.c
+24E text26 CODE >394:C:\Microcontrollers\Termo-DS18B20\prog.c
+31D text25 CODE >430:C:\Microcontrollers\Termo-DS18B20\prog.c
+31D text25 CODE >431:C:\Microcontrollers\Termo-DS18B20\prog.c
+31F text25 CODE >434:C:\Microcontrollers\Termo-DS18B20\prog.c
+320 text25 CODE >41:C:\Microcontrollers\Termo-DS18B20\prog.c
+322 text25 CODE >437:C:\Microcontrollers\Termo-DS18B20\prog.c
+325 text25 CODE >438:C:\Microcontrollers\Termo-DS18B20\prog.c
+326 text25 CODE >440:C:\Microcontrollers\Termo-DS18B20\prog.c
+32C text25 CODE >441:C:\Microcontrollers\Termo-DS18B20\prog.c
+32F text25 CODE >447:C:\Microcontrollers\Termo-DS18B20\prog.c
+334 text25 CODE >449:C:\Microcontrollers\Termo-DS18B20\prog.c
+335 text25 CODE >450:C:\Microcontrollers\Termo-DS18B20\prog.c
+33F text25 CODE >452:C:\Microcontrollers\Termo-DS18B20\prog.c
+341 text25 CODE >454:C:\Microcontrollers\Termo-DS18B20\prog.c
+342 text25 CODE >455:C:\Microcontrollers\Termo-DS18B20\prog.c
+346 text25 CODE >456:C:\Microcontrollers\Termo-DS18B20\prog.c
+349 text25 CODE >457:C:\Microcontrollers\Termo-DS18B20\prog.c
+34C text25 CODE >460:C:\Microcontrollers\Termo-DS18B20\prog.c
+350 text25 CODE >469:C:\Microcontrollers\Termo-DS18B20\prog.c
+352 text25 CODE >471:C:\Microcontrollers\Termo-DS18B20\prog.c
+355 text25 CODE >472:C:\Microcontrollers\Termo-DS18B20\prog.c
+356 text25 CODE >473:C:\Microcontrollers\Termo-DS18B20\prog.c
+357 text25 CODE >475:C:\Microcontrollers\Termo-DS18B20\prog.c
+358 text25 CODE >477:C:\Microcontrollers\Termo-DS18B20\prog.c
+35A text25 CODE >479:C:\Microcontrollers\Termo-DS18B20\prog.c
+35B text25 CODE >478:C:\Microcontrollers\Termo-DS18B20\prog.c
+35C text25 CODE >479:C:\Microcontrollers\Termo-DS18B20\prog.c
+35D text25 CODE >480:C:\Microcontrollers\Termo-DS18B20\prog.c
+35E text25 CODE >481:C:\Microcontrollers\Termo-DS18B20\prog.c
+361 text25 CODE >482:C:\Microcontrollers\Termo-DS18B20\prog.c
+362 text25 CODE >483:C:\Microcontrollers\Termo-DS18B20\prog.c
+363 text25 CODE >484:C:\Microcontrollers\Termo-DS18B20\prog.c
+364 text25 CODE >488:C:\Microcontrollers\Termo-DS18B20\prog.c
+366 text25 CODE >490:C:\Microcontrollers\Termo-DS18B20\prog.c
+367 text25 CODE >489:C:\Microcontrollers\Termo-DS18B20\prog.c
+368 text25 CODE >490:C:\Microcontrollers\Termo-DS18B20\prog.c
+369 text25 CODE >491:C:\Microcontrollers\Termo-DS18B20\prog.c
+36A text25 CODE >492:C:\Microcontrollers\Termo-DS18B20\prog.c
+36D text25 CODE >493:C:\Microcontrollers\Termo-DS18B20\prog.c
+36E text25 CODE >494:C:\Microcontrollers\Termo-DS18B20\prog.c
+36F text25 CODE >495:C:\Microcontrollers\Termo-DS18B20\prog.c
+370 text25 CODE >499:C:\Microcontrollers\Termo-DS18B20\prog.c
+37E text25 CODE >500:C:\Microcontrollers\Termo-DS18B20\prog.c
+381 text25 CODE >501:C:\Microcontrollers\Termo-DS18B20\prog.c
+385 text25 CODE >502:C:\Microcontrollers\Termo-DS18B20\prog.c
+387 text25 CODE >503:C:\Microcontrollers\Termo-DS18B20\prog.c
+388 text25 CODE >504:C:\Microcontrollers\Termo-DS18B20\prog.c
+38A text25 CODE >505:C:\Microcontrollers\Termo-DS18B20\prog.c
+392 text25 CODE >506:C:\Microcontrollers\Termo-DS18B20\prog.c
+395 text25 CODE >507:C:\Microcontrollers\Termo-DS18B20\prog.c
+39E text25 CODE >508:C:\Microcontrollers\Termo-DS18B20\prog.c
+3A0 text25 CODE >511:C:\Microcontrollers\Termo-DS18B20\prog.c
+3A2 text25 CODE >512:C:\Microcontrollers\Termo-DS18B20\prog.c
+3A5 text25 CODE >513:C:\Microcontrollers\Termo-DS18B20\prog.c
+3A7 text25 CODE >514:C:\Microcontrollers\Termo-DS18B20\prog.c
+3A8 text25 CODE >517:C:\Microcontrollers\Termo-DS18B20\prog.c
+3AE text25 CODE >518:C:\Microcontrollers\Termo-DS18B20\prog.c
+3B2 text25 CODE >524:C:\Microcontrollers\Termo-DS18B20\prog.c
+3B6 text25 CODE >525:C:\Microcontrollers\Termo-DS18B20\prog.c
+3B7 text25 CODE >526:C:\Microcontrollers\Termo-DS18B20\prog.c
+3B9 text25 CODE >527:C:\Microcontrollers\Termo-DS18B20\prog.c
+3BA text25 CODE >514:C:\Microcontrollers\Termo-DS18B20\prog.c
+3BC text25 CODE >533:C:\Microcontrollers\Termo-DS18B20\prog.c
+3BD text25 CODE >535:C:\Microcontrollers\Termo-DS18B20\prog.c
+6AE text24 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6AF text24 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B0 text24 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B3 text24 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B4 text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B5 text24 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B7 text24 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6B9 text24 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6BA text24 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6BA text24 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6BC text24 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C0 text24 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C2 text24 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C3 text24 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C5 text24 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C7 text24 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+6C8 text24 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbdiv.c
+65B text23 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+65C text23 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+65E text23 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+65F text23 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+66B text23 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+66D text23 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+671 text23 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+673 text23 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+675 text23 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+676 text23 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lbmod.c
+7A1 text22 CODE >120:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A1 text22 CODE >121:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A4 text22 CODE >122:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A5 text22 CODE >123:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A6 text22 CODE >124:C:\Microcontrollers\Termo-DS18B20\prog.c
+793 text21 CODE >114:C:\Microcontrollers\Termo-DS18B20\prog.c
+793 text21 CODE >115:C:\Microcontrollers\Termo-DS18B20\prog.c
+796 text21 CODE >116:C:\Microcontrollers\Termo-DS18B20\prog.c
+798 text21 CODE >117:C:\Microcontrollers\Termo-DS18B20\prog.c
+79A text21 CODE >118:C:\Microcontrollers\Termo-DS18B20\prog.c
+733 text20 CODE >106:C:\Microcontrollers\Termo-DS18B20\prog.c
+734 text20 CODE >107:C:\Microcontrollers\Termo-DS18B20\prog.c
+744 text20 CODE >108:C:\Microcontrollers\Termo-DS18B20\prog.c
+693 text19 CODE >586:C:\Microcontrollers\Termo-DS18B20\prog.c
+695 text19 CODE >587:C:\Microcontrollers\Termo-DS18B20\prog.c
+696 text19 CODE >590:C:\Microcontrollers\Termo-DS18B20\prog.c
+697 text19 CODE >588:C:\Microcontrollers\Termo-DS18B20\prog.c
+698 text19 CODE >590:C:\Microcontrollers\Termo-DS18B20\prog.c
+69B text19 CODE >591:C:\Microcontrollers\Termo-DS18B20\prog.c
+6A2 text19 CODE >592:C:\Microcontrollers\Termo-DS18B20\prog.c
+6A9 text19 CODE >594:C:\Microcontrollers\Termo-DS18B20\prog.c
+6AD text19 CODE >597:C:\Microcontrollers\Termo-DS18B20\prog.c
+4BD text18 CODE >221:C:\Microcontrollers\Termo-DS18B20\prog.c
+4BE text18 CODE >222:C:\Microcontrollers\Termo-DS18B20\prog.c
+4BF text18 CODE >223:C:\Microcontrollers\Termo-DS18B20\prog.c
+4C1 text18 CODE >227:C:\Microcontrollers\Termo-DS18B20\prog.c
+4C4 text18 CODE >228:C:\Microcontrollers\Termo-DS18B20\prog.c
+4CA text18 CODE >229:C:\Microcontrollers\Termo-DS18B20\prog.c
+4CF text18 CODE >230:C:\Microcontrollers\Termo-DS18B20\prog.c
+4D5 text18 CODE >231:C:\Microcontrollers\Termo-DS18B20\prog.c
+4DA text18 CODE >232:C:\Microcontrollers\Termo-DS18B20\prog.c
+4E0 text18 CODE >233:C:\Microcontrollers\Termo-DS18B20\prog.c
+4EA text18 CODE >234:C:\Microcontrollers\Termo-DS18B20\prog.c
+4EF text18 CODE >236:C:\Microcontrollers\Termo-DS18B20\prog.c
+58A text17 CODE >262:C:\Microcontrollers\Termo-DS18B20\prog.c
+58C text17 CODE >263:C:\Microcontrollers\Termo-DS18B20\prog.c
+58D text17 CODE >264:C:\Microcontrollers\Termo-DS18B20\prog.c
+58F text17 CODE >266:C:\Microcontrollers\Termo-DS18B20\prog.c
+590 text17 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
+591 text17 CODE >268:C:\Microcontrollers\Termo-DS18B20\prog.c
+594 text17 CODE >269:C:\Microcontrollers\Termo-DS18B20\prog.c
+597 text17 CODE >270:C:\Microcontrollers\Termo-DS18B20\prog.c
+59C text17 CODE >271:C:\Microcontrollers\Termo-DS18B20\prog.c
+59E text17 CODE >272:C:\Microcontrollers\Termo-DS18B20\prog.c
+5A2 text17 CODE >273:C:\Microcontrollers\Termo-DS18B20\prog.c
+5A5 text17 CODE >274:C:\Microcontrollers\Termo-DS18B20\prog.c
+5A6 text17 CODE >276:C:\Microcontrollers\Termo-DS18B20\prog.c
+5AB text17 CODE >267:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B2 text17 CODE >278:C:\Microcontrollers\Termo-DS18B20\prog.c
+5B3 text17 CODE >279:C:\Microcontrollers\Termo-DS18B20\prog.c
+765 text16 CODE >196:C:\Microcontrollers\Termo-DS18B20\prog.c
+766 text16 CODE >197:C:\Microcontrollers\Termo-DS18B20\prog.c
+768 text16 CODE >199:C:\Microcontrollers\Termo-DS18B20\prog.c
+769 text16 CODE >200:C:\Microcontrollers\Termo-DS18B20\prog.c
+76C text16 CODE >201:C:\Microcontrollers\Termo-DS18B20\prog.c
+76D text16 CODE >202:C:\Microcontrollers\Termo-DS18B20\prog.c
+770 text16 CODE >203:C:\Microcontrollers\Termo-DS18B20\prog.c
+772 text16 CODE >204:C:\Microcontrollers\Termo-DS18B20\prog.c
+773 text16 CODE >205:C:\Microcontrollers\Termo-DS18B20\prog.c
+745 text15 CODE >207:C:\Microcontrollers\Termo-DS18B20\prog.c
+746 text15 CODE >208:C:\Microcontrollers\Termo-DS18B20\prog.c
+74B text15 CODE >209:C:\Microcontrollers\Termo-DS18B20\prog.c
+754 text15 CODE >208:C:\Microcontrollers\Termo-DS18B20\prog.c
+63F text14 CODE >576:C:\Microcontrollers\Termo-DS18B20\prog.c
+641 text14 CODE >577:C:\Microcontrollers\Termo-DS18B20\prog.c
+64D text14 CODE >578:C:\Microcontrollers\Termo-DS18B20\prog.c
+64E text14 CODE >579:C:\Microcontrollers\Termo-DS18B20\prog.c
+654 text14 CODE >580:C:\Microcontrollers\Termo-DS18B20\prog.c
+655 text14 CODE >578:C:\Microcontrollers\Termo-DS18B20\prog.c
+659 text14 CODE >583:C:\Microcontrollers\Termo-DS18B20\prog.c
+65A text14 CODE >578:C:\Microcontrollers\Termo-DS18B20\prog.c
+774 text13 CODE >126:C:\Microcontrollers\Termo-DS18B20\prog.c
+774 text13 CODE >127:C:\Microcontrollers\Termo-DS18B20\prog.c
+775 text13 CODE >128:C:\Microcontrollers\Termo-DS18B20\prog.c
+779 text13 CODE >129:C:\Microcontrollers\Termo-DS18B20\prog.c
+77D text13 CODE >130:C:\Microcontrollers\Termo-DS18B20\prog.c
+781 text13 CODE >131:C:\Microcontrollers\Termo-DS18B20\prog.c
+4F5 text12 CODE >239:C:\Microcontrollers\Termo-DS18B20\prog.c
+4F6 text12 CODE >240:C:\Microcontrollers\Termo-DS18B20\prog.c
+4F8 text12 CODE >241:C:\Microcontrollers\Termo-DS18B20\prog.c
+4FA text12 CODE >244:C:\Microcontrollers\Termo-DS18B20\prog.c
+4FB text12 CODE >245:C:\Microcontrollers\Termo-DS18B20\prog.c
+4FD text12 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+4FE text12 CODE >247:C:\Microcontrollers\Termo-DS18B20\prog.c
+500 text12 CODE >248:C:\Microcontrollers\Termo-DS18B20\prog.c
+503 text12 CODE >249:C:\Microcontrollers\Termo-DS18B20\prog.c
+506 text12 CODE >250:C:\Microcontrollers\Termo-DS18B20\prog.c
+507 text12 CODE >251:C:\Microcontrollers\Termo-DS18B20\prog.c
+50C text12 CODE >252:C:\Microcontrollers\Termo-DS18B20\prog.c
+50D text12 CODE >253:C:\Microcontrollers\Termo-DS18B20\prog.c
+510 text12 CODE >254:C:\Microcontrollers\Termo-DS18B20\prog.c
+516 text12 CODE >256:C:\Microcontrollers\Termo-DS18B20\prog.c
+519 text12 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+519 text12 CODE >258:C:\Microcontrollers\Termo-DS18B20\prog.c
+51A text12 CODE >258:C:\Microcontrollers\Termo-DS18B20\prog.c
+51E text12 CODE >246:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E2 text11 CODE >181:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E3 text11 CODE >182:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E5 text11 CODE >183:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E6 text11 CODE >184:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E9 text11 CODE >185:C:\Microcontrollers\Termo-DS18B20\prog.c
+6ED text11 CODE >186:C:\Microcontrollers\Termo-DS18B20\prog.c
+6EE text11 CODE >187:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F0 text11 CODE >188:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F2 text11 CODE >189:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F3 text11 CODE >190:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F4 text11 CODE >191:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F4 text11 CODE >192:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F6 text11 CODE >193:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F9 text11 CODE >194:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A7 text10 CODE >93:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A7 text10 CODE >94:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A9 text10 CODE >95:C:\Microcontrollers\Termo-DS18B20\prog.c
+70E text9 CODE >213:C:\Microcontrollers\Termo-DS18B20\prog.c
+70F text9 CODE >214:C:\Microcontrollers\Termo-DS18B20\prog.c
+714 text9 CODE >215:C:\Microcontrollers\Termo-DS18B20\prog.c
+715 text9 CODE >216:C:\Microcontrollers\Termo-DS18B20\prog.c
+71F text9 CODE >214:C:\Microcontrollers\Termo-DS18B20\prog.c
+5FD text8 CODE >281:C:\Microcontrollers\Termo-DS18B20\prog.c
+5FE text8 CODE >282:C:\Microcontrollers\Termo-DS18B20\prog.c
+5FF text8 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
+600 text8 CODE >284:C:\Microcontrollers\Termo-DS18B20\prog.c
+605 text8 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
+606 text8 CODE >286:C:\Microcontrollers\Termo-DS18B20\prog.c
+60B text8 CODE >287:C:\Microcontrollers\Termo-DS18B20\prog.c
+60D text8 CODE >288:C:\Microcontrollers\Termo-DS18B20\prog.c
+60F text8 CODE >289:C:\Microcontrollers\Termo-DS18B20\prog.c
+614 text8 CODE >285:C:\Microcontrollers\Termo-DS18B20\prog.c
+619 text8 CODE >283:C:\Microcontrollers\Termo-DS18B20\prog.c
+61C text8 CODE >292:C:\Microcontrollers\Termo-DS18B20\prog.c
+61D text8 CODE >293:C:\Microcontrollers\Termo-DS18B20\prog.c
+756 text7 CODE >110:C:\Microcontrollers\Termo-DS18B20\prog.c
+757 text7 CODE >111:C:\Microcontrollers\Termo-DS18B20\prog.c
+764 text7 CODE >112:C:\Microcontrollers\Termo-DS18B20\prog.c
+25F text6 CODE >600:C:\Microcontrollers\Termo-DS18B20\prog.c
+25F text6 CODE >601:C:\Microcontrollers\Termo-DS18B20\prog.c
+261 text6 CODE >603:C:\Microcontrollers\Termo-DS18B20\prog.c
+262 text6 CODE >605:C:\Microcontrollers\Termo-DS18B20\prog.c
+263 text6 CODE >607:C:\Microcontrollers\Termo-DS18B20\prog.c
+265 text6 CODE >608:C:\Microcontrollers\Termo-DS18B20\prog.c
+267 text6 CODE >611:C:\Microcontrollers\Termo-DS18B20\prog.c
+268 text6 CODE >612:C:\Microcontrollers\Termo-DS18B20\prog.c
+26A text6 CODE >615:C:\Microcontrollers\Termo-DS18B20\prog.c
+272 text6 CODE >616:C:\Microcontrollers\Termo-DS18B20\prog.c
+274 text6 CODE >617:C:\Microcontrollers\Termo-DS18B20\prog.c
+276 text6 CODE >618:C:\Microcontrollers\Termo-DS18B20\prog.c
+278 text6 CODE >621:C:\Microcontrollers\Termo-DS18B20\prog.c
+27D text6 CODE >622:C:\Microcontrollers\Termo-DS18B20\prog.c
+27E text6 CODE >623:C:\Microcontrollers\Termo-DS18B20\prog.c
+282 text6 CODE >624:C:\Microcontrollers\Termo-DS18B20\prog.c
+283 text6 CODE >625:C:\Microcontrollers\Termo-DS18B20\prog.c
+284 text6 CODE >626:C:\Microcontrollers\Termo-DS18B20\prog.c
+286 text6 CODE >628:C:\Microcontrollers\Termo-DS18B20\prog.c
+289 text6 CODE >629:C:\Microcontrollers\Termo-DS18B20\prog.c
+28E text6 CODE >630:C:\Microcontrollers\Termo-DS18B20\prog.c
+28F text6 CODE >631:C:\Microcontrollers\Termo-DS18B20\prog.c
+294 text6 CODE >632:C:\Microcontrollers\Termo-DS18B20\prog.c
+295 text6 CODE >633:C:\Microcontrollers\Termo-DS18B20\prog.c
+296 text6 CODE >634:C:\Microcontrollers\Termo-DS18B20\prog.c
+298 text6 CODE >637:C:\Microcontrollers\Termo-DS18B20\prog.c
+29C text6 CODE >638:C:\Microcontrollers\Termo-DS18B20\prog.c
+29D text6 CODE >639:C:\Microcontrollers\Termo-DS18B20\prog.c
+29E text6 CODE >640:C:\Microcontrollers\Termo-DS18B20\prog.c
+29F text6 CODE >641:C:\Microcontrollers\Termo-DS18B20\prog.c
+2A0 text6 CODE >642:C:\Microcontrollers\Termo-DS18B20\prog.c
+2A7 text6 CODE >643:C:\Microcontrollers\Termo-DS18B20\prog.c
+2A9 text6 CODE >644:C:\Microcontrollers\Termo-DS18B20\prog.c
+2AA text6 CODE >645:C:\Microcontrollers\Termo-DS18B20\prog.c
+2AF text6 CODE >646:C:\Microcontrollers\Termo-DS18B20\prog.c
+2B0 text6 CODE >647:C:\Microcontrollers\Termo-DS18B20\prog.c
+2B4 text6 CODE >648:C:\Microcontrollers\Termo-DS18B20\prog.c
+2B6 text6 CODE >649:C:\Microcontrollers\Termo-DS18B20\prog.c
+2B7 text6 CODE >650:C:\Microcontrollers\Termo-DS18B20\prog.c
+2BF text6 CODE >648:C:\Microcontrollers\Termo-DS18B20\prog.c
+2C5 text6 CODE >652:C:\Microcontrollers\Termo-DS18B20\prog.c
+2CE text6 CODE >653:C:\Microcontrollers\Termo-DS18B20\prog.c
+2CF text6 CODE >654:C:\Microcontrollers\Termo-DS18B20\prog.c
+2DE text6 CODE >655:C:\Microcontrollers\Termo-DS18B20\prog.c
+2E0 text6 CODE >658:C:\Microcontrollers\Termo-DS18B20\prog.c
+2E1 text6 CODE >659:C:\Microcontrollers\Termo-DS18B20\prog.c
+2E5 text6 CODE >665:C:\Microcontrollers\Termo-DS18B20\prog.c
+2EE text6 CODE >666:C:\Microcontrollers\Termo-DS18B20\prog.c
+2F0 text6 CODE >667:C:\Microcontrollers\Termo-DS18B20\prog.c
+2F2 text6 CODE >668:C:\Microcontrollers\Termo-DS18B20\prog.c
+2F8 text6 CODE >667:C:\Microcontrollers\Termo-DS18B20\prog.c
+2FD text6 CODE >670:C:\Microcontrollers\Termo-DS18B20\prog.c
+2FE text6 CODE >676:C:\Microcontrollers\Termo-DS18B20\prog.c
+302 text6 CODE >678:C:\Microcontrollers\Termo-DS18B20\prog.c
+303 text6 CODE >677:C:\Microcontrollers\Termo-DS18B20\prog.c
+304 text6 CODE >678:C:\Microcontrollers\Termo-DS18B20\prog.c
+30B text6 CODE >679:C:\Microcontrollers\Termo-DS18B20\prog.c
+30D text6 CODE >680:C:\Microcontrollers\Termo-DS18B20\prog.c
+318 text6 CODE >681:C:\Microcontrollers\Termo-DS18B20\prog.c
+31A text6 CODE >684:C:\Microcontrollers\Termo-DS18B20\prog.c
+31B text6 CODE >685:C:\Microcontrollers\Termo-DS18B20\prog.c
+31C text6 CODE >686:C:\Microcontrollers\Termo-DS18B20\prog.c
+433 text5 CODE >396:C:\Microcontrollers\Termo-DS18B20\prog.c
+435 text5 CODE >397:C:\Microcontrollers\Termo-DS18B20\prog.c
+438 text5 CODE >398:C:\Microcontrollers\Termo-DS18B20\prog.c
+43F text5 CODE >399:C:\Microcontrollers\Termo-DS18B20\prog.c
+43F text5 CODE >400:C:\Microcontrollers\Termo-DS18B20\prog.c
+441 text5 CODE >401:C:\Microcontrollers\Termo-DS18B20\prog.c
+443 text5 CODE >404:C:\Microcontrollers\Termo-DS18B20\prog.c
+446 text5 CODE >405:C:\Microcontrollers\Termo-DS18B20\prog.c
+44F text5 CODE >407:C:\Microcontrollers\Termo-DS18B20\prog.c
+457 text5 CODE >411:C:\Microcontrollers\Termo-DS18B20\prog.c
+458 text5 CODE >412:C:\Microcontrollers\Termo-DS18B20\prog.c
+45E text5 CODE >413:C:\Microcontrollers\Termo-DS18B20\prog.c
+460 text5 CODE >414:C:\Microcontrollers\Termo-DS18B20\prog.c
+461 text5 CODE >415:C:\Microcontrollers\Termo-DS18B20\prog.c
+466 text5 CODE >416:C:\Microcontrollers\Termo-DS18B20\prog.c
+467 text5 CODE >414:C:\Microcontrollers\Termo-DS18B20\prog.c
+46C text5 CODE >420:C:\Microcontrollers\Termo-DS18B20\prog.c
+46F text5 CODE >421:C:\Microcontrollers\Termo-DS18B20\prog.c
+471 text5 CODE >422:C:\Microcontrollers\Termo-DS18B20\prog.c
+472 text5 CODE >424:C:\Microcontrollers\Termo-DS18B20\prog.c
+476 text5 CODE >425:C:\Microcontrollers\Termo-DS18B20\prog.c
+477 text5 CODE >426:C:\Microcontrollers\Termo-DS18B20\prog.c
+79B text4 CODE >98:C:\Microcontrollers\Termo-DS18B20\prog.c
+79B text4 CODE >99:C:\Microcontrollers\Termo-DS18B20\prog.c
+7A0 text4 CODE >100:C:\Microcontrollers\Termo-DS18B20\prog.c
+721 text3 CODE >706:C:\Microcontrollers\Termo-DS18B20\prog.c
+723 text3 CODE >710:C:\Microcontrollers\Termo-DS18B20\prog.c
+724 text3 CODE >708:C:\Microcontrollers\Termo-DS18B20\prog.c
+725 text3 CODE >709:C:\Microcontrollers\Termo-DS18B20\prog.c
+726 text3 CODE >710:C:\Microcontrollers\Termo-DS18B20\prog.c
+727 text3 CODE >711:C:\Microcontrollers\Termo-DS18B20\prog.c
+728 text3 CODE >712:C:\Microcontrollers\Termo-DS18B20\prog.c
+72A text3 CODE >713:C:\Microcontrollers\Termo-DS18B20\prog.c
+72B text3 CODE >714:C:\Microcontrollers\Termo-DS18B20\prog.c
+72C text3 CODE >715:C:\Microcontrollers\Termo-DS18B20\prog.c
+72D text3 CODE >716:C:\Microcontrollers\Termo-DS18B20\prog.c
+72E text3 CODE >717:C:\Microcontrollers\Termo-DS18B20\prog.c
+72F text3 CODE >718:C:\Microcontrollers\Termo-DS18B20\prog.c
+731 text3 CODE >720:C:\Microcontrollers\Termo-DS18B20\prog.c
+732 text3 CODE >722:C:\Microcontrollers\Termo-DS18B20\prog.c
+6FA text2 CODE >688:C:\Microcontrollers\Termo-DS18B20\prog.c
+6FC text2 CODE >692:C:\Microcontrollers\Termo-DS18B20\prog.c
+6FD text2 CODE >690:C:\Microcontrollers\Termo-DS18B20\prog.c
+6FE text2 CODE >691:C:\Microcontrollers\Termo-DS18B20\prog.c
+6FF text2 CODE >692:C:\Microcontrollers\Termo-DS18B20\prog.c
+700 text2 CODE >694:C:\Microcontrollers\Termo-DS18B20\prog.c
+701 text2 CODE >693:C:\Microcontrollers\Termo-DS18B20\prog.c
+702 text2 CODE >694:C:\Microcontrollers\Termo-DS18B20\prog.c
+703 text2 CODE >697:C:\Microcontrollers\Termo-DS18B20\prog.c
+704 text2 CODE >694:C:\Microcontrollers\Termo-DS18B20\prog.c
+705 text2 CODE >695:C:\Microcontrollers\Termo-DS18B20\prog.c
+706 text2 CODE >696:C:\Microcontrollers\Termo-DS18B20\prog.c
+707 text2 CODE >697:C:\Microcontrollers\Termo-DS18B20\prog.c
+708 text2 CODE >698:C:\Microcontrollers\Termo-DS18B20\prog.c
+709 text2 CODE >699:C:\Microcontrollers\Termo-DS18B20\prog.c
+70A text2 CODE >700:C:\Microcontrollers\Termo-DS18B20\prog.c
+70C text2 CODE >702:C:\Microcontrollers\Termo-DS18B20\prog.c
+70D text2 CODE >704:C:\Microcontrollers\Termo-DS18B20\prog.c
 3C8 text1 CODE >537:C:\Microcontrollers\Termo-DS18B20\prog.c
-3CA text1 CODE >538:C:\Microcontrollers\Termo-DS18B20\prog.c
-3CB text1 CODE >540:C:\Microcontrollers\Termo-DS18B20\prog.c
-3CE text1 CODE >541:C:\Microcontrollers\Termo-DS18B20\prog.c
-3D3 text1 CODE >544:C:\Microcontrollers\Termo-DS18B20\prog.c
-3D7 text1 CODE >545:C:\Microcontrollers\Termo-DS18B20\prog.c
-3D8 text1 CODE >546:C:\Microcontrollers\Termo-DS18B20\prog.c
-3D9 text1 CODE >549:C:\Microcontrollers\Termo-DS18B20\prog.c
-3DA text1 CODE >551:C:\Microcontrollers\Termo-DS18B20\prog.c
-3EB text1 CODE >552:C:\Microcontrollers\Termo-DS18B20\prog.c
-3F3 text1 CODE >553:C:\Microcontrollers\Termo-DS18B20\prog.c
-3F6 text1 CODE >554:C:\Microcontrollers\Termo-DS18B20\prog.c
-3FB text1 CODE >555:C:\Microcontrollers\Termo-DS18B20\prog.c
-3FD text1 CODE >557:C:\Microcontrollers\Termo-DS18B20\prog.c
-402 text1 CODE >558:C:\Microcontrollers\Termo-DS18B20\prog.c
-403 text1 CODE >559:C:\Microcontrollers\Termo-DS18B20\prog.c
-406 text1 CODE >561:C:\Microcontrollers\Termo-DS18B20\prog.c
-409 text1 CODE >562:C:\Microcontrollers\Termo-DS18B20\prog.c
-40B text1 CODE >563:C:\Microcontrollers\Termo-DS18B20\prog.c
-416 text1 CODE >565:C:\Microcontrollers\Termo-DS18B20\prog.c
-41E text1 CODE >566:C:\Microcontrollers\Termo-DS18B20\prog.c
-2D maintext CODE >718:C:\Microcontrollers\Termo-DS18B20\prog.c
-2D maintext CODE >720:C:\Microcontrollers\Termo-DS18B20\prog.c
-2E maintext CODE >721:C:\Microcontrollers\Termo-DS18B20\prog.c
-31 maintext CODE >722:C:\Microcontrollers\Termo-DS18B20\prog.c
-33 maintext CODE >723:C:\Microcontrollers\Termo-DS18B20\prog.c
-34 maintext CODE >724:C:\Microcontrollers\Termo-DS18B20\prog.c
-36 maintext CODE >725:C:\Microcontrollers\Termo-DS18B20\prog.c
-37 maintext CODE >39:C:\Microcontrollers\Termo-DS18B20\prog.c
-39 maintext CODE >727:C:\Microcontrollers\Termo-DS18B20\prog.c
-3B maintext CODE >728:C:\Microcontrollers\Termo-DS18B20\prog.c
-3D maintext CODE >730:C:\Microcontrollers\Termo-DS18B20\prog.c
-3E maintext CODE >731:C:\Microcontrollers\Termo-DS18B20\prog.c
-3F maintext CODE >733:C:\Microcontrollers\Termo-DS18B20\prog.c
-41 maintext CODE >735:C:\Microcontrollers\Termo-DS18B20\prog.c
-42 maintext CODE >741:C:\Microcontrollers\Termo-DS18B20\prog.c
-43 maintext CODE >737:C:\Microcontrollers\Termo-DS18B20\prog.c
-45 maintext CODE >739:C:\Microcontrollers\Termo-DS18B20\prog.c
-47 maintext CODE >740:C:\Microcontrollers\Termo-DS18B20\prog.c
-49 maintext CODE >741:C:\Microcontrollers\Termo-DS18B20\prog.c
-4A maintext CODE >743:C:\Microcontrollers\Termo-DS18B20\prog.c
-4D maintext CODE >747:C:\Microcontrollers\Termo-DS18B20\prog.c
-52 maintext CODE >748:C:\Microcontrollers\Termo-DS18B20\prog.c
-53 maintext CODE >749:C:\Microcontrollers\Termo-DS18B20\prog.c
-56 maintext CODE >751:C:\Microcontrollers\Termo-DS18B20\prog.c
-57 maintext CODE >750:C:\Microcontrollers\Termo-DS18B20\prog.c
-59 maintext CODE >751:C:\Microcontrollers\Termo-DS18B20\prog.c
-5D maintext CODE >752:C:\Microcontrollers\Termo-DS18B20\prog.c
-5E maintext CODE >753:C:\Microcontrollers\Termo-DS18B20\prog.c
-60 maintext CODE >754:C:\Microcontrollers\Termo-DS18B20\prog.c
-62 maintext CODE >756:C:\Microcontrollers\Termo-DS18B20\prog.c
-6E maintext CODE >757:C:\Microcontrollers\Termo-DS18B20\prog.c
-6F maintext CODE >759:C:\Microcontrollers\Termo-DS18B20\prog.c
-75 maintext CODE >761:C:\Microcontrollers\Termo-DS18B20\prog.c
-7E maintext CODE >763:C:\Microcontrollers\Termo-DS18B20\prog.c
-80 maintext CODE >764:C:\Microcontrollers\Termo-DS18B20\prog.c
-8A maintext CODE >766:C:\Microcontrollers\Termo-DS18B20\prog.c
-8B maintext CODE >765:C:\Microcontrollers\Termo-DS18B20\prog.c
-8D maintext CODE >766:C:\Microcontrollers\Termo-DS18B20\prog.c
-8E maintext CODE >770:C:\Microcontrollers\Termo-DS18B20\prog.c
-90 maintext CODE >771:C:\Microcontrollers\Termo-DS18B20\prog.c
-91 maintext CODE >772:C:\Microcontrollers\Termo-DS18B20\prog.c
-92 maintext CODE >773:C:\Microcontrollers\Termo-DS18B20\prog.c
-95 maintext CODE >775:C:\Microcontrollers\Termo-DS18B20\prog.c
-95 maintext CODE >778:C:\Microcontrollers\Termo-DS18B20\prog.c
-96 maintext CODE >776:C:\Microcontrollers\Termo-DS18B20\prog.c
-97 maintext CODE >778:C:\Microcontrollers\Termo-DS18B20\prog.c
-B9 maintext CODE >780:C:\Microcontrollers\Termo-DS18B20\prog.c
-BA maintext CODE >781:C:\Microcontrollers\Termo-DS18B20\prog.c
-BC maintext CODE >782:C:\Microcontrollers\Termo-DS18B20\prog.c
-BF maintext CODE >783:C:\Microcontrollers\Termo-DS18B20\prog.c
-C0 maintext CODE >784:C:\Microcontrollers\Termo-DS18B20\prog.c
-C2 maintext CODE >785:C:\Microcontrollers\Termo-DS18B20\prog.c
-C3 maintext CODE >786:C:\Microcontrollers\Termo-DS18B20\prog.c
-C4 maintext CODE >788:C:\Microcontrollers\Termo-DS18B20\prog.c
-C7 maintext CODE >789:C:\Microcontrollers\Termo-DS18B20\prog.c
-C8 maintext CODE >790:C:\Microcontrollers\Termo-DS18B20\prog.c
-CB maintext CODE >794:C:\Microcontrollers\Termo-DS18B20\prog.c
-CF maintext CODE >795:C:\Microcontrollers\Termo-DS18B20\prog.c
-D0 maintext CODE >796:C:\Microcontrollers\Termo-DS18B20\prog.c
-D1 maintext CODE >798:C:\Microcontrollers\Termo-DS18B20\prog.c
-D2 maintext CODE >797:C:\Microcontrollers\Termo-DS18B20\prog.c
-D3 maintext CODE >798:C:\Microcontrollers\Termo-DS18B20\prog.c
-D5 maintext CODE >799:C:\Microcontrollers\Termo-DS18B20\prog.c
-D7 maintext CODE >800:C:\Microcontrollers\Termo-DS18B20\prog.c
-D8 maintext CODE >801:C:\Microcontrollers\Termo-DS18B20\prog.c
-DA maintext CODE >802:C:\Microcontrollers\Termo-DS18B20\prog.c
-DD maintext CODE >803:C:\Microcontrollers\Termo-DS18B20\prog.c
-E2 maintext CODE >804:C:\Microcontrollers\Termo-DS18B20\prog.c
-E3 maintext CODE >805:C:\Microcontrollers\Termo-DS18B20\prog.c
-E7 maintext CODE >806:C:\Microcontrollers\Termo-DS18B20\prog.c
-E8 maintext CODE >809:C:\Microcontrollers\Termo-DS18B20\prog.c
-E9 maintext CODE >810:C:\Microcontrollers\Termo-DS18B20\prog.c
-ED maintext CODE >812:C:\Microcontrollers\Termo-DS18B20\prog.c
-EF maintext CODE >813:C:\Microcontrollers\Termo-DS18B20\prog.c
-F2 maintext CODE >814:C:\Microcontrollers\Termo-DS18B20\prog.c
-F3 maintext CODE >815:C:\Microcontrollers\Termo-DS18B20\prog.c
-F6 maintext CODE >818:C:\Microcontrollers\Termo-DS18B20\prog.c
-F7 maintext CODE >820:C:\Microcontrollers\Termo-DS18B20\prog.c
-FA maintext CODE >821:C:\Microcontrollers\Termo-DS18B20\prog.c
-FC maintext CODE >824:C:\Microcontrollers\Termo-DS18B20\prog.c
-FF maintext CODE >825:C:\Microcontrollers\Termo-DS18B20\prog.c
-101 maintext CODE >826:C:\Microcontrollers\Termo-DS18B20\prog.c
-106 maintext CODE >827:C:\Microcontrollers\Termo-DS18B20\prog.c
-109 maintext CODE >830:C:\Microcontrollers\Termo-DS18B20\prog.c
-10A maintext CODE >831:C:\Microcontrollers\Termo-DS18B20\prog.c
-10B maintext CODE >833:C:\Microcontrollers\Termo-DS18B20\prog.c
-10E maintext CODE >834:C:\Microcontrollers\Termo-DS18B20\prog.c
-111 maintext CODE >835:C:\Microcontrollers\Termo-DS18B20\prog.c
-112 maintext CODE >836:C:\Microcontrollers\Termo-DS18B20\prog.c
-113 maintext CODE >837:C:\Microcontrollers\Termo-DS18B20\prog.c
-116 maintext CODE >838:C:\Microcontrollers\Termo-DS18B20\prog.c
-11B maintext CODE >839:C:\Microcontrollers\Termo-DS18B20\prog.c
-11C maintext CODE >840:C:\Microcontrollers\Termo-DS18B20\prog.c
-11D maintext CODE >841:C:\Microcontrollers\Termo-DS18B20\prog.c
-121 maintext CODE >842:C:\Microcontrollers\Termo-DS18B20\prog.c
-125 maintext CODE >843:C:\Microcontrollers\Termo-DS18B20\prog.c
-129 maintext CODE >846:C:\Microcontrollers\Termo-DS18B20\prog.c
-12E maintext CODE >847:C:\Microcontrollers\Termo-DS18B20\prog.c
-133 maintext CODE >848:C:\Microcontrollers\Termo-DS18B20\prog.c
-13A maintext CODE >851:C:\Microcontrollers\Termo-DS18B20\prog.c
-77E clrtext CODE >483:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-77E clrtext CODE >484:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-77F clrtext CODE >485:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-77F clrtext CODE >486:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-780 clrtext CODE >487:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-781 clrtext CODE >488:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-782 clrtext CODE >489:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-783 clrtext CODE >490:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-784 clrtext CODE >491:C:\Users\Vadim\AppData\Local\Temp\s5ok.
-785 clrtext CODE >492:C:\Users\Vadim\AppData\Local\Temp\s5ok.
+3C8 text1 CODE >539:C:\Microcontrollers\Termo-DS18B20\prog.c
+3CA text1 CODE >540:C:\Microcontrollers\Termo-DS18B20\prog.c
+3CB text1 CODE >542:C:\Microcontrollers\Termo-DS18B20\prog.c
+3CE text1 CODE >543:C:\Microcontrollers\Termo-DS18B20\prog.c
+3D3 text1 CODE >546:C:\Microcontrollers\Termo-DS18B20\prog.c
+3D7 text1 CODE >547:C:\Microcontrollers\Termo-DS18B20\prog.c
+3D8 text1 CODE >548:C:\Microcontrollers\Termo-DS18B20\prog.c
+3D9 text1 CODE >551:C:\Microcontrollers\Termo-DS18B20\prog.c
+3DA text1 CODE >552:C:\Microcontrollers\Termo-DS18B20\prog.c
+3E5 text1 CODE >553:C:\Microcontrollers\Termo-DS18B20\prog.c
+3E7 text1 CODE >557:C:\Microcontrollers\Termo-DS18B20\prog.c
+3F8 text1 CODE >558:C:\Microcontrollers\Termo-DS18B20\prog.c
+400 text1 CODE >559:C:\Microcontrollers\Termo-DS18B20\prog.c
+403 text1 CODE >560:C:\Microcontrollers\Termo-DS18B20\prog.c
+408 text1 CODE >561:C:\Microcontrollers\Termo-DS18B20\prog.c
+40A text1 CODE >563:C:\Microcontrollers\Termo-DS18B20\prog.c
+40F text1 CODE >564:C:\Microcontrollers\Termo-DS18B20\prog.c
+410 text1 CODE >565:C:\Microcontrollers\Termo-DS18B20\prog.c
+413 text1 CODE >567:C:\Microcontrollers\Termo-DS18B20\prog.c
+416 text1 CODE >568:C:\Microcontrollers\Termo-DS18B20\prog.c
+418 text1 CODE >569:C:\Microcontrollers\Termo-DS18B20\prog.c
+423 text1 CODE >571:C:\Microcontrollers\Termo-DS18B20\prog.c
+42B text1 CODE >572:C:\Microcontrollers\Termo-DS18B20\prog.c
+2D maintext CODE >724:C:\Microcontrollers\Termo-DS18B20\prog.c
+2D maintext CODE >726:C:\Microcontrollers\Termo-DS18B20\prog.c
+2E maintext CODE >727:C:\Microcontrollers\Termo-DS18B20\prog.c
+31 maintext CODE >728:C:\Microcontrollers\Termo-DS18B20\prog.c
+33 maintext CODE >729:C:\Microcontrollers\Termo-DS18B20\prog.c
+34 maintext CODE >730:C:\Microcontrollers\Termo-DS18B20\prog.c
+36 maintext CODE >731:C:\Microcontrollers\Termo-DS18B20\prog.c
+37 maintext CODE >41:C:\Microcontrollers\Termo-DS18B20\prog.c
+39 maintext CODE >733:C:\Microcontrollers\Termo-DS18B20\prog.c
+3B maintext CODE >734:C:\Microcontrollers\Termo-DS18B20\prog.c
+3D maintext CODE >736:C:\Microcontrollers\Termo-DS18B20\prog.c
+3E maintext CODE >737:C:\Microcontrollers\Termo-DS18B20\prog.c
+3F maintext CODE >739:C:\Microcontrollers\Termo-DS18B20\prog.c
+41 maintext CODE >741:C:\Microcontrollers\Termo-DS18B20\prog.c
+42 maintext CODE >747:C:\Microcontrollers\Termo-DS18B20\prog.c
+43 maintext CODE >743:C:\Microcontrollers\Termo-DS18B20\prog.c
+45 maintext CODE >745:C:\Microcontrollers\Termo-DS18B20\prog.c
+47 maintext CODE >746:C:\Microcontrollers\Termo-DS18B20\prog.c
+49 maintext CODE >747:C:\Microcontrollers\Termo-DS18B20\prog.c
+4A maintext CODE >749:C:\Microcontrollers\Termo-DS18B20\prog.c
+4D maintext CODE >753:C:\Microcontrollers\Termo-DS18B20\prog.c
+52 maintext CODE >754:C:\Microcontrollers\Termo-DS18B20\prog.c
+53 maintext CODE >755:C:\Microcontrollers\Termo-DS18B20\prog.c
+56 maintext CODE >757:C:\Microcontrollers\Termo-DS18B20\prog.c
+57 maintext CODE >756:C:\Microcontrollers\Termo-DS18B20\prog.c
+59 maintext CODE >757:C:\Microcontrollers\Termo-DS18B20\prog.c
+5D maintext CODE >758:C:\Microcontrollers\Termo-DS18B20\prog.c
+5E maintext CODE >759:C:\Microcontrollers\Termo-DS18B20\prog.c
+60 maintext CODE >760:C:\Microcontrollers\Termo-DS18B20\prog.c
+62 maintext CODE >762:C:\Microcontrollers\Termo-DS18B20\prog.c
+6E maintext CODE >763:C:\Microcontrollers\Termo-DS18B20\prog.c
+6F maintext CODE >765:C:\Microcontrollers\Termo-DS18B20\prog.c
+75 maintext CODE >767:C:\Microcontrollers\Termo-DS18B20\prog.c
+7E maintext CODE >769:C:\Microcontrollers\Termo-DS18B20\prog.c
+80 maintext CODE >770:C:\Microcontrollers\Termo-DS18B20\prog.c
+8A maintext CODE >772:C:\Microcontrollers\Termo-DS18B20\prog.c
+8B maintext CODE >771:C:\Microcontrollers\Termo-DS18B20\prog.c
+8D maintext CODE >772:C:\Microcontrollers\Termo-DS18B20\prog.c
+8E maintext CODE >776:C:\Microcontrollers\Termo-DS18B20\prog.c
+90 maintext CODE >777:C:\Microcontrollers\Termo-DS18B20\prog.c
+91 maintext CODE >778:C:\Microcontrollers\Termo-DS18B20\prog.c
+92 maintext CODE >779:C:\Microcontrollers\Termo-DS18B20\prog.c
+95 maintext CODE >781:C:\Microcontrollers\Termo-DS18B20\prog.c
+95 maintext CODE >784:C:\Microcontrollers\Termo-DS18B20\prog.c
+96 maintext CODE >782:C:\Microcontrollers\Termo-DS18B20\prog.c
+97 maintext CODE >784:C:\Microcontrollers\Termo-DS18B20\prog.c
+B9 maintext CODE >786:C:\Microcontrollers\Termo-DS18B20\prog.c
+BA maintext CODE >787:C:\Microcontrollers\Termo-DS18B20\prog.c
+BC maintext CODE >788:C:\Microcontrollers\Termo-DS18B20\prog.c
+BF maintext CODE >789:C:\Microcontrollers\Termo-DS18B20\prog.c
+C0 maintext CODE >790:C:\Microcontrollers\Termo-DS18B20\prog.c
+C2 maintext CODE >791:C:\Microcontrollers\Termo-DS18B20\prog.c
+C3 maintext CODE >792:C:\Microcontrollers\Termo-DS18B20\prog.c
+C4 maintext CODE >794:C:\Microcontrollers\Termo-DS18B20\prog.c
+C7 maintext CODE >795:C:\Microcontrollers\Termo-DS18B20\prog.c
+C8 maintext CODE >796:C:\Microcontrollers\Termo-DS18B20\prog.c
+CB maintext CODE >800:C:\Microcontrollers\Termo-DS18B20\prog.c
+CF maintext CODE >801:C:\Microcontrollers\Termo-DS18B20\prog.c
+D0 maintext CODE >802:C:\Microcontrollers\Termo-DS18B20\prog.c
+D1 maintext CODE >804:C:\Microcontrollers\Termo-DS18B20\prog.c
+D2 maintext CODE >803:C:\Microcontrollers\Termo-DS18B20\prog.c
+D3 maintext CODE >804:C:\Microcontrollers\Termo-DS18B20\prog.c
+D5 maintext CODE >805:C:\Microcontrollers\Termo-DS18B20\prog.c
+D7 maintext CODE >806:C:\Microcontrollers\Termo-DS18B20\prog.c
+D8 maintext CODE >807:C:\Microcontrollers\Termo-DS18B20\prog.c
+DA maintext CODE >808:C:\Microcontrollers\Termo-DS18B20\prog.c
+DD maintext CODE >809:C:\Microcontrollers\Termo-DS18B20\prog.c
+E2 maintext CODE >810:C:\Microcontrollers\Termo-DS18B20\prog.c
+E3 maintext CODE >811:C:\Microcontrollers\Termo-DS18B20\prog.c
+E7 maintext CODE >812:C:\Microcontrollers\Termo-DS18B20\prog.c
+E8 maintext CODE >815:C:\Microcontrollers\Termo-DS18B20\prog.c
+E9 maintext CODE >816:C:\Microcontrollers\Termo-DS18B20\prog.c
+ED maintext CODE >818:C:\Microcontrollers\Termo-DS18B20\prog.c
+EF maintext CODE >819:C:\Microcontrollers\Termo-DS18B20\prog.c
+F2 maintext CODE >820:C:\Microcontrollers\Termo-DS18B20\prog.c
+F3 maintext CODE >821:C:\Microcontrollers\Termo-DS18B20\prog.c
+F6 maintext CODE >824:C:\Microcontrollers\Termo-DS18B20\prog.c
+F7 maintext CODE >826:C:\Microcontrollers\Termo-DS18B20\prog.c
+FA maintext CODE >827:C:\Microcontrollers\Termo-DS18B20\prog.c
+FC maintext CODE >830:C:\Microcontrollers\Termo-DS18B20\prog.c
+FF maintext CODE >831:C:\Microcontrollers\Termo-DS18B20\prog.c
+106 maintext CODE >832:C:\Microcontrollers\Termo-DS18B20\prog.c
+108 maintext CODE >833:C:\Microcontrollers\Termo-DS18B20\prog.c
+109 maintext CODE >834:C:\Microcontrollers\Termo-DS18B20\prog.c
+10A maintext CODE >835:C:\Microcontrollers\Termo-DS18B20\prog.c
+10B maintext CODE >837:C:\Microcontrollers\Termo-DS18B20\prog.c
+10E maintext CODE >838:C:\Microcontrollers\Termo-DS18B20\prog.c
+111 maintext CODE >839:C:\Microcontrollers\Termo-DS18B20\prog.c
+112 maintext CODE >840:C:\Microcontrollers\Termo-DS18B20\prog.c
+113 maintext CODE >841:C:\Microcontrollers\Termo-DS18B20\prog.c
+116 maintext CODE >842:C:\Microcontrollers\Termo-DS18B20\prog.c
+11B maintext CODE >843:C:\Microcontrollers\Termo-DS18B20\prog.c
+11C maintext CODE >844:C:\Microcontrollers\Termo-DS18B20\prog.c
+11D maintext CODE >845:C:\Microcontrollers\Termo-DS18B20\prog.c
+121 maintext CODE >846:C:\Microcontrollers\Termo-DS18B20\prog.c
+125 maintext CODE >847:C:\Microcontrollers\Termo-DS18B20\prog.c
+129 maintext CODE >850:C:\Microcontrollers\Termo-DS18B20\prog.c
+12E maintext CODE >851:C:\Microcontrollers\Termo-DS18B20\prog.c
+133 maintext CODE >852:C:\Microcontrollers\Termo-DS18B20\prog.c
+13A maintext CODE >855:C:\Microcontrollers\Termo-DS18B20\prog.c
+78B clrtext CODE >435:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78B clrtext CODE >436:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78C clrtext CODE >437:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78C clrtext CODE >438:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78D clrtext CODE >439:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78E clrtext CODE >440:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+78F clrtext CODE >441:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+790 clrtext CODE >442:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+791 clrtext CODE >443:C:\Users\Vadim\AppData\Local\Temp\s2i0.
+792 clrtext CODE >444:C:\Users\Vadim\AppData\Local\Temp\s2i0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -821,49 +822,49 @@ ___latbits 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___awdiv@counter 7A 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 _digitemp 59 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 _digits_0 4D 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-__LdataBANK1 C0 4200 ABS 0 dataBANK1 -
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
 __size_of_ReadCell 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__Hspace_0 21600 0 ABS 0 - -
+__Hspace_0 2008 0 ABS 0 - -
 __Hspace_1 302 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
-__Hspace_3 60 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
 EditAddressMemory@CellsData A0 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-__HidataBANK1 42C0 0 ABS 0 idataBANK1 -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
 FillArrayFromEEPROM@i 34 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 i1TX@Zero 74 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1TX@line 70 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1TX@temp 73 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 __size_of_FillArrayFromEEPROM 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 calc_crc@fb 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Heeprom_data C0 4200 EEDATA 3 eeprom_data -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_EditAddressMemory 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 PL2 278 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
 PL4 296 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
-PL6 49E 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
-PL8 2AC 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
-_RX AFA 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
-_TX 9D0 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
+PL6 2AC 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
+PL8 49E 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
+_RX B14 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
+_TX 9EA 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
 ltemp0 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ltemp1 82 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ltemp2 86 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ltemp3 80 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 F@dig 2B 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Hstrings C0 4200 ABS 0 strings -
-_EERD EB0 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
-_EEWR DAA 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
-_INIT 960 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_EERD ECA 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
+_EEWR DC4 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
+_INIT 97A 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
 _T0IF 5A 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _TMR0 1 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
+___sp 0 0 STACK 2 stack C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 _main 5A 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
 _sign 5A 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-i1_RX B4E 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
-i1_TX A9A 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
-i1_INIT A38 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
+i1_RX B68 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
+i1_TX AB4 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+i1_INIT A52 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 main@TheStart B3 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-start 20 0 CODE 0 init C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
+start 20 0 CODE 0 init C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 ttemp 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
@@ -885,25 +886,25 @@ __end_of_get_temp_Async 49E 0 CODE 0 text26 dist/default/production\Termo-DS18B2
 TX@Zero 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 TX@line 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 TX@temp 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Hpa_nodes C0 4200 ABS 0 pa_nodes -
-__LidataBANK1 42C0 0 ABS 0 idataBANK1 -
+__Hpa_nodes 0 0 ABS 0 pa_nodes -
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
 __Hpowerup 0 0 CODE 0 powerup -
 ttemp0 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ttemp1 81 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__end_of_Run_getInit E4C 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
-__end_of_Run_getTemp E02 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
+__end_of_Run_getInit E66 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
+__end_of_Run_getTemp E1C 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
 F@KeyTimeCounter 50 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-_ReadCell C64 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
-_FillArrayFromEEPROM E70 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
+_ReadCell C7E 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
+_FillArrayFromEEPROM E8A 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 wtemp2 82 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
@@ -914,13 +915,13 @@ wtemp6 7F 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 get_temp_Async@i 22 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 indData@v_240 37 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_ReadCell C9C 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
+__end_of_ReadCell CB6 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
 __end_of_F 790 0 CODE 0 text25 dist/default/production\Termo-DS18B20.production.obj
 _getTemp_flags 44 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-i1_calc_crc B9C 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
+i1_calc_crc BB6 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
 __size_ofi1_INIT 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___awdiv@sign 7B 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__Hclrtext C0 4200 ABS 0 clrtext -
+__Hclrtext 0 0 ABS 0 clrtext -
 ___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 FindCell@addressStart 40 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 ___awdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
@@ -928,24 +929,24 @@ EditAddressMemory@cell AD 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS
 _EECON1bits 9C 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 FillArrayFromEEPROM@quantity 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_indData 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__end_of___wmul DAA 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
+__end_of___wmul DC4 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
 FindCell@addressNew 3E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 _EECON2 9D 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _EEDATA 9A 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __CFG_CP$ON 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___lbdiv@dividend 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 ___lbmod@divisor 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Lmaintext C0 4200 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
 indData@isPoint 38 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 calc_crc@i 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__LnvBANK0 42C0 0 ABS 0 nvBANK0 -
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
 ___awdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__end_of___awdiv 960 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
+__end_of___awdiv 97A 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
 __size_of_FindCell 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 EditAddressMemory@i AB 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-__end_of___lbdiv D78 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
-__end_of___lbmod CD4 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
-__end_of_clrInd F34 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
+__end_of___lbdiv D92 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
+__end_of___lbmod CEE 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
+__end_of_clrInd F4E 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
 i1calc_crc@crc 75 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1calc_crc@dat 72 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1calc_crc@len 70 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
@@ -953,68 +954,63 @@ i1calc_crc@mas 71 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.
 _INTCON B 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __end_of_EditAddressMemory 63A 0 CODE 0 text6 dist/default/production\Termo-DS18B20.production.obj
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__end_ofi1_calc_crc BE0 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
+__end_ofi1_calc_crc BFA 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 start_initialization 22 0 CODE 0 cinit dist/default/production\Termo-DS18B20.production.obj
 FindCell@i 41 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_Reset_powerOnInterval F28 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
+__end_of_Reset_powerOnInterval F42 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
 __CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 WriteArrayToEEPROM@container 33 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 i1INIT@Zero 72 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1INIT@line 71 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__end_of_FillArrayFromEEPROM E92 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
+__end_of_FillArrayFromEEPROM EAC 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
 FindCell@CellIsEmpty 3F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 EEWR@address 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_WriteArrayToEEPROM 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __end_ofPL2 296 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
 __end_ofPL4 2AC 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
-__end_ofPL6 4AE 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
-__end_ofPL8 2BA 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
-__end_of_RX B4E 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
-__end_of_TX A2C 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
-__Bbank0 42C0 4200 ABS 0 bank0 -
-__Bbank1 42C0 4200 ABS 0 bank1 -
-__Bbank2 42C0 4200 ABS 0 bank2 -
-__Bbank3 42C0 4200 BANK3 1 bank3 -
-clear_ram0 EFC 0 CODE 0 clrtext dist/default/production\Termo-DS18B20.production.obj
+__end_ofPL6 2BA 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
+__end_ofPL8 4AE 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
+__end_of_RX B68 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
+__end_of_TX A46 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
+clear_ram0 F16 0 CODE 0 clrtext dist/default/production\Termo-DS18B20.production.obj
 setPoint@dignum 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-__Bpa_nodes 42C0 4200 ABS 0 pa_nodes -
 _TRISA4 42C 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-_Reset_powerOnInterval F1C 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
+_Reset_powerOnInterval F36 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
 FillArrayFromEEPROM@address_start 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-_FindCell 84C 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
+_FindCell 866 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
 setDigit@data 32 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 setPoint@value 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 EditAddressMemory@ErrorShowed A8 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
 __size_of_Run_getInit 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __size_of_Run_getTemp 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___lbdiv@counter 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_indData 84C 0 CODE 0 text1 dist/default/production\Termo-DS18B20.production.obj
+__end_of_indData 866 0 CODE 0 text1 dist/default/production\Termo-DS18B20.production.obj
 EERD@INTCON_BUP 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-__end_of_FindCell 8D6 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
-__Hbank0 C0 4200 ABS 0 bank0 -
-__Hbank1 C0 4200 ABS 0 bank1 -
-__Hbank2 C0 4200 ABS 0 bank2 -
-__Hbank3 C0 4200 BANK3 1 bank3 -
+___int_sp 0 0 STACK 2 stack C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+__end_of_FindCell 8F0 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
 __Hcinit 5A 0 CODE 0 cinit -
 _DS_Address BF 0 BANK1 1 dataBANK1 dist/default/production\Termo-DS18B20.production.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
-__stringbase EF4 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
+__stringbase F0E 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
 __size_of_convDig 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__Hmaintext C0 4200 ABS 0 maintext -
+__Hmaintext 0 0 ABS 0 maintext -
 i1RX@Zero 72 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1RX@line 71 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__Hcommon C0 4200 ABS 0 common -
+__Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 0 config -
 _DS_ReadData B6 0 BANK1 1 dataBANK1 dist/default/production\Termo-DS18B20.production.obj
-__Lbank0 C0 4200 ABS 0 bank0 -
-__Lbank1 C0 4200 ABS 0 bank1 -
-__Lbank2 C0 4200 ABS 0 bank2 -
-__Lbank3 C0 4200 BANK3 1 bank3 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 BANK3 1 bank3 -
 __Lcinit 22 0 CODE 0 cinit -
 get_temp_Async@line 25 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __Lidloc 0 0 IDLOC 0 idloc -
@@ -1025,42 +1021,35 @@ __size_of_TX 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _EditAddressMemory 4BE 0 CODE 0 text6 dist/default/production\Termo-DS18B20.production.obj
 i1calc_crc@fb 73 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 _INTCONbits B 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__Babs1 42C0 4200 ABS 0 abs1 -
-__Bcode 42C0 4200 ABS 0 code -
-__Bsfr0 42C0 4200 ABS 0 sfr0 -
-__Bsfr1 42C0 4200 ABS 0 sfr1 -
-__Bsfr2 42C0 4200 ABS 0 sfr2 -
-__Bsfr3 42C0 4200 ABS 0 sfr3 -
-__Btext 42C0 4200 ABS 0 text -
-__Habs1 C0 4200 ABS 0 abs1 -
-__Hcode C0 4200 ABS 0 code -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
 __Hinit 20 0 CODE 0 init -
-__Hsfr0 C0 4200 ABS 0 sfr0 -
-__Hsfr1 C0 4200 ABS 0 sfr1 -
-__Hsfr2 C0 4200 ABS 0 sfr2 -
-__Hsfr3 C0 4200 ABS 0 sfr3 -
-__Htext C0 4200 ABS 0 text -
-__Labs1 C0 4200 ABS 0 abs1 -
-__Lcode C0 4200 ABS 0 code -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
 __Linit 20 0 CODE 0 init -
-__Lsfr0 C0 4200 ABS 0 sfr0 -
-__Lsfr1 C0 4200 ABS 0 sfr1 -
-__Lsfr2 C0 4200 ABS 0 sfr2 -
-__Lsfr3 C0 4200 ABS 0 sfr3 -
-__Ltext C0 4200 ABS 0 text -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
 __pnvBANK0 5D 0 BANK0 1 nvBANK0 dist/default/production\Termo-DS18B20.production.obj
 setDigit@a 35 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-___wmul D78 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
-__LcstackBANK0 C0 4200 ABS 0 cstackBANK0 -
-__LcstackBANK1 C0 4200 ABS 0 cstackBANK1 -
+___wmul D92 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 F@ButtonPressTimeIn1 52 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 F@ButtonPressTimeIn2 53 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 F@ButtonPressTimeOut 54 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-__HcstackCOMMON C0 4200 ABS 0 cstackCOMMON -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 PL10 4AE 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
-PL12 A2C 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
-PL14 AE6 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
-PL16 AF0 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+PL12 A46 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
+PL14 B00 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+PL16 B0A 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
 RX@d 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 RX@i 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 TX@i 32 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
@@ -1069,78 +1058,72 @@ _RA5 2D 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __S0 2008 0 ABS 0 - -
 __S1 C7 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-__S3 2160 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
 __pbitbssBANK0 300 -2A0 BANK0 1 bitbssBANK0 dist/default/production\Termo-DS18B20.production.obj
 RX@Zero 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 RX@line 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_get_temp_Async 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 saved_w 7E 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-_clrInd F28 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
-__Bstrings 42C0 4200 ABS 0 strings -
+_clrInd F42 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
 _digits 4A 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 _temp_drob 5B 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-_refreshInd F0C 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
+_refreshInd F26 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
 __end_ofPL10 4BE 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
-__end_ofPL12 A38 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
-__end_ofPL14 AF0 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
-__end_ofPL16 AFA 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
-__HnvBANK0 42C0 0 ABS 0 nvBANK0 -
+__end_ofPL12 A52 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
+__end_ofPL14 B0A 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+__end_ofPL16 B14 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab EEA 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-__BcstackBANK0 42C0 4200 ABS 0 cstackBANK0 -
-__BcstackBANK1 42C0 4200 ABS 0 cstackBANK1 -
+__stringtab F04 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 indData@cd 3B 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 indData@dN 3A 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __pdataBANK1 B6 0 BANK1 1 dataBANK1 dist/default/production\Termo-DS18B20.production.obj
 WriteArrayToEEPROM@i 34 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-_waitInterrupt F34 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
+_waitInterrupt F4E 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 Run_getTemp@line 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__LbssBANK0 42C0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 EditAddressMemory@CellIsEmpty AA 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
 __size_of_calc_crc 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 main@address B4 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-__LbitbssBANK0 21600 -1D340 ABS 0 bitbssBANK0 -
-__end_of_convDig D0C 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
+__LbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
+__end_of_convDig D26 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
 __size_ofi1_calc_crc 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__ptext10 F34 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
-__ptext11 DAA 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
-__ptext12 9D0 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
-__ptext13 ECE 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
-__ptext14 C64 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
-__ptext15 E70 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
-__ptext16 EB0 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
-__ptext17 AFA 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
-__ptext18 960 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
-__ptext19 D0C 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
-__ptext20 E4C 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
-__ptext21 F0C 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
-__ptext22 F28 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
-__ptext23 C9C 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
-__ptext24 D42 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
+__ptext10 F4E 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
+__ptext11 DC4 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
+__ptext12 9EA 0 CODE 0 text12 dist/default/production\Termo-DS18B20.production.obj
+__ptext13 EE8 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
+__ptext14 C7E 0 CODE 0 text14 dist/default/production\Termo-DS18B20.production.obj
+__ptext15 E8A 0 CODE 0 text15 dist/default/production\Termo-DS18B20.production.obj
+__ptext16 ECA 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
+__ptext17 B14 0 CODE 0 text17 dist/default/production\Termo-DS18B20.production.obj
+__ptext18 97A 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
+__ptext19 D26 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
+__ptext20 E66 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
+__ptext21 F26 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
+__ptext22 F42 0 CODE 0 text22 dist/default/production\Termo-DS18B20.production.obj
+__ptext23 CB6 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
+__ptext24 D5C 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
 __ptext25 63A 0 CODE 0 text25 dist/default/production\Termo-DS18B20.production.obj
 __ptext26 2BA 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
-__ptext27 B9C 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
-__ptext28 A9A 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
-__ptext29 B4E 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
-__ptext30 A38 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
-__ptext31 D78 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
-__ptext32 8D6 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
-__ptext33 CD4 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
-___awdiv 8D6 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
+__ptext27 BB6 0 CODE 0 text27 dist/default/production\Termo-DS18B20.production.obj
+__ptext28 AB4 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+__ptext29 B68 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
+__ptext30 A52 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
+__ptext31 D92 0 CODE 0 text31 dist/default/production\Termo-DS18B20.production.obj
+__ptext32 8F0 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
+__ptext33 CEE 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
+___awdiv 8F0 0 CODE 0 text32 dist/default/production\Termo-DS18B20.production.obj
 __size_of_clrInd 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-___lbdiv D42 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
-___lbmod C9C 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
-__BcstackCOMMON 42C0 4200 ABS 0 cstackCOMMON -
+___lbdiv D5C 0 CODE 0 text24 dist/default/production\Termo-DS18B20.production.obj
+___lbmod CB6 0 CODE 0 text23 dist/default/production\Termo-DS18B20.production.obj
 __pmaintext 5A 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
 EEWR@INTCON_BUP 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Bcommon 42C0 4200 ABS 0 common -
 __size_of_setDigit 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 convDig@dig 70 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 __size_of_setPoint 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__Bclrtext 42C0 4200 ABS 0 clrtext -
-__Lcommon C0 4200 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
@@ -1153,15 +1136,13 @@ main@line B5 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.product
 main@point_on_ind_delay AE 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
 _KeyCode 5F 0 BANK0 1 nvBANK0 dist/default/production\Termo-DS18B20.production.obj
 FindCell@CellsData 36 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_refreshInd F1C 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
+__end_of_refreshInd F36 0 CODE 0 text21 dist/default/production\Termo-DS18B20.production.obj
 F@long_press 57 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 i1INIT@One 74 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-stackhi 0 0 ABS 0 - C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
-stacklo 0 0 ABS 0 - C:\Users\Vadim\AppData\Local\Temp\s5ok.obj
+stackhi 0 0 ABS 0 - C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
+stacklo 0 0 ABS 0 - C:\Users\Vadim\AppData\Local\Temp\s2i0.obj
 ReadCell@i 38 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__Bmaintext 42C0 4200 ABS 0 maintext -
-__end_of__stringtab EF6 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
-__BbitbssBANK0 42C0 -1D340 ABS 0 bitbssBANK0 -
+__end_of__stringtab F10 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 FindCell@previous 35 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 F@LastKeysState 56 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
@@ -1169,109 +1150,106 @@ __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__HcstackBANK0 C0 4200 ABS 0 cstackBANK0 -
-__HcstackBANK1 C0 4200 ABS 0 cstackBANK1 -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 Run_getInit@line 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __Lend_init 20 0 CODE 0 end_init -
-_calc_crc BE0 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
+_calc_crc BFA 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
 INIT@b 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__LcstackCOMMON C0 4200 ABS 0 cstackCOMMON -
-_Run_getInit E28 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
-_Run_getTemp DDA 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_Run_getInit E42 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
+_Run_getTemp DF4 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
 end_of_initialization 56 0 CODE 0 cinit dist/default/production\Termo-DS18B20.production.obj
 __Hintentry 20 0 CODE 0 intentry -
-__Lstrings C0 4200 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
 ___awdiv@quotient 7C 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 ?___awdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__end_of_calc_crc C22 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
+__end_of_calc_crc C3C 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
 _Broadcasting 300 -2A0 BANK0 1 bitbssBANK0 dist/default/production\Termo-DS18B20.production.obj
-_setDigit E4C 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
-_setPoint E92 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
+_setDigit E66 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
+_setPoint EAC 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
 __Hreset_vec 2 0 CODE 0 reset_vec -
-__HbssBANK0 42C0 0 ABS 0 bssBANK0 -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
 _indData 790 0 CODE 0 text1 dist/default/production\Termo-DS18B20.production.obj
 WriteArrayToEEPROM@quantity 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_F 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __size_of_waitInterrupt 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __ptext1 790 0 CODE 0 text1 dist/default/production\Termo-DS18B20.production.obj
-__ptext2 DDA 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
-__ptext3 E28 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
-__ptext4 F1C 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
-__ptext5 84C 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
+__ptext2 DF4 0 CODE 0 text2 dist/default/production\Termo-DS18B20.production.obj
+__ptext3 E42 0 CODE 0 text3 dist/default/production\Termo-DS18B20.production.obj
+__ptext4 F36 0 CODE 0 text4 dist/default/production\Termo-DS18B20.production.obj
+__ptext5 866 0 CODE 0 text5 dist/default/production\Termo-DS18B20.production.obj
 __ptext6 4BE 0 CODE 0 text6 dist/default/production\Termo-DS18B20.production.obj
-__ptext7 E92 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
-__ptext8 BE0 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
-__ptext9 E02 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
-__end_of_setDigit E70 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
+__ptext7 EAC 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
+__ptext8 BFA 0 CODE 0 text8 dist/default/production\Termo-DS18B20.production.obj
+__ptext9 E1C 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
+__end_of_setDigit E8A 0 CODE 0 text20 dist/default/production\Termo-DS18B20.production.obj
 ___lbdiv@quotient 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_setPoint EB0 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
+__end_of_setPoint ECA 0 CODE 0 text7 dist/default/production\Termo-DS18B20.production.obj
 __size_of_Reset_powerOnInterval 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 ___lbmod@dividend 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
-__Leeprom_data 0 4200 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
 RX@One 32 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 i1INIT@b 73 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__end_ofi1_INIT A9A 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
+__end_ofi1_INIT AB4 0 CODE 0 text30 dist/default/production\Termo-DS18B20.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
 TX@One 33 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 TX@cmd 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 _powerOnInterval 5D 0 BANK0 1 nvBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_of_CellToInd D42 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
-__HbitbssBANK0 21600 -1D340 ABS 0 bitbssBANK0 -
+__end_of_CellToInd D5C 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
+__HbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
 __end_of__initialization 56 0 CODE 0 cinit dist/default/production\Termo-DS18B20.production.obj
 F@DigitNumber 55 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_CellToInd 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 __Lfunctab 0 0 CODE 0 functab -
-__BdataBANK1 42C0 4200 ABS 0 dataBANK1 -
-__end_of_PortAData EFC 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
-__end_of_waitInterrupt F3E 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
+__end_of_PortAData F16 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
+__end_of_waitInterrupt F58 0 CODE 0 text10 dist/default/production\Termo-DS18B20.production.obj
 __pidataBANK1 0 0 CODE 0 idataBANK1 dist/default/production\Termo-DS18B20.production.obj
-__Lclrtext C0 4200 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
 EditAddressMemory@i_256 AC 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
 __CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__end_of_ShowError EEA 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
+__end_of_ShowError F04 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
 INIT@Zero 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 INIT@line 2E 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
-__Beeprom_data 4200 4200 EEDATA 3 eeprom_data -
-_CellToInd D0C 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
+_CellToInd D26 0 CODE 0 text19 dist/default/production\Termo-DS18B20.production.obj
 __size_of_ShowError 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 i1RX@One 75 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 EERD@address 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __Hend_init 22 0 CODE 0 end_init -
-__end_of_WriteArrayToEEPROM E28 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
+__end_of_WriteArrayToEEPROM E42 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
 ___lbmod@rem 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-_PortAData EF6 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
-__end_of_EERD ECE 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
-__end_of_EEWR DDA 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
-__end_of_INIT 9D0 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
+_PortAData F10 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
+__end_of_EERD EE8 0 CODE 0 text16 dist/default/production\Termo-DS18B20.production.obj
+__end_of_EEWR DF4 0 CODE 0 text11 dist/default/production\Termo-DS18B20.production.obj
+__end_of_INIT 9EA 0 CODE 0 text18 dist/default/production\Termo-DS18B20.production.obj
 __end_of_main 278 0 CODE 0 maintext dist/default/production\Termo-DS18B20.production.obj
 _PowerBlocked 58 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-__end_ofi1_RX B9C 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
-__end_ofi1_TX AE6 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
+__end_ofi1_RX BB6 0 CODE 0 text29 dist/default/production\Termo-DS18B20.production.obj
+__end_ofi1_TX B00 0 CODE 0 text28 dist/default/production\Termo-DS18B20.production.obj
 ReadCell@CellsData 35 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 i1TX@One 76 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 i1TX@cmd 72 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 EERD@EEDATA_BUP 2F 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 _CMCON 1F 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _EEADR 9B 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-__Lpa_nodes C0 4200 ABS 0 pa_nodes -
+__Lpa_nodes 0 0 ABS 0 pa_nodes -
 _PORTA 5 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _PORTB 6 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _T2CON 12 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _TRISA 85 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _TRISB 86 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 _main$272 B0 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
-__Bram 42C0 4200 ABS 0 ram -
-__Hram C0 4200 ABS 0 ram -
-__Lram C0 4200 ABS 0 ram -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Termo-DS18B20.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
 EditAddressMemory@RereadCell A9 0 BANK1 1 cstackBANK1 dist/default/production\Termo-DS18B20.production.obj
 _temperature 5C 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\Termo-DS18B20.production.obj
-_ShowError ECE 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
-__HdataBANK1 C0 4200 ABS 0 dataBANK1 -
+_ShowError EE8 0 CODE 0 text13 dist/default/production\Termo-DS18B20.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
 WriteArrayToEEPROM@address_start 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 EEWR@data 2D 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __initialization 22 0 CODE 0 cinit dist/default/production\Termo-DS18B20.production.obj
@@ -1279,16 +1257,16 @@ indData@v 39 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.product
 FindCell@address 42 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 _get_temp_Async 2BA 0 CODE 0 text26 dist/default/production\Termo-DS18B20.production.obj
 __pbssBANK0 44 0 BANK0 1 bssBANK0 dist/default/production\Termo-DS18B20.production.obj
-_convDig CD4 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
-__pstrings EEA 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
+_convDig CEE 0 CODE 0 text33 dist/default/production\Termo-DS18B20.production.obj
+__pstrings F04 0 STRING 0 strings dist/default/production\Termo-DS18B20.production.obj
 ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 F@CurrentKeysState 2C 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 __size_of_refreshInd 0 0 ABS 0 - dist/default/production\Termo-DS18B20.production.obj
-_WriteArrayToEEPROM E02 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
+_WriteArrayToEEPROM E1C 0 CODE 0 text9 dist/default/production\Termo-DS18B20.production.obj
 i1calc_crc@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Termo-DS18B20.production.obj
 ___lbmod@counter 30 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 CellToInd@cell 36 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
-__pswtext1 C22 0 CONST 0 swtext1 dist/default/production\Termo-DS18B20.production.obj
+__pswtext1 C3C 0 CONST 0 swtext1 dist/default/production\Termo-DS18B20.production.obj
 INIT@One 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -1315,14 +1293,13 @@ INIT@One 31 0 BANK0 1 cstackBANK0 dist/default/production\Termo-DS18B20.producti
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text14 0 632 C64 143 2
+text14 0 63F C7E 143 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 41 1
 cstackBANK1 1 A0 A0 27 1
-intentry 0 4 8 60D 2
+intentry 0 4 8 61A 2
 reset_vec 0 0 0 1 2
-strings 0 775 EEA 9 2
-eeprom_data 3 0 4200 60 2
-swtext1 0 611 C22 21 2
-clrtext 0 77E EFC 21 2
+strings 0 782 F04 9 2
+swtext1 0 61E C3C 21 2
+clrtext 0 78B F16 21 2
 config 0 2007 400E 1 2

@@ -960,19 +960,7 @@ extern __bit __timeout;
 #pragma config CPD = OFF
 #pragma config CP = ON
 
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x13" "," "0xE7" "," "0x63" "," "0x15" "," "0x02" "," "0x5B");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x29" "," "0x89" "," "0x63" "," "0x15" "," "0x02" "," "0xE7");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xF8" "," "0xE7" "," "0x63" "," "0x15" "," "0x02" "," "0xF1");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xBE" "," "0xAC" "," "0x64" "," "0x15" "," "0x01" "," "0x68");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xEC" "," "0x95" "," "0x63" "," "0x15" "," "0x02" "," "0x3D");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x00" "," "0x93" "," "0x63" "," "0x15" "," "0x02" "," "0xCF");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x1D" "," "0xA8" "," "0x63" "," "0x15" "," "0x02" "," "0x83");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x2A" "," "0xA8" "," "0x63" "," "0x15" "," "0x02" "," "0x56");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xA5" "," "0xD4" "," "0x63" "," "0x15" "," "0x02" "," "0x48");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x65" "," "0xD3" "," "0x63" "," "0x15" "," "0x02" "," "0xEC");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0x41" "," "0xA7" "," "0x63" "," "0x15" "," "0x02" "," "0xAD");
-asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); asm("\tdb\t" "0x28" "," "0xFF" "," "0xA2" "," "0xD1" "," "0x64" "," "0x15" "," "0x01" "," "0x00");
-
+# 38
 volatile unsigned char digits [3];
 volatile unsigned char digits_0 [3];
 volatile unsigned char KeyCode;
@@ -1010,7 +998,7 @@ char temperature = 0;
 unsigned char temp_drob = 0;
 unsigned char sign;
 
-# 91
+# 93
 void waitInterrupt() {
 endInterrupt = 0;
 while (!endInterrupt);
@@ -1065,13 +1053,13 @@ case 7: return 0b10011000;
 case 8: return 0b11111011;
 case 9: return 0b11111010;
 
-# 150
+# 152
 case 14: return 0b11100011;
 
-# 162
+# 164
 case 24: return 0b00100001;
 
-# 173
+# 175
 case 32: return 0b00100000;
 
 default: return 0b00000000;
@@ -1340,7 +1328,7 @@ DigitNumber = 0;
 unsigned char dig = digits[DigitNumber];
 digitemp = convDig(0b00111111 & dig);
 
-# 445
+# 447
 (0b01000000 == (0b01000000 & dig)) ? digitemp |= 0b00000100 : digitemp &= 0b11111011;
 
 PORTB = 0;
@@ -1446,6 +1434,10 @@ dN--;
 }
 
 unsigned char isPoint = 0;
+if(sign && temperature > 9 || temperature > 99){
+isPoint = 1;
+}
+
 do {
 unsigned char v = (temperature > 9 ? 1 : 0) + (temperature > 99 ? 1 : 0);
 setDigit(cd - v, temperature % 10);
@@ -1721,10 +1713,8 @@ Run_getTemp(line);
 }
 
 if (getTemp_flags.Error) {
-if (Broadcasting) {
-if (line == 0b00000010) {
+if (Broadcasting && line == 0b00000010) {
 line = 0b00001000;
-}
 } else {
 clrInd();
 ShowError();
