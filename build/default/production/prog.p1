@@ -1,62 +1,62 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "53 prog.c
-[s S57 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 `ui 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :8 `uc 1 ]
-[n S57 . Init Send_Address CountAddressBytes SendConvertTemp PauseValue SendGetTemp ReadData CountDataBytes DataIsRead Error ActiveProcess Line ]
-"301 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h
+[s S56 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 `ui 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :8 `uc 1 ]
+[n S56 . Init Send_Address CountAddressBytes SendConvertTemp PauseValue SendGetTemp ReadData CountDataBytes DataIsRead Error ActiveProcess Line ]
+"299 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f628a.h
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
-"307
-[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S18 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
-"317
-[s S19 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S19 . . TMR0IF . TMR0IE ]
-"306
-[u S17 `S18 1 `S19 1 ]
-[n S17 . . . ]
-"324
-[v _INTCONbits `VS17 ~T0 @X0 0 e@11 ]
-"1181
+"305
+[s S17 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S17 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"315
+[s S18 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S18 . . TMR0IF . TMR0IE ]
+"304
+[u S16 `S17 1 `S18 1 ]
+[n S16 . . . ]
+"322
+[v _INTCONbits `VS16 ~T0 @X0 0 e@11 ]
+"1179
 [v _EEADR `Vuc ~T0 @X0 0 e@155 ]
-"1175
+"1173
 [v _EEDATA `Vuc ~T0 @X0 0 e@154 ]
-"1193
-[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S53 . RD WR WREN WRERR ]
-"1192
-[u S52 `S53 1 ]
-[n S52 . . ]
-"1200
-[v _EECON1bits `VS52 ~T0 @X0 0 e@156 ]
-"1224
+"1191
+[s S52 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S52 . RD WR WREN WRERR ]
+"1190
+[u S51 `S52 1 ]
+[n S51 . . ]
+"1198
+[v _EECON1bits `VS51 ~T0 @X0 0 e@156 ]
+"1222
 [v _EECON2 `Vuc ~T0 @X0 0 e@157 ]
-"881
+"879
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-[v F782 `(v ~T0 @X0 1 tf1`ul ]
-"152 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic.h
-[v __delay `JF782 ~T0 @X0 0 e ]
+[v F780 `(v ~T0 @X0 1 tf1`ul ]
+"152 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic.h
+[v __delay `JF780 ~T0 @X0 0 e ]
 [p i __delay ]
-"160 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h
+"158 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f628a.h
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"1440
+"1438
 [v _T0IF `Vb ~T0 @X0 0 e@90 ]
 "55
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"221
+"219
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"1488
+"1486
 [v _TRISA4 `Vb ~T0 @X0 0 e@1068 ]
-"1390
+"1388
 [v _RA5 `Vb ~T0 @X0 0 e@45 ]
-"1384
+"1382
 [v _RA2 `Vb ~T0 @X0 0 e@42 ]
 [p mainexit ]
-"812
+"810
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
-"942
+"940
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"516
+"514
 [v _T2CON `Vuc ~T0 @X0 0 e@18 ]
-"743
+"741
 [v _CMCON `Vuc ~T0 @X0 0 e@31 ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -142,7 +142,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;pic16f628a.h: 49: extern volatile unsigned char INDF @ 0x000;
-"51 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f628a.h
 [; ;pic16f628a.h: 51: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic16f628a.h: 55: extern volatile unsigned char TMR0 @ 0x001;
@@ -174,527 +174,525 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic16f628a.h: 86: };
 [; ;pic16f628a.h: 87: struct {
 [; ;pic16f628a.h: 88: unsigned CARRY :1;
-[; ;pic16f628a.h: 89: };
-[; ;pic16f628a.h: 90: struct {
-[; ;pic16f628a.h: 91: unsigned :2;
-[; ;pic16f628a.h: 92: unsigned ZERO :1;
-[; ;pic16f628a.h: 93: };
-[; ;pic16f628a.h: 94: } STATUSbits_t;
-[; ;pic16f628a.h: 95: extern volatile STATUSbits_t STATUSbits @ 0x003;
-[; ;pic16f628a.h: 154: extern volatile unsigned char FSR @ 0x004;
-"156
-[; ;pic16f628a.h: 156: asm("FSR equ 04h");
+[; ;pic16f628a.h: 89: unsigned :1;
+[; ;pic16f628a.h: 90: unsigned ZERO :1;
+[; ;pic16f628a.h: 91: };
+[; ;pic16f628a.h: 92: } STATUSbits_t;
+[; ;pic16f628a.h: 93: extern volatile STATUSbits_t STATUSbits @ 0x003;
+[; ;pic16f628a.h: 152: extern volatile unsigned char FSR @ 0x004;
+"154
+[; ;pic16f628a.h: 154: asm("FSR equ 04h");
 [; <" FSR equ 04h ;# ">
-[; ;pic16f628a.h: 160: extern volatile unsigned char PORTA @ 0x005;
-"162
-[; ;pic16f628a.h: 162: asm("PORTA equ 05h");
+[; ;pic16f628a.h: 158: extern volatile unsigned char PORTA @ 0x005;
+"160
+[; ;pic16f628a.h: 160: asm("PORTA equ 05h");
 [; <" PORTA equ 05h ;# ">
-[; ;pic16f628a.h: 165: typedef union {
-[; ;pic16f628a.h: 166: struct {
-[; ;pic16f628a.h: 167: unsigned RA0 :1;
-[; ;pic16f628a.h: 168: unsigned RA1 :1;
-[; ;pic16f628a.h: 169: unsigned RA2 :1;
-[; ;pic16f628a.h: 170: unsigned RA3 :1;
-[; ;pic16f628a.h: 171: unsigned RA4 :1;
-[; ;pic16f628a.h: 172: unsigned RA5 :1;
-[; ;pic16f628a.h: 173: unsigned RA6 :1;
-[; ;pic16f628a.h: 174: unsigned RA7 :1;
-[; ;pic16f628a.h: 175: };
-[; ;pic16f628a.h: 176: } PORTAbits_t;
-[; ;pic16f628a.h: 177: extern volatile PORTAbits_t PORTAbits @ 0x005;
-[; ;pic16f628a.h: 221: extern volatile unsigned char PORTB @ 0x006;
-"223
-[; ;pic16f628a.h: 223: asm("PORTB equ 06h");
+[; ;pic16f628a.h: 163: typedef union {
+[; ;pic16f628a.h: 164: struct {
+[; ;pic16f628a.h: 165: unsigned RA0 :1;
+[; ;pic16f628a.h: 166: unsigned RA1 :1;
+[; ;pic16f628a.h: 167: unsigned RA2 :1;
+[; ;pic16f628a.h: 168: unsigned RA3 :1;
+[; ;pic16f628a.h: 169: unsigned RA4 :1;
+[; ;pic16f628a.h: 170: unsigned RA5 :1;
+[; ;pic16f628a.h: 171: unsigned RA6 :1;
+[; ;pic16f628a.h: 172: unsigned RA7 :1;
+[; ;pic16f628a.h: 173: };
+[; ;pic16f628a.h: 174: } PORTAbits_t;
+[; ;pic16f628a.h: 175: extern volatile PORTAbits_t PORTAbits @ 0x005;
+[; ;pic16f628a.h: 219: extern volatile unsigned char PORTB @ 0x006;
+"221
+[; ;pic16f628a.h: 221: asm("PORTB equ 06h");
 [; <" PORTB equ 06h ;# ">
-[; ;pic16f628a.h: 226: typedef union {
-[; ;pic16f628a.h: 227: struct {
-[; ;pic16f628a.h: 228: unsigned RB0 :1;
-[; ;pic16f628a.h: 229: unsigned RB1 :1;
-[; ;pic16f628a.h: 230: unsigned RB2 :1;
-[; ;pic16f628a.h: 231: unsigned RB3 :1;
-[; ;pic16f628a.h: 232: unsigned RB4 :1;
-[; ;pic16f628a.h: 233: unsigned RB5 :1;
-[; ;pic16f628a.h: 234: unsigned RB6 :1;
-[; ;pic16f628a.h: 235: unsigned RB7 :1;
-[; ;pic16f628a.h: 236: };
-[; ;pic16f628a.h: 237: } PORTBbits_t;
-[; ;pic16f628a.h: 238: extern volatile PORTBbits_t PORTBbits @ 0x006;
-[; ;pic16f628a.h: 282: extern volatile unsigned char PCLATH @ 0x00A;
-"284
-[; ;pic16f628a.h: 284: asm("PCLATH equ 0Ah");
+[; ;pic16f628a.h: 224: typedef union {
+[; ;pic16f628a.h: 225: struct {
+[; ;pic16f628a.h: 226: unsigned RB0 :1;
+[; ;pic16f628a.h: 227: unsigned RB1 :1;
+[; ;pic16f628a.h: 228: unsigned RB2 :1;
+[; ;pic16f628a.h: 229: unsigned RB3 :1;
+[; ;pic16f628a.h: 230: unsigned RB4 :1;
+[; ;pic16f628a.h: 231: unsigned RB5 :1;
+[; ;pic16f628a.h: 232: unsigned RB6 :1;
+[; ;pic16f628a.h: 233: unsigned RB7 :1;
+[; ;pic16f628a.h: 234: };
+[; ;pic16f628a.h: 235: } PORTBbits_t;
+[; ;pic16f628a.h: 236: extern volatile PORTBbits_t PORTBbits @ 0x006;
+[; ;pic16f628a.h: 280: extern volatile unsigned char PCLATH @ 0x00A;
+"282
+[; ;pic16f628a.h: 282: asm("PCLATH equ 0Ah");
 [; <" PCLATH equ 0Ah ;# ">
-[; ;pic16f628a.h: 287: typedef union {
-[; ;pic16f628a.h: 288: struct {
-[; ;pic16f628a.h: 289: unsigned PCLATH :5;
-[; ;pic16f628a.h: 290: };
-[; ;pic16f628a.h: 291: } PCLATHbits_t;
-[; ;pic16f628a.h: 292: extern volatile PCLATHbits_t PCLATHbits @ 0x00A;
-[; ;pic16f628a.h: 301: extern volatile unsigned char INTCON @ 0x00B;
-"303
-[; ;pic16f628a.h: 303: asm("INTCON equ 0Bh");
+[; ;pic16f628a.h: 285: typedef union {
+[; ;pic16f628a.h: 286: struct {
+[; ;pic16f628a.h: 287: unsigned PCLATH :5;
+[; ;pic16f628a.h: 288: };
+[; ;pic16f628a.h: 289: } PCLATHbits_t;
+[; ;pic16f628a.h: 290: extern volatile PCLATHbits_t PCLATHbits @ 0x00A;
+[; ;pic16f628a.h: 299: extern volatile unsigned char INTCON @ 0x00B;
+"301
+[; ;pic16f628a.h: 301: asm("INTCON equ 0Bh");
 [; <" INTCON equ 0Bh ;# ">
-[; ;pic16f628a.h: 306: typedef union {
-[; ;pic16f628a.h: 307: struct {
-[; ;pic16f628a.h: 308: unsigned RBIF :1;
-[; ;pic16f628a.h: 309: unsigned INTF :1;
-[; ;pic16f628a.h: 310: unsigned T0IF :1;
-[; ;pic16f628a.h: 311: unsigned RBIE :1;
-[; ;pic16f628a.h: 312: unsigned INTE :1;
-[; ;pic16f628a.h: 313: unsigned T0IE :1;
-[; ;pic16f628a.h: 314: unsigned PEIE :1;
-[; ;pic16f628a.h: 315: unsigned GIE :1;
-[; ;pic16f628a.h: 316: };
-[; ;pic16f628a.h: 317: struct {
+[; ;pic16f628a.h: 304: typedef union {
+[; ;pic16f628a.h: 305: struct {
+[; ;pic16f628a.h: 306: unsigned RBIF :1;
+[; ;pic16f628a.h: 307: unsigned INTF :1;
+[; ;pic16f628a.h: 308: unsigned T0IF :1;
+[; ;pic16f628a.h: 309: unsigned RBIE :1;
+[; ;pic16f628a.h: 310: unsigned INTE :1;
+[; ;pic16f628a.h: 311: unsigned T0IE :1;
+[; ;pic16f628a.h: 312: unsigned PEIE :1;
+[; ;pic16f628a.h: 313: unsigned GIE :1;
+[; ;pic16f628a.h: 314: };
+[; ;pic16f628a.h: 315: struct {
+[; ;pic16f628a.h: 316: unsigned :2;
+[; ;pic16f628a.h: 317: unsigned TMR0IF :1;
 [; ;pic16f628a.h: 318: unsigned :2;
-[; ;pic16f628a.h: 319: unsigned TMR0IF :1;
-[; ;pic16f628a.h: 320: unsigned :2;
-[; ;pic16f628a.h: 321: unsigned TMR0IE :1;
-[; ;pic16f628a.h: 322: };
-[; ;pic16f628a.h: 323: } INTCONbits_t;
-[; ;pic16f628a.h: 324: extern volatile INTCONbits_t INTCONbits @ 0x00B;
-[; ;pic16f628a.h: 378: extern volatile unsigned char PIR1 @ 0x00C;
-"380
-[; ;pic16f628a.h: 380: asm("PIR1 equ 0Ch");
+[; ;pic16f628a.h: 319: unsigned TMR0IE :1;
+[; ;pic16f628a.h: 320: };
+[; ;pic16f628a.h: 321: } INTCONbits_t;
+[; ;pic16f628a.h: 322: extern volatile INTCONbits_t INTCONbits @ 0x00B;
+[; ;pic16f628a.h: 376: extern volatile unsigned char PIR1 @ 0x00C;
+"378
+[; ;pic16f628a.h: 378: asm("PIR1 equ 0Ch");
 [; <" PIR1 equ 0Ch ;# ">
-[; ;pic16f628a.h: 383: typedef union {
-[; ;pic16f628a.h: 384: struct {
-[; ;pic16f628a.h: 385: unsigned TMR1IF :1;
-[; ;pic16f628a.h: 386: unsigned TMR2IF :1;
-[; ;pic16f628a.h: 387: unsigned CCP1IF :1;
-[; ;pic16f628a.h: 388: unsigned :1;
-[; ;pic16f628a.h: 389: unsigned TXIF :1;
-[; ;pic16f628a.h: 390: unsigned RCIF :1;
-[; ;pic16f628a.h: 391: unsigned CMIF :1;
-[; ;pic16f628a.h: 392: unsigned EEIF :1;
-[; ;pic16f628a.h: 393: };
-[; ;pic16f628a.h: 394: } PIR1bits_t;
-[; ;pic16f628a.h: 395: extern volatile PIR1bits_t PIR1bits @ 0x00C;
-[; ;pic16f628a.h: 434: extern volatile unsigned short TMR1 @ 0x00E;
-"436
-[; ;pic16f628a.h: 436: asm("TMR1 equ 0Eh");
+[; ;pic16f628a.h: 381: typedef union {
+[; ;pic16f628a.h: 382: struct {
+[; ;pic16f628a.h: 383: unsigned TMR1IF :1;
+[; ;pic16f628a.h: 384: unsigned TMR2IF :1;
+[; ;pic16f628a.h: 385: unsigned CCP1IF :1;
+[; ;pic16f628a.h: 386: unsigned :1;
+[; ;pic16f628a.h: 387: unsigned TXIF :1;
+[; ;pic16f628a.h: 388: unsigned RCIF :1;
+[; ;pic16f628a.h: 389: unsigned CMIF :1;
+[; ;pic16f628a.h: 390: unsigned EEIF :1;
+[; ;pic16f628a.h: 391: };
+[; ;pic16f628a.h: 392: } PIR1bits_t;
+[; ;pic16f628a.h: 393: extern volatile PIR1bits_t PIR1bits @ 0x00C;
+[; ;pic16f628a.h: 432: extern volatile unsigned short TMR1 @ 0x00E;
+"434
+[; ;pic16f628a.h: 434: asm("TMR1 equ 0Eh");
 [; <" TMR1 equ 0Eh ;# ">
-[; ;pic16f628a.h: 440: extern volatile unsigned char TMR1L @ 0x00E;
-"442
-[; ;pic16f628a.h: 442: asm("TMR1L equ 0Eh");
+[; ;pic16f628a.h: 438: extern volatile unsigned char TMR1L @ 0x00E;
+"440
+[; ;pic16f628a.h: 440: asm("TMR1L equ 0Eh");
 [; <" TMR1L equ 0Eh ;# ">
-[; ;pic16f628a.h: 446: extern volatile unsigned char TMR1H @ 0x00F;
-"448
-[; ;pic16f628a.h: 448: asm("TMR1H equ 0Fh");
+[; ;pic16f628a.h: 444: extern volatile unsigned char TMR1H @ 0x00F;
+"446
+[; ;pic16f628a.h: 446: asm("TMR1H equ 0Fh");
 [; <" TMR1H equ 0Fh ;# ">
-[; ;pic16f628a.h: 452: extern volatile unsigned char T1CON @ 0x010;
-"454
-[; ;pic16f628a.h: 454: asm("T1CON equ 010h");
+[; ;pic16f628a.h: 450: extern volatile unsigned char T1CON @ 0x010;
+"452
+[; ;pic16f628a.h: 452: asm("T1CON equ 010h");
 [; <" T1CON equ 010h ;# ">
-[; ;pic16f628a.h: 457: typedef union {
-[; ;pic16f628a.h: 458: struct {
-[; ;pic16f628a.h: 459: unsigned TMR1ON :1;
-[; ;pic16f628a.h: 460: unsigned TMR1CS :1;
-[; ;pic16f628a.h: 461: unsigned nT1SYNC :1;
-[; ;pic16f628a.h: 462: unsigned T1OSCEN :1;
-[; ;pic16f628a.h: 463: unsigned T1CKPS :2;
-[; ;pic16f628a.h: 464: };
-[; ;pic16f628a.h: 465: struct {
-[; ;pic16f628a.h: 466: unsigned :4;
-[; ;pic16f628a.h: 467: unsigned T1CKPS0 :1;
-[; ;pic16f628a.h: 468: unsigned T1CKPS1 :1;
-[; ;pic16f628a.h: 469: };
-[; ;pic16f628a.h: 470: } T1CONbits_t;
-[; ;pic16f628a.h: 471: extern volatile T1CONbits_t T1CONbits @ 0x010;
-[; ;pic16f628a.h: 510: extern volatile unsigned char TMR2 @ 0x011;
-"512
-[; ;pic16f628a.h: 512: asm("TMR2 equ 011h");
+[; ;pic16f628a.h: 455: typedef union {
+[; ;pic16f628a.h: 456: struct {
+[; ;pic16f628a.h: 457: unsigned TMR1ON :1;
+[; ;pic16f628a.h: 458: unsigned TMR1CS :1;
+[; ;pic16f628a.h: 459: unsigned nT1SYNC :1;
+[; ;pic16f628a.h: 460: unsigned T1OSCEN :1;
+[; ;pic16f628a.h: 461: unsigned T1CKPS :2;
+[; ;pic16f628a.h: 462: };
+[; ;pic16f628a.h: 463: struct {
+[; ;pic16f628a.h: 464: unsigned :4;
+[; ;pic16f628a.h: 465: unsigned T1CKPS0 :1;
+[; ;pic16f628a.h: 466: unsigned T1CKPS1 :1;
+[; ;pic16f628a.h: 467: };
+[; ;pic16f628a.h: 468: } T1CONbits_t;
+[; ;pic16f628a.h: 469: extern volatile T1CONbits_t T1CONbits @ 0x010;
+[; ;pic16f628a.h: 508: extern volatile unsigned char TMR2 @ 0x011;
+"510
+[; ;pic16f628a.h: 510: asm("TMR2 equ 011h");
 [; <" TMR2 equ 011h ;# ">
-[; ;pic16f628a.h: 516: extern volatile unsigned char T2CON @ 0x012;
-"518
-[; ;pic16f628a.h: 518: asm("T2CON equ 012h");
+[; ;pic16f628a.h: 514: extern volatile unsigned char T2CON @ 0x012;
+"516
+[; ;pic16f628a.h: 516: asm("T2CON equ 012h");
 [; <" T2CON equ 012h ;# ">
-[; ;pic16f628a.h: 521: typedef union {
-[; ;pic16f628a.h: 522: struct {
-[; ;pic16f628a.h: 523: unsigned T2CKPS :2;
-[; ;pic16f628a.h: 524: unsigned TMR2ON :1;
-[; ;pic16f628a.h: 525: unsigned TOUTPS :4;
-[; ;pic16f628a.h: 526: };
-[; ;pic16f628a.h: 527: struct {
-[; ;pic16f628a.h: 528: unsigned T2CKPS0 :1;
-[; ;pic16f628a.h: 529: unsigned T2CKPS1 :1;
-[; ;pic16f628a.h: 530: unsigned :1;
-[; ;pic16f628a.h: 531: unsigned TOUTPS0 :1;
-[; ;pic16f628a.h: 532: unsigned TOUTPS1 :1;
-[; ;pic16f628a.h: 533: unsigned TOUTPS2 :1;
-[; ;pic16f628a.h: 534: unsigned TOUTPS3 :1;
-[; ;pic16f628a.h: 535: };
-[; ;pic16f628a.h: 536: } T2CONbits_t;
-[; ;pic16f628a.h: 537: extern volatile T2CONbits_t T2CONbits @ 0x012;
-[; ;pic16f628a.h: 586: extern volatile unsigned short CCPR1 @ 0x015;
-"588
-[; ;pic16f628a.h: 588: asm("CCPR1 equ 015h");
+[; ;pic16f628a.h: 519: typedef union {
+[; ;pic16f628a.h: 520: struct {
+[; ;pic16f628a.h: 521: unsigned T2CKPS :2;
+[; ;pic16f628a.h: 522: unsigned TMR2ON :1;
+[; ;pic16f628a.h: 523: unsigned TOUTPS :4;
+[; ;pic16f628a.h: 524: };
+[; ;pic16f628a.h: 525: struct {
+[; ;pic16f628a.h: 526: unsigned T2CKPS0 :1;
+[; ;pic16f628a.h: 527: unsigned T2CKPS1 :1;
+[; ;pic16f628a.h: 528: unsigned :1;
+[; ;pic16f628a.h: 529: unsigned TOUTPS0 :1;
+[; ;pic16f628a.h: 530: unsigned TOUTPS1 :1;
+[; ;pic16f628a.h: 531: unsigned TOUTPS2 :1;
+[; ;pic16f628a.h: 532: unsigned TOUTPS3 :1;
+[; ;pic16f628a.h: 533: };
+[; ;pic16f628a.h: 534: } T2CONbits_t;
+[; ;pic16f628a.h: 535: extern volatile T2CONbits_t T2CONbits @ 0x012;
+[; ;pic16f628a.h: 584: extern volatile unsigned short CCPR1 @ 0x015;
+"586
+[; ;pic16f628a.h: 586: asm("CCPR1 equ 015h");
 [; <" CCPR1 equ 015h ;# ">
-[; ;pic16f628a.h: 592: extern volatile unsigned char CCPR1L @ 0x015;
-"594
-[; ;pic16f628a.h: 594: asm("CCPR1L equ 015h");
+[; ;pic16f628a.h: 590: extern volatile unsigned char CCPR1L @ 0x015;
+"592
+[; ;pic16f628a.h: 592: asm("CCPR1L equ 015h");
 [; <" CCPR1L equ 015h ;# ">
-[; ;pic16f628a.h: 598: extern volatile unsigned char CCPR1H @ 0x016;
-"600
-[; ;pic16f628a.h: 600: asm("CCPR1H equ 016h");
+[; ;pic16f628a.h: 596: extern volatile unsigned char CCPR1H @ 0x016;
+"598
+[; ;pic16f628a.h: 598: asm("CCPR1H equ 016h");
 [; <" CCPR1H equ 016h ;# ">
-[; ;pic16f628a.h: 604: extern volatile unsigned char CCP1CON @ 0x017;
-"606
-[; ;pic16f628a.h: 606: asm("CCP1CON equ 017h");
+[; ;pic16f628a.h: 602: extern volatile unsigned char CCP1CON @ 0x017;
+"604
+[; ;pic16f628a.h: 604: asm("CCP1CON equ 017h");
 [; <" CCP1CON equ 017h ;# ">
-[; ;pic16f628a.h: 609: typedef union {
-[; ;pic16f628a.h: 610: struct {
-[; ;pic16f628a.h: 611: unsigned CCP1M :4;
-[; ;pic16f628a.h: 612: unsigned CCP1Y :1;
-[; ;pic16f628a.h: 613: unsigned CCP1X :1;
-[; ;pic16f628a.h: 614: };
-[; ;pic16f628a.h: 615: struct {
-[; ;pic16f628a.h: 616: unsigned CCP1M0 :1;
-[; ;pic16f628a.h: 617: unsigned CCP1M1 :1;
-[; ;pic16f628a.h: 618: unsigned CCP1M2 :1;
-[; ;pic16f628a.h: 619: unsigned CCP1M3 :1;
-[; ;pic16f628a.h: 620: };
-[; ;pic16f628a.h: 621: } CCP1CONbits_t;
-[; ;pic16f628a.h: 622: extern volatile CCP1CONbits_t CCP1CONbits @ 0x017;
-[; ;pic16f628a.h: 661: extern volatile unsigned char RCSTA @ 0x018;
-"663
-[; ;pic16f628a.h: 663: asm("RCSTA equ 018h");
+[; ;pic16f628a.h: 607: typedef union {
+[; ;pic16f628a.h: 608: struct {
+[; ;pic16f628a.h: 609: unsigned CCP1M :4;
+[; ;pic16f628a.h: 610: unsigned CCP1Y :1;
+[; ;pic16f628a.h: 611: unsigned CCP1X :1;
+[; ;pic16f628a.h: 612: };
+[; ;pic16f628a.h: 613: struct {
+[; ;pic16f628a.h: 614: unsigned CCP1M0 :1;
+[; ;pic16f628a.h: 615: unsigned CCP1M1 :1;
+[; ;pic16f628a.h: 616: unsigned CCP1M2 :1;
+[; ;pic16f628a.h: 617: unsigned CCP1M3 :1;
+[; ;pic16f628a.h: 618: };
+[; ;pic16f628a.h: 619: } CCP1CONbits_t;
+[; ;pic16f628a.h: 620: extern volatile CCP1CONbits_t CCP1CONbits @ 0x017;
+[; ;pic16f628a.h: 659: extern volatile unsigned char RCSTA @ 0x018;
+"661
+[; ;pic16f628a.h: 661: asm("RCSTA equ 018h");
 [; <" RCSTA equ 018h ;# ">
-[; ;pic16f628a.h: 666: typedef union {
-[; ;pic16f628a.h: 667: struct {
-[; ;pic16f628a.h: 668: unsigned RX9D :1;
-[; ;pic16f628a.h: 669: unsigned OERR :1;
-[; ;pic16f628a.h: 670: unsigned FERR :1;
-[; ;pic16f628a.h: 671: unsigned ADEN :1;
-[; ;pic16f628a.h: 672: unsigned CREN :1;
-[; ;pic16f628a.h: 673: unsigned SREN :1;
-[; ;pic16f628a.h: 674: unsigned RX9 :1;
-[; ;pic16f628a.h: 675: unsigned SPEN :1;
-[; ;pic16f628a.h: 676: };
-[; ;pic16f628a.h: 677: struct {
-[; ;pic16f628a.h: 678: unsigned :3;
-[; ;pic16f628a.h: 679: unsigned ADDEN :1;
-[; ;pic16f628a.h: 680: };
-[; ;pic16f628a.h: 681: } RCSTAbits_t;
-[; ;pic16f628a.h: 682: extern volatile RCSTAbits_t RCSTAbits @ 0x018;
-[; ;pic16f628a.h: 731: extern volatile unsigned char TXREG @ 0x019;
-"733
-[; ;pic16f628a.h: 733: asm("TXREG equ 019h");
+[; ;pic16f628a.h: 664: typedef union {
+[; ;pic16f628a.h: 665: struct {
+[; ;pic16f628a.h: 666: unsigned RX9D :1;
+[; ;pic16f628a.h: 667: unsigned OERR :1;
+[; ;pic16f628a.h: 668: unsigned FERR :1;
+[; ;pic16f628a.h: 669: unsigned ADEN :1;
+[; ;pic16f628a.h: 670: unsigned CREN :1;
+[; ;pic16f628a.h: 671: unsigned SREN :1;
+[; ;pic16f628a.h: 672: unsigned RX9 :1;
+[; ;pic16f628a.h: 673: unsigned SPEN :1;
+[; ;pic16f628a.h: 674: };
+[; ;pic16f628a.h: 675: struct {
+[; ;pic16f628a.h: 676: unsigned :3;
+[; ;pic16f628a.h: 677: unsigned ADDEN :1;
+[; ;pic16f628a.h: 678: };
+[; ;pic16f628a.h: 679: } RCSTAbits_t;
+[; ;pic16f628a.h: 680: extern volatile RCSTAbits_t RCSTAbits @ 0x018;
+[; ;pic16f628a.h: 729: extern volatile unsigned char TXREG @ 0x019;
+"731
+[; ;pic16f628a.h: 731: asm("TXREG equ 019h");
 [; <" TXREG equ 019h ;# ">
-[; ;pic16f628a.h: 737: extern volatile unsigned char RCREG @ 0x01A;
-"739
-[; ;pic16f628a.h: 739: asm("RCREG equ 01Ah");
+[; ;pic16f628a.h: 735: extern volatile unsigned char RCREG @ 0x01A;
+"737
+[; ;pic16f628a.h: 737: asm("RCREG equ 01Ah");
 [; <" RCREG equ 01Ah ;# ">
-[; ;pic16f628a.h: 743: extern volatile unsigned char CMCON @ 0x01F;
-"745
-[; ;pic16f628a.h: 745: asm("CMCON equ 01Fh");
+[; ;pic16f628a.h: 741: extern volatile unsigned char CMCON @ 0x01F;
+"743
+[; ;pic16f628a.h: 743: asm("CMCON equ 01Fh");
 [; <" CMCON equ 01Fh ;# ">
-[; ;pic16f628a.h: 748: typedef union {
-[; ;pic16f628a.h: 749: struct {
-[; ;pic16f628a.h: 750: unsigned CM :3;
-[; ;pic16f628a.h: 751: unsigned CIS :1;
-[; ;pic16f628a.h: 752: unsigned C1INV :1;
-[; ;pic16f628a.h: 753: unsigned C2INV :1;
-[; ;pic16f628a.h: 754: unsigned C1OUT :1;
-[; ;pic16f628a.h: 755: unsigned C2OUT :1;
-[; ;pic16f628a.h: 756: };
-[; ;pic16f628a.h: 757: struct {
-[; ;pic16f628a.h: 758: unsigned CM0 :1;
-[; ;pic16f628a.h: 759: unsigned CM1 :1;
-[; ;pic16f628a.h: 760: unsigned CM2 :1;
-[; ;pic16f628a.h: 761: };
-[; ;pic16f628a.h: 762: } CMCONbits_t;
-[; ;pic16f628a.h: 763: extern volatile CMCONbits_t CMCONbits @ 0x01F;
-[; ;pic16f628a.h: 812: extern volatile unsigned char OPTION_REG @ 0x081;
-"814
-[; ;pic16f628a.h: 814: asm("OPTION_REG equ 081h");
+[; ;pic16f628a.h: 746: typedef union {
+[; ;pic16f628a.h: 747: struct {
+[; ;pic16f628a.h: 748: unsigned CM :3;
+[; ;pic16f628a.h: 749: unsigned CIS :1;
+[; ;pic16f628a.h: 750: unsigned C1INV :1;
+[; ;pic16f628a.h: 751: unsigned C2INV :1;
+[; ;pic16f628a.h: 752: unsigned C1OUT :1;
+[; ;pic16f628a.h: 753: unsigned C2OUT :1;
+[; ;pic16f628a.h: 754: };
+[; ;pic16f628a.h: 755: struct {
+[; ;pic16f628a.h: 756: unsigned CM0 :1;
+[; ;pic16f628a.h: 757: unsigned CM1 :1;
+[; ;pic16f628a.h: 758: unsigned CM2 :1;
+[; ;pic16f628a.h: 759: };
+[; ;pic16f628a.h: 760: } CMCONbits_t;
+[; ;pic16f628a.h: 761: extern volatile CMCONbits_t CMCONbits @ 0x01F;
+[; ;pic16f628a.h: 810: extern volatile unsigned char OPTION_REG @ 0x081;
+"812
+[; ;pic16f628a.h: 812: asm("OPTION_REG equ 081h");
 [; <" OPTION_REG equ 081h ;# ">
-[; ;pic16f628a.h: 817: typedef union {
-[; ;pic16f628a.h: 818: struct {
-[; ;pic16f628a.h: 819: unsigned PS :3;
-[; ;pic16f628a.h: 820: unsigned PSA :1;
-[; ;pic16f628a.h: 821: unsigned T0SE :1;
-[; ;pic16f628a.h: 822: unsigned T0CS :1;
-[; ;pic16f628a.h: 823: unsigned INTEDG :1;
-[; ;pic16f628a.h: 824: unsigned nRBPU :1;
-[; ;pic16f628a.h: 825: };
-[; ;pic16f628a.h: 826: struct {
-[; ;pic16f628a.h: 827: unsigned PS0 :1;
-[; ;pic16f628a.h: 828: unsigned PS1 :1;
-[; ;pic16f628a.h: 829: unsigned PS2 :1;
-[; ;pic16f628a.h: 830: };
-[; ;pic16f628a.h: 831: } OPTION_REGbits_t;
-[; ;pic16f628a.h: 832: extern volatile OPTION_REGbits_t OPTION_REGbits @ 0x081;
-[; ;pic16f628a.h: 881: extern volatile unsigned char TRISA @ 0x085;
-"883
-[; ;pic16f628a.h: 883: asm("TRISA equ 085h");
+[; ;pic16f628a.h: 815: typedef union {
+[; ;pic16f628a.h: 816: struct {
+[; ;pic16f628a.h: 817: unsigned PS :3;
+[; ;pic16f628a.h: 818: unsigned PSA :1;
+[; ;pic16f628a.h: 819: unsigned T0SE :1;
+[; ;pic16f628a.h: 820: unsigned T0CS :1;
+[; ;pic16f628a.h: 821: unsigned INTEDG :1;
+[; ;pic16f628a.h: 822: unsigned nRBPU :1;
+[; ;pic16f628a.h: 823: };
+[; ;pic16f628a.h: 824: struct {
+[; ;pic16f628a.h: 825: unsigned PS0 :1;
+[; ;pic16f628a.h: 826: unsigned PS1 :1;
+[; ;pic16f628a.h: 827: unsigned PS2 :1;
+[; ;pic16f628a.h: 828: };
+[; ;pic16f628a.h: 829: } OPTION_REGbits_t;
+[; ;pic16f628a.h: 830: extern volatile OPTION_REGbits_t OPTION_REGbits @ 0x081;
+[; ;pic16f628a.h: 879: extern volatile unsigned char TRISA @ 0x085;
+"881
+[; ;pic16f628a.h: 881: asm("TRISA equ 085h");
 [; <" TRISA equ 085h ;# ">
-[; ;pic16f628a.h: 886: typedef union {
-[; ;pic16f628a.h: 887: struct {
-[; ;pic16f628a.h: 888: unsigned TRISA0 :1;
-[; ;pic16f628a.h: 889: unsigned TRISA1 :1;
-[; ;pic16f628a.h: 890: unsigned TRISA2 :1;
-[; ;pic16f628a.h: 891: unsigned TRISA3 :1;
-[; ;pic16f628a.h: 892: unsigned TRISA4 :1;
-[; ;pic16f628a.h: 893: unsigned TRISA5 :1;
-[; ;pic16f628a.h: 894: unsigned TRISA6 :1;
-[; ;pic16f628a.h: 895: unsigned TRISA7 :1;
-[; ;pic16f628a.h: 896: };
-[; ;pic16f628a.h: 897: } TRISAbits_t;
-[; ;pic16f628a.h: 898: extern volatile TRISAbits_t TRISAbits @ 0x085;
-[; ;pic16f628a.h: 942: extern volatile unsigned char TRISB @ 0x086;
-"944
-[; ;pic16f628a.h: 944: asm("TRISB equ 086h");
+[; ;pic16f628a.h: 884: typedef union {
+[; ;pic16f628a.h: 885: struct {
+[; ;pic16f628a.h: 886: unsigned TRISA0 :1;
+[; ;pic16f628a.h: 887: unsigned TRISA1 :1;
+[; ;pic16f628a.h: 888: unsigned TRISA2 :1;
+[; ;pic16f628a.h: 889: unsigned TRISA3 :1;
+[; ;pic16f628a.h: 890: unsigned TRISA4 :1;
+[; ;pic16f628a.h: 891: unsigned TRISA5 :1;
+[; ;pic16f628a.h: 892: unsigned TRISA6 :1;
+[; ;pic16f628a.h: 893: unsigned TRISA7 :1;
+[; ;pic16f628a.h: 894: };
+[; ;pic16f628a.h: 895: } TRISAbits_t;
+[; ;pic16f628a.h: 896: extern volatile TRISAbits_t TRISAbits @ 0x085;
+[; ;pic16f628a.h: 940: extern volatile unsigned char TRISB @ 0x086;
+"942
+[; ;pic16f628a.h: 942: asm("TRISB equ 086h");
 [; <" TRISB equ 086h ;# ">
-[; ;pic16f628a.h: 947: typedef union {
-[; ;pic16f628a.h: 948: struct {
-[; ;pic16f628a.h: 949: unsigned TRISB0 :1;
-[; ;pic16f628a.h: 950: unsigned TRISB1 :1;
-[; ;pic16f628a.h: 951: unsigned TRISB2 :1;
-[; ;pic16f628a.h: 952: unsigned TRISB3 :1;
-[; ;pic16f628a.h: 953: unsigned TRISB4 :1;
-[; ;pic16f628a.h: 954: unsigned TRISB5 :1;
-[; ;pic16f628a.h: 955: unsigned TRISB6 :1;
-[; ;pic16f628a.h: 956: unsigned TRISB7 :1;
-[; ;pic16f628a.h: 957: };
-[; ;pic16f628a.h: 958: } TRISBbits_t;
-[; ;pic16f628a.h: 959: extern volatile TRISBbits_t TRISBbits @ 0x086;
-[; ;pic16f628a.h: 1003: extern volatile unsigned char PIE1 @ 0x08C;
-"1005
-[; ;pic16f628a.h: 1005: asm("PIE1 equ 08Ch");
+[; ;pic16f628a.h: 945: typedef union {
+[; ;pic16f628a.h: 946: struct {
+[; ;pic16f628a.h: 947: unsigned TRISB0 :1;
+[; ;pic16f628a.h: 948: unsigned TRISB1 :1;
+[; ;pic16f628a.h: 949: unsigned TRISB2 :1;
+[; ;pic16f628a.h: 950: unsigned TRISB3 :1;
+[; ;pic16f628a.h: 951: unsigned TRISB4 :1;
+[; ;pic16f628a.h: 952: unsigned TRISB5 :1;
+[; ;pic16f628a.h: 953: unsigned TRISB6 :1;
+[; ;pic16f628a.h: 954: unsigned TRISB7 :1;
+[; ;pic16f628a.h: 955: };
+[; ;pic16f628a.h: 956: } TRISBbits_t;
+[; ;pic16f628a.h: 957: extern volatile TRISBbits_t TRISBbits @ 0x086;
+[; ;pic16f628a.h: 1001: extern volatile unsigned char PIE1 @ 0x08C;
+"1003
+[; ;pic16f628a.h: 1003: asm("PIE1 equ 08Ch");
 [; <" PIE1 equ 08Ch ;# ">
-[; ;pic16f628a.h: 1008: typedef union {
-[; ;pic16f628a.h: 1009: struct {
-[; ;pic16f628a.h: 1010: unsigned TMR1IE :1;
-[; ;pic16f628a.h: 1011: unsigned TMR2IE :1;
-[; ;pic16f628a.h: 1012: unsigned CCP1IE :1;
-[; ;pic16f628a.h: 1013: unsigned :1;
-[; ;pic16f628a.h: 1014: unsigned TXIE :1;
-[; ;pic16f628a.h: 1015: unsigned RCIE :1;
-[; ;pic16f628a.h: 1016: unsigned CMIE :1;
-[; ;pic16f628a.h: 1017: unsigned EEIE :1;
-[; ;pic16f628a.h: 1018: };
-[; ;pic16f628a.h: 1019: } PIE1bits_t;
-[; ;pic16f628a.h: 1020: extern volatile PIE1bits_t PIE1bits @ 0x08C;
-[; ;pic16f628a.h: 1059: extern volatile unsigned char PCON @ 0x08E;
-"1061
-[; ;pic16f628a.h: 1061: asm("PCON equ 08Eh");
+[; ;pic16f628a.h: 1006: typedef union {
+[; ;pic16f628a.h: 1007: struct {
+[; ;pic16f628a.h: 1008: unsigned TMR1IE :1;
+[; ;pic16f628a.h: 1009: unsigned TMR2IE :1;
+[; ;pic16f628a.h: 1010: unsigned CCP1IE :1;
+[; ;pic16f628a.h: 1011: unsigned :1;
+[; ;pic16f628a.h: 1012: unsigned TXIE :1;
+[; ;pic16f628a.h: 1013: unsigned RCIE :1;
+[; ;pic16f628a.h: 1014: unsigned CMIE :1;
+[; ;pic16f628a.h: 1015: unsigned EEIE :1;
+[; ;pic16f628a.h: 1016: };
+[; ;pic16f628a.h: 1017: } PIE1bits_t;
+[; ;pic16f628a.h: 1018: extern volatile PIE1bits_t PIE1bits @ 0x08C;
+[; ;pic16f628a.h: 1057: extern volatile unsigned char PCON @ 0x08E;
+"1059
+[; ;pic16f628a.h: 1059: asm("PCON equ 08Eh");
 [; <" PCON equ 08Eh ;# ">
-[; ;pic16f628a.h: 1064: typedef union {
-[; ;pic16f628a.h: 1065: struct {
-[; ;pic16f628a.h: 1066: unsigned nBOR :1;
-[; ;pic16f628a.h: 1067: unsigned nPOR :1;
-[; ;pic16f628a.h: 1068: unsigned :1;
-[; ;pic16f628a.h: 1069: unsigned OSCF :1;
-[; ;pic16f628a.h: 1070: };
-[; ;pic16f628a.h: 1071: struct {
-[; ;pic16f628a.h: 1072: unsigned nBO :1;
-[; ;pic16f628a.h: 1073: };
-[; ;pic16f628a.h: 1074: struct {
-[; ;pic16f628a.h: 1075: unsigned nBOD :1;
-[; ;pic16f628a.h: 1076: };
-[; ;pic16f628a.h: 1077: } PCONbits_t;
-[; ;pic16f628a.h: 1078: extern volatile PCONbits_t PCONbits @ 0x08E;
-[; ;pic16f628a.h: 1107: extern volatile unsigned char PR2 @ 0x092;
-"1109
-[; ;pic16f628a.h: 1109: asm("PR2 equ 092h");
+[; ;pic16f628a.h: 1062: typedef union {
+[; ;pic16f628a.h: 1063: struct {
+[; ;pic16f628a.h: 1064: unsigned nBOR :1;
+[; ;pic16f628a.h: 1065: unsigned nPOR :1;
+[; ;pic16f628a.h: 1066: unsigned :1;
+[; ;pic16f628a.h: 1067: unsigned OSCF :1;
+[; ;pic16f628a.h: 1068: };
+[; ;pic16f628a.h: 1069: struct {
+[; ;pic16f628a.h: 1070: unsigned nBO :1;
+[; ;pic16f628a.h: 1071: };
+[; ;pic16f628a.h: 1072: struct {
+[; ;pic16f628a.h: 1073: unsigned nBOD :1;
+[; ;pic16f628a.h: 1074: };
+[; ;pic16f628a.h: 1075: } PCONbits_t;
+[; ;pic16f628a.h: 1076: extern volatile PCONbits_t PCONbits @ 0x08E;
+[; ;pic16f628a.h: 1105: extern volatile unsigned char PR2 @ 0x092;
+"1107
+[; ;pic16f628a.h: 1107: asm("PR2 equ 092h");
 [; <" PR2 equ 092h ;# ">
-[; ;pic16f628a.h: 1113: extern volatile unsigned char TXSTA @ 0x098;
-"1115
-[; ;pic16f628a.h: 1115: asm("TXSTA equ 098h");
+[; ;pic16f628a.h: 1111: extern volatile unsigned char TXSTA @ 0x098;
+"1113
+[; ;pic16f628a.h: 1113: asm("TXSTA equ 098h");
 [; <" TXSTA equ 098h ;# ">
-[; ;pic16f628a.h: 1118: typedef union {
-[; ;pic16f628a.h: 1119: struct {
-[; ;pic16f628a.h: 1120: unsigned TX9D :1;
-[; ;pic16f628a.h: 1121: unsigned TRMT :1;
-[; ;pic16f628a.h: 1122: unsigned BRGH :1;
-[; ;pic16f628a.h: 1123: unsigned :1;
-[; ;pic16f628a.h: 1124: unsigned SYNC :1;
-[; ;pic16f628a.h: 1125: unsigned TXEN :1;
-[; ;pic16f628a.h: 1126: unsigned TX9 :1;
-[; ;pic16f628a.h: 1127: unsigned CSRC :1;
-[; ;pic16f628a.h: 1128: };
-[; ;pic16f628a.h: 1129: } TXSTAbits_t;
-[; ;pic16f628a.h: 1130: extern volatile TXSTAbits_t TXSTAbits @ 0x098;
-[; ;pic16f628a.h: 1169: extern volatile unsigned char SPBRG @ 0x099;
-"1171
-[; ;pic16f628a.h: 1171: asm("SPBRG equ 099h");
+[; ;pic16f628a.h: 1116: typedef union {
+[; ;pic16f628a.h: 1117: struct {
+[; ;pic16f628a.h: 1118: unsigned TX9D :1;
+[; ;pic16f628a.h: 1119: unsigned TRMT :1;
+[; ;pic16f628a.h: 1120: unsigned BRGH :1;
+[; ;pic16f628a.h: 1121: unsigned :1;
+[; ;pic16f628a.h: 1122: unsigned SYNC :1;
+[; ;pic16f628a.h: 1123: unsigned TXEN :1;
+[; ;pic16f628a.h: 1124: unsigned TX9 :1;
+[; ;pic16f628a.h: 1125: unsigned CSRC :1;
+[; ;pic16f628a.h: 1126: };
+[; ;pic16f628a.h: 1127: } TXSTAbits_t;
+[; ;pic16f628a.h: 1128: extern volatile TXSTAbits_t TXSTAbits @ 0x098;
+[; ;pic16f628a.h: 1167: extern volatile unsigned char SPBRG @ 0x099;
+"1169
+[; ;pic16f628a.h: 1169: asm("SPBRG equ 099h");
 [; <" SPBRG equ 099h ;# ">
-[; ;pic16f628a.h: 1175: extern volatile unsigned char EEDATA @ 0x09A;
-"1177
-[; ;pic16f628a.h: 1177: asm("EEDATA equ 09Ah");
+[; ;pic16f628a.h: 1173: extern volatile unsigned char EEDATA @ 0x09A;
+"1175
+[; ;pic16f628a.h: 1175: asm("EEDATA equ 09Ah");
 [; <" EEDATA equ 09Ah ;# ">
-[; ;pic16f628a.h: 1181: extern volatile unsigned char EEADR @ 0x09B;
-"1183
-[; ;pic16f628a.h: 1183: asm("EEADR equ 09Bh");
+[; ;pic16f628a.h: 1179: extern volatile unsigned char EEADR @ 0x09B;
+"1181
+[; ;pic16f628a.h: 1181: asm("EEADR equ 09Bh");
 [; <" EEADR equ 09Bh ;# ">
-[; ;pic16f628a.h: 1187: extern volatile unsigned char EECON1 @ 0x09C;
-"1189
-[; ;pic16f628a.h: 1189: asm("EECON1 equ 09Ch");
+[; ;pic16f628a.h: 1185: extern volatile unsigned char EECON1 @ 0x09C;
+"1187
+[; ;pic16f628a.h: 1187: asm("EECON1 equ 09Ch");
 [; <" EECON1 equ 09Ch ;# ">
-[; ;pic16f628a.h: 1192: typedef union {
-[; ;pic16f628a.h: 1193: struct {
-[; ;pic16f628a.h: 1194: unsigned RD :1;
-[; ;pic16f628a.h: 1195: unsigned WR :1;
-[; ;pic16f628a.h: 1196: unsigned WREN :1;
-[; ;pic16f628a.h: 1197: unsigned WRERR :1;
-[; ;pic16f628a.h: 1198: };
-[; ;pic16f628a.h: 1199: } EECON1bits_t;
-[; ;pic16f628a.h: 1200: extern volatile EECON1bits_t EECON1bits @ 0x09C;
-[; ;pic16f628a.h: 1224: extern volatile unsigned char EECON2 @ 0x09D;
-"1226
-[; ;pic16f628a.h: 1226: asm("EECON2 equ 09Dh");
+[; ;pic16f628a.h: 1190: typedef union {
+[; ;pic16f628a.h: 1191: struct {
+[; ;pic16f628a.h: 1192: unsigned RD :1;
+[; ;pic16f628a.h: 1193: unsigned WR :1;
+[; ;pic16f628a.h: 1194: unsigned WREN :1;
+[; ;pic16f628a.h: 1195: unsigned WRERR :1;
+[; ;pic16f628a.h: 1196: };
+[; ;pic16f628a.h: 1197: } EECON1bits_t;
+[; ;pic16f628a.h: 1198: extern volatile EECON1bits_t EECON1bits @ 0x09C;
+[; ;pic16f628a.h: 1222: extern volatile unsigned char EECON2 @ 0x09D;
+"1224
+[; ;pic16f628a.h: 1224: asm("EECON2 equ 09Dh");
 [; <" EECON2 equ 09Dh ;# ">
-[; ;pic16f628a.h: 1230: extern volatile unsigned char VRCON @ 0x09F;
-"1232
-[; ;pic16f628a.h: 1232: asm("VRCON equ 09Fh");
+[; ;pic16f628a.h: 1228: extern volatile unsigned char VRCON @ 0x09F;
+"1230
+[; ;pic16f628a.h: 1230: asm("VRCON equ 09Fh");
 [; <" VRCON equ 09Fh ;# ">
-[; ;pic16f628a.h: 1235: typedef union {
-[; ;pic16f628a.h: 1236: struct {
-[; ;pic16f628a.h: 1237: unsigned VR :4;
-[; ;pic16f628a.h: 1238: unsigned :1;
-[; ;pic16f628a.h: 1239: unsigned VRR :1;
-[; ;pic16f628a.h: 1240: unsigned VROE :1;
-[; ;pic16f628a.h: 1241: unsigned VREN :1;
-[; ;pic16f628a.h: 1242: };
-[; ;pic16f628a.h: 1243: struct {
-[; ;pic16f628a.h: 1244: unsigned VR0 :1;
-[; ;pic16f628a.h: 1245: unsigned VR1 :1;
-[; ;pic16f628a.h: 1246: unsigned VR2 :1;
-[; ;pic16f628a.h: 1247: unsigned VR3 :1;
-[; ;pic16f628a.h: 1248: };
-[; ;pic16f628a.h: 1249: } VRCONbits_t;
-[; ;pic16f628a.h: 1250: extern volatile VRCONbits_t VRCONbits @ 0x09F;
-[; ;pic16f628a.h: 1300: extern volatile __bit ADDEN @ (((unsigned) &RCSTA)*8) + 3;
-[; ;pic16f628a.h: 1302: extern volatile __bit ADEN @ (((unsigned) &RCSTA)*8) + 3;
-[; ;pic16f628a.h: 1304: extern volatile __bit BRGH @ (((unsigned) &TXSTA)*8) + 2;
-[; ;pic16f628a.h: 1306: extern volatile __bit C1INV @ (((unsigned) &CMCON)*8) + 4;
-[; ;pic16f628a.h: 1308: extern volatile __bit C1OUT @ (((unsigned) &CMCON)*8) + 6;
-[; ;pic16f628a.h: 1310: extern volatile __bit C2INV @ (((unsigned) &CMCON)*8) + 5;
-[; ;pic16f628a.h: 1312: extern volatile __bit C2OUT @ (((unsigned) &CMCON)*8) + 7;
-[; ;pic16f628a.h: 1314: extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
-[; ;pic16f628a.h: 1316: extern volatile __bit CCP1IE @ (((unsigned) &PIE1)*8) + 2;
-[; ;pic16f628a.h: 1318: extern volatile __bit CCP1IF @ (((unsigned) &PIR1)*8) + 2;
-[; ;pic16f628a.h: 1320: extern volatile __bit CCP1M0 @ (((unsigned) &CCP1CON)*8) + 0;
-[; ;pic16f628a.h: 1322: extern volatile __bit CCP1M1 @ (((unsigned) &CCP1CON)*8) + 1;
-[; ;pic16f628a.h: 1324: extern volatile __bit CCP1M2 @ (((unsigned) &CCP1CON)*8) + 2;
-[; ;pic16f628a.h: 1326: extern volatile __bit CCP1M3 @ (((unsigned) &CCP1CON)*8) + 3;
-[; ;pic16f628a.h: 1328: extern volatile __bit CCP1X @ (((unsigned) &CCP1CON)*8) + 5;
-[; ;pic16f628a.h: 1330: extern volatile __bit CCP1Y @ (((unsigned) &CCP1CON)*8) + 4;
-[; ;pic16f628a.h: 1332: extern volatile __bit CIS @ (((unsigned) &CMCON)*8) + 3;
-[; ;pic16f628a.h: 1334: extern volatile __bit CM0 @ (((unsigned) &CMCON)*8) + 0;
-[; ;pic16f628a.h: 1336: extern volatile __bit CM1 @ (((unsigned) &CMCON)*8) + 1;
-[; ;pic16f628a.h: 1338: extern volatile __bit CM2 @ (((unsigned) &CMCON)*8) + 2;
-[; ;pic16f628a.h: 1340: extern volatile __bit CMIE @ (((unsigned) &PIE1)*8) + 6;
-[; ;pic16f628a.h: 1342: extern volatile __bit CMIF @ (((unsigned) &PIR1)*8) + 6;
-[; ;pic16f628a.h: 1344: extern volatile __bit CREN @ (((unsigned) &RCSTA)*8) + 4;
-[; ;pic16f628a.h: 1346: extern volatile __bit CSRC @ (((unsigned) &TXSTA)*8) + 7;
-[; ;pic16f628a.h: 1348: extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
-[; ;pic16f628a.h: 1350: extern volatile __bit EEIE @ (((unsigned) &PIE1)*8) + 7;
-[; ;pic16f628a.h: 1352: extern volatile __bit EEIF @ (((unsigned) &PIR1)*8) + 7;
-[; ;pic16f628a.h: 1354: extern volatile __bit FERR @ (((unsigned) &RCSTA)*8) + 2;
-[; ;pic16f628a.h: 1356: extern volatile __bit GIE @ (((unsigned) &INTCON)*8) + 7;
-[; ;pic16f628a.h: 1358: extern volatile __bit INTE @ (((unsigned) &INTCON)*8) + 4;
-[; ;pic16f628a.h: 1360: extern volatile __bit INTEDG @ (((unsigned) &OPTION_REG)*8) + 6;
-[; ;pic16f628a.h: 1362: extern volatile __bit INTF @ (((unsigned) &INTCON)*8) + 1;
-[; ;pic16f628a.h: 1364: extern volatile __bit IRP @ (((unsigned) &STATUS)*8) + 7;
-[; ;pic16f628a.h: 1366: extern volatile __bit OERR @ (((unsigned) &RCSTA)*8) + 1;
-[; ;pic16f628a.h: 1368: extern volatile __bit OSCF @ (((unsigned) &PCON)*8) + 3;
-[; ;pic16f628a.h: 1370: extern volatile __bit PEIE @ (((unsigned) &INTCON)*8) + 6;
-[; ;pic16f628a.h: 1372: extern volatile __bit PS0 @ (((unsigned) &OPTION_REG)*8) + 0;
-[; ;pic16f628a.h: 1374: extern volatile __bit PS1 @ (((unsigned) &OPTION_REG)*8) + 1;
-[; ;pic16f628a.h: 1376: extern volatile __bit PS2 @ (((unsigned) &OPTION_REG)*8) + 2;
-[; ;pic16f628a.h: 1378: extern volatile __bit PSA @ (((unsigned) &OPTION_REG)*8) + 3;
-[; ;pic16f628a.h: 1380: extern volatile __bit RA0 @ (((unsigned) &PORTA)*8) + 0;
-[; ;pic16f628a.h: 1382: extern volatile __bit RA1 @ (((unsigned) &PORTA)*8) + 1;
-[; ;pic16f628a.h: 1384: extern volatile __bit RA2 @ (((unsigned) &PORTA)*8) + 2;
-[; ;pic16f628a.h: 1386: extern volatile __bit RA3 @ (((unsigned) &PORTA)*8) + 3;
-[; ;pic16f628a.h: 1388: extern volatile __bit RA4 @ (((unsigned) &PORTA)*8) + 4;
-[; ;pic16f628a.h: 1390: extern volatile __bit RA5 @ (((unsigned) &PORTA)*8) + 5;
-[; ;pic16f628a.h: 1392: extern volatile __bit RA6 @ (((unsigned) &PORTA)*8) + 6;
-[; ;pic16f628a.h: 1394: extern volatile __bit RA7 @ (((unsigned) &PORTA)*8) + 7;
-[; ;pic16f628a.h: 1396: extern volatile __bit RB0 @ (((unsigned) &PORTB)*8) + 0;
-[; ;pic16f628a.h: 1398: extern volatile __bit RB1 @ (((unsigned) &PORTB)*8) + 1;
-[; ;pic16f628a.h: 1400: extern volatile __bit RB2 @ (((unsigned) &PORTB)*8) + 2;
-[; ;pic16f628a.h: 1402: extern volatile __bit RB3 @ (((unsigned) &PORTB)*8) + 3;
-[; ;pic16f628a.h: 1404: extern volatile __bit RB4 @ (((unsigned) &PORTB)*8) + 4;
-[; ;pic16f628a.h: 1406: extern volatile __bit RB5 @ (((unsigned) &PORTB)*8) + 5;
-[; ;pic16f628a.h: 1408: extern volatile __bit RB6 @ (((unsigned) &PORTB)*8) + 6;
-[; ;pic16f628a.h: 1410: extern volatile __bit RB7 @ (((unsigned) &PORTB)*8) + 7;
-[; ;pic16f628a.h: 1412: extern volatile __bit RBIE @ (((unsigned) &INTCON)*8) + 3;
-[; ;pic16f628a.h: 1414: extern volatile __bit RBIF @ (((unsigned) &INTCON)*8) + 0;
-[; ;pic16f628a.h: 1416: extern volatile __bit RCIE @ (((unsigned) &PIE1)*8) + 5;
-[; ;pic16f628a.h: 1418: extern volatile __bit RCIF @ (((unsigned) &PIR1)*8) + 5;
-[; ;pic16f628a.h: 1420: extern volatile __bit RD @ (((unsigned) &EECON1)*8) + 0;
-[; ;pic16f628a.h: 1422: extern volatile __bit RP0 @ (((unsigned) &STATUS)*8) + 5;
-[; ;pic16f628a.h: 1424: extern volatile __bit RP1 @ (((unsigned) &STATUS)*8) + 6;
-[; ;pic16f628a.h: 1426: extern volatile __bit RX9 @ (((unsigned) &RCSTA)*8) + 6;
-[; ;pic16f628a.h: 1428: extern volatile __bit RX9D @ (((unsigned) &RCSTA)*8) + 0;
-[; ;pic16f628a.h: 1430: extern volatile __bit SPEN @ (((unsigned) &RCSTA)*8) + 7;
-[; ;pic16f628a.h: 1432: extern volatile __bit SREN @ (((unsigned) &RCSTA)*8) + 5;
-[; ;pic16f628a.h: 1434: extern volatile __bit SYNC @ (((unsigned) &TXSTA)*8) + 4;
-[; ;pic16f628a.h: 1436: extern volatile __bit T0CS @ (((unsigned) &OPTION_REG)*8) + 5;
-[; ;pic16f628a.h: 1438: extern volatile __bit T0IE @ (((unsigned) &INTCON)*8) + 5;
-[; ;pic16f628a.h: 1440: extern volatile __bit T0IF @ (((unsigned) &INTCON)*8) + 2;
-[; ;pic16f628a.h: 1442: extern volatile __bit T0SE @ (((unsigned) &OPTION_REG)*8) + 4;
-[; ;pic16f628a.h: 1444: extern volatile __bit T1CKPS0 @ (((unsigned) &T1CON)*8) + 4;
-[; ;pic16f628a.h: 1446: extern volatile __bit T1CKPS1 @ (((unsigned) &T1CON)*8) + 5;
-[; ;pic16f628a.h: 1448: extern volatile __bit T1OSCEN @ (((unsigned) &T1CON)*8) + 3;
-[; ;pic16f628a.h: 1450: extern volatile __bit T2CKPS0 @ (((unsigned) &T2CON)*8) + 0;
-[; ;pic16f628a.h: 1452: extern volatile __bit T2CKPS1 @ (((unsigned) &T2CON)*8) + 1;
-[; ;pic16f628a.h: 1454: extern volatile __bit TMR0IE @ (((unsigned) &INTCON)*8) + 5;
-[; ;pic16f628a.h: 1456: extern volatile __bit TMR0IF @ (((unsigned) &INTCON)*8) + 2;
-[; ;pic16f628a.h: 1458: extern volatile __bit TMR1CS @ (((unsigned) &T1CON)*8) + 1;
-[; ;pic16f628a.h: 1460: extern volatile __bit TMR1IE @ (((unsigned) &PIE1)*8) + 0;
-[; ;pic16f628a.h: 1462: extern volatile __bit TMR1IF @ (((unsigned) &PIR1)*8) + 0;
-[; ;pic16f628a.h: 1464: extern volatile __bit TMR1ON @ (((unsigned) &T1CON)*8) + 0;
-[; ;pic16f628a.h: 1466: extern volatile __bit TMR2IE @ (((unsigned) &PIE1)*8) + 1;
-[; ;pic16f628a.h: 1468: extern volatile __bit TMR2IF @ (((unsigned) &PIR1)*8) + 1;
-[; ;pic16f628a.h: 1470: extern volatile __bit TMR2ON @ (((unsigned) &T2CON)*8) + 2;
-[; ;pic16f628a.h: 1472: extern volatile __bit TOUTPS0 @ (((unsigned) &T2CON)*8) + 3;
-[; ;pic16f628a.h: 1474: extern volatile __bit TOUTPS1 @ (((unsigned) &T2CON)*8) + 4;
-[; ;pic16f628a.h: 1476: extern volatile __bit TOUTPS2 @ (((unsigned) &T2CON)*8) + 5;
-[; ;pic16f628a.h: 1478: extern volatile __bit TOUTPS3 @ (((unsigned) &T2CON)*8) + 6;
-[; ;pic16f628a.h: 1480: extern volatile __bit TRISA0 @ (((unsigned) &TRISA)*8) + 0;
-[; ;pic16f628a.h: 1482: extern volatile __bit TRISA1 @ (((unsigned) &TRISA)*8) + 1;
-[; ;pic16f628a.h: 1484: extern volatile __bit TRISA2 @ (((unsigned) &TRISA)*8) + 2;
-[; ;pic16f628a.h: 1486: extern volatile __bit TRISA3 @ (((unsigned) &TRISA)*8) + 3;
-[; ;pic16f628a.h: 1488: extern volatile __bit TRISA4 @ (((unsigned) &TRISA)*8) + 4;
-[; ;pic16f628a.h: 1490: extern volatile __bit TRISA5 @ (((unsigned) &TRISA)*8) + 5;
-[; ;pic16f628a.h: 1492: extern volatile __bit TRISA6 @ (((unsigned) &TRISA)*8) + 6;
-[; ;pic16f628a.h: 1494: extern volatile __bit TRISA7 @ (((unsigned) &TRISA)*8) + 7;
-[; ;pic16f628a.h: 1496: extern volatile __bit TRISB0 @ (((unsigned) &TRISB)*8) + 0;
-[; ;pic16f628a.h: 1498: extern volatile __bit TRISB1 @ (((unsigned) &TRISB)*8) + 1;
-[; ;pic16f628a.h: 1500: extern volatile __bit TRISB2 @ (((unsigned) &TRISB)*8) + 2;
-[; ;pic16f628a.h: 1502: extern volatile __bit TRISB3 @ (((unsigned) &TRISB)*8) + 3;
-[; ;pic16f628a.h: 1504: extern volatile __bit TRISB4 @ (((unsigned) &TRISB)*8) + 4;
-[; ;pic16f628a.h: 1506: extern volatile __bit TRISB5 @ (((unsigned) &TRISB)*8) + 5;
-[; ;pic16f628a.h: 1508: extern volatile __bit TRISB6 @ (((unsigned) &TRISB)*8) + 6;
-[; ;pic16f628a.h: 1510: extern volatile __bit TRISB7 @ (((unsigned) &TRISB)*8) + 7;
-[; ;pic16f628a.h: 1512: extern volatile __bit TRMT @ (((unsigned) &TXSTA)*8) + 1;
-[; ;pic16f628a.h: 1514: extern volatile __bit TX9 @ (((unsigned) &TXSTA)*8) + 6;
-[; ;pic16f628a.h: 1516: extern volatile __bit TX9D @ (((unsigned) &TXSTA)*8) + 0;
-[; ;pic16f628a.h: 1518: extern volatile __bit TXEN @ (((unsigned) &TXSTA)*8) + 5;
-[; ;pic16f628a.h: 1520: extern volatile __bit TXIE @ (((unsigned) &PIE1)*8) + 4;
-[; ;pic16f628a.h: 1522: extern volatile __bit TXIF @ (((unsigned) &PIR1)*8) + 4;
-[; ;pic16f628a.h: 1524: extern volatile __bit VR0 @ (((unsigned) &VRCON)*8) + 0;
-[; ;pic16f628a.h: 1526: extern volatile __bit VR1 @ (((unsigned) &VRCON)*8) + 1;
-[; ;pic16f628a.h: 1528: extern volatile __bit VR2 @ (((unsigned) &VRCON)*8) + 2;
-[; ;pic16f628a.h: 1530: extern volatile __bit VR3 @ (((unsigned) &VRCON)*8) + 3;
-[; ;pic16f628a.h: 1532: extern volatile __bit VREN @ (((unsigned) &VRCON)*8) + 7;
-[; ;pic16f628a.h: 1534: extern volatile __bit VROE @ (((unsigned) &VRCON)*8) + 6;
-[; ;pic16f628a.h: 1536: extern volatile __bit VRR @ (((unsigned) &VRCON)*8) + 5;
-[; ;pic16f628a.h: 1538: extern volatile __bit WR @ (((unsigned) &EECON1)*8) + 1;
-[; ;pic16f628a.h: 1540: extern volatile __bit WREN @ (((unsigned) &EECON1)*8) + 2;
-[; ;pic16f628a.h: 1542: extern volatile __bit WRERR @ (((unsigned) &EECON1)*8) + 3;
-[; ;pic16f628a.h: 1544: extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
-[; ;pic16f628a.h: 1546: extern volatile __bit nBO @ (((unsigned) &PCON)*8) + 0;
-[; ;pic16f628a.h: 1548: extern volatile __bit nBOD @ (((unsigned) &PCON)*8) + 0;
-[; ;pic16f628a.h: 1550: extern volatile __bit nBOR @ (((unsigned) &PCON)*8) + 0;
-[; ;pic16f628a.h: 1552: extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
-[; ;pic16f628a.h: 1554: extern volatile __bit nPOR @ (((unsigned) &PCON)*8) + 1;
-[; ;pic16f628a.h: 1556: extern volatile __bit nRBPU @ (((unsigned) &OPTION_REG)*8) + 7;
-[; ;pic16f628a.h: 1558: extern volatile __bit nT1SYNC @ (((unsigned) &T1CON)*8) + 2;
-[; ;pic16f628a.h: 1560: extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
+[; ;pic16f628a.h: 1233: typedef union {
+[; ;pic16f628a.h: 1234: struct {
+[; ;pic16f628a.h: 1235: unsigned VR :4;
+[; ;pic16f628a.h: 1236: unsigned :1;
+[; ;pic16f628a.h: 1237: unsigned VRR :1;
+[; ;pic16f628a.h: 1238: unsigned VROE :1;
+[; ;pic16f628a.h: 1239: unsigned VREN :1;
+[; ;pic16f628a.h: 1240: };
+[; ;pic16f628a.h: 1241: struct {
+[; ;pic16f628a.h: 1242: unsigned VR0 :1;
+[; ;pic16f628a.h: 1243: unsigned VR1 :1;
+[; ;pic16f628a.h: 1244: unsigned VR2 :1;
+[; ;pic16f628a.h: 1245: unsigned VR3 :1;
+[; ;pic16f628a.h: 1246: };
+[; ;pic16f628a.h: 1247: } VRCONbits_t;
+[; ;pic16f628a.h: 1248: extern volatile VRCONbits_t VRCONbits @ 0x09F;
+[; ;pic16f628a.h: 1298: extern volatile __bit ADDEN @ (((unsigned) &RCSTA)*8) + 3;
+[; ;pic16f628a.h: 1300: extern volatile __bit ADEN @ (((unsigned) &RCSTA)*8) + 3;
+[; ;pic16f628a.h: 1302: extern volatile __bit BRGH @ (((unsigned) &TXSTA)*8) + 2;
+[; ;pic16f628a.h: 1304: extern volatile __bit C1INV @ (((unsigned) &CMCON)*8) + 4;
+[; ;pic16f628a.h: 1306: extern volatile __bit C1OUT @ (((unsigned) &CMCON)*8) + 6;
+[; ;pic16f628a.h: 1308: extern volatile __bit C2INV @ (((unsigned) &CMCON)*8) + 5;
+[; ;pic16f628a.h: 1310: extern volatile __bit C2OUT @ (((unsigned) &CMCON)*8) + 7;
+[; ;pic16f628a.h: 1312: extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+[; ;pic16f628a.h: 1314: extern volatile __bit CCP1IE @ (((unsigned) &PIE1)*8) + 2;
+[; ;pic16f628a.h: 1316: extern volatile __bit CCP1IF @ (((unsigned) &PIR1)*8) + 2;
+[; ;pic16f628a.h: 1318: extern volatile __bit CCP1M0 @ (((unsigned) &CCP1CON)*8) + 0;
+[; ;pic16f628a.h: 1320: extern volatile __bit CCP1M1 @ (((unsigned) &CCP1CON)*8) + 1;
+[; ;pic16f628a.h: 1322: extern volatile __bit CCP1M2 @ (((unsigned) &CCP1CON)*8) + 2;
+[; ;pic16f628a.h: 1324: extern volatile __bit CCP1M3 @ (((unsigned) &CCP1CON)*8) + 3;
+[; ;pic16f628a.h: 1326: extern volatile __bit CCP1X @ (((unsigned) &CCP1CON)*8) + 5;
+[; ;pic16f628a.h: 1328: extern volatile __bit CCP1Y @ (((unsigned) &CCP1CON)*8) + 4;
+[; ;pic16f628a.h: 1330: extern volatile __bit CIS @ (((unsigned) &CMCON)*8) + 3;
+[; ;pic16f628a.h: 1332: extern volatile __bit CM0 @ (((unsigned) &CMCON)*8) + 0;
+[; ;pic16f628a.h: 1334: extern volatile __bit CM1 @ (((unsigned) &CMCON)*8) + 1;
+[; ;pic16f628a.h: 1336: extern volatile __bit CM2 @ (((unsigned) &CMCON)*8) + 2;
+[; ;pic16f628a.h: 1338: extern volatile __bit CMIE @ (((unsigned) &PIE1)*8) + 6;
+[; ;pic16f628a.h: 1340: extern volatile __bit CMIF @ (((unsigned) &PIR1)*8) + 6;
+[; ;pic16f628a.h: 1342: extern volatile __bit CREN @ (((unsigned) &RCSTA)*8) + 4;
+[; ;pic16f628a.h: 1344: extern volatile __bit CSRC @ (((unsigned) &TXSTA)*8) + 7;
+[; ;pic16f628a.h: 1346: extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+[; ;pic16f628a.h: 1348: extern volatile __bit EEIE @ (((unsigned) &PIE1)*8) + 7;
+[; ;pic16f628a.h: 1350: extern volatile __bit EEIF @ (((unsigned) &PIR1)*8) + 7;
+[; ;pic16f628a.h: 1352: extern volatile __bit FERR @ (((unsigned) &RCSTA)*8) + 2;
+[; ;pic16f628a.h: 1354: extern volatile __bit GIE @ (((unsigned) &INTCON)*8) + 7;
+[; ;pic16f628a.h: 1356: extern volatile __bit INTE @ (((unsigned) &INTCON)*8) + 4;
+[; ;pic16f628a.h: 1358: extern volatile __bit INTEDG @ (((unsigned) &OPTION_REG)*8) + 6;
+[; ;pic16f628a.h: 1360: extern volatile __bit INTF @ (((unsigned) &INTCON)*8) + 1;
+[; ;pic16f628a.h: 1362: extern volatile __bit IRP @ (((unsigned) &STATUS)*8) + 7;
+[; ;pic16f628a.h: 1364: extern volatile __bit OERR @ (((unsigned) &RCSTA)*8) + 1;
+[; ;pic16f628a.h: 1366: extern volatile __bit OSCF @ (((unsigned) &PCON)*8) + 3;
+[; ;pic16f628a.h: 1368: extern volatile __bit PEIE @ (((unsigned) &INTCON)*8) + 6;
+[; ;pic16f628a.h: 1370: extern volatile __bit PS0 @ (((unsigned) &OPTION_REG)*8) + 0;
+[; ;pic16f628a.h: 1372: extern volatile __bit PS1 @ (((unsigned) &OPTION_REG)*8) + 1;
+[; ;pic16f628a.h: 1374: extern volatile __bit PS2 @ (((unsigned) &OPTION_REG)*8) + 2;
+[; ;pic16f628a.h: 1376: extern volatile __bit PSA @ (((unsigned) &OPTION_REG)*8) + 3;
+[; ;pic16f628a.h: 1378: extern volatile __bit RA0 @ (((unsigned) &PORTA)*8) + 0;
+[; ;pic16f628a.h: 1380: extern volatile __bit RA1 @ (((unsigned) &PORTA)*8) + 1;
+[; ;pic16f628a.h: 1382: extern volatile __bit RA2 @ (((unsigned) &PORTA)*8) + 2;
+[; ;pic16f628a.h: 1384: extern volatile __bit RA3 @ (((unsigned) &PORTA)*8) + 3;
+[; ;pic16f628a.h: 1386: extern volatile __bit RA4 @ (((unsigned) &PORTA)*8) + 4;
+[; ;pic16f628a.h: 1388: extern volatile __bit RA5 @ (((unsigned) &PORTA)*8) + 5;
+[; ;pic16f628a.h: 1390: extern volatile __bit RA6 @ (((unsigned) &PORTA)*8) + 6;
+[; ;pic16f628a.h: 1392: extern volatile __bit RA7 @ (((unsigned) &PORTA)*8) + 7;
+[; ;pic16f628a.h: 1394: extern volatile __bit RB0 @ (((unsigned) &PORTB)*8) + 0;
+[; ;pic16f628a.h: 1396: extern volatile __bit RB1 @ (((unsigned) &PORTB)*8) + 1;
+[; ;pic16f628a.h: 1398: extern volatile __bit RB2 @ (((unsigned) &PORTB)*8) + 2;
+[; ;pic16f628a.h: 1400: extern volatile __bit RB3 @ (((unsigned) &PORTB)*8) + 3;
+[; ;pic16f628a.h: 1402: extern volatile __bit RB4 @ (((unsigned) &PORTB)*8) + 4;
+[; ;pic16f628a.h: 1404: extern volatile __bit RB5 @ (((unsigned) &PORTB)*8) + 5;
+[; ;pic16f628a.h: 1406: extern volatile __bit RB6 @ (((unsigned) &PORTB)*8) + 6;
+[; ;pic16f628a.h: 1408: extern volatile __bit RB7 @ (((unsigned) &PORTB)*8) + 7;
+[; ;pic16f628a.h: 1410: extern volatile __bit RBIE @ (((unsigned) &INTCON)*8) + 3;
+[; ;pic16f628a.h: 1412: extern volatile __bit RBIF @ (((unsigned) &INTCON)*8) + 0;
+[; ;pic16f628a.h: 1414: extern volatile __bit RCIE @ (((unsigned) &PIE1)*8) + 5;
+[; ;pic16f628a.h: 1416: extern volatile __bit RCIF @ (((unsigned) &PIR1)*8) + 5;
+[; ;pic16f628a.h: 1418: extern volatile __bit RD @ (((unsigned) &EECON1)*8) + 0;
+[; ;pic16f628a.h: 1420: extern volatile __bit RP0 @ (((unsigned) &STATUS)*8) + 5;
+[; ;pic16f628a.h: 1422: extern volatile __bit RP1 @ (((unsigned) &STATUS)*8) + 6;
+[; ;pic16f628a.h: 1424: extern volatile __bit RX9 @ (((unsigned) &RCSTA)*8) + 6;
+[; ;pic16f628a.h: 1426: extern volatile __bit RX9D @ (((unsigned) &RCSTA)*8) + 0;
+[; ;pic16f628a.h: 1428: extern volatile __bit SPEN @ (((unsigned) &RCSTA)*8) + 7;
+[; ;pic16f628a.h: 1430: extern volatile __bit SREN @ (((unsigned) &RCSTA)*8) + 5;
+[; ;pic16f628a.h: 1432: extern volatile __bit SYNC @ (((unsigned) &TXSTA)*8) + 4;
+[; ;pic16f628a.h: 1434: extern volatile __bit T0CS @ (((unsigned) &OPTION_REG)*8) + 5;
+[; ;pic16f628a.h: 1436: extern volatile __bit T0IE @ (((unsigned) &INTCON)*8) + 5;
+[; ;pic16f628a.h: 1438: extern volatile __bit T0IF @ (((unsigned) &INTCON)*8) + 2;
+[; ;pic16f628a.h: 1440: extern volatile __bit T0SE @ (((unsigned) &OPTION_REG)*8) + 4;
+[; ;pic16f628a.h: 1442: extern volatile __bit T1CKPS0 @ (((unsigned) &T1CON)*8) + 4;
+[; ;pic16f628a.h: 1444: extern volatile __bit T1CKPS1 @ (((unsigned) &T1CON)*8) + 5;
+[; ;pic16f628a.h: 1446: extern volatile __bit T1OSCEN @ (((unsigned) &T1CON)*8) + 3;
+[; ;pic16f628a.h: 1448: extern volatile __bit T2CKPS0 @ (((unsigned) &T2CON)*8) + 0;
+[; ;pic16f628a.h: 1450: extern volatile __bit T2CKPS1 @ (((unsigned) &T2CON)*8) + 1;
+[; ;pic16f628a.h: 1452: extern volatile __bit TMR0IE @ (((unsigned) &INTCON)*8) + 5;
+[; ;pic16f628a.h: 1454: extern volatile __bit TMR0IF @ (((unsigned) &INTCON)*8) + 2;
+[; ;pic16f628a.h: 1456: extern volatile __bit TMR1CS @ (((unsigned) &T1CON)*8) + 1;
+[; ;pic16f628a.h: 1458: extern volatile __bit TMR1IE @ (((unsigned) &PIE1)*8) + 0;
+[; ;pic16f628a.h: 1460: extern volatile __bit TMR1IF @ (((unsigned) &PIR1)*8) + 0;
+[; ;pic16f628a.h: 1462: extern volatile __bit TMR1ON @ (((unsigned) &T1CON)*8) + 0;
+[; ;pic16f628a.h: 1464: extern volatile __bit TMR2IE @ (((unsigned) &PIE1)*8) + 1;
+[; ;pic16f628a.h: 1466: extern volatile __bit TMR2IF @ (((unsigned) &PIR1)*8) + 1;
+[; ;pic16f628a.h: 1468: extern volatile __bit TMR2ON @ (((unsigned) &T2CON)*8) + 2;
+[; ;pic16f628a.h: 1470: extern volatile __bit TOUTPS0 @ (((unsigned) &T2CON)*8) + 3;
+[; ;pic16f628a.h: 1472: extern volatile __bit TOUTPS1 @ (((unsigned) &T2CON)*8) + 4;
+[; ;pic16f628a.h: 1474: extern volatile __bit TOUTPS2 @ (((unsigned) &T2CON)*8) + 5;
+[; ;pic16f628a.h: 1476: extern volatile __bit TOUTPS3 @ (((unsigned) &T2CON)*8) + 6;
+[; ;pic16f628a.h: 1478: extern volatile __bit TRISA0 @ (((unsigned) &TRISA)*8) + 0;
+[; ;pic16f628a.h: 1480: extern volatile __bit TRISA1 @ (((unsigned) &TRISA)*8) + 1;
+[; ;pic16f628a.h: 1482: extern volatile __bit TRISA2 @ (((unsigned) &TRISA)*8) + 2;
+[; ;pic16f628a.h: 1484: extern volatile __bit TRISA3 @ (((unsigned) &TRISA)*8) + 3;
+[; ;pic16f628a.h: 1486: extern volatile __bit TRISA4 @ (((unsigned) &TRISA)*8) + 4;
+[; ;pic16f628a.h: 1488: extern volatile __bit TRISA5 @ (((unsigned) &TRISA)*8) + 5;
+[; ;pic16f628a.h: 1490: extern volatile __bit TRISA6 @ (((unsigned) &TRISA)*8) + 6;
+[; ;pic16f628a.h: 1492: extern volatile __bit TRISA7 @ (((unsigned) &TRISA)*8) + 7;
+[; ;pic16f628a.h: 1494: extern volatile __bit TRISB0 @ (((unsigned) &TRISB)*8) + 0;
+[; ;pic16f628a.h: 1496: extern volatile __bit TRISB1 @ (((unsigned) &TRISB)*8) + 1;
+[; ;pic16f628a.h: 1498: extern volatile __bit TRISB2 @ (((unsigned) &TRISB)*8) + 2;
+[; ;pic16f628a.h: 1500: extern volatile __bit TRISB3 @ (((unsigned) &TRISB)*8) + 3;
+[; ;pic16f628a.h: 1502: extern volatile __bit TRISB4 @ (((unsigned) &TRISB)*8) + 4;
+[; ;pic16f628a.h: 1504: extern volatile __bit TRISB5 @ (((unsigned) &TRISB)*8) + 5;
+[; ;pic16f628a.h: 1506: extern volatile __bit TRISB6 @ (((unsigned) &TRISB)*8) + 6;
+[; ;pic16f628a.h: 1508: extern volatile __bit TRISB7 @ (((unsigned) &TRISB)*8) + 7;
+[; ;pic16f628a.h: 1510: extern volatile __bit TRMT @ (((unsigned) &TXSTA)*8) + 1;
+[; ;pic16f628a.h: 1512: extern volatile __bit TX9 @ (((unsigned) &TXSTA)*8) + 6;
+[; ;pic16f628a.h: 1514: extern volatile __bit TX9D @ (((unsigned) &TXSTA)*8) + 0;
+[; ;pic16f628a.h: 1516: extern volatile __bit TXEN @ (((unsigned) &TXSTA)*8) + 5;
+[; ;pic16f628a.h: 1518: extern volatile __bit TXIE @ (((unsigned) &PIE1)*8) + 4;
+[; ;pic16f628a.h: 1520: extern volatile __bit TXIF @ (((unsigned) &PIR1)*8) + 4;
+[; ;pic16f628a.h: 1522: extern volatile __bit VR0 @ (((unsigned) &VRCON)*8) + 0;
+[; ;pic16f628a.h: 1524: extern volatile __bit VR1 @ (((unsigned) &VRCON)*8) + 1;
+[; ;pic16f628a.h: 1526: extern volatile __bit VR2 @ (((unsigned) &VRCON)*8) + 2;
+[; ;pic16f628a.h: 1528: extern volatile __bit VR3 @ (((unsigned) &VRCON)*8) + 3;
+[; ;pic16f628a.h: 1530: extern volatile __bit VREN @ (((unsigned) &VRCON)*8) + 7;
+[; ;pic16f628a.h: 1532: extern volatile __bit VROE @ (((unsigned) &VRCON)*8) + 6;
+[; ;pic16f628a.h: 1534: extern volatile __bit VRR @ (((unsigned) &VRCON)*8) + 5;
+[; ;pic16f628a.h: 1536: extern volatile __bit WR @ (((unsigned) &EECON1)*8) + 1;
+[; ;pic16f628a.h: 1538: extern volatile __bit WREN @ (((unsigned) &EECON1)*8) + 2;
+[; ;pic16f628a.h: 1540: extern volatile __bit WRERR @ (((unsigned) &EECON1)*8) + 3;
+[; ;pic16f628a.h: 1542: extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+[; ;pic16f628a.h: 1544: extern volatile __bit nBO @ (((unsigned) &PCON)*8) + 0;
+[; ;pic16f628a.h: 1546: extern volatile __bit nBOD @ (((unsigned) &PCON)*8) + 0;
+[; ;pic16f628a.h: 1548: extern volatile __bit nBOR @ (((unsigned) &PCON)*8) + 0;
+[; ;pic16f628a.h: 1550: extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
+[; ;pic16f628a.h: 1552: extern volatile __bit nPOR @ (((unsigned) &PCON)*8) + 1;
+[; ;pic16f628a.h: 1554: extern volatile __bit nRBPU @ (((unsigned) &OPTION_REG)*8) + 7;
+[; ;pic16f628a.h: 1556: extern volatile __bit nT1SYNC @ (((unsigned) &T1CON)*8) + 2;
+[; ;pic16f628a.h: 1558: extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
 [; ;pic.h: 28: extern void __nop(void);
 [; ;pic.h: 77: extern unsigned int flash_read(unsigned short addr);
 [; ;pic.h: 141: extern void flash_erase(unsigned short addr);
@@ -703,9 +701,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 116: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 117: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 152: extern __nonreentrant void _delay(unsigned long);
-[; ;pic.h: 186: extern unsigned char __resetbits;
-[; ;pic.h: 187: extern __bit __powerdown;
-[; ;pic.h: 188: extern __bit __timeout;
+[; ;pic.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
+[; ;pic.h: 192: extern unsigned char __resetbits;
+[; ;pic.h: 193: extern __bit __powerdown;
+[; ;pic.h: 194: extern __bit __timeout;
 "14 prog.c
 [p x FOSC=INTOSCIO ]
 "15
@@ -770,7 +769,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PowerBlocked `uc ~T0 @X0 1 e ]
 [; ;prog.c: 51: unsigned char PowerBlocked;
 "66
-[v _getTemp_flags `S57 ~T0 @X0 1 e ]
+[v _getTemp_flags `S56 ~T0 @X0 1 e ]
 [; ;prog.c: 53: struct {
 [; ;prog.c: 54: unsigned Init : 1;
 [; ;prog.c: 55: unsigned Send_Address : 1;
@@ -842,14 +841,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _endInterrupt -> -> 0 `i `b ]
 [; ;prog.c: 95: while (!endInterrupt);
 "95
-[e $U 59  ]
-[e :U 60 ]
+[e $U 58  ]
 [e :U 59 ]
-[e $ ! _endInterrupt 60  ]
-[e :U 61 ]
+[e :U 58 ]
+[e $ ! _endInterrupt 59  ]
+[e :U 60 ]
 [; ;prog.c: 96: }
 "96
-[e :UE 58 ]
+[e :UE 57 ]
 }
 "98
 [v _Reset_powerOnInterval `(v ~T0 @X0 1 ef ]
@@ -862,7 +861,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _powerOnInterval -> 700 `i ]
 [; ;prog.c: 100: }
 "100
-[e :UE 62 ]
+[e :UE 61 ]
 }
 "102
 [v _getDigit `(uc ~T0 @X0 1 ef1`uc ]
@@ -874,10 +873,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 103: return (digits_0[a - 1] & 0b00111111);
 "103
 [e ) -> & -> *U + &U _digits_0 * -> -> - -> _a `i -> 1 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux `i -> 63 `i `uc ]
-[e $UE 63  ]
+[e $UE 62  ]
 [; ;prog.c: 104: }
 "104
-[e :UE 63 ]
+[e :UE 62 ]
 }
 "106
 [v _setDigit `(v ~T0 @X0 1 ef2`uc`uc ]
@@ -892,7 +891,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _digits_0 * -> -> - -> _a `i -> 1 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux -> | & -> *U + &U _digits_0 * -> -> - -> _a `i -> 1 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux `i -> 192 `i & -> _data `i -> 63 `i `uc ]
 [; ;prog.c: 108: }
 "108
-[e :UE 64 ]
+[e :UE 63 ]
 }
 "110
 [v _setPoint `(v ~T0 @X0 1 ef2`uc`uc ]
@@ -907,7 +906,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ? == -> _value `i -> 1 `i : -> =| *U + &U _digits_0 * -> -> - -> _dignum `i -> 1 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux -> -> 64 `i `uc `i -> =& *U + &U _digits_0 * -> -> - -> _dignum `i -> 1 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux -> -> 191 `i `uc `i ]
 [; ;prog.c: 112: }
 "112
-[e :UE 65 ]
+[e :UE 64 ]
 }
 "114
 [v _refreshInd `(v ~T0 @X0 1 ef ]
@@ -926,7 +925,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _digits * -> -> -> 2 `i `ui `ux -> -> # *U &U _digits `ui `ux *U + &U _digits_0 * -> -> -> 2 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux ]
 [; ;prog.c: 118: }
 "118
-[e :UE 66 ]
+[e :UE 65 ]
 }
 "120
 [v _clrInd `(v ~T0 @X0 1 ef ]
@@ -945,7 +944,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _digits_0 * -> -> -> 2 `i `ui `ux -> -> # *U &U _digits_0 `ui `ux -> -> 34 `i `uc ]
 [; ;prog.c: 124: }
 "124
-[e :UE 67 ]
+[e :UE 66 ]
 }
 "126
 [v _ShowError `(v ~T0 @X0 1 ef ]
@@ -970,7 +969,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _refreshInd ..  ]
 [; ;prog.c: 132: }
 "132
-[e :UE 68 ]
+[e :UE 67 ]
 }
 "134
 [v _convDig `(uc ~T0 @X0 1 ef1`uc ]
@@ -981,103 +980,103 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;prog.c: 135: switch (dig) {
 "135
-[e $U 71  ]
+[e $U 70  ]
 {
 [; ;prog.c: 136: case 0: return 0b11011011;
 "136
-[e :U 72 ]
+[e :U 71 ]
 [e ) -> -> 219 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 137: case 1: return 0b00011000;
 "137
-[e :U 73 ]
+[e :U 72 ]
 [e ) -> -> 24 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 138: case 2: return 0b10110011;
 "138
-[e :U 74 ]
+[e :U 73 ]
 [e ) -> -> 179 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 139: case 3: return 0b10111010;
 "139
-[e :U 75 ]
+[e :U 74 ]
 [e ) -> -> 186 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 140: case 4: return 0b01111000;
 "140
-[e :U 76 ]
+[e :U 75 ]
 [e ) -> -> 120 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 141: case 5: return 0b11101010;
 "141
-[e :U 77 ]
+[e :U 76 ]
 [e ) -> -> 234 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 142: case 6: return 0b11101011;
 "142
-[e :U 78 ]
+[e :U 77 ]
 [e ) -> -> 235 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 143: case 7: return 0b10011000;
 "143
-[e :U 79 ]
+[e :U 78 ]
 [e ) -> -> 152 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 144: case 8: return 0b11111011;
 "144
-[e :U 80 ]
+[e :U 79 ]
 [e ) -> -> 251 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 145: case 9: return 0b11111010;
 "145
-[e :U 81 ]
+[e :U 80 ]
 [e ) -> -> 250 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 152: case 14: return 0b11100011;
 "152
-[e :U 82 ]
+[e :U 81 ]
 [e ) -> -> 227 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 164: case 24: return 0b00100001;
 "164
-[e :U 83 ]
+[e :U 82 ]
 [e ) -> -> 33 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 175: case 32: return 0b00100000;
 "175
-[e :U 84 ]
+[e :U 83 ]
 [e ) -> -> 32 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 [; ;prog.c: 177: default: return 0b00000000;
 "177
-[e :U 85 ]
+[e :U 84 ]
 [e ) -> -> 0 `i `uc ]
-[e $UE 69  ]
+[e $UE 68  ]
 "178
 }
 [; ;prog.c: 178: }
-[e $U 70  ]
+[e $U 69  ]
 "135
-[e :U 71 ]
-[e [\ _dig , $ -> -> 0 `i `uc 72
- , $ -> -> 1 `i `uc 73
- , $ -> -> 2 `i `uc 74
- , $ -> -> 3 `i `uc 75
- , $ -> -> 4 `i `uc 76
- , $ -> -> 5 `i `uc 77
- , $ -> -> 6 `i `uc 78
- , $ -> -> 7 `i `uc 79
- , $ -> -> 8 `i `uc 80
- , $ -> -> 9 `i `uc 81
- , $ -> -> 14 `i `uc 82
- , $ -> -> 24 `i `uc 83
- , $ -> -> 32 `i `uc 84
- 85 ]
-"178
 [e :U 70 ]
+[e [\ _dig , $ -> -> 0 `i `uc 71
+ , $ -> -> 1 `i `uc 72
+ , $ -> -> 2 `i `uc 73
+ , $ -> -> 3 `i `uc 74
+ , $ -> -> 4 `i `uc 75
+ , $ -> -> 5 `i `uc 76
+ , $ -> -> 6 `i `uc 77
+ , $ -> -> 7 `i `uc 78
+ , $ -> -> 8 `i `uc 79
+ , $ -> -> 9 `i `uc 80
+ , $ -> -> 14 `i `uc 81
+ , $ -> -> 24 `i `uc 82
+ , $ -> -> 32 `i `uc 83
+ 84 ]
+"178
+[e :U 69 ]
 [; ;prog.c: 179: }
 "179
-[e :UE 69 ]
+[e :UE 68 ]
 }
 "181
 [v _EEWR `(v ~T0 @X0 1 ef2`uc`uc ]
@@ -1117,22 +1116,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
 [; ;prog.c: 191: while (EECON1bits.WR == 1) {
 "191
-[e $U 87  ]
-[e :U 88 ]
+[e $U 86  ]
+[e :U 87 ]
 {
 "192
 }
-[e :U 87 ]
+[e :U 86 ]
 "191
-[e $ == -> . . _EECON1bits 0 1 `i -> 1 `i 88  ]
-[e :U 89 ]
+[e $ == -> . . _EECON1bits 0 1 `i -> 1 `i 87  ]
+[e :U 88 ]
 [; ;prog.c: 192: }
 [; ;prog.c: 193: INTCON = INTCON_BUP;
 "193
 [e = _INTCON _INTCON_BUP ]
 [; ;prog.c: 194: }
 "194
-[e :UE 86 ]
+[e :UE 85 ]
 }
 "196
 [v _EERD `(uc ~T0 @X0 1 ef1`uc ]
@@ -1166,10 +1165,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 204: return EEDATA_BUP;
 "204
 [e ) _EEDATA_BUP ]
-[e $UE 90  ]
+[e $UE 89  ]
 [; ;prog.c: 205: }
 "205
-[e :UE 90 ]
+[e :UE 89 ]
 }
 "207
 [v _FillArrayFromEEPROM `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
@@ -1185,8 +1184,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 95  ]
-[e :U 92 ]
+[e $U 94  ]
+[e :U 91 ]
 {
 [; ;prog.c: 209: container[i] = EERD(address_start + i);
 "209
@@ -1195,15 +1194,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "208
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 95 ]
-[e $ < -> _i `i -> _quantity `i 92  ]
-[e :U 93 ]
+[e :U 94 ]
+[e $ < -> _i `i -> _quantity `i 91  ]
+[e :U 92 ]
 "210
 }
 [; ;prog.c: 210: }
 [; ;prog.c: 211: }
 "211
-[e :UE 91 ]
+[e :UE 90 ]
 }
 "213
 [v _WriteArrayToEEPROM `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
@@ -1219,8 +1218,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 100  ]
-[e :U 97 ]
+[e $U 99  ]
+[e :U 96 ]
 {
 [; ;prog.c: 215: waitInterrupt();
 "215
@@ -1232,15 +1231,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "214
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 100 ]
-[e $ < -> _i `i -> _quantity `i 97  ]
-[e :U 98 ]
+[e :U 99 ]
+[e $ < -> _i `i -> _quantity `i 96  ]
+[e :U 97 ]
 "217
 }
 [; ;prog.c: 217: }
 [; ;prog.c: 218: }
 "218
-[e :UE 96 ]
+[e :UE 95 ]
 }
 "221
 [v _INIT `(uc ~T0 @X0 1 ef1`uc ]
@@ -1290,10 +1289,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 236: return !b;
 "236
 [e ) -> -> ! != -> _b `i -> -> -> 0 `i `uc `i `i `uc ]
-[e $UE 101  ]
+[e $UE 100  ]
 [; ;prog.c: 237: }
 "237
-[e :UE 101 ]
+[e :UE 100 ]
 }
 "239
 [v _TX `(v ~T0 @X0 1 ef2`uc`uc ]
@@ -1326,13 +1325,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "246
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 103  ]
-[e $U 104  ]
-[e :U 103 ]
+[e $ < -> _i `i -> 8 `i 102  ]
+[e $U 103  ]
+[e :U 102 ]
 {
 [; ;prog.c: 247: if (temp & 0x01) {
 "247
-[e $ ! != & -> _temp `i -> 1 `i -> 0 `i 106  ]
+[e $ ! != & -> _temp `i -> 1 `i -> 0 `i 105  ]
 {
 [; ;prog.c: 248: TRISA &= Zero;
 "248
@@ -1349,8 +1348,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "252
 }
 [; ;prog.c: 252: } else {
-[e $U 107  ]
-[e :U 106 ]
+[e $U 106  ]
+[e :U 105 ]
 {
 [; ;prog.c: 253: TRISA &= Zero;
 "253
@@ -1366,7 +1365,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "257
 }
-[e :U 107 ]
+[e :U 106 ]
 [; ;prog.c: 257: }
 [; ;prog.c: 258: temp >>= 1;
 "258
@@ -1375,14 +1374,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "246
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 103  ]
-[e :U 104 ]
+[e $ < -> _i `i -> 8 `i 102  ]
+[e :U 103 ]
 "259
 }
 [; ;prog.c: 259: }
 [; ;prog.c: 260: }
 "260
-[e :UE 102 ]
+[e :UE 101 ]
 }
 "262
 [v _RX `(uc ~T0 @X0 1 ef1`uc ]
@@ -1408,9 +1407,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 109  ]
-[e $U 110  ]
-[e :U 109 ]
+[e $ < -> _i `i -> 8 `i 108  ]
+[e $U 109  ]
+[e :U 108 ]
 {
 [; ;prog.c: 268: TRISA &= Zero;
 "268
@@ -1429,14 +1428,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =>> _d -> 1 `i ]
 [; ;prog.c: 273: if ((PORTA & One) > 0) {
 "273
-[e $ ! > & -> _PORTA `i -> _One `i -> 0 `i 112  ]
+[e $ ! > & -> _PORTA `i -> _One `i -> 0 `i 111  ]
 {
 [; ;prog.c: 274: d |= 0x80;
 "274
 [e =| _d -> -> 128 `i `uc ]
 "275
 }
-[e :U 112 ]
+[e :U 111 ]
 [; ;prog.c: 275: }
 [; ;prog.c: 276: _delay((unsigned long)((60)*(4000000/4000000.0)));
 "276
@@ -1445,18 +1444,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "267
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 109  ]
-[e :U 110 ]
+[e $ < -> _i `i -> 8 `i 108  ]
+[e :U 109 ]
 "277
 }
 [; ;prog.c: 277: }
 [; ;prog.c: 278: return d;
 "278
 [e ) _d ]
-[e $UE 108  ]
+[e $UE 107  ]
 [; ;prog.c: 279: }
 "279
-[e :UE 108 ]
+[e :UE 107 ]
 }
 "281
 [v _calc_crc `(uc ~T0 @X0 1 ef2`*uc`uc ]
@@ -1472,8 +1471,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _crc -> -> 0 `i `uc ]
 [; ;prog.c: 283: while (len--) {
 "283
-[e $U 114  ]
-[e :U 115 ]
+[e $U 113  ]
+[e :U 114 ]
 {
 "284
 [v _dat `uc ~T0 @X0 1 a ]
@@ -1484,9 +1483,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 117  ]
-[e $U 118  ]
-[e :U 117 ]
+[e $ < -> _i `i -> 8 `i 116  ]
+[e $U 117  ]
+[e :U 116 ]
 {
 "286
 [v _fb `uc ~T0 @X0 1 a ]
@@ -1500,32 +1499,32 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =>> _dat -> 1 `i ]
 [; ;prog.c: 289: if (fb) crc ^= 0x8c;
 "289
-[e $ ! != -> _fb `i -> -> -> 0 `i `uc `i 120  ]
+[e $ ! != -> _fb `i -> -> -> 0 `i `uc `i 119  ]
 [e =^ _crc -> -> 140 `i `uc ]
-[e :U 120 ]
+[e :U 119 ]
 "290
 }
 "285
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 117  ]
-[e :U 118 ]
+[e $ < -> _i `i -> 8 `i 116  ]
+[e :U 117 ]
 "290
 }
 "291
 }
-[e :U 114 ]
+[e :U 113 ]
 "283
-[e $ != -> -- _len -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 115  ]
-[e :U 116 ]
+[e $ != -> -- _len -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 114  ]
+[e :U 115 ]
 [; ;prog.c: 290: }
 [; ;prog.c: 291: }
 [; ;prog.c: 292: return crc;
 "292
 [e ) _crc ]
-[e $UE 113  ]
+[e $UE 112  ]
 [; ;prog.c: 293: }
 "293
-[e :UE 113 ]
+[e :UE 112 ]
 }
 "296
 [v _get_temp_Async `(v ~T0 @X0 1 ef ]
@@ -1535,14 +1534,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;prog.c: 298: if (!getTemp_flags.ActiveProcess) {
 "298
-[e $ ! ! != -> . _getTemp_flags 10 `i -> -> -> 0 `i `uc `i 122  ]
+[e $ ! ! != -> . _getTemp_flags 10 `i -> -> -> 0 `i `uc `i 121  ]
 {
 [; ;prog.c: 299: return;
 "299
-[e $UE 121  ]
+[e $UE 120  ]
 "300
 }
-[e :U 122 ]
+[e :U 121 ]
 "302
 [v _line `uc ~T0 @X0 1 a ]
 [; ;prog.c: 300: }
@@ -1550,11 +1549,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _line . _getTemp_flags 11 ]
 [; ;prog.c: 305: if (getTemp_flags.Init) {
 "305
-[e $ ! != -> . _getTemp_flags 0 `i -> -> -> 0 `i `uc `i 123  ]
+[e $ ! != -> . _getTemp_flags 0 `i -> -> -> 0 `i `uc `i 122  ]
 {
 [; ;prog.c: 306: if (INIT(line)) {
 "306
-[e $ ! != -> ( _INIT (1 _line `i -> -> -> 0 `i `uc `i 124  ]
+[e $ ! != -> ( _INIT (1 _line `i -> -> -> 0 `i `uc `i 123  ]
 {
 [; ;prog.c: 307: getTemp_flags.Init = 0;
 "307
@@ -1568,8 +1567,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "311
 }
 [; ;prog.c: 311: } else {
-[e $U 125  ]
-[e :U 124 ]
+[e $U 124  ]
+[e :U 123 ]
 {
 [; ;prog.c: 312: getTemp_flags.ActiveProcess = 0;
 "312
@@ -1579,20 +1578,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _getTemp_flags 9 -> -> 1 `i `uc ]
 "314
 }
-[e :U 125 ]
+[e :U 124 ]
 "315
 }
 [; ;prog.c: 314: }
 [; ;prog.c: 315: } else
-[e $U 126  ]
-[e :U 123 ]
+[e $U 125  ]
+[e :U 122 ]
 [; ;prog.c: 317: if (getTemp_flags.Send_Address) {
 "317
-[e $ ! != -> . _getTemp_flags 1 `i -> -> -> 0 `i `uc `i 127  ]
+[e $ ! != -> . _getTemp_flags 1 `i -> -> -> 0 `i `uc `i 126  ]
 {
 [; ;prog.c: 318: if (Broadcasting) {
 "318
-[e $ ! _Broadcasting 128  ]
+[e $ ! _Broadcasting 127  ]
 {
 [; ;prog.c: 319: TX(0xCC, line);
 "319
@@ -1606,20 +1605,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 "322
 }
 [; ;prog.c: 322: } else if (getTemp_flags.CountAddressBytes < sizeof (DS_Address)) {
-[e $U 129  ]
-[e :U 128 ]
-[e $ ! < -> . _getTemp_flags 2 `ui -> # _DS_Address `ui 130  ]
+[e $U 128  ]
+[e :U 127 ]
+[e $ ! < -> . _getTemp_flags 2 `ui -> # _DS_Address `ui 129  ]
 {
 [; ;prog.c: 323: if (getTemp_flags.CountAddressBytes == 0) {
 "323
-[e $ ! == -> . _getTemp_flags 2 `i -> 0 `i 131  ]
+[e $ ! == -> . _getTemp_flags 2 `i -> 0 `i 130  ]
 {
 [; ;prog.c: 324: TX(0x55, line);
 "324
 [e ( _TX (2 , -> -> 85 `i `uc _line ]
 "325
 }
-[e :U 131 ]
+[e :U 130 ]
 [; ;prog.c: 325: }
 [; ;prog.c: 326: TX(DS_Address[getTemp_flags.CountAddressBytes], line);
 "326
@@ -1629,28 +1628,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ . _getTemp_flags 2 -> -> 1 `i `uc ]
 [; ;prog.c: 329: if (getTemp_flags.CountAddressBytes == sizeof (DS_Address)) {
 "329
-[e $ ! == -> . _getTemp_flags 2 `ui -> # _DS_Address `ui 132  ]
+[e $ ! == -> . _getTemp_flags 2 `ui -> # _DS_Address `ui 131  ]
 {
 [; ;prog.c: 330: getTemp_flags.Send_Address = 0;
 "330
 [e = . _getTemp_flags 1 -> -> 0 `i `uc ]
 "331
 }
-[e :U 132 ]
+[e :U 131 ]
 "332
 }
-[e :U 130 ]
-"333
 [e :U 129 ]
+"333
+[e :U 128 ]
 }
 [; ;prog.c: 331: }
 [; ;prog.c: 332: }
 [; ;prog.c: 333: } else
-[e $U 133  ]
-[e :U 127 ]
+[e $U 132  ]
+[e :U 126 ]
 [; ;prog.c: 335: if (getTemp_flags.SendConvertTemp) {
 "335
-[e $ ! != -> . _getTemp_flags 3 `i -> -> -> 0 `i `uc `i 134  ]
+[e $ ! != -> . _getTemp_flags 3 `i -> -> -> 0 `i `uc `i 133  ]
 {
 [; ;prog.c: 336: TX(0x44, line);
 "336
@@ -1661,34 +1660,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 "339
 }
 [; ;prog.c: 339: } else
-[e $U 135  ]
-[e :U 134 ]
+[e $U 134  ]
+[e :U 133 ]
 [; ;prog.c: 341: if (getTemp_flags.PauseValue > 0) {
 "341
-[e $ ! > . _getTemp_flags 4 -> -> 0 `i `ui 136  ]
+[e $ ! > . _getTemp_flags 4 -> -> 0 `i `ui 135  ]
 {
 [; ;prog.c: 342: getTemp_flags.PauseValue--;
 "342
 [e -- . _getTemp_flags 4 -> -> 1 `i `ui ]
 [; ;prog.c: 343: if (getTemp_flags.PauseValue == 0) {
 "343
-[e $ ! == . _getTemp_flags 4 -> -> 0 `i `ui 137  ]
+[e $ ! == . _getTemp_flags 4 -> -> 0 `i `ui 136  ]
 {
 [; ;prog.c: 344: getTemp_flags.Init = 1;
 "344
 [e = . _getTemp_flags 0 -> -> 1 `i `uc ]
 "345
 }
-[e :U 137 ]
+[e :U 136 ]
 "346
 }
 [; ;prog.c: 345: }
 [; ;prog.c: 346: } else
-[e $U 138  ]
-[e :U 136 ]
+[e $U 137  ]
+[e :U 135 ]
 [; ;prog.c: 348: if (getTemp_flags.SendGetTemp) {
 "348
-[e $ ! != -> . _getTemp_flags 5 `i -> -> -> 0 `i `uc `i 139  ]
+[e $ ! != -> . _getTemp_flags 5 `i -> -> -> 0 `i `uc `i 138  ]
 {
 [; ;prog.c: 349: TX(0xBE, line);
 "349
@@ -1699,23 +1698,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 "351
 }
 [; ;prog.c: 351: } else
-[e $U 140  ]
-[e :U 139 ]
+[e $U 139  ]
+[e :U 138 ]
 [; ;prog.c: 353: if (getTemp_flags.ReadData) {
 "353
-[e $ ! != -> . _getTemp_flags 6 `i -> -> -> 0 `i `uc `i 141  ]
+[e $ ! != -> . _getTemp_flags 6 `i -> -> -> 0 `i `uc `i 140  ]
 {
 [; ;prog.c: 354: if (getTemp_flags.CountDataBytes < sizeof (DS_ReadData)) {
 "354
-[e $ ! < -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 142  ]
+[e $ ! < -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 141  ]
 {
 [; ;prog.c: 355: for (unsigned char i = 0; i < 3 && getTemp_flags.CountDataBytes < sizeof (DS_ReadData); i++) {
 "355
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 146  ]
-[e :U 143 ]
+[e $U 145  ]
+[e :U 142 ]
 {
 [; ;prog.c: 356: DS_ReadData[getTemp_flags.CountDataBytes] = RX(line);
 "356
@@ -1727,19 +1726,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "355
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 146 ]
-[e $ && < -> _i `i -> 3 `i < -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 143  ]
-[e :U 144 ]
+[e :U 145 ]
+[e $ && < -> _i `i -> 3 `i < -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 142  ]
+[e :U 143 ]
 "358
 }
 [; ;prog.c: 358: }
 [; ;prog.c: 359: if (getTemp_flags.CountDataBytes == sizeof (DS_ReadData)) {
 "359
-[e $ ! == -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 147  ]
+[e $ ! == -> . _getTemp_flags 7 `ui -> # _DS_ReadData `ui 146  ]
 {
 [; ;prog.c: 360: if (DS_ReadData[sizeof (DS_ReadData) - 1] != calc_crc(DS_ReadData, sizeof (DS_ReadData) - 1)) {
 "360
-[e $ ! != -> *U + &U _DS_ReadData * -> - -> # _DS_ReadData `ui -> -> 1 `i `ui `ux -> -> # *U &U _DS_ReadData `ui `ux `i -> ( _calc_crc (2 , &U _DS_ReadData -> - -> # _DS_ReadData `ui -> -> 1 `i `ui `uc `i 148  ]
+[e $ ! != -> *U + &U _DS_ReadData * -> - -> # _DS_ReadData `ui -> -> 1 `i `ui `ux -> -> # *U &U _DS_ReadData `ui `ux `i -> ( _calc_crc (2 , &U _DS_ReadData -> - -> # _DS_ReadData `ui -> -> 1 `i `ui `uc `i 147  ]
 {
 [; ;prog.c: 361: getTemp_flags.Error = 1;
 "361
@@ -1747,8 +1746,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "362
 }
 [; ;prog.c: 362: } else {
-[e $U 149  ]
-[e :U 148 ]
+[e $U 148  ]
+[e :U 147 ]
 {
 "364
 [v _temp1 `uc ~T0 @X0 1 a ]
@@ -1781,7 +1780,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| _temp2 _temp1 ]
 [; ;prog.c: 375: if (sign) {
 "375
-[e $ ! != -> _sign `i -> -> -> 0 `i `uc `i 150  ]
+[e $ ! != -> _sign `i -> -> -> 0 `i `uc `i 149  ]
 {
 [; ;prog.c: 376: temperature = 127 - temp2;
 "376
@@ -1791,7 +1790,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _temp_drob -> - -> 10 `i -> _temp_drob `i `uc ]
 [; ;prog.c: 378: if (temp_drob == 10) {
 "378
-[e $ ! == -> _temp_drob `i -> 10 `i 151  ]
+[e $ ! == -> _temp_drob `i -> 10 `i 150  ]
 {
 [; ;prog.c: 379: temp_drob = 0;
 "379
@@ -1801,23 +1800,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _temperature -> -> 1 `i `uc ]
 "381
 }
-[e :U 151 ]
+[e :U 150 ]
 "382
 }
 [; ;prog.c: 381: }
 [; ;prog.c: 382: } else {
-[e $U 152  ]
-[e :U 150 ]
+[e $U 151  ]
+[e :U 149 ]
 {
 [; ;prog.c: 383: temperature = temp2;
 "383
 [e = _temperature _temp2 ]
 "384
 }
-[e :U 152 ]
+[e :U 151 ]
 "385
 }
-[e :U 149 ]
+[e :U 148 ]
 [; ;prog.c: 384: }
 [; ;prog.c: 385: }
 [; ;prog.c: 386: getTemp_flags.ReadData = 0;
@@ -1831,33 +1830,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _getTemp_flags 8 -> -> 1 `i `uc ]
 "389
 }
-[e :U 147 ]
+[e :U 146 ]
 "390
 }
-[e :U 142 ]
+[e :U 141 ]
 "391
 }
 [; ;prog.c: 389: }
 [; ;prog.c: 390: }
 [; ;prog.c: 391: } else {
-[e $U 153  ]
-[e :U 141 ]
+[e $U 152  ]
+[e :U 140 ]
 {
 [; ;prog.c: 392: getTemp_flags.ActiveProcess = 0;
 "392
 [e = . _getTemp_flags 10 -> -> 0 `i `uc ]
 "393
 }
-[e :U 153 ]
-[e :U 140 ]
-[e :U 138 ]
-[e :U 135 ]
-[e :U 133 ]
-[e :U 126 ]
+[e :U 152 ]
+[e :U 139 ]
+[e :U 137 ]
+[e :U 134 ]
+[e :U 132 ]
+[e :U 125 ]
 [; ;prog.c: 393: }
 [; ;prog.c: 394: }
 "394
-[e :UE 121 ]
+[e :UE 120 ]
 }
 "396
 [v _FindCell `(uc ~T0 @X0 1 ef2`uc`uc ]
@@ -1869,14 +1868,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;prog.c: 397: if (addressStart == ((sizeof(DS_Address)) * 16)) {
 "397
-[e $ ! == -> _addressStart `ui * -> # _DS_Address `ui -> -> 16 `i `ui 155  ]
+[e $ ! == -> _addressStart `ui * -> # _DS_Address `ui -> -> 16 `i `ui 154  ]
 {
 [; ;prog.c: 398: previous ? addressStart = 0 : addressStart = (((sizeof(DS_Address)) * 16) - (sizeof(DS_Address)));
 "398
 [e ? != -> _previous `i -> -> -> 0 `i `uc `i : -> = _addressStart -> -> 0 `i `uc `i -> = _addressStart -> - * -> # _DS_Address `ui -> -> 16 `i `ui -> # _DS_Address `ui `uc `i ]
 "399
 }
-[e :U 155 ]
+[e :U 154 ]
 "400
 [v _address `uc ~T0 @X0 1 a ]
 [; ;prog.c: 399: }
@@ -1888,11 +1887,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _addressNew -> * -> # _DS_Address `ui -> -> 16 `i `ui `uc ]
 [; ;prog.c: 402: do {
 "402
-[e :U 158 ]
+[e :U 157 ]
 {
 [; ;prog.c: 404: if (!previous) {
 "404
-[e $ ! ! != -> _previous `i -> -> -> 0 `i `uc `i 159  ]
+[e $ ! ! != -> _previous `i -> -> -> 0 `i `uc `i 158  ]
 {
 [; ;prog.c: 405: address == (((sizeof(DS_Address)) * 16) - (sizeof(DS_Address))) ? address = 0 : address += (sizeof(DS_Address));
 "405
@@ -1900,15 +1899,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "406
 }
 [; ;prog.c: 406: } else {
-[e $U 160  ]
-[e :U 159 ]
+[e $U 159  ]
+[e :U 158 ]
 {
 [; ;prog.c: 407: address == 0 ? address = (((sizeof(DS_Address)) * 16) - (sizeof(DS_Address))) : address -= (sizeof(DS_Address));
 "407
 [e ? == -> _address `i -> 0 `i : -> = _address -> - * -> # _DS_Address `ui -> -> 16 `i `ui -> # _DS_Address `ui `uc `i -> =- _address -> -> # _DS_Address `ui `uc `i ]
 "408
 }
-[e :U 160 ]
+[e :U 159 ]
 "410
 [v _CellsData `uc ~T0 @X0 -> # _DS_Address `ui a ]
 [; ;prog.c: 408: }
@@ -1928,71 +1927,71 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 161  ]
-[e $U 162  ]
-[e :U 161 ]
+[e $ < -> _i `ui -> # _DS_Address `ui 160  ]
+[e $U 161  ]
+[e :U 160 ]
 {
 [; ;prog.c: 415: if (CellsData[i] != 0xFF) {
 "415
-[e $ ! != -> *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux `i -> 255 `i 164  ]
+[e $ ! != -> *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux `i -> 255 `i 163  ]
 {
 [; ;prog.c: 416: CellIsEmpty = 0;
 "416
 [e = _CellIsEmpty -> -> 0 `i `uc ]
 "417
 }
-[e :U 164 ]
+[e :U 163 ]
 "418
 }
 "414
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 161  ]
-[e :U 162 ]
+[e $ < -> _i `ui -> # _DS_Address `ui 160  ]
+[e :U 161 ]
 "418
 }
 [; ;prog.c: 417: }
 [; ;prog.c: 418: }
 [; ;prog.c: 420: if (CellIsEmpty == 0) {
 "420
-[e $ ! == -> _CellIsEmpty `i -> 0 `i 165  ]
+[e $ ! == -> _CellIsEmpty `i -> 0 `i 164  ]
 {
 [; ;prog.c: 421: addressNew = address;
 "421
 [e = _addressNew _address ]
 [; ;prog.c: 422: break;
 "422
-[e $U 157  ]
+[e $U 156  ]
 "423
 }
-[e :U 165 ]
+[e :U 164 ]
 "424
 }
 [; ;prog.c: 423: }
 [; ;prog.c: 424: } while (address != addressStart);
-[e $ != -> _address `i -> _addressStart `i 158  ]
-[e :U 157 ]
+[e $ != -> _address `i -> _addressStart `i 157  ]
+[e :U 156 ]
 [; ;prog.c: 425: return addressNew;
 "425
 [e ) _addressNew ]
-[e $UE 154  ]
+[e $UE 153  ]
 [; ;prog.c: 426: }
 "426
-[e :UE 154 ]
+[e :UE 153 ]
 }
-[v F898 `(v ~T0 @X0 1 tf ]
+[v F899 `(v ~T0 @X0 1 tf ]
 "430
-[v _F `IF898 ~T0 @X0 1 e ]
+[v _F `IF899 ~T0 @X0 1 e ]
 {
 [; ;prog.c: 430: void interrupt F() {
 [e :U _F ]
 [f ]
 [; ;prog.c: 431: if (T0IF) {
 "431
-[e $ ! _T0IF 167  ]
+[e $ ! _T0IF 166  ]
 {
 "432
-[v F899 `uc ~T0 @X0 1 s DigitNumber ]
-[i F899
+[v F900 `uc ~T0 @X0 1 s DigitNumber ]
+[i F900
 -> -> 0 `i `uc
 ]
 [; ;prog.c: 432: static unsigned char DigitNumber = 0;
@@ -2004,19 +2003,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =+ _TMR0 _TMR0_VALUE ]
 [; ;prog.c: 437: if (DigitNumber > 2) {
 "437
-[e $ ! > -> F899 `i -> 2 `i 168  ]
+[e $ ! > -> F900 `i -> 2 `i 167  ]
 {
 [; ;prog.c: 438: DigitNumber = 0;
 "438
-[e = F899 -> -> 0 `i `uc ]
+[e = F900 -> -> 0 `i `uc ]
 "439
 }
-[e :U 168 ]
+[e :U 167 ]
 "440
 [v _dig `uc ~T0 @X0 1 a ]
 [; ;prog.c: 439: }
 [; ;prog.c: 440: unsigned char dig = digits[DigitNumber];
-[e = _dig *U + &U _digits * -> F899 `ux -> -> # *U &U _digits `ui `ux ]
+[e = _dig *U + &U _digits * -> F900 `ux -> -> # *U &U _digits `ui `ux ]
 [; ;prog.c: 441: digitemp = convDig(0b00111111 & dig);
 "441
 [e = _digitemp ( _convDig (1 -> & -> 63 `i -> _dig `i `uc ]
@@ -2028,7 +2027,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _PORTB -> -> 0 `i `uc ]
 [; ;prog.c: 450: PORTA = (PORTA & 0b00110100) | PortAData[DigitNumber++];
 "450
-[e = _PORTA -> | & -> _PORTA `i -> 52 `i -> *U + &U _PortAData * -> ++ F899 -> -> 1 `i `uc `ux -> -> # *U &U _PortAData `ui `ux `i `uc ]
+[e = _PORTA -> | & -> _PORTA `i -> 52 `i -> *U + &U _PortAData * -> ++ F900 -> -> 1 `i `uc `ux -> -> # *U &U _PortAData `ui `ux `i `uc ]
 [; ;prog.c: 452: PORTB = digitemp;
 "452
 [e = _PORTB _digitemp ]
@@ -2037,59 +2036,59 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _endInterrupt -> -> 1 `i `b ]
 [; ;prog.c: 455: if (powerOnInterval == 0) {
 "455
-[e $ ! == _powerOnInterval -> 0 `i 169  ]
+[e $ ! == _powerOnInterval -> 0 `i 168  ]
 {
 [; ;prog.c: 456: if (PowerBlocked == 0) {
 "456
-[e $ ! == -> _PowerBlocked `i -> 0 `i 170  ]
+[e $ ! == -> _PowerBlocked `i -> 0 `i 169  ]
 {
 [; ;prog.c: 457: TRISA4 = 1;
 "457
 [e = _TRISA4 -> -> 1 `i `b ]
 "458
 }
-[e :U 170 ]
+[e :U 169 ]
 "459
 }
 [; ;prog.c: 458: }
 [; ;prog.c: 459: } else {
-[e $U 171  ]
-[e :U 169 ]
+[e $U 170  ]
+[e :U 168 ]
 {
 [; ;prog.c: 460: powerOnInterval--;
 "460
 [e -- _powerOnInterval -> 1 `i ]
 "461
 }
-[e :U 171 ]
+[e :U 170 ]
 "463
-[v F901 `ui ~T0 @X0 1 s KeyTimeCounter ]
-[i F901
+[v F902 `ui ~T0 @X0 1 s KeyTimeCounter ]
+[i F902
 -> -> 0 `i `ui
 ]
 "464
-[v F902 `uc ~T0 @X0 1 s LastKeysState ]
-[i F902
--> -> 0 `i `uc
-]
-"465
-[v F903 `uc ~T0 @X0 1 s long_press ]
+[v F903 `uc ~T0 @X0 1 s LastKeysState ]
 [i F903
 -> -> 0 `i `uc
 ]
-"466
-[v F904 `uc ~T0 @X0 1 s ButtonPressTimeIn1 ]
+"465
+[v F904 `uc ~T0 @X0 1 s long_press ]
 [i F904
 -> -> 0 `i `uc
 ]
-"467
-[v F905 `uc ~T0 @X0 1 s ButtonPressTimeIn2 ]
+"466
+[v F905 `uc ~T0 @X0 1 s ButtonPressTimeIn1 ]
 [i F905
 -> -> 0 `i `uc
 ]
-"468
-[v F906 `uc ~T0 @X0 1 s ButtonPressTimeOut ]
+"467
+[v F906 `uc ~T0 @X0 1 s ButtonPressTimeIn2 ]
 [i F906
+-> -> 0 `i `uc
+]
+"468
+[v F907 `uc ~T0 @X0 1 s ButtonPressTimeOut ]
+[i F907
 -> -> 0 `i `uc
 ]
 "469
@@ -2105,39 +2104,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _CurrentKeysState -> -> 0 `i `uc ]
 [; ;prog.c: 471: if (ButtonPressTimeOut > 0) {
 "471
-[e $ ! > -> F906 `i -> 0 `i 172  ]
+[e $ ! > -> F907 `i -> 0 `i 171  ]
 {
 [; ;prog.c: 472: ButtonPressTimeOut--;
 "472
-[e -- F906 -> -> 1 `i `uc ]
+[e -- F907 -> -> 1 `i `uc ]
 "473
 }
 [; ;prog.c: 473: } else {
-[e $U 173  ]
-[e :U 172 ]
+[e $U 172  ]
+[e :U 171 ]
 {
 [; ;prog.c: 475: KeyCode = 0;
 "475
 [e = _KeyCode -> -> 0 `i `uc ]
 [; ;prog.c: 477: if (RA5) {
 "477
-[e $ ! _RA5 174  ]
+[e $ ! _RA5 173  ]
 {
 [; ;prog.c: 478: CurrentKeysState = CurrentKeysState | 0b00000001;
 "478
 [e = _CurrentKeysState -> | -> _CurrentKeysState `i -> 1 `i `uc ]
 [; ;prog.c: 479: ButtonPressTimeIn1 = 25;
 "479
-[e = F904 -> -> 25 `i `uc ]
+[e = F905 -> -> 25 `i `uc ]
 "480
 }
 [; ;prog.c: 480: } else {
-[e $U 175  ]
-[e :U 174 ]
+[e $U 174  ]
+[e :U 173 ]
 {
 [; ;prog.c: 481: if (ButtonPressTimeIn1 == 0) {
 "481
-[e $ ! == -> F904 `i -> 0 `i 176  ]
+[e $ ! == -> F905 `i -> 0 `i 175  ]
 {
 [; ;prog.c: 482: CurrentKeysState = CurrentKeysState & 0b11111110;
 "482
@@ -2145,39 +2144,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 "483
 }
 [; ;prog.c: 483: } else {
-[e $U 177  ]
-[e :U 176 ]
+[e $U 176  ]
+[e :U 175 ]
 {
 [; ;prog.c: 484: ButtonPressTimeIn1--;
 "484
-[e -- F904 -> -> 1 `i `uc ]
+[e -- F905 -> -> 1 `i `uc ]
 "485
 }
-[e :U 177 ]
+[e :U 176 ]
 "486
 }
-[e :U 175 ]
+[e :U 174 ]
 [; ;prog.c: 485: }
 [; ;prog.c: 486: }
 [; ;prog.c: 488: if (RA2) {
 "488
-[e $ ! _RA2 178  ]
+[e $ ! _RA2 177  ]
 {
 [; ;prog.c: 489: CurrentKeysState = CurrentKeysState | 0b00000010;
 "489
 [e = _CurrentKeysState -> | -> _CurrentKeysState `i -> 2 `i `uc ]
 [; ;prog.c: 490: ButtonPressTimeIn2 = 25;
 "490
-[e = F905 -> -> 25 `i `uc ]
+[e = F906 -> -> 25 `i `uc ]
 "491
 }
 [; ;prog.c: 491: } else {
-[e $U 179  ]
-[e :U 178 ]
+[e $U 178  ]
+[e :U 177 ]
 {
 [; ;prog.c: 492: if (ButtonPressTimeIn2 == 0) {
 "492
-[e $ ! == -> F905 `i -> 0 `i 180  ]
+[e $ ! == -> F906 `i -> 0 `i 179  ]
 {
 [; ;prog.c: 493: CurrentKeysState = CurrentKeysState & 0b11111101;
 "493
@@ -2185,136 +2184,136 @@ Version 3.2 HI-TECH Software Intermediate Code
 "494
 }
 [; ;prog.c: 494: } else {
-[e $U 181  ]
-[e :U 180 ]
+[e $U 180  ]
+[e :U 179 ]
 {
 [; ;prog.c: 495: ButtonPressTimeIn2--;
 "495
-[e -- F905 -> -> 1 `i `uc ]
+[e -- F906 -> -> 1 `i `uc ]
 "496
 }
-[e :U 181 ]
+[e :U 180 ]
 "497
 }
-[e :U 179 ]
+[e :U 178 ]
 [; ;prog.c: 496: }
 [; ;prog.c: 497: }
 [; ;prog.c: 499: if ((ButtonPressTimeIn1 == 0 || ButtonPressTimeIn1 == 25) && (ButtonPressTimeIn2 == 0 || ButtonPressTimeIn2 == 25)) {
 "499
-[e $ ! && || == -> F904 `i -> 0 `i == -> F904 `i -> 25 `i || == -> F905 `i -> 0 `i == -> F905 `i -> 25 `i 182  ]
+[e $ ! && || == -> F905 `i -> 0 `i == -> F905 `i -> 25 `i || == -> F906 `i -> 0 `i == -> F906 `i -> 25 `i 181  ]
 {
 [; ;prog.c: 500: if (CurrentKeysState > 0) {
 "500
-[e $ ! > -> _CurrentKeysState `i -> 0 `i 183  ]
+[e $ ! > -> _CurrentKeysState `i -> 0 `i 182  ]
 {
 [; ;prog.c: 501: if (LastKeysState != CurrentKeysState) {
 "501
-[e $ ! != -> F902 `i -> _CurrentKeysState `i 184  ]
+[e $ ! != -> F903 `i -> _CurrentKeysState `i 183  ]
 {
 [; ;prog.c: 502: KeyTimeCounter = 0;
 "502
-[e = F901 -> -> 0 `i `ui ]
+[e = F902 -> -> 0 `i `ui ]
 [; ;prog.c: 503: long_press = 0;
 "503
-[e = F903 -> -> 0 `i `uc ]
+[e = F904 -> -> 0 `i `uc ]
 [; ;prog.c: 504: LastKeysState = CurrentKeysState;
 "504
-[e = F902 _CurrentKeysState ]
+[e = F903 _CurrentKeysState ]
 "505
 }
 [; ;prog.c: 505: } else if (KeyTimeCounter < 150) {
-[e $U 185  ]
-[e :U 184 ]
-[e $ ! < F901 -> -> 150 `i `ui 186  ]
+[e $U 184  ]
+[e :U 183 ]
+[e $ ! < F902 -> -> 150 `i `ui 185  ]
 {
 [; ;prog.c: 506: KeyTimeCounter++;
 "506
-[e ++ F901 -> -> 1 `i `ui ]
+[e ++ F902 -> -> 1 `i `ui ]
 "507
 }
 [; ;prog.c: 507: } else if (KeyTimeCounter == 150 && !long_press) {
-[e $U 187  ]
-[e :U 186 ]
-[e $ ! && == F901 -> -> 150 `i `ui ! != -> F903 `i -> -> -> 0 `i `uc `i 188  ]
+[e $U 186  ]
+[e :U 185 ]
+[e $ ! && == F902 -> -> 150 `i `ui ! != -> F904 `i -> -> -> 0 `i `uc `i 187  ]
 {
 [; ;prog.c: 508: long_press = 1;
 "508
-[e = F903 -> -> 1 `i `uc ]
+[e = F904 -> -> 1 `i `uc ]
 "509
 }
-[e :U 188 ]
-"511
 [e :U 187 ]
-[e :U 185 ]
+"511
+[e :U 186 ]
+[e :U 184 ]
 [; ;prog.c: 509: }
 [; ;prog.c: 511: if (long_press == 1) {
-[e $ ! == -> F903 `i -> 1 `i 189  ]
+[e $ ! == -> F904 `i -> 1 `i 188  ]
 {
 [; ;prog.c: 512: KeyCode = 30 + LastKeysState + 3;
 "512
-[e = _KeyCode -> + + -> 30 `i -> F902 `i -> 3 `i `uc ]
+[e = _KeyCode -> + + -> 30 `i -> F903 `i -> 3 `i `uc ]
 [; ;prog.c: 513: long_press = 2;
 "513
-[e = F903 -> -> 2 `i `uc ]
+[e = F904 -> -> 2 `i `uc ]
 [; ;prog.c: 514: ButtonPressTimeOut = 40;
 "514
-[e = F906 -> -> 40 `i `uc ]
+[e = F907 -> -> 40 `i `uc ]
 "515
 }
-[e :U 189 ]
+[e :U 188 ]
 "517
 }
 [; ;prog.c: 515: }
 [; ;prog.c: 517: } else if (LastKeysState > 0 && long_press == 0) {
-[e $U 190  ]
-[e :U 183 ]
-[e $ ! && > -> F902 `i -> 0 `i == -> F903 `i -> 0 `i 191  ]
+[e $U 189  ]
+[e :U 182 ]
+[e $ ! && > -> F903 `i -> 0 `i == -> F904 `i -> 0 `i 190  ]
 {
 [; ;prog.c: 518: KeyCode = 30 + LastKeysState;
 "518
-[e = _KeyCode -> + -> 30 `i -> F902 `i `uc ]
+[e = _KeyCode -> + -> 30 `i -> F903 `i `uc ]
 [; ;prog.c: 519: LastKeysState = 0;
 "519
-[e = F902 -> -> 0 `i `uc ]
+[e = F903 -> -> 0 `i `uc ]
 [; ;prog.c: 520: KeyTimeCounter = 0;
 "520
-[e = F901 -> -> 0 `i `ui ]
+[e = F902 -> -> 0 `i `ui ]
 [; ;prog.c: 521: long_press = 0;
 "521
-[e = F903 -> -> 0 `i `uc ]
+[e = F904 -> -> 0 `i `uc ]
 [; ;prog.c: 522: ButtonPressTimeOut = 40;
 "522
-[e = F906 -> -> 40 `i `uc ]
+[e = F907 -> -> 40 `i `uc ]
 "524
 }
 [; ;prog.c: 524: } else if (long_press == 2) {
-[e $U 192  ]
-[e :U 191 ]
-[e $ ! == -> F903 `i -> 2 `i 193  ]
+[e $U 191  ]
+[e :U 190 ]
+[e $ ! == -> F904 `i -> 2 `i 192  ]
 {
 [; ;prog.c: 525: LastKeysState = 0;
 "525
-[e = F902 -> -> 0 `i `uc ]
+[e = F903 -> -> 0 `i `uc ]
 [; ;prog.c: 526: KeyTimeCounter = 0;
 "526
-[e = F901 -> -> 0 `i `ui ]
+[e = F902 -> -> 0 `i `ui ]
 [; ;prog.c: 527: long_press = 0;
 "527
-[e = F903 -> -> 0 `i `uc ]
+[e = F904 -> -> 0 `i `uc ]
 [; ;prog.c: 528: ButtonPressTimeOut = 40;
 "528
-[e = F906 -> -> 40 `i `uc ]
+[e = F907 -> -> 40 `i `uc ]
 "529
 }
-[e :U 193 ]
-"530
 [e :U 192 ]
-[e :U 190 ]
+"530
+[e :U 191 ]
+[e :U 189 ]
 }
-[e :U 182 ]
+[e :U 181 ]
 "531
 }
-[e :U 173 ]
+[e :U 172 ]
 [; ;prog.c: 529: }
 [; ;prog.c: 530: }
 [; ;prog.c: 531: }
@@ -2323,11 +2322,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _get_temp_Async ..  ]
 "534
 }
-[e :U 167 ]
+[e :U 166 ]
 [; ;prog.c: 534: }
 [; ;prog.c: 535: }
 "535
-[e :UE 166 ]
+[e :UE 165 ]
 }
 "537
 [v _indData `(v ~T0 @X0 1 ef ]
@@ -2345,7 +2344,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _dN -> -> 3 `i `uc ]
 [; ;prog.c: 542: if (sign != 0) {
 "542
-[e $ ! != -> _sign `i -> 0 `i 195  ]
+[e $ ! != -> _sign `i -> 0 `i 194  ]
 {
 [; ;prog.c: 543: setDigit(cd, 32);
 "543
@@ -2359,9 +2358,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "546
 }
 [; ;prog.c: 546: } else if (temperature < 10) {
-[e $U 196  ]
-[e :U 195 ]
-[e $ ! < -> _temperature `i -> 10 `i 197  ]
+[e $U 195  ]
+[e :U 194 ]
+[e $ ! < -> _temperature `i -> 10 `i 196  ]
 {
 [; ;prog.c: 547: cd--;
 "547
@@ -2371,27 +2370,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e -- _dN -> -> 1 `i `uc ]
 "549
 }
-[e :U 197 ]
-"551
 [e :U 196 ]
+"551
+[e :U 195 ]
 [v _isPoint `uc ~T0 @X0 1 a ]
 [; ;prog.c: 549: }
 [; ;prog.c: 551: unsigned char isPoint = 0;
 [e = _isPoint -> -> 0 `i `uc ]
 [; ;prog.c: 552: if(sign && temperature > 9 || temperature > 99){
 "552
-[e $ ! || && != -> _sign `i -> -> -> 0 `i `uc `i > -> _temperature `i -> 9 `i > -> _temperature `i -> 99 `i 198  ]
+[e $ ! || && != -> _sign `i -> -> -> 0 `i `uc `i > -> _temperature `i -> 9 `i > -> _temperature `i -> 99 `i 197  ]
 {
 [; ;prog.c: 553: isPoint = 1;
 "553
 [e = _isPoint -> -> 1 `i `uc ]
 "554
 }
-[e :U 198 ]
+[e :U 197 ]
 [; ;prog.c: 554: }
 [; ;prog.c: 556: do {
 "556
-[e :U 201 ]
+[e :U 200 ]
 {
 "557
 [v _v `uc ~T0 @X0 1 a ]
@@ -2402,7 +2401,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _setDigit (2 , -> - -> _cd `i -> _v `i `uc -> % -> _temperature `i -> 10 `i `uc ]
 [; ;prog.c: 559: if (!isPoint) {
 "559
-[e $ ! ! != -> _isPoint `i -> -> -> 0 `i `uc `i 202  ]
+[e $ ! ! != -> _isPoint `i -> -> -> 0 `i `uc `i 201  ]
 {
 [; ;prog.c: 560: setPoint(cd - v, 1);
 "560
@@ -2412,7 +2411,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _isPoint -> -> 1 `i `uc ]
 "562
 }
-[e :U 202 ]
+[e :U 201 ]
 [; ;prog.c: 562: }
 [; ;prog.c: 563: temperature /= 10;
 "563
@@ -2423,20 +2422,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 "565
 }
 [; ;prog.c: 565: } while (temperature > 0);
-[e $ > -> _temperature `i -> 0 `i 201  ]
-[e :U 200 ]
+[e $ > -> _temperature `i -> 0 `i 200  ]
+[e :U 199 ]
 [; ;prog.c: 567: if (dN > 0) {
 "567
-[e $ ! > -> _dN `i -> 0 `i 203  ]
+[e $ ! > -> _dN `i -> 0 `i 202  ]
 {
 [; ;prog.c: 568: cd = dN;
 "568
 [e = _cd _dN ]
 [; ;prog.c: 569: if (temp_drob > 9 && dN == 1) temp_drob /= 10;
 "569
-[e $ ! && > -> _temp_drob `i -> 9 `i == -> _dN `i -> 1 `i 204  ]
+[e $ ! && > -> _temp_drob `i -> 9 `i == -> _dN `i -> 1 `i 203  ]
 [e =/ _temp_drob -> 10 `uc ]
-[e :U 204 ]
+[e :U 203 ]
 "571
 [v _v `uc ~T0 @X0 1 a ]
 [; ;prog.c: 571: unsigned char v = (temp_drob > 9 ? 1 : 0);
@@ -2446,11 +2445,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _setDigit (2 , -> - -> _cd `i -> _v `i `uc -> % -> _temp_drob `i -> 10 `i `uc ]
 "573
 }
-[e :U 203 ]
+[e :U 202 ]
 [; ;prog.c: 573: }
 [; ;prog.c: 574: }
 "574
-[e :UE 194 ]
+[e :UE 193 ]
 }
 "576
 [v _ReadCell `(uc ~T0 @X0 1 ef2`uc`*uc ]
@@ -2468,27 +2467,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 206  ]
-[e $U 207  ]
-[e :U 206 ]
+[e $ < -> _i `ui -> # _DS_Address `ui 205  ]
+[e $U 206  ]
+[e :U 205 ]
 {
 [; ;prog.c: 579: if (CellsData[i] != 0xFF) {
 "579
-[e $ ! != -> *U + _CellsData * -> _i `ux -> -> # *U _CellsData `ui `ux `i -> 255 `i 209  ]
+[e $ ! != -> *U + _CellsData * -> _i `ux -> -> # *U _CellsData `ui `ux `i -> 255 `i 208  ]
 {
 [; ;prog.c: 580: return 0;
 "580
 [e ) -> -> 0 `i `uc ]
-[e $UE 205  ]
+[e $UE 204  ]
 "581
 }
-[e :U 209 ]
+[e :U 208 ]
 "582
 }
 "578
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 206  ]
-[e :U 207 ]
+[e $ < -> _i `ui -> # _DS_Address `ui 205  ]
+[e :U 206 ]
 "582
 }
 [; ;prog.c: 581: }
@@ -2496,10 +2495,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 583: return 1;
 "583
 [e ) -> -> 1 `i `uc ]
-[e $UE 205  ]
+[e $UE 204  ]
 [; ;prog.c: 584: }
 "584
-[e :UE 205 ]
+[e :UE 204 ]
 }
 "586
 [v _CellToInd `(v ~T0 @X0 1 ef1`uc ]
@@ -2516,7 +2515,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _cell -> -> 1 `i `uc ]
 [; ;prog.c: 590: if (cell > 9) {
 "590
-[e $ ! > -> _cell `i -> 9 `i 211  ]
+[e $ ! > -> _cell `i -> 9 `i 210  ]
 {
 [; ;prog.c: 591: setDigit(3, cell / 10);
 "591
@@ -2527,22 +2526,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 "593
 }
 [; ;prog.c: 593: } else {
-[e $U 212  ]
-[e :U 211 ]
+[e $U 211  ]
+[e :U 210 ]
 {
 [; ;prog.c: 594: setDigit(3, cell);
 "594
 [e ( _setDigit (2 , -> -> 3 `i `uc _cell ]
 "595
 }
-[e :U 212 ]
+[e :U 211 ]
 [; ;prog.c: 595: }
 [; ;prog.c: 597: refreshInd();
 "597
 [e ( _refreshInd ..  ]
 [; ;prog.c: 598: }
 "598
-[e :UE 210 ]
+[e :UE 209 ]
 }
 "600
 [v _EditAddressMemory `(v ~T0 @X0 1 ef ]
@@ -2580,11 +2579,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _RereadCell -> -> 1 `i `uc ]
 [; ;prog.c: 613: while (1) {
 "613
-[e :U 215 ]
+[e :U 214 ]
 {
 [; ;prog.c: 615: if (KeyCode != 0 && ErrorShowed) {
 "615
-[e $ ! && != -> _KeyCode `i -> 0 `i != -> _ErrorShowed `i -> -> -> 0 `i `uc `i 217  ]
+[e $ ! && != -> _KeyCode `i -> 0 `i != -> _ErrorShowed `i -> -> -> 0 `i `uc `i 216  ]
 {
 [; ;prog.c: 616: KeyCode = 0;
 "616
@@ -2597,18 +2596,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _RereadCell -> -> 1 `i `uc ]
 "619
 }
-[e :U 217 ]
+[e :U 216 ]
 [; ;prog.c: 619: }
 [; ;prog.c: 621: if (KeyCode == 31) {
 "621
-[e $ ! == -> _KeyCode `i -> 31 `i 218  ]
+[e $ ! == -> _KeyCode `i -> 31 `i 217  ]
 {
 [; ;prog.c: 622: KeyCode = 0;
 "622
 [e = _KeyCode -> -> 0 `i `uc ]
 [; ;prog.c: 623: if (cell > 0) {
 "623
-[e $ ! > -> _cell `i -> 0 `i 219  ]
+[e $ ! > -> _cell `i -> 0 `i 218  ]
 {
 [; ;prog.c: 624: cell--;
 "624
@@ -2616,15 +2615,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "625
 }
 [; ;prog.c: 625: } else {
-[e $U 220  ]
-[e :U 219 ]
+[e $U 219  ]
+[e :U 218 ]
 {
 [; ;prog.c: 626: cell = 16 - 1;
 "626
 [e = _cell -> - -> 16 `i -> 1 `i `uc ]
 "627
 }
-[e :U 220 ]
+[e :U 219 ]
 [; ;prog.c: 627: }
 [; ;prog.c: 628: RereadCell = 1;
 "628
@@ -2632,16 +2631,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 "629
 }
 [; ;prog.c: 629: } else if (KeyCode == 32) {
-[e $U 221  ]
-[e :U 218 ]
-[e $ ! == -> _KeyCode `i -> 32 `i 222  ]
+[e $U 220  ]
+[e :U 217 ]
+[e $ ! == -> _KeyCode `i -> 32 `i 221  ]
 {
 [; ;prog.c: 630: KeyCode = 0;
 "630
 [e = _KeyCode -> -> 0 `i `uc ]
 [; ;prog.c: 631: if (cell < 16 - 1) {
 "631
-[e $ ! < -> _cell `i - -> 16 `i -> 1 `i 223  ]
+[e $ ! < -> _cell `i - -> 16 `i -> 1 `i 222  ]
 {
 [; ;prog.c: 632: cell++;
 "632
@@ -2649,15 +2648,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "633
 }
 [; ;prog.c: 633: } else {
-[e $U 224  ]
-[e :U 223 ]
+[e $U 223  ]
+[e :U 222 ]
 {
 [; ;prog.c: 634: cell = 0;
 "634
 [e = _cell -> -> 0 `i `uc ]
 "635
 }
-[e :U 224 ]
+[e :U 223 ]
 [; ;prog.c: 635: }
 [; ;prog.c: 636: RereadCell = 1;
 "636
@@ -2665,9 +2664,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "637
 }
 [; ;prog.c: 637: } else if (KeyCode == 34) {
-[e $U 225  ]
-[e :U 222 ]
-[e $ ! == -> _KeyCode `i -> 34 `i 226  ]
+[e $U 224  ]
+[e :U 221 ]
+[e $ ! == -> _KeyCode `i -> 34 `i 225  ]
 {
 [; ;prog.c: 638: KeyCode = 0;
 "638
@@ -2680,13 +2679,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _refreshInd ..  ]
 [; ;prog.c: 641: break;
 "641
-[e $U 216  ]
+[e $U 215  ]
 "642
 }
 [; ;prog.c: 642: } else if (KeyCode == 35 && CellIsEmpty == 1) {
-[e $U 227  ]
-[e :U 226 ]
-[e $ ! && == -> _KeyCode `i -> 35 `i == -> _CellIsEmpty `i -> 1 `i 228  ]
+[e $U 226  ]
+[e :U 225 ]
+[e $ ! && == -> _KeyCode `i -> 35 `i == -> _CellIsEmpty `i -> 1 `i 227  ]
 {
 [; ;prog.c: 643: KeyCode = 0;
 "643
@@ -2694,703 +2693,706 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 644: waitInterrupt();
 "644
 [e ( _waitInterrupt ..  ]
-[; ;prog.c: 645: if (INIT(0b00000010)) {
 "645
-[e $ ! != -> ( _INIT (1 -> -> 2 `i `uc `i -> -> -> 0 `i `uc `i 229  ]
-{
-[; ;prog.c: 646: waitInterrupt();
+[v _line `uc ~T0 @X0 1 a ]
+[; ;prog.c: 645: unsigned char line;
+[; ;prog.c: 646: if (INIT(line = 0b00000010) || INIT(line = 0b00001000)) {
 "646
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 647: TX(0x33, 0b00000010);
+[e $ ! || != -> ( _INIT (1 = _line -> -> 2 `i `uc `i -> -> -> 0 `i `uc `i != -> ( _INIT (1 = _line -> -> 8 `i `uc `i -> -> -> 0 `i `uc `i 228  ]
+{
+[; ;prog.c: 647: waitInterrupt();
 "647
-[e ( _TX (2 , -> -> 51 `i `uc -> -> 2 `i `uc ]
-[; ;prog.c: 648: for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 648: TX(0x33, line);
 "648
+[e ( _TX (2 , -> -> 51 `i `uc _line ]
+[; ;prog.c: 649: for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
+"649
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 230  ]
-[e $U 231  ]
-[e :U 230 ]
-{
-[; ;prog.c: 649: waitInterrupt();
-"649
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 650: CellsData[i] = RX(0b00000010);
-"650
-[e = *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux ( _RX (1 -> -> 2 `i `uc ]
-"651
-}
-"648
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 230  ]
-[e :U 231 ]
-"651
-}
-[; ;prog.c: 651: }
-[; ;prog.c: 652: if (CellsData[(sizeof(DS_Address)) - 1] == calc_crc(CellsData, (sizeof(DS_Address)) - 1)) {
-"652
-[e $ ! == -> *U + &U _CellsData * -> - -> # _DS_Address `ui -> -> 1 `i `ui `ux -> -> # *U &U _CellsData `ui `ux `i -> ( _calc_crc (2 , &U _CellsData -> - -> # _DS_Address `ui -> -> 1 `i `ui `uc `i 233  ]
-{
-[; ;prog.c: 653: waitInterrupt();
-"653
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 654: WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
-"654
-[e ( _WriteArrayToEEPROM (3 , , &U _CellsData -> * -> _cell `ui -> # _DS_Address `ui `uc -> -> # _DS_Address `ui `uc ]
-[; ;prog.c: 655: waitInterrupt();
-"655
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 656: RereadCell = 1;
-"656
-[e = _RereadCell -> -> 1 `i `uc ]
-"657
-}
-[; ;prog.c: 657: } else {
-[e $U 234  ]
-[e :U 233 ]
-{
-[; ;prog.c: 658: ShowError();
-"658
-[e ( _ShowError ..  ]
-[; ;prog.c: 659: ErrorShowed = 1;
-"659
-[e = _ErrorShowed -> -> 1 `i `uc ]
-"660
-}
-[e :U 234 ]
-"661
-}
-[; ;prog.c: 660: }
-[; ;prog.c: 661: } else {
-[e $U 235  ]
+[e $ < -> _i `ui -> # _DS_Address `ui 229  ]
+[e $U 230  ]
 [e :U 229 ]
 {
-[; ;prog.c: 662: ShowError();
-"662
-[e ( _ShowError ..  ]
-[; ;prog.c: 663: ErrorShowed = 1;
-"663
-[e = _ErrorShowed -> -> 1 `i `uc ]
-"664
+[; ;prog.c: 650: waitInterrupt();
+"650
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 651: CellsData[i] = RX(line);
+"651
+[e = *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux ( _RX (1 _line ]
+"652
 }
-[e :U 235 ]
+"649
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _DS_Address `ui 229  ]
+[e :U 230 ]
+"652
+}
+[; ;prog.c: 652: }
+[; ;prog.c: 653: if (CellsData[(sizeof(DS_Address)) - 1] == calc_crc(CellsData, (sizeof(DS_Address)) - 1)) {
+"653
+[e $ ! == -> *U + &U _CellsData * -> - -> # _DS_Address `ui -> -> 1 `i `ui `ux -> -> # *U &U _CellsData `ui `ux `i -> ( _calc_crc (2 , &U _CellsData -> - -> # _DS_Address `ui -> -> 1 `i `ui `uc `i 232  ]
+{
+[; ;prog.c: 654: waitInterrupt();
+"654
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 655: WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
+"655
+[e ( _WriteArrayToEEPROM (3 , , &U _CellsData -> * -> _cell `ui -> # _DS_Address `ui `uc -> -> # _DS_Address `ui `uc ]
+[; ;prog.c: 656: waitInterrupt();
+"656
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 657: RereadCell = 1;
+"657
+[e = _RereadCell -> -> 1 `i `uc ]
+"658
+}
+[; ;prog.c: 658: } else {
+[e $U 233  ]
+[e :U 232 ]
+{
+[; ;prog.c: 659: ShowError();
+"659
+[e ( _ShowError ..  ]
+[; ;prog.c: 660: ErrorShowed = 1;
+"660
+[e = _ErrorShowed -> -> 1 `i `uc ]
+"661
+}
+[e :U 233 ]
+"662
+}
+[; ;prog.c: 661: }
+[; ;prog.c: 662: } else {
+[e $U 234  ]
+[e :U 228 ]
+{
+[; ;prog.c: 663: ShowError();
+"663
+[e ( _ShowError ..  ]
+[; ;prog.c: 664: ErrorShowed = 1;
+"664
+[e = _ErrorShowed -> -> 1 `i `uc ]
 "665
 }
-[; ;prog.c: 664: }
-[; ;prog.c: 665: } else if (KeyCode == 36 && CellIsEmpty == 0) {
-[e $U 236  ]
-[e :U 228 ]
-[e $ ! && == -> _KeyCode `i -> 36 `i == -> _CellIsEmpty `i -> 0 `i 237  ]
-{
-[; ;prog.c: 666: KeyCode = 0;
+[e :U 234 ]
 "666
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 667: for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
+}
+[; ;prog.c: 665: }
+[; ;prog.c: 666: } else if (KeyCode == 36 && CellIsEmpty == 0) {
+[e $U 235  ]
+[e :U 227 ]
+[e $ ! && == -> _KeyCode `i -> 36 `i == -> _CellIsEmpty `i -> 0 `i 236  ]
+{
+[; ;prog.c: 667: KeyCode = 0;
 "667
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 668: for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
+"668
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 238  ]
-[e $U 239  ]
-[e :U 238 ]
-{
-[; ;prog.c: 668: CellsData[i] = 0xFF;
-"668
-[e = *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux -> -> 255 `i `uc ]
-"669
-}
-"667
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _DS_Address `ui 238  ]
-[e :U 239 ]
-"669
-}
-[; ;prog.c: 669: }
-[; ;prog.c: 670: waitInterrupt();
-"670
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 671: WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
-"671
-[e ( _WriteArrayToEEPROM (3 , , &U _CellsData -> * -> _cell `ui -> # _DS_Address `ui `uc -> -> # _DS_Address `ui `uc ]
-[; ;prog.c: 672: waitInterrupt();
-"672
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 673: RereadCell = 1;
-"673
-[e = _RereadCell -> -> 1 `i `uc ]
-"674
-}
+[e $ < -> _i `ui -> # _DS_Address `ui 237  ]
+[e $U 238  ]
 [e :U 237 ]
-"676
-[e :U 236 ]
-[e :U 227 ]
-[e :U 225 ]
-[e :U 221 ]
-[; ;prog.c: 674: }
-[; ;prog.c: 676: if (RereadCell) {
-[e $ ! != -> _RereadCell `i -> -> -> 0 `i `uc `i 241  ]
 {
-[; ;prog.c: 677: RereadCell = 0;
-"677
-[e = _RereadCell -> -> 0 `i `uc ]
-[; ;prog.c: 678: CellIsEmpty = ReadCell(cell, CellsData);
-"678
-[e = _CellIsEmpty ( _ReadCell (2 , _cell &U _CellsData ]
-[; ;prog.c: 679: CellToInd(cell);
-"679
-[e ( _CellToInd (1 _cell ]
-[; ;prog.c: 680: setPoint(1, !CellIsEmpty);
-"680
-[e ( _setPoint (2 , -> -> 1 `i `uc -> -> ! != -> _CellIsEmpty `i -> -> -> 0 `i `uc `i `i `uc ]
-[; ;prog.c: 681: refreshInd();
-"681
-[e ( _refreshInd ..  ]
-"682
+[; ;prog.c: 669: CellsData[i] = 0xFF;
+"669
+[e = *U + &U _CellsData * -> _i `ux -> -> # *U &U _CellsData `ui `ux -> -> 255 `i `uc ]
+"670
 }
-[e :U 241 ]
+"668
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _DS_Address `ui 237  ]
+[e :U 238 ]
+"670
+}
+[; ;prog.c: 670: }
+[; ;prog.c: 671: waitInterrupt();
+"671
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 672: WriteArrayToEEPROM(CellsData, cell * (sizeof(DS_Address)), (sizeof(DS_Address)));
+"672
+[e ( _WriteArrayToEEPROM (3 , , &U _CellsData -> * -> _cell `ui -> # _DS_Address `ui `uc -> -> # _DS_Address `ui `uc ]
+[; ;prog.c: 673: waitInterrupt();
+"673
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 674: RereadCell = 1;
+"674
+[e = _RereadCell -> -> 1 `i `uc ]
+"675
+}
+[e :U 236 ]
+"677
+[e :U 235 ]
+[e :U 226 ]
+[e :U 224 ]
+[e :U 220 ]
+[; ;prog.c: 675: }
+[; ;prog.c: 677: if (RereadCell) {
+[e $ ! != -> _RereadCell `i -> -> -> 0 `i `uc `i 240  ]
+{
+[; ;prog.c: 678: RereadCell = 0;
+"678
+[e = _RereadCell -> -> 0 `i `uc ]
+[; ;prog.c: 679: CellIsEmpty = ReadCell(cell, CellsData);
+"679
+[e = _CellIsEmpty ( _ReadCell (2 , _cell &U _CellsData ]
+[; ;prog.c: 680: CellToInd(cell);
+"680
+[e ( _CellToInd (1 _cell ]
+[; ;prog.c: 681: setPoint(1, !CellIsEmpty);
+"681
+[e ( _setPoint (2 , -> -> 1 `i `uc -> -> ! != -> _CellIsEmpty `i -> -> -> 0 `i `uc `i `i `uc ]
+[; ;prog.c: 682: refreshInd();
+"682
+[e ( _refreshInd ..  ]
 "683
 }
-[e :U 214 ]
-"613
-[e $U 215  ]
-[e :U 216 ]
-[; ;prog.c: 682: }
-[; ;prog.c: 683: }
-[; ;prog.c: 684: waitInterrupt();
+[e :U 240 ]
 "684
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 685: PowerBlocked--;
-"685
-[e -- _PowerBlocked -> -> 1 `i `uc ]
-[; ;prog.c: 686: }
-"686
-[e :UE 213 ]
 }
-"688
+[e :U 213 ]
+"613
+[e $U 214  ]
+[e :U 215 ]
+[; ;prog.c: 683: }
+[; ;prog.c: 684: }
+[; ;prog.c: 685: waitInterrupt();
+"685
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 686: PowerBlocked--;
+"686
+[e -- _PowerBlocked -> -> 1 `i `uc ]
+[; ;prog.c: 687: }
+"687
+[e :UE 212 ]
+}
+"689
 [v _Run_getTemp `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;prog.c: 688: void Run_getTemp(unsigned char line) {
+[; ;prog.c: 689: void Run_getTemp(unsigned char line) {
 [e :U _Run_getTemp ]
 [v _line `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;prog.c: 690: getTemp_flags.Init = 1;
-"690
-[e = . _getTemp_flags 0 -> -> 1 `i `uc ]
-[; ;prog.c: 691: getTemp_flags.Send_Address = 1;
+[; ;prog.c: 691: getTemp_flags.Init = 1;
 "691
-[e = . _getTemp_flags 1 -> -> 1 `i `uc ]
-[; ;prog.c: 692: getTemp_flags.CountAddressBytes = 0;
+[e = . _getTemp_flags 0 -> -> 1 `i `uc ]
+[; ;prog.c: 692: getTemp_flags.Send_Address = 1;
 "692
-[e = . _getTemp_flags 2 -> -> 0 `i `uc ]
-[; ;prog.c: 693: getTemp_flags.SendConvertTemp = 1;
+[e = . _getTemp_flags 1 -> -> 1 `i `uc ]
+[; ;prog.c: 693: getTemp_flags.CountAddressBytes = 0;
 "693
-[e = . _getTemp_flags 3 -> -> 1 `i `uc ]
-[; ;prog.c: 694: getTemp_flags.PauseValue = 120;
+[e = . _getTemp_flags 2 -> -> 0 `i `uc ]
+[; ;prog.c: 694: getTemp_flags.SendConvertTemp = 1;
 "694
-[e = . _getTemp_flags 4 -> -> 120 `i `ui ]
-[; ;prog.c: 695: getTemp_flags.SendGetTemp = 1;
+[e = . _getTemp_flags 3 -> -> 1 `i `uc ]
+[; ;prog.c: 695: getTemp_flags.PauseValue = 120;
 "695
-[e = . _getTemp_flags 5 -> -> 1 `i `uc ]
-[; ;prog.c: 696: getTemp_flags.ReadData = 1;
+[e = . _getTemp_flags 4 -> -> 120 `i `ui ]
+[; ;prog.c: 696: getTemp_flags.SendGetTemp = 1;
 "696
-[e = . _getTemp_flags 6 -> -> 1 `i `uc ]
-[; ;prog.c: 697: getTemp_flags.CountDataBytes = 0;
+[e = . _getTemp_flags 5 -> -> 1 `i `uc ]
+[; ;prog.c: 697: getTemp_flags.ReadData = 1;
 "697
-[e = . _getTemp_flags 7 -> -> 0 `i `uc ]
-[; ;prog.c: 698: getTemp_flags.Error = 0;
+[e = . _getTemp_flags 6 -> -> 1 `i `uc ]
+[; ;prog.c: 698: getTemp_flags.CountDataBytes = 0;
 "698
-[e = . _getTemp_flags 9 -> -> 0 `i `uc ]
-[; ;prog.c: 699: getTemp_flags.DataIsRead = 0;
+[e = . _getTemp_flags 7 -> -> 0 `i `uc ]
+[; ;prog.c: 699: getTemp_flags.Error = 0;
 "699
-[e = . _getTemp_flags 8 -> -> 0 `i `uc ]
-[; ;prog.c: 700: getTemp_flags.Line = line;
+[e = . _getTemp_flags 9 -> -> 0 `i `uc ]
+[; ;prog.c: 700: getTemp_flags.DataIsRead = 0;
 "700
+[e = . _getTemp_flags 8 -> -> 0 `i `uc ]
+[; ;prog.c: 701: getTemp_flags.Line = line;
+"701
 [e = . _getTemp_flags 11 _line ]
-[; ;prog.c: 702: getTemp_flags.ActiveProcess = 1;
-"702
+[; ;prog.c: 703: getTemp_flags.ActiveProcess = 1;
+"703
 [e = . _getTemp_flags 10 -> -> 1 `i `uc ]
-[; ;prog.c: 704: }
-"704
-[e :UE 242 ]
+[; ;prog.c: 705: }
+"705
+[e :UE 241 ]
 }
-"706
+"707
 [v _Run_getInit `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;prog.c: 706: void Run_getInit(unsigned char line) {
+[; ;prog.c: 707: void Run_getInit(unsigned char line) {
 [e :U _Run_getInit ]
 [v _line `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;prog.c: 708: getTemp_flags.Init = 1;
-"708
-[e = . _getTemp_flags 0 -> -> 1 `i `uc ]
-[; ;prog.c: 709: getTemp_flags.Send_Address = 0;
+[; ;prog.c: 709: getTemp_flags.Init = 1;
 "709
-[e = . _getTemp_flags 1 -> -> 0 `i `uc ]
-[; ;prog.c: 710: getTemp_flags.CountAddressBytes = 0;
+[e = . _getTemp_flags 0 -> -> 1 `i `uc ]
+[; ;prog.c: 710: getTemp_flags.Send_Address = 0;
 "710
-[e = . _getTemp_flags 2 -> -> 0 `i `uc ]
-[; ;prog.c: 711: getTemp_flags.SendConvertTemp = 0;
+[e = . _getTemp_flags 1 -> -> 0 `i `uc ]
+[; ;prog.c: 711: getTemp_flags.CountAddressBytes = 0;
 "711
-[e = . _getTemp_flags 3 -> -> 0 `i `uc ]
-[; ;prog.c: 712: getTemp_flags.PauseValue = 0;
+[e = . _getTemp_flags 2 -> -> 0 `i `uc ]
+[; ;prog.c: 712: getTemp_flags.SendConvertTemp = 0;
 "712
-[e = . _getTemp_flags 4 -> -> 0 `i `ui ]
-[; ;prog.c: 713: getTemp_flags.SendGetTemp = 0;
+[e = . _getTemp_flags 3 -> -> 0 `i `uc ]
+[; ;prog.c: 713: getTemp_flags.PauseValue = 0;
 "713
-[e = . _getTemp_flags 5 -> -> 0 `i `uc ]
-[; ;prog.c: 714: getTemp_flags.ReadData = 0;
+[e = . _getTemp_flags 4 -> -> 0 `i `ui ]
+[; ;prog.c: 714: getTemp_flags.SendGetTemp = 0;
 "714
-[e = . _getTemp_flags 6 -> -> 0 `i `uc ]
-[; ;prog.c: 715: getTemp_flags.CountDataBytes = 0;
+[e = . _getTemp_flags 5 -> -> 0 `i `uc ]
+[; ;prog.c: 715: getTemp_flags.ReadData = 0;
 "715
-[e = . _getTemp_flags 7 -> -> 0 `i `uc ]
-[; ;prog.c: 716: getTemp_flags.Error = 0;
+[e = . _getTemp_flags 6 -> -> 0 `i `uc ]
+[; ;prog.c: 716: getTemp_flags.CountDataBytes = 0;
 "716
-[e = . _getTemp_flags 9 -> -> 0 `i `uc ]
-[; ;prog.c: 717: getTemp_flags.DataIsRead = 0;
+[e = . _getTemp_flags 7 -> -> 0 `i `uc ]
+[; ;prog.c: 717: getTemp_flags.Error = 0;
 "717
-[e = . _getTemp_flags 8 -> -> 0 `i `uc ]
-[; ;prog.c: 718: getTemp_flags.Line = line;
+[e = . _getTemp_flags 9 -> -> 0 `i `uc ]
+[; ;prog.c: 718: getTemp_flags.DataIsRead = 0;
 "718
+[e = . _getTemp_flags 8 -> -> 0 `i `uc ]
+[; ;prog.c: 719: getTemp_flags.Line = line;
+"719
 [e = . _getTemp_flags 11 _line ]
-[; ;prog.c: 720: getTemp_flags.ActiveProcess = 1;
-"720
+[; ;prog.c: 721: getTemp_flags.ActiveProcess = 1;
+"721
 [e = . _getTemp_flags 10 -> -> 1 `i `uc ]
-[; ;prog.c: 722: }
-"722
-[e :UE 243 ]
+[; ;prog.c: 723: }
+"723
+[e :UE 242 ]
 }
-"724
+"725
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;prog.c: 724: void main() {
+[; ;prog.c: 725: void main() {
 [e :U _main ]
 [f ]
-[; ;prog.c: 726: INTCON = 0;
-"726
-[e = _INTCON -> -> 0 `i `uc ]
-[; ;prog.c: 727: OPTION_REG = 0b00000111;
+[; ;prog.c: 727: INTCON = 0;
 "727
-[e = _OPTION_REG -> -> 7 `i `uc ]
-[; ;prog.c: 728: TRISA = 0b00101110;
+[e = _INTCON -> -> 0 `i `uc ]
+[; ;prog.c: 728: OPTION_REG = 0b00000111;
 "728
-[e = _TRISA -> -> 46 `i `uc ]
-[; ;prog.c: 729: TRISB = 0b00000000;
+[e = _OPTION_REG -> -> 7 `i `uc ]
+[; ;prog.c: 729: TRISA = 0b00101110;
 "729
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;prog.c: 730: PORTA = 0b00000000;
+[e = _TRISA -> -> 46 `i `uc ]
+[; ;prog.c: 730: TRISB = 0b00000000;
 "730
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;prog.c: 731: PORTB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;prog.c: 731: PORTA = 0b00000000;
 "731
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;prog.c: 732: TMR0 = TMR0_VALUE;
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;prog.c: 732: PORTB = 0b00000000;
 "732
-[e = _TMR0 _TMR0_VALUE ]
-[; ;prog.c: 733: T2CON = 0b00000100;
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;prog.c: 733: TMR0 = TMR0_VALUE;
 "733
-[e = _T2CON -> -> 4 `i `uc ]
-[; ;prog.c: 734: CMCON = 0b00000111;
+[e = _TMR0 _TMR0_VALUE ]
+[; ;prog.c: 734: T2CON = 0b00000100;
 "734
+[e = _T2CON -> -> 4 `i `uc ]
+[; ;prog.c: 735: CMCON = 0b00000111;
+"735
 [e = _CMCON -> -> 7 `i `uc ]
-[; ;prog.c: 736: clrInd();
-"736
-[e ( _clrInd ..  ]
-[; ;prog.c: 737: refreshInd();
+[; ;prog.c: 737: clrInd();
 "737
+[e ( _clrInd ..  ]
+[; ;prog.c: 738: refreshInd();
+"738
 [e ( _refreshInd ..  ]
-[; ;prog.c: 739: INTCON = 0b10100000;
-"739
+[; ;prog.c: 740: INTCON = 0b10100000;
+"740
 [e = _INTCON -> -> 160 `i `uc ]
-[; ;prog.c: 741: Reset_powerOnInterval();
-"741
+[; ;prog.c: 742: Reset_powerOnInterval();
+"742
 [e ( _Reset_powerOnInterval ..  ]
-"743
-[v _cell `uc ~T0 @X0 1 a ]
-[; ;prog.c: 743: unsigned char cell = 0;
-[e = _cell -> -> 0 `i `uc ]
 "744
-[v _address `uc ~T0 @X0 1 a ]
+[v _cell `uc ~T0 @X0 1 a ]
+[; ;prog.c: 744: unsigned char cell = 0;
+[e = _cell -> -> 0 `i `uc ]
 "745
-[v _point_on_ind_delay `ui ~T0 @X0 1 a ]
-[; ;prog.c: 744: unsigned char address;
-[; ;prog.c: 745: unsigned int point_on_ind_delay = 0;
-[e = _point_on_ind_delay -> -> 0 `i `ui ]
+[v _address `uc ~T0 @X0 1 a ]
 "746
-[v _TheStart `uc ~T0 @X0 1 a ]
-[; ;prog.c: 746: unsigned char TheStart = 1;
-[e = _TheStart -> -> 1 `i `uc ]
+[v _point_on_ind_delay `ui ~T0 @X0 1 a ]
+[; ;prog.c: 745: unsigned char address;
+[; ;prog.c: 746: unsigned int point_on_ind_delay = 0;
+[e = _point_on_ind_delay -> -> 0 `i `ui ]
 "747
+[v _TheStart `uc ~T0 @X0 1 a ]
+[; ;prog.c: 747: unsigned char TheStart = 1;
+[e = _TheStart -> -> 1 `i `uc ]
+"748
 [v _line `uc ~T0 @X0 1 a ]
-[; ;prog.c: 747: unsigned char line = 0b00001000;
+[; ;prog.c: 748: unsigned char line = 0b00001000;
 [e = _line -> -> 8 `i `uc ]
-[; ;prog.c: 749: KeyCode = 36;
-"749
+[; ;prog.c: 750: KeyCode = 36;
+"750
 [e = _KeyCode -> -> 36 `i `uc ]
-[; ;prog.c: 751: while (1) {
-"751
-[e :U 246 ]
+[; ;prog.c: 752: while (1) {
+"752
+[e :U 245 ]
 {
-[; ;prog.c: 753: if (KeyCode == 33) {
-"753
-[e $ ! == -> _KeyCode `i -> 33 `i 248  ]
-{
-[; ;prog.c: 754: KeyCode = 0;
+[; ;prog.c: 754: if (KeyCode == 33) {
 "754
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 755: if (PowerBlocked != 1) {
+[e $ ! == -> _KeyCode `i -> 33 `i 247  ]
+{
+[; ;prog.c: 755: KeyCode = 0;
 "755
-[e $ ! != -> _PowerBlocked `i -> 1 `i 249  ]
-{
-[; ;prog.c: 756: PowerBlocked = 1;
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 756: if (PowerBlocked != 1) {
 "756
-[e = _PowerBlocked -> -> 1 `i `uc ]
-[; ;prog.c: 757: point_on_ind_delay = 4000;
-"757
-[e = _point_on_ind_delay -> -> 4000 `i `ui ]
-"758
-}
-[; ;prog.c: 758: } else {
-[e $U 250  ]
-[e :U 249 ]
+[e $ ! != -> _PowerBlocked `i -> 1 `i 248  ]
 {
-[; ;prog.c: 759: powerOnInterval = 0;
+[; ;prog.c: 757: PowerBlocked = 1;
+"757
+[e = _PowerBlocked -> -> 1 `i `uc ]
+[; ;prog.c: 758: point_on_ind_delay = 4000;
+"758
+[e = _point_on_ind_delay -> -> 4000 `i `ui ]
 "759
-[e = _powerOnInterval -> 0 `i ]
-[; ;prog.c: 760: PowerBlocked = 0;
-"760
-[e = _PowerBlocked -> -> 0 `i `uc ]
-"761
 }
-[e :U 250 ]
+[; ;prog.c: 759: } else {
+[e $U 249  ]
+[e :U 248 ]
+{
+[; ;prog.c: 760: powerOnInterval = 0;
+"760
+[e = _powerOnInterval -> 0 `i ]
+[; ;prog.c: 761: PowerBlocked = 0;
+"761
+[e = _PowerBlocked -> -> 0 `i `uc ]
 "762
 }
-[; ;prog.c: 761: }
-[; ;prog.c: 762: } else if (KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
-[e $U 251  ]
-[e :U 248 ]
-[e $ ! || || == -> _KeyCode `i -> 31 `i == -> _KeyCode `i -> 32 `i == -> _KeyCode `i -> 34 `i 252  ]
-{
-[; ;prog.c: 763: Reset_powerOnInterval();
+[e :U 249 ]
 "763
+}
+[; ;prog.c: 762: }
+[; ;prog.c: 763: } else if (KeyCode == 31 || KeyCode == 32 || KeyCode == 34) {
+[e $U 250  ]
+[e :U 247 ]
+[e $ ! || || == -> _KeyCode `i -> 31 `i == -> _KeyCode `i -> 32 `i == -> _KeyCode `i -> 34 `i 251  ]
+{
+[; ;prog.c: 764: Reset_powerOnInterval();
+"764
 [e ( _Reset_powerOnInterval ..  ]
-[; ;prog.c: 765: if (Broadcasting && KeyCode != 34) {
-"765
-[e $ ! && _Broadcasting != -> _KeyCode `i -> 34 `i 253  ]
+[; ;prog.c: 766: if (Broadcasting && KeyCode != 34) {
+"766
+[e $ ! && _Broadcasting != -> _KeyCode `i -> 34 `i 252  ]
 {
-[; ;prog.c: 767: if (KeyCode == 31 && line != 0b00001000) {
-"767
-[e $ ! && == -> _KeyCode `i -> 31 `i != -> _line `i -> 8 `i 254  ]
-{
-[; ;prog.c: 768: TheStart = 1;
+[; ;prog.c: 768: if (KeyCode == 31 && line != 0b00001000) {
 "768
-[e = _TheStart -> -> 1 `i `uc ]
-[; ;prog.c: 769: line = 0b00001000;
+[e $ ! && == -> _KeyCode `i -> 31 `i != -> _line `i -> 8 `i 253  ]
+{
+[; ;prog.c: 769: TheStart = 1;
 "769
-[e = _line -> -> 8 `i `uc ]
-"770
-}
-[; ;prog.c: 770: } else if (KeyCode == 32 && line != 0b00000010) {
-[e $U 255  ]
-[e :U 254 ]
-[e $ ! && == -> _KeyCode `i -> 32 `i != -> _line `i -> 2 `i 256  ]
-{
-[; ;prog.c: 771: TheStart = 1;
-"771
 [e = _TheStart -> -> 1 `i `uc ]
-[; ;prog.c: 772: line = 0b00000010;
-"772
-[e = _line -> -> 2 `i `uc ]
-"773
+[; ;prog.c: 770: line = 0b00001000;
+"770
+[e = _line -> -> 8 `i `uc ]
+"771
 }
-[; ;prog.c: 773: } else {
-[e $U 257  ]
-[e :U 256 ]
+[; ;prog.c: 771: } else if (KeyCode == 32 && line != 0b00000010) {
+[e $U 254  ]
+[e :U 253 ]
+[e $ ! && == -> _KeyCode `i -> 32 `i != -> _line `i -> 2 `i 255  ]
 {
-[; ;prog.c: 774: continue;
+[; ;prog.c: 772: TheStart = 1;
+"772
+[e = _TheStart -> -> 1 `i `uc ]
+[; ;prog.c: 773: line = 0b00000010;
+"773
+[e = _line -> -> 2 `i `uc ]
 "774
-[e $U 245  ]
+}
+[; ;prog.c: 774: } else {
+[e $U 256  ]
+[e :U 255 ]
+{
+[; ;prog.c: 775: continue;
 "775
+[e $U 244  ]
+"776
+}
+[e :U 256 ]
+[e :U 254 ]
+[; ;prog.c: 776: }
+[; ;prog.c: 777: KeyCode = 0;
+"777
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 778: getTemp_flags.ActiveProcess = 0;
+"778
+[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
+[; ;prog.c: 779: waitInterrupt();
+"779
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 780: Run_getTemp(line);
+"780
+[e ( _Run_getTemp (1 _line ]
+"782
+}
+[; ;prog.c: 782: } else {
+[e $U 257  ]
+[e :U 252 ]
+{
+[; ;prog.c: 783: getTemp_flags.ActiveProcess = 0;
+"783
+[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
+[; ;prog.c: 785: address = FindCell((KeyCode == 34 ? ((sizeof(DS_Address)) * 16) : cell * (sizeof(DS_Address))), (KeyCode == 31 ? 1 : 0));
+"785
+[e = _address ( _FindCell (2 , -> ? == -> _KeyCode `i -> 34 `i : * -> # _DS_Address `ui -> -> 16 `i `ui * -> _cell `ui -> # _DS_Address `ui `uc -> ? == -> _KeyCode `i -> 31 `i : -> 1 `i -> 0 `i `uc ]
+[; ;prog.c: 786: Broadcasting = address == ((sizeof(DS_Address)) * 16);
+"786
+[e = _Broadcasting == -> _address `ui * -> # _DS_Address `ui -> -> 16 `i `ui ]
+[; ;prog.c: 787: KeyCode = 0;
+"787
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 788: if (Broadcasting) {
+"788
+[e $ ! _Broadcasting 258  ]
+{
+[; ;prog.c: 789: TheStart = 1;
+"789
+[e = _TheStart -> -> 1 `i `uc ]
+"790
+}
+[; ;prog.c: 790: } else {
+[e $U 259  ]
+[e :U 258 ]
+{
+[; ;prog.c: 791: FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
+"791
+[e ( _FillArrayFromEEPROM (3 , , &U _DS_Address _address -> -> # _DS_Address `ui `uc ]
+[; ;prog.c: 792: cell = address / (sizeof(DS_Address));
+"792
+[e = _cell -> / -> _address `ui -> # _DS_Address `ui `uc ]
+[; ;prog.c: 793: CellToInd(cell);
+"793
+[e ( _CellToInd (1 _cell ]
+"794
+}
+[e :U 259 ]
+[; ;prog.c: 794: }
+[; ;prog.c: 795: line = 0b00001000;
+"795
+[e = _line -> -> 8 `i `uc ]
+[; ;prog.c: 796: Run_getInit(line);
+"796
+[e ( _Run_getInit (1 _line ]
+[; ;prog.c: 797: while(getTemp_flags.ActiveProcess);
+"797
+[e $U 260  ]
+[e :U 261 ]
+[e :U 260 ]
+[e $ != -> . _getTemp_flags 10 `i -> -> -> 0 `i `uc `i 261  ]
+[e :U 262 ]
+[; ;prog.c: 798: Run_getTemp(line);
+"798
+[e ( _Run_getTemp (1 _line ]
+"799
 }
 [e :U 257 ]
-[e :U 255 ]
-[; ;prog.c: 775: }
-[; ;prog.c: 776: KeyCode = 0;
-"776
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 777: getTemp_flags.ActiveProcess = 0;
-"777
-[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
-[; ;prog.c: 778: waitInterrupt();
-"778
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 779: Run_getTemp(line);
-"779
-[e ( _Run_getTemp (1 _line ]
-"781
-}
-[; ;prog.c: 781: } else {
-[e $U 258  ]
-[e :U 253 ]
-{
-[; ;prog.c: 782: getTemp_flags.ActiveProcess = 0;
-"782
-[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
-[; ;prog.c: 784: address = FindCell((KeyCode == 34 ? ((sizeof(DS_Address)) * 16) : cell * (sizeof(DS_Address))), (KeyCode == 31 ? 1 : 0));
-"784
-[e = _address ( _FindCell (2 , -> ? == -> _KeyCode `i -> 34 `i : * -> # _DS_Address `ui -> -> 16 `i `ui * -> _cell `ui -> # _DS_Address `ui `uc -> ? == -> _KeyCode `i -> 31 `i : -> 1 `i -> 0 `i `uc ]
-[; ;prog.c: 785: Broadcasting = address == ((sizeof(DS_Address)) * 16);
-"785
-[e = _Broadcasting == -> _address `ui * -> # _DS_Address `ui -> -> 16 `i `ui ]
-[; ;prog.c: 786: KeyCode = 0;
-"786
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 787: if (Broadcasting) {
-"787
-[e $ ! _Broadcasting 259  ]
-{
-[; ;prog.c: 788: TheStart = 1;
-"788
-[e = _TheStart -> -> 1 `i `uc ]
-"789
-}
-[; ;prog.c: 789: } else {
-[e $U 260  ]
-[e :U 259 ]
-{
-[; ;prog.c: 790: FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
-"790
-[e ( _FillArrayFromEEPROM (3 , , &U _DS_Address _address -> -> # _DS_Address `ui `uc ]
-[; ;prog.c: 791: cell = address / (sizeof(DS_Address));
-"791
-[e = _cell -> / -> _address `ui -> # _DS_Address `ui `uc ]
-[; ;prog.c: 792: CellToInd(cell);
-"792
-[e ( _CellToInd (1 _cell ]
-"793
-}
-[e :U 260 ]
-[; ;prog.c: 793: }
-[; ;prog.c: 794: line = 0b00001000;
-"794
-[e = _line -> -> 8 `i `uc ]
-[; ;prog.c: 795: Run_getInit(line);
-"795
-[e ( _Run_getInit (1 _line ]
-[; ;prog.c: 796: while(getTemp_flags.ActiveProcess);
-"796
-[e $U 261  ]
-[e :U 262 ]
-[e :U 261 ]
-[e $ != -> . _getTemp_flags 10 `i -> -> -> 0 `i `uc `i 262  ]
-[e :U 263 ]
-[; ;prog.c: 797: Run_getTemp(line);
-"797
-[e ( _Run_getTemp (1 _line ]
-"798
-}
-[e :U 258 ]
-"800
-}
-[; ;prog.c: 798: }
-[; ;prog.c: 800: } else if (KeyCode == 35) {
-[e $U 264  ]
-[e :U 252 ]
-[e $ ! == -> _KeyCode `i -> 35 `i 265  ]
-{
-[; ;prog.c: 801: Reset_powerOnInterval();
 "801
-[e ( _Reset_powerOnInterval ..  ]
-[; ;prog.c: 802: KeyCode = 0;
+}
+[; ;prog.c: 799: }
+[; ;prog.c: 801: } else if (KeyCode == 35) {
+[e $U 263  ]
+[e :U 251 ]
+[e $ ! == -> _KeyCode `i -> 35 `i 264  ]
+{
+[; ;prog.c: 802: Reset_powerOnInterval();
 "802
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 803: Broadcasting = 1;
-"803
-[e = _Broadcasting -> -> 1 `i `b ]
-[; ;prog.c: 804: line = 0b00000010;
-"804
-[e = _line -> -> 2 `i `uc ]
-[; ;prog.c: 805: getTemp_flags.ActiveProcess = 0;
-"805
-[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
-[; ;prog.c: 806: waitInterrupt();
-"806
-[e ( _waitInterrupt ..  ]
-[; ;prog.c: 807: Run_getTemp(line);
-"807
-[e ( _Run_getTemp (1 _line ]
-[; ;prog.c: 808: TheStart = 1;
-"808
-[e = _TheStart -> -> 1 `i `uc ]
-"809
-}
-[; ;prog.c: 809: } else if (KeyCode == 36) {
-[e $U 266  ]
-[e :U 265 ]
-[e $ ! == -> _KeyCode `i -> 36 `i 267  ]
-{
-[; ;prog.c: 810: KeyCode = 0;
-"810
-[e = _KeyCode -> -> 0 `i `uc ]
-[; ;prog.c: 811: if (!TheStart) {
-"811
-[e $ ! ! != -> _TheStart `i -> -> -> 0 `i `uc `i 268  ]
-{
-[; ;prog.c: 812: EditAddressMemory();
-"812
-[e ( _EditAddressMemory ..  ]
-"813
-}
-[e :U 268 ]
-[; ;prog.c: 813: }
-[; ;prog.c: 815: Reset_powerOnInterval();
-"815
 [e ( _Reset_powerOnInterval ..  ]
-[; ;prog.c: 816: address = FindCell(((sizeof(DS_Address)) * 16), 0);
-"816
-[e = _address ( _FindCell (2 , -> * -> # _DS_Address `ui -> -> 16 `i `ui `uc -> -> 0 `i `uc ]
-[; ;prog.c: 817: Broadcasting = address == ((sizeof(DS_Address)) * 16);
-"817
-[e = _Broadcasting == -> _address `ui * -> # _DS_Address `ui -> -> 16 `i `ui ]
-[; ;prog.c: 818: if (Broadcasting) {
-"818
-[e $ ! _Broadcasting 269  ]
-{
-[; ;prog.c: 819: TheStart = 1;
-"819
-[e = _TheStart -> -> 1 `i `uc ]
-"820
-}
-[; ;prog.c: 820: } else {
-[e $U 270  ]
-[e :U 269 ]
-{
-[; ;prog.c: 821: FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
-"821
-[e ( _FillArrayFromEEPROM (3 , , &U _DS_Address _address -> -> # _DS_Address `ui `uc ]
-[; ;prog.c: 822: cell = address / (sizeof(DS_Address));
-"822
-[e = _cell -> / -> _address `ui -> # _DS_Address `ui `uc ]
-[; ;prog.c: 824: CellToInd(cell);
-"824
-[e ( _CellToInd (1 _cell ]
-"825
-}
-[e :U 270 ]
-[; ;prog.c: 825: }
-[; ;prog.c: 826: line = 0b00001000;
-"826
-[e = _line -> -> 8 `i `uc ]
-[; ;prog.c: 827: Run_getTemp(line);
-"827
+[; ;prog.c: 803: KeyCode = 0;
+"803
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 804: Broadcasting = 1;
+"804
+[e = _Broadcasting -> -> 1 `i `b ]
+[; ;prog.c: 805: line = 0b00000010;
+"805
+[e = _line -> -> 2 `i `uc ]
+[; ;prog.c: 806: getTemp_flags.ActiveProcess = 0;
+"806
+[e = . _getTemp_flags 10 -> -> 0 `i `uc ]
+[; ;prog.c: 807: waitInterrupt();
+"807
+[e ( _waitInterrupt ..  ]
+[; ;prog.c: 808: Run_getTemp(line);
+"808
 [e ( _Run_getTemp (1 _line ]
-"828
+[; ;prog.c: 809: TheStart = 1;
+"809
+[e = _TheStart -> -> 1 `i `uc ]
+"810
+}
+[; ;prog.c: 810: } else if (KeyCode == 36) {
+[e $U 265  ]
+[e :U 264 ]
+[e $ ! == -> _KeyCode `i -> 36 `i 266  ]
+{
+[; ;prog.c: 811: KeyCode = 0;
+"811
+[e = _KeyCode -> -> 0 `i `uc ]
+[; ;prog.c: 812: if (!TheStart) {
+"812
+[e $ ! ! != -> _TheStart `i -> -> -> 0 `i `uc `i 267  ]
+{
+[; ;prog.c: 813: EditAddressMemory();
+"813
+[e ( _EditAddressMemory ..  ]
+"814
 }
 [e :U 267 ]
-"830
-[e :U 266 ]
-[e :U 264 ]
-[e :U 251 ]
-[; ;prog.c: 828: }
-[; ;prog.c: 830: if (getTemp_flags.Error) {
-[e $ ! != -> . _getTemp_flags 9 `i -> -> -> 0 `i `uc `i 271  ]
+[; ;prog.c: 814: }
+[; ;prog.c: 816: Reset_powerOnInterval();
+"816
+[e ( _Reset_powerOnInterval ..  ]
+[; ;prog.c: 817: address = FindCell(((sizeof(DS_Address)) * 16), 0);
+"817
+[e = _address ( _FindCell (2 , -> * -> # _DS_Address `ui -> -> 16 `i `ui `uc -> -> 0 `i `uc ]
+[; ;prog.c: 818: Broadcasting = address == ((sizeof(DS_Address)) * 16);
+"818
+[e = _Broadcasting == -> _address `ui * -> # _DS_Address `ui -> -> 16 `i `ui ]
+[; ;prog.c: 819: if (Broadcasting) {
+"819
+[e $ ! _Broadcasting 268  ]
 {
-[; ;prog.c: 831: if (Broadcasting && line == 0b00000010) {
-"831
-[e $ ! && _Broadcasting == -> _line `i -> 2 `i 272  ]
+[; ;prog.c: 820: TheStart = 1;
+"820
+[e = _TheStart -> -> 1 `i `uc ]
+"821
+}
+[; ;prog.c: 821: } else {
+[e $U 269  ]
+[e :U 268 ]
 {
-[; ;prog.c: 832: line = 0b00001000;
-"832
+[; ;prog.c: 822: FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
+"822
+[e ( _FillArrayFromEEPROM (3 , , &U _DS_Address _address -> -> # _DS_Address `ui `uc ]
+[; ;prog.c: 823: cell = address / (sizeof(DS_Address));
+"823
+[e = _cell -> / -> _address `ui -> # _DS_Address `ui `uc ]
+[; ;prog.c: 825: CellToInd(cell);
+"825
+[e ( _CellToInd (1 _cell ]
+"826
+}
+[e :U 269 ]
+[; ;prog.c: 826: }
+[; ;prog.c: 827: line = 0b00001000;
+"827
 [e = _line -> -> 8 `i `uc ]
+[; ;prog.c: 828: Run_getTemp(line);
+"828
+[e ( _Run_getTemp (1 _line ]
+"829
+}
+[e :U 266 ]
+"831
+[e :U 265 ]
+[e :U 263 ]
+[e :U 250 ]
+[; ;prog.c: 829: }
+[; ;prog.c: 831: if (getTemp_flags.Error) {
+[e $ ! != -> . _getTemp_flags 9 `i -> -> -> 0 `i `uc `i 270  ]
+{
+[; ;prog.c: 832: if (Broadcasting && line == 0b00000010) {
+"832
+[e $ ! && _Broadcasting == -> _line `i -> 2 `i 271  ]
+{
+[; ;prog.c: 833: line = 0b00001000;
 "833
-}
-[; ;prog.c: 833: } else {
-[e $U 273  ]
-[e :U 272 ]
-{
-[; ;prog.c: 834: clrInd();
+[e = _line -> -> 8 `i `uc ]
 "834
-[e ( _clrInd ..  ]
-[; ;prog.c: 835: ShowError();
-"835
-[e ( _ShowError ..  ]
-"836
 }
-[e :U 273 ]
-[; ;prog.c: 836: }
-[; ;prog.c: 837: Run_getTemp(line);
-"837
-[e ( _Run_getTemp (1 _line ]
-"838
-}
-[; ;prog.c: 838: } else if (getTemp_flags.DataIsRead) {
-[e $U 274  ]
+[; ;prog.c: 834: } else {
+[e $U 272  ]
 [e :U 271 ]
-[e $ ! != -> . _getTemp_flags 8 `i -> -> -> 0 `i `uc `i 275  ]
 {
-[; ;prog.c: 839: clrInd();
-"839
+[; ;prog.c: 835: clrInd();
+"835
 [e ( _clrInd ..  ]
-[; ;prog.c: 840: indData();
-"840
-[e ( _indData ..  ]
-[; ;prog.c: 841: Run_getTemp(line);
-"841
-[e ( _Run_getTemp (1 _line ]
-"842
+[; ;prog.c: 836: ShowError();
+"836
+[e ( _ShowError ..  ]
+"837
 }
-[; ;prog.c: 842: } else if (TheStart) {
-[e $U 276  ]
-[e :U 275 ]
-[e $ ! != -> _TheStart `i -> -> -> 0 `i `uc `i 277  ]
+[e :U 272 ]
+[; ;prog.c: 837: }
+[; ;prog.c: 838: Run_getTemp(line);
+"838
+[e ( _Run_getTemp (1 _line ]
+"839
+}
+[; ;prog.c: 839: } else if (getTemp_flags.DataIsRead) {
+[e $U 273  ]
+[e :U 270 ]
+[e $ ! != -> . _getTemp_flags 8 `i -> -> -> 0 `i `uc `i 274  ]
 {
-[; ;prog.c: 843: TheStart = 0;
-"843
-[e = _TheStart -> -> 0 `i `uc ]
-[; ;prog.c: 844: clrInd();
-"844
+[; ;prog.c: 840: clrInd();
+"840
 [e ( _clrInd ..  ]
-[; ;prog.c: 845: setDigit(1, 32);
+[; ;prog.c: 841: indData();
+"841
+[e ( _indData ..  ]
+[; ;prog.c: 842: Run_getTemp(line);
+"842
+[e ( _Run_getTemp (1 _line ]
+"843
+}
+[; ;prog.c: 843: } else if (TheStart) {
+[e $U 275  ]
+[e :U 274 ]
+[e $ ! != -> _TheStart `i -> -> -> 0 `i `uc `i 276  ]
+{
+[; ;prog.c: 844: TheStart = 0;
+"844
+[e = _TheStart -> -> 0 `i `uc ]
+[; ;prog.c: 845: clrInd();
 "845
-[e ( _setDigit (2 , -> -> 1 `i `uc -> -> 32 `i `uc ]
-[; ;prog.c: 846: setDigit(2, 32);
+[e ( _clrInd ..  ]
+[; ;prog.c: 846: setDigit(1, 32);
 "846
-[e ( _setDigit (2 , -> -> 2 `i `uc -> -> 32 `i `uc ]
-[; ;prog.c: 847: setDigit(3, 32);
+[e ( _setDigit (2 , -> -> 1 `i `uc -> -> 32 `i `uc ]
+[; ;prog.c: 847: setDigit(2, 32);
 "847
-[e ( _setDigit (2 , -> -> 3 `i `uc -> -> 32 `i `uc ]
+[e ( _setDigit (2 , -> -> 2 `i `uc -> -> 32 `i `uc ]
+[; ;prog.c: 848: setDigit(3, 32);
 "848
+[e ( _setDigit (2 , -> -> 3 `i `uc -> -> 32 `i `uc ]
+"849
+}
+[e :U 276 ]
+"851
+[e :U 275 ]
+[e :U 273 ]
+[; ;prog.c: 849: }
+[; ;prog.c: 851: if (point_on_ind_delay > 0) {
+[e $ ! > _point_on_ind_delay -> -> 0 `i `ui 277  ]
+{
+[; ;prog.c: 852: setPoint(1, 1);
+"852
+[e ( _setPoint (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;prog.c: 853: point_on_ind_delay--;
+"853
+[e -- _point_on_ind_delay -> -> 1 `i `ui ]
+"854
 }
 [e :U 277 ]
-"850
-[e :U 276 ]
-[e :U 274 ]
-[; ;prog.c: 848: }
-[; ;prog.c: 850: if (point_on_ind_delay > 0) {
-[e $ ! > _point_on_ind_delay -> -> 0 `i `ui 278  ]
-{
-[; ;prog.c: 851: setPoint(1, 1);
-"851
-[e ( _setPoint (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;prog.c: 852: point_on_ind_delay--;
-"852
-[e -- _point_on_ind_delay -> -> 1 `i `ui ]
-"853
-}
-[e :U 278 ]
-[; ;prog.c: 853: }
-[; ;prog.c: 855: refreshInd();
-"855
+[; ;prog.c: 854: }
+[; ;prog.c: 856: refreshInd();
+"856
 [e ( _refreshInd ..  ]
-"857
-}
-[e :U 245 ]
-"751
-[e $U 246  ]
-[e :U 247 ]
-[; ;prog.c: 857: }
-[; ;prog.c: 858: }
 "858
-[e :UE 244 ]
+}
+[e :U 244 ]
+"752
+[e $U 245  ]
+[e :U 246 ]
+[; ;prog.c: 858: }
+[; ;prog.c: 859: }
+"859
+[e :UE 243 ]
 }

@@ -642,12 +642,13 @@ void EditAddressMemory() {
 		} else if (KeyCode == 35 && CellIsEmpty == 1) {
 			KeyCode = 0;
 			waitInterrupt();
-			if (INIT(SECOND_LINE)) {
+            unsigned char line;
+			if (INIT(line = SECOND_LINE) || INIT(line = FIRST_LINE)) {
 				waitInterrupt();
-				TX(0x33, SECOND_LINE);
+				TX(0x33, line);
 				for (unsigned char i = 0; i < CELL_CAPACITY; i++) {
 					waitInterrupt();
-					CellsData[i] = RX(SECOND_LINE);
+					CellsData[i] = RX(line);
 				}
 				if (CellsData[CELL_CAPACITY - 1] == calc_crc(CellsData, CELL_CAPACITY - 1)) {
 					waitInterrupt();

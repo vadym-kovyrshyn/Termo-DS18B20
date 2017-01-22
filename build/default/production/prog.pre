@@ -1,10 +1,10 @@
 
 # 1 "prog.c"
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\__size_t.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\stdarg.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -13,17 +13,17 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\stdio.h"
+# 43 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdio.h"
 struct __prbuf
 {
 char * ptr;
 void (* func)(char);
 };
 
-# 29 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\errno.h"
+# 29 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\errno.h"
 extern int errno;
 
-# 12 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\conio.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -37,7 +37,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 88 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\stdio.h"
+# 88 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -64,7 +64,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\stdlib.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdlib.h"
 typedef unsigned short wchar_t;
 
 # 15
@@ -113,11 +113,11 @@ extern void free(void *);
 extern void * realloc(void *, size_t);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 86 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\stdlib.h"
+# 86 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdlib.h"
 extern int atexit(void (*)(void));
 extern char * getenv(const char *);
 extern char ** environ;
@@ -138,12 +138,12 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 26 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\htc.h"
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
-# 49 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f628a.h"
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f628a.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -184,15 +184,13 @@ unsigned RP1 :1;
 };
 struct {
 unsigned CARRY :1;
-};
-struct {
-unsigned :2;
+unsigned :1;
 unsigned ZERO :1;
 };
 } STATUSbits_t;
 extern volatile STATUSbits_t STATUSbits @ 0x003;
 
-# 154
+# 152
 extern volatile unsigned char FSR @ 0x004;
 
 asm("FSR equ 04h");
@@ -218,7 +216,7 @@ unsigned RA7 :1;
 } PORTAbits_t;
 extern volatile PORTAbits_t PORTAbits @ 0x005;
 
-# 221
+# 219
 extern volatile unsigned char PORTB @ 0x006;
 
 asm("PORTB equ 06h");
@@ -238,7 +236,7 @@ unsigned RB7 :1;
 } PORTBbits_t;
 extern volatile PORTBbits_t PORTBbits @ 0x006;
 
-# 282
+# 280
 extern volatile unsigned char PCLATH @ 0x00A;
 
 asm("PCLATH equ 0Ah");
@@ -251,7 +249,7 @@ unsigned PCLATH :5;
 } PCLATHbits_t;
 extern volatile PCLATHbits_t PCLATHbits @ 0x00A;
 
-# 301
+# 299
 extern volatile unsigned char INTCON @ 0x00B;
 
 asm("INTCON equ 0Bh");
@@ -277,7 +275,7 @@ unsigned TMR0IE :1;
 } INTCONbits_t;
 extern volatile INTCONbits_t INTCONbits @ 0x00B;
 
-# 378
+# 376
 extern volatile unsigned char PIR1 @ 0x00C;
 
 asm("PIR1 equ 0Ch");
@@ -297,7 +295,7 @@ unsigned EEIF :1;
 } PIR1bits_t;
 extern volatile PIR1bits_t PIR1bits @ 0x00C;
 
-# 434
+# 432
 extern volatile unsigned short TMR1 @ 0x00E;
 
 asm("TMR1 equ 0Eh");
@@ -337,7 +335,7 @@ unsigned T1CKPS1 :1;
 } T1CONbits_t;
 extern volatile T1CONbits_t T1CONbits @ 0x010;
 
-# 510
+# 508
 extern volatile unsigned char TMR2 @ 0x011;
 
 asm("TMR2 equ 011h");
@@ -367,7 +365,7 @@ unsigned TOUTPS3 :1;
 } T2CONbits_t;
 extern volatile T2CONbits_t T2CONbits @ 0x012;
 
-# 586
+# 584
 extern volatile unsigned short CCPR1 @ 0x015;
 
 asm("CCPR1 equ 015h");
@@ -406,7 +404,7 @@ unsigned CCP1M3 :1;
 } CCP1CONbits_t;
 extern volatile CCP1CONbits_t CCP1CONbits @ 0x017;
 
-# 661
+# 659
 extern volatile unsigned char RCSTA @ 0x018;
 
 asm("RCSTA equ 018h");
@@ -430,7 +428,7 @@ unsigned ADDEN :1;
 } RCSTAbits_t;
 extern volatile RCSTAbits_t RCSTAbits @ 0x018;
 
-# 731
+# 729
 extern volatile unsigned char TXREG @ 0x019;
 
 asm("TXREG equ 019h");
@@ -465,7 +463,7 @@ unsigned CM2 :1;
 } CMCONbits_t;
 extern volatile CMCONbits_t CMCONbits @ 0x01F;
 
-# 812
+# 810
 extern volatile unsigned char OPTION_REG @ 0x081;
 
 asm("OPTION_REG equ 081h");
@@ -488,7 +486,7 @@ unsigned PS2 :1;
 } OPTION_REGbits_t;
 extern volatile OPTION_REGbits_t OPTION_REGbits @ 0x081;
 
-# 881
+# 879
 extern volatile unsigned char TRISA @ 0x085;
 
 asm("TRISA equ 085h");
@@ -508,7 +506,7 @@ unsigned TRISA7 :1;
 } TRISAbits_t;
 extern volatile TRISAbits_t TRISAbits @ 0x085;
 
-# 942
+# 940
 extern volatile unsigned char TRISB @ 0x086;
 
 asm("TRISB equ 086h");
@@ -528,7 +526,7 @@ unsigned TRISB7 :1;
 } TRISBbits_t;
 extern volatile TRISBbits_t TRISBbits @ 0x086;
 
-# 1003
+# 1001
 extern volatile unsigned char PIE1 @ 0x08C;
 
 asm("PIE1 equ 08Ch");
@@ -548,7 +546,7 @@ unsigned EEIE :1;
 } PIE1bits_t;
 extern volatile PIE1bits_t PIE1bits @ 0x08C;
 
-# 1059
+# 1057
 extern volatile unsigned char PCON @ 0x08E;
 
 asm("PCON equ 08Eh");
@@ -570,7 +568,7 @@ unsigned nBOD :1;
 } PCONbits_t;
 extern volatile PCONbits_t PCONbits @ 0x08E;
 
-# 1107
+# 1105
 extern volatile unsigned char PR2 @ 0x092;
 
 asm("PR2 equ 092h");
@@ -596,7 +594,7 @@ unsigned CSRC :1;
 } TXSTAbits_t;
 extern volatile TXSTAbits_t TXSTAbits @ 0x098;
 
-# 1169
+# 1167
 extern volatile unsigned char SPBRG @ 0x099;
 
 asm("SPBRG equ 099h");
@@ -630,7 +628,7 @@ unsigned WRERR :1;
 } EECON1bits_t;
 extern volatile EECON1bits_t EECON1bits @ 0x09C;
 
-# 1224
+# 1222
 extern volatile unsigned char EECON2 @ 0x09D;
 
 asm("EECON2 equ 09Dh");
@@ -659,7 +657,7 @@ unsigned VR3 :1;
 } VRCONbits_t;
 extern volatile VRCONbits_t VRCONbits @ 0x09F;
 
-# 1300
+# 1298
 extern volatile __bit ADDEN @ (((unsigned) &RCSTA)*8) + 3;
 
 extern volatile __bit ADEN @ (((unsigned) &RCSTA)*8) + 3;
@@ -923,7 +921,7 @@ extern volatile __bit nT1SYNC @ (((unsigned) &T1CON)*8) + 2;
 extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
 
 
-# 27 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic.h"
+# 27 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -933,18 +931,20 @@ extern unsigned int flash_read(unsigned short addr);
 # 141
 extern void flash_erase(unsigned short addr);
 
-# 114 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\eeprom_routines.h"
+# 114 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 151 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic.h"
+# 151 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
+#pragma intrinsic(_delaywdt)
+extern __nonreentrant void _delaywdt(unsigned long);
 
-# 186
+# 192
 extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
@@ -1527,12 +1527,13 @@ break;
 } else if (KeyCode == 35 && CellIsEmpty == 1) {
 KeyCode = 0;
 waitInterrupt();
-if (INIT(0b00000010)) {
+unsigned char line;
+if (INIT(line = 0b00000010) || INIT(line = 0b00001000)) {
 waitInterrupt();
-TX(0x33, 0b00000010);
+TX(0x33, line);
 for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
 waitInterrupt();
-CellsData[i] = RX(0b00000010);
+CellsData[i] = RX(line);
 }
 if (CellsData[(sizeof(DS_Address)) - 1] == calc_crc(CellsData, (sizeof(DS_Address)) - 1)) {
 waitInterrupt();
