@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.40\dat\en_msgs.txt -cs \
   -h+dist/default/production\Termo-DS18B20.production.sym \
   --cmf=dist/default/production\Termo-DS18B20.production.cmf -z -Q16F628A \
-  -oC:\Users\VDMKVR~1\AppData\Local\Temp\5\sbkk.2 \
+  -oC:\Users\VDMKVR~1\AppData\Local\Temp\5\saa4.2 \
   -Mdist/default/production/Termo-DS18B20.production.map -E1 -ver=XC8 \
   -ASTACK=0120h-014fh -pstack=STACK -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
   -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 \
@@ -17,7 +17,7 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-07Fh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\VDMKVR~1\AppData\Local\Temp\5\sbkk.obj \
+  -DENTRY=2 -k C:\Users\VDMKVR~1\AppData\Local\Temp\5\saa4.obj \
   dist/default/production\Termo-DS18B20.production.obj 
 
 Object code version is 3.11
@@ -27,7 +27,7 @@ Machine type is 16F628A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\VDMKVR~1\AppData\Local\Temp\5\sbkk.obj
+C:\Users\VDMKVR~1\AppData\Local\Temp\5\saa4.obj
                 end_init                             10       10        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        1     400E       0

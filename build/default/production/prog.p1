@@ -2696,9 +2696,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "645
 [v _line `uc ~T0 @X0 1 a ]
 [; ;prog.c: 645: unsigned char line;
-[; ;prog.c: 646: if (INIT(line = 0b00000010) || INIT(line = 0b00001000)) {
+[; ;prog.c: 646: if (INIT(line = 0b00001000) || INIT(line = 0b00000010)) {
 "646
-[e $ ! || != -> ( _INIT (1 = _line -> -> 2 `i `uc `i -> -> -> 0 `i `uc `i != -> ( _INIT (1 = _line -> -> 8 `i `uc `i -> -> -> 0 `i `uc `i 228  ]
+[e $ ! || != -> ( _INIT (1 = _line -> -> 8 `i `uc `i -> -> -> 0 `i `uc `i != -> ( _INIT (1 = _line -> -> 2 `i `uc `i -> -> -> 0 `i `uc `i 228  ]
 {
 [; ;prog.c: 647: waitInterrupt();
 "647
@@ -3025,8 +3025,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TheStart -> -> 1 `i `uc ]
 "748
 [v _line `uc ~T0 @X0 1 a ]
-[; ;prog.c: 748: unsigned char line = 0b00001000;
-[e = _line -> -> 8 `i `uc ]
+[; ;prog.c: 748: unsigned char line = 0b00000010;
+[e = _line -> -> 2 `i `uc ]
 [; ;prog.c: 750: KeyCode = 36;
 "750
 [e = _KeyCode -> -> 36 `i `uc ]
@@ -3081,29 +3081,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 "766
 [e $ ! && _Broadcasting != -> _KeyCode `i -> 34 `i 252  ]
 {
-[; ;prog.c: 768: if (KeyCode == 31 && line != 0b00001000) {
+[; ;prog.c: 768: if (KeyCode == 31 && line != 0b00000010) {
 "768
-[e $ ! && == -> _KeyCode `i -> 31 `i != -> _line `i -> 8 `i 253  ]
+[e $ ! && == -> _KeyCode `i -> 31 `i != -> _line `i -> 2 `i 253  ]
 {
 [; ;prog.c: 769: TheStart = 1;
 "769
 [e = _TheStart -> -> 1 `i `uc ]
-[; ;prog.c: 770: line = 0b00001000;
+[; ;prog.c: 770: line = 0b00000010;
 "770
-[e = _line -> -> 8 `i `uc ]
+[e = _line -> -> 2 `i `uc ]
 "771
 }
-[; ;prog.c: 771: } else if (KeyCode == 32 && line != 0b00000010) {
+[; ;prog.c: 771: } else if (KeyCode == 32 && line != 0b00001000) {
 [e $U 254  ]
 [e :U 253 ]
-[e $ ! && == -> _KeyCode `i -> 32 `i != -> _line `i -> 2 `i 255  ]
+[e $ ! && == -> _KeyCode `i -> 32 `i != -> _line `i -> 8 `i 255  ]
 {
 [; ;prog.c: 772: TheStart = 1;
 "772
 [e = _TheStart -> -> 1 `i `uc ]
-[; ;prog.c: 773: line = 0b00000010;
+[; ;prog.c: 773: line = 0b00001000;
 "773
-[e = _line -> -> 2 `i `uc ]
+[e = _line -> -> 8 `i `uc ]
 "774
 }
 [; ;prog.c: 774: } else {
@@ -3174,9 +3174,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 259 ]
 [; ;prog.c: 794: }
-[; ;prog.c: 795: line = 0b00001000;
+[; ;prog.c: 795: line = 0b00000010;
 "795
-[e = _line -> -> 8 `i `uc ]
+[e = _line -> -> 2 `i `uc ]
 [; ;prog.c: 796: Run_getInit(line);
 "796
 [e ( _Run_getInit (1 _line ]
@@ -3210,9 +3210,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 804: Broadcasting = 1;
 "804
 [e = _Broadcasting -> -> 1 `i `b ]
-[; ;prog.c: 805: line = 0b00000010;
+[; ;prog.c: 805: line = 0b00001000;
 "805
-[e = _line -> -> 2 `i `uc ]
+[e = _line -> -> 8 `i `uc ]
 [; ;prog.c: 806: getTemp_flags.ActiveProcess = 0;
 "806
 [e = . _getTemp_flags 10 -> -> 0 `i `uc ]
@@ -3281,9 +3281,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 269 ]
 [; ;prog.c: 826: }
-[; ;prog.c: 827: line = 0b00001000;
+[; ;prog.c: 827: line = 0b00000010;
 "827
-[e = _line -> -> 8 `i `uc ]
+[e = _line -> -> 2 `i `uc ]
 [; ;prog.c: 828: Run_getTemp(line);
 "828
 [e ( _Run_getTemp (1 _line ]
@@ -3298,13 +3298,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prog.c: 831: if (getTemp_flags.Error) {
 [e $ ! != -> . _getTemp_flags 9 `i -> -> -> 0 `i `uc `i 270  ]
 {
-[; ;prog.c: 832: if (Broadcasting && line == 0b00000010) {
+[; ;prog.c: 832: if (Broadcasting && line == 0b00001000) {
 "832
-[e $ ! && _Broadcasting == -> _line `i -> 2 `i 271  ]
+[e $ ! && _Broadcasting == -> _line `i -> 8 `i 271  ]
 {
-[; ;prog.c: 833: line = 0b00001000;
+[; ;prog.c: 833: line = 0b00000010;
 "833
-[e = _line -> -> 8 `i `uc ]
+[e = _line -> -> 2 `i `uc ]
 "834
 }
 [; ;prog.c: 834: } else {

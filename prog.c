@@ -78,8 +78,8 @@ unsigned char sign; //знак температуры
 #define STATE_REG TRISA
 #define PIN_REG PORTA
 
-#define FIRST_LINE 0b00001000
-#define SECOND_LINE 0b00000010
+#define FIRST_LINE 0b00000010
+#define SECOND_LINE 0b00001000
 
 #define CELLS_COUNT 16
 #define CELL_CAPACITY (sizeof(DS_Address))

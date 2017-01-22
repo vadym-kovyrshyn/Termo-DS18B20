@@ -1528,7 +1528,7 @@ break;
 KeyCode = 0;
 waitInterrupt();
 unsigned char line;
-if (INIT(line = 0b00000010) || INIT(line = 0b00001000)) {
+if (INIT(line = 0b00001000) || INIT(line = 0b00000010)) {
 waitInterrupt();
 TX(0x33, line);
 for (unsigned char i = 0; i < (sizeof(DS_Address)); i++) {
@@ -1630,7 +1630,7 @@ unsigned char cell = 0;
 unsigned char address;
 unsigned int point_on_ind_delay = 0;
 unsigned char TheStart = 1;
-unsigned char line = 0b00001000;
+unsigned char line = 0b00000010;
 
 KeyCode = 36;
 
@@ -1650,12 +1650,12 @@ Reset_powerOnInterval();
 
 if (Broadcasting && KeyCode != 34) {
 
-if (KeyCode == 31 && line != 0b00001000) {
-TheStart = 1;
-line = 0b00001000;
-} else if (KeyCode == 32 && line != 0b00000010) {
+if (KeyCode == 31 && line != 0b00000010) {
 TheStart = 1;
 line = 0b00000010;
+} else if (KeyCode == 32 && line != 0b00001000) {
+TheStart = 1;
+line = 0b00001000;
 } else {
 continue;
 }
@@ -1677,7 +1677,7 @@ FillArrayFromEEPROM(DS_Address, address, (sizeof(DS_Address)));
 cell = address / (sizeof(DS_Address));
 CellToInd(cell);
 }
-line = 0b00001000;
+line = 0b00000010;
 Run_getInit(line);
 while(getTemp_flags.ActiveProcess);
 Run_getTemp(line);
@@ -1687,7 +1687,7 @@ Run_getTemp(line);
 Reset_powerOnInterval();
 KeyCode = 0;
 Broadcasting = 1;
-line = 0b00000010;
+line = 0b00001000;
 getTemp_flags.ActiveProcess = 0;
 waitInterrupt();
 Run_getTemp(line);
@@ -1709,13 +1709,13 @@ cell = address / (sizeof(DS_Address));
 
 CellToInd(cell);
 }
-line = 0b00001000;
+line = 0b00000010;
 Run_getTemp(line);
 }
 
 if (getTemp_flags.Error) {
-if (Broadcasting && line == 0b00000010) {
-line = 0b00001000;
+if (Broadcasting && line == 0b00001000) {
+line = 0b00000010;
 } else {
 clrInd();
 ShowError();
